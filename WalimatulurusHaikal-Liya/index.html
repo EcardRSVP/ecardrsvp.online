@@ -1529,49 +1529,6 @@ function copyRek() {
    <!-- ✅ SCRIPT UNTUK PAPAR STATUS TEMPAHAN -->
 <script src="n98hm1a2n.js"></script>
 
-<!-- ✅ Bahagian akhir sebelum </body> -->
-<!-- LETAK SCRIPT INI TERUS DALAM index.html -->
-<script>
-  let submitted = false;
-
-  function handleRSVP(e) {
-    const form = document.getElementById("rsvp-form");
-    const msg = document.getElementById("submit-popup");
-
-    const nama = document.getElementById("nama").value.trim();
-    const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
-    const bilangan = document.getElementById("bilangan").value.trim();
-
-    if (!nama || !kehadiran || bilangan === "" || parseInt(bilangan) < 1) {
-      e.preventDefault(); // Halang submit jika tak lengkap
-      alert("Sila lengkapkan semua maklumat.");
-      return false;
-    }
-
-    // ✅ Benarkan Google Form submit secara biasa
-    submitted = true;
-    return true;
-  }
-
-  // ✅ Akan dipanggil bila iframe reload lepas submit
-  function rsvpSuccessHandler() {
-    if (submitted) {
-      submitted = false;
-
-      const popup = document.getElementById("submit-popup");
-      const form = document.getElementById("rsvp-form");
-
-      if (form) form.reset();
-      if (popup) {
-        popup.style.display = "block";
-        setTimeout(() => {
-          popup.style.display = "none";
-        }, 5000);
-      }
-    }
-  }
-</script>
-
 
 
 </body>
