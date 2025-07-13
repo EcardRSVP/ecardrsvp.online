@@ -97,6 +97,8 @@ function rsvpSuccessHandler() {
     const form = document.getElementById("rsvp-form");
 
     if (form) form.reset();
+
+    // ✅ SEMAK DULU popup wujud
     if (popup) {
       popup.classList.add("show-popup");
       console.log("✅ Popup muncul");
@@ -104,6 +106,8 @@ function rsvpSuccessHandler() {
       setTimeout(() => {
         popup.classList.remove("show-popup");
       }, 5000);
+    } else {
+      console.warn("⚠️ Elemen #submit-popup tidak dijumpai.");
     }
   } else {
     console.log("ℹ️ iframe reload tanpa submitted");
