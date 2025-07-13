@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ✅ Dipanggil bila iframe reload selepas submit
 function rsvpSuccessHandler() {
+  console.log("📢 rsvpSuccessHandler triggered");
   if (submitted) {
     submitted = false;
 
@@ -100,14 +101,17 @@ function rsvpSuccessHandler() {
 
     if (form) form.reset();
     if (popup) {
-      // Tunjukkan popup gaya slide dari bawah
       popup.classList.add("show-popup");
+      console.log("✅ Popup sepatutnya muncul");
 
-      // Sembunyikan popup selepas 5 saat
       setTimeout(() => {
         popup.classList.remove("show-popup");
       }, 5000);
+    } else {
+      console.log("❌ Popup element tidak dijumpai");
     }
+  } else {
+    console.log("ℹ️ Borang reload tapi submitted === false");
   }
 }
 
