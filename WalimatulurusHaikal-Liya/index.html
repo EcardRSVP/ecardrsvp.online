@@ -1533,38 +1533,11 @@ function copyRek() {
 
 <!-- ✅ Bahagian akhir sebelum </body> -->
 <!-- LETAK SCRIPT INI TERUS DALAM index.html -->
-<script>
-let submitted = false;
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("rsvp-form");
-  const nama = document.getElementById("nama");
-  const bilangan = document.getElementById("bilangan");
-  const popup = document.getElementById("submit-popup");
-
-  if (!form || !popup) {
-    console.error("❌ Elemen penting tidak dijumpai.");
-    return;
-  }
-
-  form.addEventListener("submit", function (e) {
-    const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
-
-    // Semak semua input wajib
-    if (!nama.value.trim() || !kehadiran || !bilangan.value.trim()) {
-      e.preventDefault(); // Halang submit jika tak lengkap
-      alert("Sila lengkapkan semua maklumat.");
-      return;
-    }
-
-    // ✅ Benarkan Google Form submit secara biasa
-    submitted = true;
-  });
-});
-
-// ✅ Dipanggil selepas Google Form selesai submit melalui iframe
 function rsvpSuccessHandler() {
+  console.log("📩 iframe loaded — semak if submitted = true");
+
   if (submitted) {
+    console.log("✅ Borang telah disubmit — papar popup.");
     submitted = false;
 
     const form = document.getElementById("rsvp-form");
@@ -1577,9 +1550,11 @@ function rsvpSuccessHandler() {
         popup.style.display = "none";
       }, 5000);
     }
+  } else {
+    console.log("⚠️ iframe loaded tapi tiada penanda submitted.");
   }
 }
-</script>
+
 
 
 </body>
