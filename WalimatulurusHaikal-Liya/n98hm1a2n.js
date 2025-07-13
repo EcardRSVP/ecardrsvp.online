@@ -109,3 +109,5 @@ function rsvpSuccessHandler() {
     console.log("ℹ️ iframe reload tanpa submitted");
   }
 }
+
+window.rsvpSuccessHandler = rsvpSuccessHandler;
