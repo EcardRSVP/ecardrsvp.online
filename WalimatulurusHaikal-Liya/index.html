@@ -285,10 +285,12 @@
   ✅ Terima kasih! Kehadiran anda telah direkodkan.
 </div>
 
-<iframe name="hidden_iframe"
-        id="hidden_iframe"
-        style="display:none;"
-        onload="rsvpSuccessHandler()"></iframe>
+<iframe
+  name="hidden_iframe"
+  id="hidden_iframe"
+  style="display:none;"
+  onload="if (window.rsvpSuccessHandler) rsvpSuccessHandler();">
+</iframe>
 
 
 
