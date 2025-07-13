@@ -65,7 +65,7 @@ let submitted = false;
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("rsvp-form");
-  const popup = document.getElementById("submit-popup"); // 🎯 ubah ke popup
+  const popup = document.getElementById("submit-popup");
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
 
@@ -78,21 +78,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
     if (!nama.value.trim() || !kehadiran || !bilangan.value) {
-      e.preventDefault(); // kekalkan supaya tak terus submit jika tak lengkap
+      e.preventDefault();
       alert("Sila lengkapkan semua maklumat.");
       return;
     }
 
-    // ✅ Biar Google yang submit form seperti biasa
     submitted = true;
-    // ⚠️ Jangan buat `form.submit()` — Google akan tolak dalam sesetengah kes
-    // Jadi biar form auto submit melalui button
   });
 });
 
-// ✅ Dipanggil bila iframe reload selepas submit
 function rsvpSuccessHandler() {
   console.log("📢 rsvpSuccessHandler triggered");
+
   if (submitted) {
     submitted = false;
 
@@ -102,16 +99,13 @@ function rsvpSuccessHandler() {
     if (form) form.reset();
     if (popup) {
       popup.classList.add("show-popup");
-      console.log("✅ Popup sepatutnya muncul");
+      console.log("✅ Popup muncul");
 
       setTimeout(() => {
         popup.classList.remove("show-popup");
       }, 5000);
-    } else {
-      console.log("❌ Popup element tidak dijumpai");
     }
   } else {
-    console.log("ℹ️ Borang reload tapi submitted === false");
+    console.log("ℹ️ iframe reload tanpa submitted");
   }
 }
-
