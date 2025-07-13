@@ -252,12 +252,12 @@
 <!-- ✅ Seksyen RSVP -->
 <section id="Seksyen RSVP" class="hidden-section">
   <h2>💌 RSVP</h2>
-<form id="rsvp-form"
-      action="https://docs.google.com/forms/d/e/1FAIpQLSedlvRozEgmCPlheAte9YGIS-VxcumFs7FBSSeqURJLB9chiA/formResponse"
-      method="POST"
-      target="hidden_iframe"
-      onsubmit="return handleRSVP(event)">
-
+<form id="rsvp-form" 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSedlvRozEgmCPlheAte9YGIS-VxcumFs7FBSSeqURJLB9chiA/formResponse" 
+      method="POST" 
+      target="hidden_iframe" 
+      onsubmit="handleRSVP(event)">
+  
     <!-- Nama -->
     <label for="nama">Nama</label>
     <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
@@ -1534,47 +1534,35 @@ function copyRek() {
 <!-- ✅ Bahagian akhir sebelum </body> -->
 <!-- LETAK SCRIPT INI TERUS DALAM index.html -->
 <script>
-  let submitted = false;
-
   function handleRSVP(e) {
+    e.preventDefault(); // Halang form reload
+
     const form = document.getElementById("rsvp-form");
     const msg = document.getElementById("submit-popup");
 
     const nama = document.getElementById("nama").value.trim();
-    const bilangan = document.getElementById("bilangan").value.trim();
     const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
+    const bilangan = document.getElementById("bilangan").value;
 
     if (!nama || !kehadiran || !bilangan) {
-      e.preventDefault(); // Halang jika tak lengkap
       alert("Sila lengkapkan semua maklumat.");
-      return false;
+      return;
     }
 
-    // ✅ Tandakan bahawa form sedang disubmit
-    submitted = true;
+    // Submit ke Google Form
+    form.submit();
 
-    // ⚠️ Biarkan browser submit sendiri (tanpa `form.submit();`)
-    return true;
-  }
+    // Papar popup selepas sedikit delay
+    setTimeout(() => {
+      msg.style.display = "block";
+      form.reset();
 
-  // ✅ Ini akan dipanggil bila iframe reload selepas submit
-  function rsvpSuccessHandler() {
-    if (submitted) {
-      submitted = false;
-      const form = document.getElementById("rsvp-form");
-      const msg = document.getElementById("submit-popup");
-
-      if (form) form.reset();
-      if (msg) {
-        msg.style.display = "block";
-        setTimeout(() => {
-          msg.style.display = "none";
-        }, 5000);
-      }
-    }
-  }
+      setTimeout(() => {
+        msg.style.display = "none";
+      }, 5000);
+    }, 2000); // tunggu 2 saat
+  }
 </script>
-
 
 
 </body>
