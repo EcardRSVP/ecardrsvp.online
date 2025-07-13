@@ -659,18 +659,27 @@ hr {
 }
 
 #submit-popup {
-  display: none;
   position: fixed;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #e0ffe0;
-  color: green;
-  padding: 15px 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  max-width: 390px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+  z-index: 1001;
+  transition: bottom 0.4s ease;
+  margin: 0 auto;
   font-weight: bold;
-  z-index: 10000;
+  font-size: 16px;
+}
+
+.show-popup {
+  bottom: 0;
 }
 
 
