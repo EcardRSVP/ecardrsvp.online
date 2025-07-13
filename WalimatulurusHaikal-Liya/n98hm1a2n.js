@@ -100,9 +100,12 @@ function rsvpSuccessHandler() {
 
     if (form) form.reset();
     if (popup) {
-      popup.style.display = "block";
+      // Tunjukkan popup gaya slide dari bawah
+      popup.classList.add("show-popup");
+
+      // Sembunyikan popup selepas 5 saat
       setTimeout(() => {
-        popup.style.display = "none";
+        popup.classList.remove("show-popup");
       }, 5000);
     }
   }
