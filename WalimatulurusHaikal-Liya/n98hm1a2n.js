@@ -115,3 +115,17 @@ function rsvpSuccessHandler() {
 }
 
 window.rsvpSuccessHandler = rsvpSuccessHandler;
+
+function toggleSection(id) {
+  // Sembunyikan semua seksyen dulu
+  const allSections = document.querySelectorAll('.hidden-section');
+  allSections.forEach(section => section.style.display = 'none');
+
+  // Tunjukkan seksyen yang dipilih
+  const target = document.getElementById(id);
+  if (target) {
+    target.style.display = 'block';
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
