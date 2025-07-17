@@ -71,11 +71,10 @@
   background-color: white;
   margin: 30px auto;
   padding: 30px 20px;
-  width: fit-content;          /* ✅ ikut kandungan sebenar */
-  max-width: 90%;             /* ❗ supaya tak overflow */
+  display: inline-block;        /* ✅ supaya ikut saiz kandungan */
+  max-width: 90%;               /* ✅ hadkan supaya tak terlalu lebar */
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: none;
 }
   </style>
 </head>
@@ -1433,18 +1432,24 @@ let currentVisibleSection = null;
 function toggleSection(id) {
   const section = document.getElementById(id);
   const mainContent = document.getElementById('main-content');
-  const allSections = document.querySelectorAll('.hidden-section');
 
+  if (!section) {
+    console.warn("Seksyen ID tidak wujud:", id);
+    return;
+  }
+
+  // Jika tekan ikon yang sama → tutup seksyen dan kembali ke main
   if (currentVisibleSection === id) {
-    // Sembunyi jika ikon sama ditekan
     section.style.display = 'none';
     mainContent.style.display = 'block';
     currentVisibleSection = null;
   } else {
-    // Sembunyi semua dahulu
-    allSections.forEach(sec => sec.style.display = 'none');
+    // Sembunyikan semua section
+    document.querySelectorAll('.hidden-section').forEach(sec => {
+      sec.style.display = 'none';
+    });
 
-    // Tunjuk seksyen yang diklik
+    // Tunjuk seksyen yang dipilih
     section.style.display = 'block';
     mainContent.style.display = 'none';
     currentVisibleSection = id;
