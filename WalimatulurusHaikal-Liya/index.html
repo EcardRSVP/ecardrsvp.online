@@ -1421,58 +1421,37 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
 
 <!-- ✅ JavaScript -->
 <script>
-function toggleSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  const overlay = document.getElementById("popupOverlay");
-  const popupContent = document.getElementById("popupContent");
+let currentVisibleSection = null;
 
-  if (!section || !overlay || !popupContent) return;
+function toggleSection(id) {
+  const section = document.getElementById(id);
+  const main = document.getElementById("main-content");
+  const all = document.querySelectorAll('.hidden-section');
 
-  const current = popupContent.getAttribute("data-current");
+  if (!section || !main) return;
 
-  // Jika seksyen sama sedang dipaparkan → tutup
-  if (current === sectionId) {
-    closePopup();
-    return;
+  const sudah = (currentVisibleSection === id);
+
+  // sembunyi semua
+  all.forEach(sec => {
+    sec.style.display = 'none';
+    sec.classList.remove('show');
+  });
+
+  if (sudah) {
+    // kalau ikon sama ditekan → tutup popup & tunjuk main
+    main.style.display = 'block';
+    currentVisibleSection = null;
+  } else {
+    // buka section, sembunyi main-content
+    section.style.display = 'block';
+    main.style.display = 'none';
+    // kuatkan class show untuk anim animate
+    setTimeout(() => section.classList.add('show'), 10);
+    currentVisibleSection = id;
   }
-
-  // Clone kandungan section & buang h2 asal
-  const cloned = section.cloneNode(true);
-  const h2 = cloned.querySelector("h2");
-  if (h2) h2.remove();
-
-  // Tambah semula satu tajuk sahaja
-    popupContent.innerHTML = `
-      <div style="padding-bottom: 10px; padding-top: 20px;">
-        <h2>${section.querySelector('h2')?.innerHTML || ''}</h2>
-        ${cloned.innerHTML}
-      </div>
-    `;
-
-  popupContent.setAttribute("data-current", sectionId);
-  overlay.style.display = "flex";
-  document.body.style.overflow = 'hidden';
-
-    // Sembunyikan main-content jika popup dibuka
-    document.getElementById("main-content").style.display = "none";
-  }  
-
-function closePopup() {
-  const overlay = document.getElementById("popupOverlay");
-  const popupContent = document.getElementById("popupContent");
-
-  if (overlay && popupContent) {
-    overlay.style.display = "none";
-    popupContent.innerHTML = "";
-    popupContent.removeAttribute("data-current");
-
-      // Paparkan semula main-content apabila popup ditutup
-      document.getElementById("main-content").style.display = "block";
-      document.body.style.overflow = 'auto';
-    }
-  }
-
-    
+}
+  
 function copyRek() {
     const text = document.getElementById("rek").innerText;
     navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
