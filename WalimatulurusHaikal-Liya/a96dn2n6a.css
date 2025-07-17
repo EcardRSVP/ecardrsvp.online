@@ -684,3 +684,13 @@ hr {
 #submit-popup.show {
   top: 0;
 }
+
+.hidden-section {
+  display: none;
+  background-color: white;
+  padding: 30px 20px;
+  max-width: 390px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
