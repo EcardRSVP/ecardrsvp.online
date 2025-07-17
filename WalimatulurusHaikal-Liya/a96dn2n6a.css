@@ -660,7 +660,7 @@ hr {
 
 #submit-popup {
   position: fixed;
-  bottom: -100%;
+  top: -100%;
   left: 0;
   width: 100%;
   max-width: 390px;
@@ -674,10 +674,10 @@ hr {
   z-index: 1001;
   transition: bottom 0.4s ease;
   font-weight: bold;
-  color: green;
+  color: black;
 }
 
 /* ✅ Tukar dari .show-popup → .show */
 #submit-popup.show {
-  bottom: 0;
+  top: 0;
 }
