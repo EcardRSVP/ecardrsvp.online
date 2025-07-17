@@ -1067,7 +1067,7 @@
 
 
   <footer>
-    <p>&copy; Hak Cipta Terpelihara 2025 ecardrsvp.online</p>
+    <p>Hak Cipta Terpelihara &copy; 2025 ecardrsvp.online</p>
   </footer>
 
   <script>
@@ -1079,3 +1079,98 @@
   
 </body>
 </html>
+
+
+
+<!-- HEADER + TOGGLE BUTTON -->
+<header>
+  <div class="logo">Kad RSVP</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div id="menu" class="menu">
+    <a href="#" onclick="showSection('design')">🎨 Design Kad</a>
+    <a href="#" onclick="showSection('payment')">💰 Seksyen Bayaran</a>
+    <a href="#" onclick="showSection('form')">📝 Borang Maklumat</a>
+  </div>
+</header>
+
+<!-- MAIN SECTIONS -->
+<main>
+  <!-- DESIGN SECTION -->
+  <section id="design-section" class="section">
+    <h2>Senarai Design Kad</h2>
+    <div class="card-container">
+      <!-- Senarai 100 kad anda di sini -->
+      <!-- ... dari A1 ke A69 seperti HTML anda -->
+    </div>
+  </section>
+
+  <!-- PAYMENT SECTION -->
+  <section id="payment-section" class="section" style="display:none">
+    <h2>Bayaran</h2>
+    <p>Sila buat bayaran ke akaun berikut:</p>
+    <ul>
+      <li>Bank: Maybank</li>
+      <li>No Akaun: 1234567890</li>
+      <li>Nama: ABC Enterprise</li>
+    </ul>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section id="form-section" class="section" style="display:none">
+    <h2>Borang Maklumat</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSft4XXXXX/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Memuatkan…</iframe>
+  </section>
+</main>
+
+<!-- SCRIPT TO TOGGLE -->
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show-menu");
+  }
+
+  function showSection(id) {
+    const sections = ["design", "payment", "form"];
+    sections.forEach(sec => {
+      const el = document.getElementById(`${sec}-section`);
+      if (el) el.style.display = (sec === id) ? "block" : "none";
+    });
+    document.getElementById("menu").classList.remove("show-menu");
+  }
+</script>
+
+<!-- STYLE -->
+<style>
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+  }
+  .menu.show-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu a {
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #eee;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+  }
+  .card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+</style>
+
