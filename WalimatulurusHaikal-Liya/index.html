@@ -67,9 +67,17 @@
       width: 100%;
       max-width: 420px;
     }
-    .hidden-section {
-      display: none;
-    }
+.hidden-section {
+  /* styling popup */
+  display: none;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.hidden-section.show {
+  transform: translateY(0);
+  opacity: 1;
+}
   </style>
 </head>
 <body>
