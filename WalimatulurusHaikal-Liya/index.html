@@ -1421,58 +1421,28 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
 
 <!-- ✅ JavaScript -->
 <script>
-function toggleSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  const overlay = document.getElementById("popupOverlay");
-  const popupContent = document.getElementById("popupContent");
+let currentVisibleSection = null;
 
-  if (!section || !overlay || !popupContent) return;
+function toggleSection(id) {
+  const section = document.getElementById(id);
+  const mainContent = document.getElementById('main-content');
 
-  const current = popupContent.getAttribute("data-current");
-
-  // Jika seksyen sama sedang dipaparkan → tutup
-  if (current === sectionId) {
-    closePopup();
+  if (currentVisibleSection === id) {
+    section.style.display = 'none';
+    mainContent.style.display = 'block';
+    currentVisibleSection = null;
     return;
   }
 
-  // Clone kandungan section & buang h2 asal
-  const cloned = section.cloneNode(true);
-  const h2 = cloned.querySelector("h2");
-  if (h2) h2.remove();
+  const allSections = document.querySelectorAll('.hidden-section');
+  allSections.forEach(sec => sec.style.display = 'none');
 
-  // Tambah semula satu tajuk sahaja
-    popupContent.innerHTML = `
-      <div style="padding-bottom: 10px; padding-top: 20px;">
-        <h2>${section.querySelector('h2')?.innerHTML || ''}</h2>
-        ${cloned.innerHTML}
-      </div>
-    `;
+  section.style.display = 'block';
+  mainContent.style.display = 'none';
 
-  popupContent.setAttribute("data-current", sectionId);
-  overlay.style.display = "flex";
-  document.body.style.overflow = 'hidden';
-
-    // Sembunyikan main-content jika popup dibuka
-    document.getElementById("main-content").style.display = "none";
-  }  
-
-function closePopup() {
-  const overlay = document.getElementById("popupOverlay");
-  const popupContent = document.getElementById("popupContent");
-
-  if (overlay && popupContent) {
-    overlay.style.display = "none";
-    popupContent.innerHTML = "";
-    popupContent.removeAttribute("data-current");
-
-      // Paparkan semula main-content apabila popup ditutup
-      document.getElementById("main-content").style.display = "block";
-      document.body.style.overflow = 'auto';
-    }
-  }
-
-    
+  currentVisibleSection = id;
+}
+  
 function copyRek() {
     const text = document.getElementById("rek").innerText;
     navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
