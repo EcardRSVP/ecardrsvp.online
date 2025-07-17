@@ -3,90 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eCard RSVP - Pilih Design Kad</title>
+  <title>ecardrsvp.online</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
+  body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background: #fefefe;
     }
-    header, footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: #fff;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      margin: 0.5em 0;
-    }
-    .card-container {
+
+    header {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 2rem;
-      gap: 2rem;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      width: 300px;
-      padding: 1rem;
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .preview { background-color: #4caf50; }
-    .preview:hover { background-color: #45a049; }
-    .order { background-color: #ff9800; }
-    .order:hover { background-color: #fb8c00; }
-    .pay { background-color: #2196f3; }
-    .pay:hover { background-color: #1976d2; }
-    .form { background-color: #9c27b0; }
-    .form:hover { background-color: #7b1fa2; }
-    .payment-section {
-      padding: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
       background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .menu-btn {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .pakej-section {
+      padding: 2rem;
       text-align: center;
     }
-    .payment-section img.qr {
-      width: 200px;
+
+    .pakej {
       margin: 1rem auto;
-      display: block;
+      padding: 1rem;
+      max-width: 600px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
-    @media (max-width: 768px) {
-      .card-container {
-        flex-direction: column;
-        align-items: center;
-      }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      z-index: 999;
+    }
+
+    .menu a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu a:last-child {
+      border-bottom: none;
+    }
+
+    .show-menu {
+      display: flex;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f1f1f1;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 1rem 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>PAKEJ RSVP (LINK)</h1>
-  </header>
+
+<header>
+  <div class="logo">RSVP (LINK)</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div id="menu" class="menu">
+    <a href="#design">Lihat Design (Versi Kad)</a>
+    <a href="#hubungi">Hubungi Kami</a>
+  </div>
+</header>
+
+<section class="pakej-section">
+  <h2>Senarai Pakej</h2>
+  
+  <div class="pakej">
+    <h3>Bronze Package</h3>
+    <p>RM20.99 - RSVP, Contact, Location, Countdown, Musik</p>
+  </div>
+
+  <div class="pakej">
+    <h3>Silver Package</h3>
+    <p>RM 30.99 - RSVP, Money Gift, Wishlist (Boleh Pilih Hadiah Existing), Contact, Location, Countdown, Musik </p>
+  </div>
+
+  <div class="pakej">
+    <h3>Gold Package</h3>
+    <p>R42.99 - RSVP, Money Gift, Wishlist (Hadiah Mengikut Link pilihan anda sendiri), Contact, Location, Countdown, Musik, Free PDF (2 Page/Saiz A6)</p>
+  </div>
+  
 
   <main class="card-container">
     <!-- Kad 1 -->
