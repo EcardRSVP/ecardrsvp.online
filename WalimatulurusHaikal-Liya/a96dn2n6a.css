@@ -677,6 +677,7 @@ hr {
   color: green;
 }
 
-.show-popup {
+/* ✅ Tukar dari .show-popup → .show */
+#submit-popup.show {
   bottom: 0;
 }
