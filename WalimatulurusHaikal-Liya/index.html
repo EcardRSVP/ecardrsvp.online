@@ -10,11 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Estonia&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> <!-- ✅ Tambahan ini -->
-
-
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="a96dn2n6a.css" />
   
-  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="a96dn2n6a.css" />
   <style>
       body {
       color: black;
@@ -50,6 +48,24 @@
       border: none;
       border-radius: 25px;
       cursor: pointer;
+    }
+     .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      display: none;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-y: auto;
+      padding: 30px 20px;
+    }
+    .popup-section {
+      width: 100%;
+      max-width: 420px;
     }
     .hidden-section {
       display: none;
@@ -1373,6 +1389,35 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
   </div>
 </div>
 
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  .popup-section {
+    max-width: 390px;
+    width: 100%;
+    padding: 20px;
+    color: black;
+  }
+
+  .popup-section h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+</style>          
+
 
 <!-- ✅ JavaScript -->
 <script>
@@ -1397,19 +1442,20 @@ function toggleSection(sectionId) {
   if (h2) h2.remove();
 
   // Tambah semula satu tajuk sahaja
-  popupContent.innerHTML = `
-    <div style="padding-bottom: 10px; padding-top: 70px;">
-      <h2 style="margin-bottom: 12px; text-align: center; font-weight: bold;">
-        ${section.querySelector('h2')?.innerHTML || ''}
-      </h2>
-      ${cloned.innerHTML}
-    </div>
-  `;
+    popupContent.innerHTML = `
+      <div style="padding-bottom: 10px; padding-top: 20px;">
+        <h2>${section.querySelector('h2')?.innerHTML || ''}</h2>
+        ${cloned.innerHTML}
+      </div>
+    `;
 
   popupContent.setAttribute("data-current", sectionId);
   overlay.style.display = "flex";
   document.body.style.overflow = 'hidden';
-}
+
+    // Sembunyikan main-content jika popup dibuka
+    document.getElementById("main-content").style.display = "none";
+  }  
 
 function closePopup() {
   const overlay = document.getElementById("popupOverlay");
@@ -1419,10 +1465,14 @@ function closePopup() {
     overlay.style.display = "none";
     popupContent.innerHTML = "";
     popupContent.removeAttribute("data-current");
-    document.body.style.overflow = 'auto';
-  }
-}
 
+      // Paparkan semula main-content apabila popup ditutup
+      document.getElementById("main-content").style.display = "block";
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+    
 function copyRek() {
     const text = document.getElementById("rek").innerText;
     navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
