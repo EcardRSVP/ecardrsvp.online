@@ -107,11 +107,11 @@ function rsvpSuccessHandler() {
     if (form) form.reset();
 
     if (popup) {
-      popup.classList.add("show-popup");
+      popup.classList.add("show");
       console.log("✅ Popup muncul");
 
       setTimeout(() => {
-        popup.classList.remove("show-popup");
+        popup.classList.remove("show");
       }, 5000);
     } else {
       console.warn("⚠️ Elemen #submit-popup tidak dijumpai.");
