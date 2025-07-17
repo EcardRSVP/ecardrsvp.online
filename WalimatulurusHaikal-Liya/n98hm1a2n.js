@@ -133,3 +133,40 @@ function toggleSection(id) {
     target.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+// SENARAI ID popup & ikon yang berkaitan
+const popupMap = {
+  RSVP: "popup-RSVP",
+  MoneyGift: "popup-MoneyGift",
+  Wishlist: "popup-Wishlist",
+  Contact: "popup-Contact",
+  Location: "popup-Location"
+};
+
+let popupTerbuka = null;
+
+function togglePopup(nama) {
+  const idPopup = popupMap[nama];
+  const popup = document.getElementById(idPopup);
+  const mainContent = document.getElementById("main-content");
+
+  if (!popup || !mainContent) return;
+
+  // Kalau popup sekarang terbuka dan ditekan semula → tutup
+  if (popupTerbuka === idPopup) {
+    popup.style.display = "none";
+    mainContent.style.display = "block";
+    popupTerbuka = null;
+  } else {
+    // Tutup semua popup lain dulu
+    Object.values(popupMap).forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = "none";
+    });
+
+    // Buka popup yang diminta
+    popup.style.display = "flex";
+    mainContent.style.display = "none";
+    popupTerbuka = idPopup;
+  }
+}
