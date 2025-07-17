@@ -67,15 +67,9 @@
       width: 100%;
       max-width: 420px;
     }
-.hidden-section {
-  background-color: white;
-  margin: 30px auto;
-  padding: 30px 20px;
-  display: inline-block;        /* ✅ supaya ikut saiz kandungan */
-  max-width: 90%;               /* ✅ hadkan supaya tak terlalu lebar */
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+    .hidden-section {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -1427,36 +1421,58 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
 
 <!-- ✅ JavaScript -->
 <script>
-let currentVisibleSection = null;
+function toggleSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  const overlay = document.getElementById("popupOverlay");
+  const popupContent = document.getElementById("popupContent");
 
-function toggleSection(id) {
-  const section = document.getElementById(id);
-  const mainContent = document.getElementById('main-content');
+  if (!section || !overlay || !popupContent) return;
 
-  if (!section) {
-    console.warn("Seksyen ID tidak wujud:", id);
+  const current = popupContent.getAttribute("data-current");
+
+  // Jika seksyen sama sedang dipaparkan → tutup
+  if (current === sectionId) {
+    closePopup();
     return;
   }
 
-  // Jika tekan ikon yang sama → tutup seksyen dan kembali ke main
-  if (currentVisibleSection === id) {
-    section.style.display = 'none';
-    mainContent.style.display = 'block';
-    currentVisibleSection = null;
-  } else {
-    // Sembunyikan semua section
-    document.querySelectorAll('.hidden-section').forEach(sec => {
-      sec.style.display = 'none';
-    });
+  // Clone kandungan section & buang h2 asal
+  const cloned = section.cloneNode(true);
+  const h2 = cloned.querySelector("h2");
+  if (h2) h2.remove();
 
-    // Tunjuk seksyen yang dipilih
-    section.style.display = 'block';
-    mainContent.style.display = 'none';
-    currentVisibleSection = id;
+  // Tambah semula satu tajuk sahaja
+    popupContent.innerHTML = `
+      <div style="padding-bottom: 10px; padding-top: 20px;">
+        <h2>${section.querySelector('h2')?.innerHTML || ''}</h2>
+        ${cloned.innerHTML}
+      </div>
+    `;
+
+  popupContent.setAttribute("data-current", sectionId);
+  overlay.style.display = "flex";
+  document.body.style.overflow = 'hidden';
+
+    // Sembunyikan main-content jika popup dibuka
+    document.getElementById("main-content").style.display = "none";
+  }  
+
+function closePopup() {
+  const overlay = document.getElementById("popupOverlay");
+  const popupContent = document.getElementById("popupContent");
+
+  if (overlay && popupContent) {
+    overlay.style.display = "none";
+    popupContent.innerHTML = "";
+    popupContent.removeAttribute("data-current");
+
+      // Paparkan semula main-content apabila popup ditutup
+      document.getElementById("main-content").style.display = "block";
+      document.body.style.overflow = 'auto';
+    }
   }
-}
 
-  
+    
 function copyRek() {
     const text = document.getElementById("rek").innerText;
     navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
@@ -1465,7 +1481,7 @@ function copyRek() {
   function copyToClipboard(elementId) {
     const text = document.getElementById(elementId).innerText;
     navigator.clipboard.writeText(text).then(() => {
-      alert("Disalin");
+      alert("Disalin ke papan klip!");
     }).catch(err => {
       alert("Gagal menyalin: " + err);
     });
@@ -1484,6 +1500,12 @@ function copyRek() {
     }
   });
 </script>
+
+</body>
+</html>
+
+
+
 
       
 <!-- ✅ SCRIPT UNTUK KAWAL PAPARAN + SALJI -->

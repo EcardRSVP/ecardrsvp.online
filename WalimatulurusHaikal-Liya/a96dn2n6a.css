@@ -684,14 +684,3 @@ hr {
 #submit-popup.show {
   top: 0;
 }
-
-.hidden-section {
-  background-color: white;
-  margin: 30px auto;
-  padding: 30px 20px;
-  display: inline-block;        /* ✅ supaya ikut saiz kandungan */
-  max-width: 90%;               /* ✅ hadkan supaya tak terlalu lebar */
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
