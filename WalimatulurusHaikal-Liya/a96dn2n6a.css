@@ -565,13 +565,15 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* buat main content gelap */
-  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
   display: none;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  z-index: 99999;
+  overflow-y: auto;
 }
 
 .popup-section {
