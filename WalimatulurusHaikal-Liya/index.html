@@ -1446,10 +1446,12 @@ function toggleSection(id) {
 
   const sudah = (currentVisibleSection === id);
 
-  // sembunyi semua
+  // ✅ Sembunyi semua
   all.forEach(sec => {
-    sec.style.display = 'none';
-    sec.classList.remove('show');
+    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
+    setTimeout(() => {
+      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
+    }, 300); // ikut masa transition CSS
   });
 
   if (sudah) {
