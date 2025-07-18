@@ -170,6 +170,19 @@
 background: transparent;
 }    
 
+#design-section .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+} 
+    
+#design-section .card img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
 @media (max-width: 600px) {
   header {
     flex-direction: column;
