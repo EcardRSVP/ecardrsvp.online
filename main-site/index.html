@@ -201,7 +201,7 @@
     
 .pakej-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -253,12 +253,18 @@ background: transparent;
     width: 100%;
   }
 
-  .pakej {
-  padding: 1rem;
+.pakej {
   background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
   border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: left;
+
+  /* ✅ Ini penting supaya kotak sama tinggi */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
   
   .btn-whatsapp,
