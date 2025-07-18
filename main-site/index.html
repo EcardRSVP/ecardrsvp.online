@@ -304,6 +304,38 @@ background: transparent;
     text-align: center;
   }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
     
   @media (min-width: 992px) {
     #design-section .card-container {
@@ -943,6 +975,13 @@ background: transparent;
     <p>Hak Cipta Terpelihara &copy; 2025 ecardrsvp.online</p>
   </footer>
 
+    <!-- ✅ Modal Papar Gambar -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+    
 <!-- ✅ SCRIPT -->
   <script>
     let currentVisibleSection = null;
@@ -980,6 +1019,32 @@ background: transparent;
   }
   </script>
 
+    <script>
+  function openModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+
+<script>
+  function openModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+    
   <!-- ✅ STYLE -->
   <style>
     .hidden-section {
