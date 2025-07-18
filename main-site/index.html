@@ -20,7 +20,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffeef3;
+      background-color: #ffeef3 !important;
     }
 
     header {
@@ -171,11 +171,12 @@ background: transparent;
 }    
 
 #design-section .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 1rem;
-} 
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+  gap: 20px !important;
+  padding: 1rem !important;
+}
+
     
 #design-section .card {
   background: white;
@@ -187,7 +188,7 @@ background: transparent;
     
 #design-section .card img {
   width: 100%;
-  max-width: 120px;
+  max-width: 100px;
   height: auto;
   margin: 0 auto 10px;
   display: block;
@@ -217,6 +218,11 @@ background: transparent;
   }
 }
     
+  @media (min-width: 992px) {
+    #design-section .card-container {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }    
   </style>
 </head>
 <body>
@@ -237,7 +243,7 @@ background: transparent;
 
   <!-- ✅ Kandungan Utama -->
   <div id="main-content">
-    <section class="pakej-section">
+    <div class="pakej-section">
       <h2>Senarai Pakej</h2>
   
   <div class="pakej">
@@ -281,623 +287,622 @@ background: transparent;
   <!-- ✅ Seksyen Toggle (disembunyikan dulu) -->
   <section id="design-section" class="hidden-section">
     <h2>Design Kad</h2>
+    
     <div class="card-container">
-  
-  <main class="card-container">
     <!-- Kad 1 -->
-    <section class="card">
+    <div class="card">
       <img src="B1.png" alt="B1">
       <h2>B1</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 2 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B2">
       <h2>B2</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 3 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B3">
       <h2>B3</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 4 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B4">
       <h2>B4</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 5 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B5">
       <h2>B5</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 6 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B6">
       <h2>B6</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 7 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B7">
       <h2>B7</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 8 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B8">
       <h2>B8</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 9 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B9">
       <h2>B9</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 10 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B10">
       <h2>B10</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 11 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B11">
       <h2>B11</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 12 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B12">
       <h2>B12</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 13 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B13">
       <h2>B13</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 14 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B14">
       <h2>B14</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+   </div>
 
     <!-- Kad 15 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B15">
       <h2>B15</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 16 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B16">
       <h2>B16</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 17 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B17">
       <h2>B17</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 18 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B18">
       <h2>B18</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 19 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B19">
       <h2>B19</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 20 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B22">
       <h2>B22</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 21 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B23">
       <h2>B23</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 22 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B24">
       <h2>B24</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 23 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B25">
       <h2>B25</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 24 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B28">
       <h2>B28</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 24 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B29">
       <h2>B29</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 26 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B30">
       <h2>B30</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 27 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B31">
       <h2>B31</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 28 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B32">
       <h2>B32</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 29 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B33">
       <h2>B33</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 30 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B35">
       <h2>B35</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 31 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B38">
       <h2>B38</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 32 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B39">
       <h2>B39</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 33 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B40">
       <h2>B40</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 34 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B41">
       <h2>B41</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 35 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B42">
       <h2>B42</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>    
+    </div>    
 
     <!-- Kad 36 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B43">
       <h2>B43</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 37 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B44">
       <h2>B44</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 38 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B45">
       <h2>B45</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 37 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B46">
       <h2>B46</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 38 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B47">
       <h2>B47</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 39 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B48">
       <h2>B48</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 40 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B49">
       <h2>B49</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 41 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B53">
       <h2>B53</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 42 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B54">
       <h2>B54</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 43 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B56">
       <h2>B56/h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 44 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B61">
       <h2>B61</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 45 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B63">
       <h2>B63</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 46 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="B64">
       <h2>B64</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 47 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A1">
       <h2>A1</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 48 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A2">
       <h2>A2</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 49 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A2">
       <h2>A3</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 50 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A4">
       <h2>A4</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
      <!-- Kad 51 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A5">
       <h2>A5</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section> 
+    </div> 
 
     <!-- Kad 52 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A6">
       <h2>A6</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 53 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A7">
       <h2>A7</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 54 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A9">
       <h2>A9</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 55 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A10">
       <h2>A10</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 56 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A11">
       <h2>A11</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 57 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A12">
       <h2>A12</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 58 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A13">
       <h2>A13</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 59 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A14">
       <h2>A14</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 60 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A15">
       <h2>A15</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 61 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A16">
       <h2>A16</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 62 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A17">
       <h2>A17</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 63 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A18">
       <h2>A18</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 64 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A19">
       <h2>A19</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 65 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A20">
       <h2>A20</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 66 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A21">
       <h2>A21</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 67 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A23">
       <h2>A23</h2>
       <div class="actions">
@@ -906,302 +911,301 @@ background: transparent;
     </section
 
     <!-- Kad 68 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A25">
       <h2>A25</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 69 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A26">
       <h2>A26</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 70 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A27">
       <h2>A27</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 71 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A29">
       <h2>A29</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 72 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A30">
       <h2>A30</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 73 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A31">
       <h2>A31</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 74 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A32">
       <h2>A32</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 75 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A33">
       <h2>A33</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 76 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A34">
       <h2>A34</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 77 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A35">
       <h2>A35</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 78 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A36">
       <h2>A36</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 79 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A37">
       <h2>A37</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 80 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A38">
       <h2>A38</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 81 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A39">
       <h2>A39</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
     
     <!-- Kad 82 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A40">
       <h2>A40</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>  
+    </div>  
 
     <!-- Kad 83 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A41">
       <h2>A41</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 84 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A42">
       <h2>A42</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 85 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A43">
       <h2>A43</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 86 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A44">
       <h2>A44</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 87 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A45">
       <h2>A45</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 88 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A46">
       <h2>A46</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 89 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A47">
       <h2>A47</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 90 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A52">
       <h2>A52</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 91 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A53">
       <h2>A53</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 92 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A54">
       <h2>A54</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 93 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A56">
       <h2>A56</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 94 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A57">
       <h2>A57</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 95 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A60">
       <h2>A60</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 96 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A61">
       <h2>A61</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 97 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A62">
       <h2>A62</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 98 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A63">
       <h2>A63</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 99 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A65">
       <h2>A65</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
+    </div>
 
     <!-- Kad 100 -->
-    <section class="card">
+    <div class="card">
       <img src="images/design1.jpg" alt="A69">
       <h2>A69</h2>
       <div class="actions">
         <a href="https://ecardrsvp.online/HaylaNelissa/" target="_blank" class="btn preview">Preview</a>
       </div>
-    </section>
-  </main>
+    </div>
 
     </div>
 </section>
