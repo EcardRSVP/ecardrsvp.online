@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ecardrsvp.online</title>
+
+  <!-- 🔹 Favicon (Logo kecil di tab browser) -->
+  <link rel="icon" href="Nabilah.png" type="image/png" />
+
+  <!-- 🔹 Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="style.css" />
   <style>
   body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fefefe;
+      background: #ffeef3;
     }
 
     header {
@@ -82,16 +89,30 @@
       background: #f1f1f1;
     }
 
-    .whatsapp-btn {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 1rem 0;
-    }
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.btn-whatsapp::before {
+  content: "";
+  background-image: url('whatsapp-icon.svg'); /* atau .png */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
 
     .btn.pay {
   display: inline-block;
@@ -104,6 +125,30 @@
   font-weight: bold;
   font-size: 16px;
 }
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    top: 60px;
+    right: 10px;
+    width: 100%;
+  }
+
+  .pakej {
+    margin: 1rem 0.5rem;
+  }
+
+  .btn-whatsapp,
+  .btn.pay {
+    width: 100%;
+    text-align: center;
+  }
+}
+    
   </style>
 </head>
 <body>
@@ -118,7 +163,7 @@
 </a>
       <a href="#" onclick="toggleSection('design-section')">Design Kad</a>
       <a href="#" onclick="toggleSection('payment-section')">Bayaran</a>
-      <a href="#" onclick="toggleSection('form-section')">Borang </a>
+      <a href="#" onclick="toggleSection('form-section')">Borang</a>
     </div>
   </header>
 
