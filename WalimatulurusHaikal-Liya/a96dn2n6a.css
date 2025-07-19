@@ -589,11 +589,16 @@ hr {
 }
 
 .popup-section {
+  width: 100%;
+  max-width: 390px;
+  margin: auto;
   padding: 20px;
   background-color: white;
-  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   box-sizing: border-box;
 }
+
 
 @media (min-width: 768px) {
   .popup-overlay {
