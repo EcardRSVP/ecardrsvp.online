@@ -128,7 +128,7 @@ body, html {
   margin: 0 auto;           /* ✅ center horizontal */
   padding: 20px;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 img {
@@ -577,7 +577,9 @@ hr {
   background: white;
   z-index: 999;
   box-sizing: border-box;
-  padding-bottom: 80px; /* supaya cukup ruang bawah */
+  padding: 20px;
+  overflow-y: auto;           /* ✅ Scroll kalau kandungan panjang */
+  max-height: calc(100vh - 80px); /* ✅ Tak sentuh footer (footer height = 60px + margin) */
 }
 
 .popup-overlay,
@@ -598,6 +600,7 @@ hr {
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-bottom: 80px; /* dah control posisi via overlay */
+  padding-bottom: 100px; /* supaya ada ruang sebelum footer fixed */
 }
 
 
