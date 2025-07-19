@@ -379,16 +379,8 @@ background: transparent;
 <div class="logo">
   <img src="NNA.png" alt="Logo" style="height: 32px; vertical-align: middle; margin-right: 8px;">
   RSVP (LINK)
-</div>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    <div id="menu" class="menu">
-<a href="#" onclick="showMainContent()">
-  <img src="https://img.icons8.com/ios-filled/24/000000/home.png" alt="Home" style="width: 24px; height: 24px;">
-</a>
-      <a href="#" onclick="toggleSection('payment-section')">Bayaran</a>
-      <a href="#" onclick="toggleSection('form-section')">Borang</a>
-    </div>
-  </header>
+  </div>
+</header>
 
 <section class="top-links-bar">
   <a href="#payment-section" class="bar-link">
@@ -1025,42 +1017,6 @@ background: transparent;
 
     
 <!-- ✅ SCRIPT -->
-  <script>
-    let currentVisibleSection = null;
-
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("show-menu");
-    }
-
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      const mainContent = document.getElementById("main-content");
-
-      if (!section) return;
-
-      if (currentVisibleSection === id) {
-        section.style.display = "none";
-        if (mainContent) mainContent.style.display = "block";
-        currentVisibleSection = null;
-      } else {
-        document.querySelectorAll('.hidden-section').forEach(sec => {
-          sec.style.display = 'none';
-        });
-        section.style.display = "block";
-        if (mainContent) mainContent.style.display = "none";
-        currentVisibleSection = id;
-      }
-    }
-      function showMainContent() {
-    document.querySelectorAll('.hidden-section').forEach(sec => {
-      sec.style.display = 'none';
-    });
-    const mainContent = document.getElementById("main-content");
-    if (mainContent) mainContent.style.display = "block";
-    currentVisibleSection = null;
-  }
-  </script>
-
     <script>
   function openModal(src) {
     const modal = document.getElementById("imageModal");
