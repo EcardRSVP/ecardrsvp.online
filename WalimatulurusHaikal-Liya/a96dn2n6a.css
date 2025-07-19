@@ -601,6 +601,10 @@ hr {
   box-sizing: border-box;
 }
 
+.popup-overlay,
+.popup-section {
+  box-sizing: border-box;
+}
 
 @media (min-width: 768px) {
   .popup-overlay {
