@@ -567,26 +567,31 @@ hr {
 
 /* ✅ Popup Styling */
 .popup-overlay {
-  display: none;
-  position: relative; /* atau buang */
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   max-width: 390px;
   width: 100%;
   background: white;
-  z-index: 1; /* cukup */
+  z-index: 999;
   box-sizing: border-box;
   padding: 20px;
   overflow-y: auto;
-  max-height: none; /* tiada had ketinggian */
+  /* UBAH INI ↓↓↓ */
+  max-height: calc(100dvh - 80px); /* Elak tutup footer */
+  padding-bottom: 80px; /* ruang bawah selamat */
 }
 
 
 .popup-overlay,
 .popup-section {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 390px;
   width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .popup-overlay.active {
@@ -598,7 +603,9 @@ hr {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 80px; /* dah control posisi via overlay */
+  max-height: auto;         /* ikut kandungan */
+  overflow-y: visible;      /* elak scrollbar jika pendek */
+  margin-bottom: 40px; /* dah control posisi via overlay */
 }
 
 
