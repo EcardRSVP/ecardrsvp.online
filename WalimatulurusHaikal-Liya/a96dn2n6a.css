@@ -568,17 +568,19 @@ hr {
 /* ✅ Popup Styling */
 .popup-overlay {
   position: fixed;
-  left: 50%;
-  bottom: 60px; /* tinggi footer */
-  transform: translateX(-50%);
+  bottom: 60px; /* atas footer */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 390px;
-  margin: 0 auto;
   padding: 0;
   background: transparent;
   box-sizing: border-box;
   z-index: 999;
 }
+
 
 .popup-overlay.active {
   display: block;
