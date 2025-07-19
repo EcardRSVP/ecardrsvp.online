@@ -150,8 +150,6 @@ h1, h2, p {
     font-size: 0.95rem;
   }
 
-
-
   .footer {
     flex-wrap: wrap;
   }
@@ -567,35 +565,34 @@ hr {
   padding: 2px 8px;
 }
 
+/* ✅ Popup Styling */
 .popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
   display: none;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 60px;
-  z-index: 99999;
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+  max-height: 80vh;
   overflow-y: auto;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.popup-overlay.active {
+  display: block;
 }
 
 .popup-section {
-  background-color: white;
-  width: 100%;
-  max-width: 390px;
   padding: 20px;
+  max-width: 390px;
+  margin: auto;
+  background-color: white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  padding-bottom: calc(100px + env(safe-area-inset-bottom));
-  margin: 0 auto;                     /* Center horizontal */
 }
+
 
 @media (min-width: 768px) {
   .popup-section {
@@ -612,6 +609,11 @@ hr {
   }
 }
 
+@media (max-width: 768px) {
+  .footer {
+    flex-wrap: wrap;
+  }
+}
 
 
   .countdown {
@@ -690,3 +692,15 @@ hr {
 #submit-popup.show {
   top: 0;
 }
+
+/* ✅ Slide up effect */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}  
