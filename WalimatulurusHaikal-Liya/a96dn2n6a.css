@@ -565,24 +565,16 @@ hr {
   padding: 2px 8px;
 }
 
-/* ✅ Popup Styling */
 .popup-overlay {
-  display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  max-width: 390px;
+  display: none;
+  position: relative;             /* ✅ Gunakan relative (ikut flow biasa) */
+  background: transparent;        /* ✅ Tiada blok latar */
   width: 100%;
-  background: transparent;
+  max-width: 390px;
+  padding: 20px;
   z-index: 999;
   box-sizing: border-box;
-  padding: 20px;
-  overflow-y: auto;
-  /* UBAH INI ↓↓↓ */
-  max-height: calc(100dvh - 80px); /* Elak tutup footer */
-  padding-bottom: 80px; /* ruang bawah selamat */
+  margin: 0 auto;                 /* ✅ Center horizontal */
 }
 
 
