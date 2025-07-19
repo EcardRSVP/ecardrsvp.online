@@ -604,7 +604,7 @@ hr {
 }}
 
 .popup-overlay.show {
-  display: flex; /* atau block jika tak nak flex layout */
+  display: block; /* atau flex jika tak nak flex layout */
 }
 
 @media (min-width: 768px) {
