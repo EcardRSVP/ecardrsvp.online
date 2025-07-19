@@ -1388,6 +1388,37 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
   </div>
 </div>
 
+<!-- Semua popup-section habis di sini -->
+
+<!-- TAMBAH SCRIPT INI DI SINI 👇 -->
+<script>
+function togglePopup(id) {
+  const allPopups = document.querySelectorAll('.popup-overlay');
+  allPopups.forEach(p => p.classList.remove('show'));
+
+  const popup = document.getElementById('popup-' + id);
+  if (popup) {
+    popup.classList.add('show');
+  }
+
+  const mainContent = document.getElementById('main-content');
+  if (mainContent) {
+    mainContent.style.display = 'none';
+  }
+}
+
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('popup-overlay')) {
+    e.target.classList.remove('show');
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+      mainContent.style.display = 'block';
+    }
+  }
+});
+</script>
+</body>
+</html>
 
 <!-- ✅ POPUP OVERLAY -->
 <div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
