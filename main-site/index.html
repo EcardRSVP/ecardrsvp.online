@@ -239,6 +239,44 @@
   margin-top: 2rem;
 }
 
+.top-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background: #fff;
+}
+
+.top-link-box {
+  background-color: #fa8231;
+  color: white;
+  text-decoration: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.top-link-box i {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.top-link-box span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.top-link-box:hover {
+  background-color: #d76a1e;
+  transform: translateY(-3px);
+}
+    
 #main-content {
 background: transparent;
 }    
