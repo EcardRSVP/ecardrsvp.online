@@ -565,25 +565,31 @@ hr {
   padding: 2px 8px;
 }
 
+/* ✅ Popup Styling */
 .popup-overlay {
-  display: none;
-  position: relative;             /* ✅ Gunakan relative (ikut flow biasa) */
-  background: transparent;        /* ✅ Tiada blok latar */
-  width: 100%;
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   max-width: 390px;
-  padding: 20px;
+  width: 100%;
+  background: white;
   z-index: 999;
   box-sizing: border-box;
-  margin: 0 auto;                 /* ✅ Center horizontal */
+  padding: 20px;
+  overflow-y: auto;           /* ✅ Scroll kalau kandungan panjang */
+  max-height: calc(100dvh - 100px); /* ✅ responsive, elak tindih footer */
+  padding-bottom: 100px; /* ✅ ruang lebih supaya footer tak kena */
 }
-
 
 .popup-overlay,
 .popup-section {
-  margin-left: auto;
-  margin-right: auto;
   max-width: 390px;
   width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .popup-overlay.active {
@@ -595,9 +601,7 @@ hr {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-height: auto;         /* ikut kandungan */
-  overflow-y: visible;      /* elak scrollbar jika pendek */
-  margin-bottom: 40px; /* dah control posisi via overlay */
+  margin-bottom: 80px; /* dah control posisi via overlay */
 }
 
 
