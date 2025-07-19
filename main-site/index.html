@@ -362,6 +362,17 @@ background: transparent;
     </div>
   </header>
 
+<!-- ✅ Bahagian Butang di Atas Laman (misalnya selepas header atau sebelum kad) -->
+<section class="button-section" style="text-align: center; padding: 2rem;">
+  <a href="#payment-section" class="btn pay">
+    <i class="fas fa-shopping-bag"></i> Pembayaran di Shopee
+  </a>
+
+  <a href="#form-section" class="btn form">
+    <i class="fas fa-file-alt"></i> Borang Pengisian Maklumat
+  </a>
+</section>
+
   <!-- ✅ Kandungan Utama -->
   <div id="main-content">
     <div class="pakej-section">
@@ -935,12 +946,14 @@ background: transparent;
   </section>
 </div>
 
-<section id="payment-section" class="hidden-section">
-  <h2>Bayaran</h2>
+
+    <!-- ✅ Seksyen Bayaran Shopee -->
+<section id="payment-section" style="padding: 2rem; background: #fff;">
+  <h2>Pembayaran</h2>
   <p>Sila klik butang di bawah untuk membuat bayaran melalui Shopee:</p>
 
   <a href="https://s.shopee.com.my/LcDFhPHpQ" target="_blank" class="btn pay">
-    Bayar di Shopee
+    <i class="fas fa-shopping-bag"></i> Bayar di Shopee
   </a>
 
   <p style="margin-top: 15px;">
@@ -948,19 +961,11 @@ background: transparent;
   </p>
 </section>
 
-<!-- ✅ Bayaran Shopee Section -->
-<section id="payment-section" class="hidden-section">
-  <h2>Bayaran</h2>
-  <p>Sila klik butang di bawah untuk membuat bayaran melalui Shopee:</p>
-  <a href="https://s.shopee.com.my/LcDFhPHpQ" target="_blank" class="btn pay">Bayar di Shopee</a>
-  <p style="margin-top: 15px;">Sila isi maklumat di google form selepas membuat pembayaran di Shopee</p>
-</section>
-
-<!-- ✅ Google Form Borang Tempahan -->
-<section id="form-section" class="hidden-section">
+<!-- ✅ Seksyen Borang Tempahan -->
+<section id="form-section" style="padding: 2rem; background: #fff;">
   <h2>Borang Tempahan</h2>
   <iframe 
-    src="https://docs.google.com/forms/d/e/1FAIpQLSfpZGSwL6C_UVm72VK_56pV8cSr8yOAqgPr_EQw4uFJfljY7w/viewform?embedded=true" 
+    src="https://forms.gle/Gw8ZdpYG5oWkdGwv5" 
     width="100%" 
     height="800" 
     frameborder="0" 
@@ -970,21 +975,13 @@ background: transparent;
   </iframe>
 </section>
 
+    
+
 
 <!-- Butang WhatsApp -->
 <a href="https://wa.me/601157265723" class="whatsapp-float" target="_blank">
   <i class="fab fa-whatsapp"></i> WhatsApp Kami
 </a>
-
-<!-- Butang Shopee -->
-<a href="https://s.shopee.com.my/LcDFhPHpQ" class="whatsapp-float" target="_blank">
-  <i class="fas fa-shopping-bag"></i> Pembelian di Shopee
-</a>
-
-<!-- Butang Google Form -->
-<a href="https://forms.gle/dj8cUf9EGyqQPVJs9" class="whatsapp-float" target="_blank">
-  <i class="fas fa-file-alt"></i> Isi Maklumat di Google Form
-</a>    
 
   <footer>
     <p>Hak Cipta Terpelihara &copy; 2025 ecardrsvp.online</p>
@@ -1085,5 +1082,8 @@ background: transparent;
     }
   </style>
 
-    
+ html {
+  scroll-behavior: smooth;
+}
+   
 </body>
