@@ -144,6 +144,7 @@ function toggleSection(id) {
     target.classList.add('show');
     target.scrollIntoView({ behavior: 'smooth' });
     seksyenTerbuka = id;
+  } else {
+    console.warn("Seksyen tidak dijumpai:", id);
   }
 }
-
