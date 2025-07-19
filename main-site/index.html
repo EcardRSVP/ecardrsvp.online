@@ -156,7 +156,6 @@
 
 .btn.pay {
   display: inline-block;
-  max-width: 100%;
   padding: 12px 25px;
   background-color: maroon;
   color: white;
@@ -164,8 +163,10 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  white-space: nowrap; /* Elak pecah baris */
+  white-space: nowrap; /* elak pecah baris */
+  max-width: 100%;      /* elak overflow */
 }
+
 
     .package-title {
   font-size: 1.4rem;
@@ -337,8 +338,7 @@ background: transparent;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 } 
-  .btn-whatsapp,
-  .btn.pay {
+  .btn-whatsapp {
     width: 100%;
     text-align: center;
   }
@@ -384,8 +384,9 @@ background: transparent;
 
 @media (max-width: 480px) {
   .btn.pay {
-    font-size: 14px;
-    padding: 10px 20px;
+    display: block;
+    margin: 10px auto; /* Tengah secara auto kiri kanan */
+    text-align: center;
   }
 }
     
