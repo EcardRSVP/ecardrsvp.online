@@ -573,14 +573,22 @@ hr {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 100vw;
+  height: calc(100vh - 60px); /* ✅ Tidak tutup footer */
   max-width: 390px;
   padding: 0;
-  background: transparent;
-  box-sizing: transparent;
+  background: white;
+  box-sizing: border-box;
   z-index: 999;
 }
 
+.popup-overlay,
+.popup-section {
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
 .popup-overlay.active {
   display: block;
@@ -594,10 +602,6 @@ hr {
   margin-bottom: 80px; /* dah control posisi via overlay */
 }
 
-.popup-overlay,
-.popup-section {
-  box-sizing: border-box;
-}
 
 @media (min-width: 768px) {
   .popup-overlay,
