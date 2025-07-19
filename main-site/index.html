@@ -440,8 +440,8 @@ background: transparent;
   <p><i class="fas fa-hand-holding-dollar bw-icon"></i> Money Gift</p>
   <p><i class="fas fa-gift bw-icon"></i> Wishlist (Boleh Pilih Hadiah Existing)</p>
   <p style="text-align: center;">
-    <a href="ContohHadiah1.png" target="_blank" style="font-size: 0.85rem; text-decoration: underline; color: maroon;">
-      ↪ Lihat Contoh
+    <a onclick="bukaModal('ContohHadiah1.png')" style="font-size: 0.85rem; text-decoration: underline; color: maroon; cursor: pointer;">
+      Lihat Contoh
     </a>
   </p>
   <p><i class="fas fa-phone bw-icon"></i> Contact</p>
@@ -451,16 +451,16 @@ background: transparent;
   <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya/" target="_blank" class="btn preview">Preview</a>
 </div>
 
-
-  <div class="pakej">
+<!-- GOLD PACKAGE -->
+<div class="pakej">
   <h3 class="package-title">Gold Package</h3>
   <p class="package-price">RM 40.99</p><br>
   <p><i class="fas fa-envelope-open-text bw-icon"></i> RSVP</p>
   <p><i class="fas fa-hand-holding-dollar bw-icon"></i> Money Gift</p>
   <p><i class="fas fa-gift bw-icon"></i> Wishlist (Hadiah Mengikut Link pilihan anda sendiri)</p>    
   <p style="text-align: center;">
-    <a href="ContohHadiah2.PNG" target="_blank" style="font-size: 0.85rem; text-decoration: underline; color: maroon;">
-      ↪ Lihat Contoh
+    <a onclick="bukaModal('ContohHadiah2.PNG')" style="font-size: 0.85rem; text-decoration: underline; color: maroon; cursor: pointer;">
+      Lihat Contoh
     </a>
   </p>
   <p><i class="fas fa-phone bw-icon"></i> Contact</p>
@@ -469,7 +469,32 @@ background: transparent;
   <p><i class="fas fa-music bw-icon"></i> Musik</p>
   <p><i class="fas fa-file-pdf bw-icon"></i> PDF (2 Page/Saiz A6)</p>
   <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya/" target="_blank" class="btn preview">Preview</a>
-  </div>
+</div>
+
+<!-- MODAL POPUP GAMBAR (Letak sekali sahaja di bawah, luar kad) -->
+<div id="gambarModal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.8);">
+  <span onclick="tutupModal()" style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer;">&times;</span>
+  <img id="imgPopup" style="margin:auto; display:block; max-width:90%; max-height:80%; margin-top:80px; border-radius:10px;">
+</div>
+
+<!-- SCRIPT POPUP -->
+<script>
+  function bukaModal(src) {
+    document.getElementById("gambarModal").style.display = "block";
+    document.getElementById("imgPopup").src = src;
+  }
+
+  function tutupModal() {
+    document.getElementById("gambarModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("gambarModal");
+    if (event.target == modal) {
+      tutupModal();
+    }
+  }
+</script>
     
 </div>
       
