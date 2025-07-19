@@ -145,28 +145,25 @@ const popupMap = {
 
 let popupTerbuka = null;
 
+let popupTerbuka = null;
+
 function togglePopup(nama) {
-  const idPopup = popupMap[nama];
-  const popup = document.getElementById(idPopup);
-  const mainContent = document.getElementById("main-content");
+  const id = `popup-${nama}`;
+  const semuaPopup = document.querySelectorAll('.popup-section');
 
-  if (!popup || !mainContent) return;
-
-  // Kalau popup sekarang terbuka dan ditekan semula → tutup
-  if (popupTerbuka === idPopup) {
-    popup.style.display = "none";
-    mainContent.style.display = "block";
+  if (popupTerbuka === id) {
+    semuaPopup.forEach(p => p.classList.remove('show'));
     popupTerbuka = null;
-  } else {
-    // Tutup semua popup lain dulu
-    Object.values(popupMap).forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.style.display = "none";
-    });
+    return;
+  }
 
-    // Buka popup yang diminta
-    popup.style.display = "flex";
-    mainContent.style.display = "none";
-    popupTerbuka = idPopup;
+  semuaPopup.forEach(p => p.classList.remove('show'));
+
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('show');
+    target.scrollIntoView({ behavior: 'smooth' });
+    popupTerbuka = id;
   }
 }
+
