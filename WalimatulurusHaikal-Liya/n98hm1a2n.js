@@ -145,8 +145,6 @@ const popupMap = {
 
 let popupTerbuka = null;
 
-let popupTerbuka = null;
-
 function togglePopup(nama) {
   const id = `popup-${nama}`;
   const semuaPopup = document.querySelectorAll('.popup-section');
