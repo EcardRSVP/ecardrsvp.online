@@ -155,23 +155,17 @@
 }
 
 .btn.pay {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #ff5c8a; /* boleh tukar ikut tema */
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 25px;
+  background-color: maroon;
   color: white;
-  padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
-  font-size: 1rem;
-  white-space: nowrap;
-  max-width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap; /* Elak pecah baris */
 }
-
-.btn.pay i {
-  font-size: 1.1rem;
-}
-
 
     .package-title {
   font-size: 1.4rem;
@@ -387,6 +381,14 @@ background: transparent;
       grid-template-columns: repeat(3, 1fr) !important;
     }
   }    
+
+@media (max-width: 480px) {
+  .btn.pay {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+    
   </style>
 </head>
 <body>
