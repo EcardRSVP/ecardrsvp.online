@@ -195,7 +195,13 @@ section.doa {
   min-height: auto;
 }
 
+.hidden-section.show {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
 
+  
 /* ✅ RSVP Form Styling */
 form input[type="text"],
 form input[type="number"],
