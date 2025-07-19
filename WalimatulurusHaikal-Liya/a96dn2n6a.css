@@ -570,8 +570,7 @@ hr {
   display: none;
   position: fixed;
   bottom: 70px;
-  left: 0;
-  right: 0;
+  left:50%;
   transform: translateX(-50%);
   margin: 0 auto;
   max-width: 390px;
