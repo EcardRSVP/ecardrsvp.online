@@ -603,6 +603,9 @@ hr {
   max-width: 390px;
 }}
 
+.popup-overlay.show {
+  display: flex; /* atau block jika tak nak flex layout */
+}
 
 @media (min-width: 768px) {
   .popup-overlay,
