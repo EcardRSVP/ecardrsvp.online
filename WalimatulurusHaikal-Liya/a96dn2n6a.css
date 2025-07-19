@@ -568,7 +568,7 @@ hr {
 /* ✅ Popup Styling */
 .popup-overlay {
   display: none;
-  position: fixed;
+  position: absolute;
   bottom: 60px; /* bagi ruang untuk footer */
   left: 0;
   right: 0;
