@@ -263,7 +263,7 @@
      
     <!-- Page 5 -->
 <!-- ✅ Seksyen RSVP -->
-<div id="popup-RSVP" class="popup-overlay">
+<div id="popup-RSVP" class="popup-section">
   <div class="popup-section">
   <h2>RSVP</h2>
 <form id="rsvp-form" 
@@ -309,7 +309,7 @@
 </div>
 
 <!-- ✅ Seksyen Money Gift -->
-  <div id="popup-MoneyGift" class="popup-overlay">
+  <div id="popup-MoneyGift" class="popup-section">
   <div class="popup-section">
   <h2>💵 Money Gift</h2>
   <p><strong>Nama Bank :</strong> Maybank Berhad</p>
@@ -322,7 +322,7 @@
 </div>
 
 <!-- ✅ Seksyen Wishlist (Ringkasan) -->
-  <div id="popup-Wishlist" class="popup-overlay">
+  <div id="popup-Wishlist" class="popup-section">
   <div class="popup-section">
   <h2>🎁 Wishlist</h2>
 
@@ -1362,7 +1362,7 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
 
   
 <!-- ✅ Seksyen Contact -->
-  <div id="popup-Contact" class="popup-overlay">
+  <div id="popup-Contact" class="popup-section">
   <div class="popup-section">
   <h2>📞 Contact</h2>
   <a href="tel:+601157265723" class="phone-button">📞 Fazilah (Ibu)</a>
@@ -1371,7 +1371,7 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
 </div>
 
 <!-- ✅ Seksyen Location -->
-  <div id="popup-Location" class="popup-overlay">
+  <div id="popup-Location" class="popup-section">
   <div class="popup-section">
   <h2>📍 Location</h2>
   <p>Dewan Serbaguna Bandar Sultan Suleiman<br>Bandar Sultan Suleiman<br>42000 Port Klang, Selangor</p>
@@ -1386,44 +1386,6 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
   </a>
   </div>
 </div>
-
-
-<!-- ✅ POPUP OVERLAY -->
-<div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
-  <div id="popupContent" class="popup-section" onclick="event.stopPropagation()">
-    <!-- Kandungan popup akan dimasukkan sini -->
-  </div>
-</div>
-
-<style>
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    background: white;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
-    display: none;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 60px;
-  }
-
-  .popup-section {
-    max-width: 390px;
-    width: 100%;
-    padding: 20px;
-    color: black;
-  }
-
-  .popup-section h2 {
-    text-align: center;
-    font-weight: bold;
-  }
-</style>          
-
 
 <!-- ✅ JavaScript -->
 <script>
