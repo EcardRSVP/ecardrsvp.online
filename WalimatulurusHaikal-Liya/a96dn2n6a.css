@@ -567,19 +567,17 @@ hr {
 
 /* ✅ Popup Styling */
 .popup-overlay {
-  position: fixed;
-  bottom: 60px; /* atas footer */
+  position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100vw;
-  height: calc(100vh - 60px); /* ✅ Tidak tutup footer */
-  max-width: 390px;
   padding: 0;
   background: white;
-  box-sizing: border-box;
   z-index: 999;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .popup-overlay,
