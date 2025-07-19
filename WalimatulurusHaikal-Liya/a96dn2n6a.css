@@ -577,7 +577,7 @@ hr {
   max-width: 390px;
   padding: 0;
   background: transparent;
-  box-sizing: border-box;
+  box-sizing: transparent;
   z-index: 999;
 }
 
