@@ -568,7 +568,7 @@ hr {
 /* ✅ Popup Styling */
 .popup-overlay {
   display: none;
-  position: absolute;           /* BUKAN fixed */
+  position: fixed;           /* BUKAN fixed */
   bottom: 60px;                 /* Atas footer */
   left: 0;
   right: 0;
