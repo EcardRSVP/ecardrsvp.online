@@ -568,10 +568,10 @@ hr {
 /* ✅ Popup Styling */
 .popup-overlay {
   display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
   margin: 0 auto;
   max-width: 390px;
   width: 100%;
