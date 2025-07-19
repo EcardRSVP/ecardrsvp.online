@@ -568,26 +568,21 @@ hr {
 /* ✅ Popup Styling */
 .popup-overlay {
   display: none;
-  position: absolute;
-  bottom: 60px; /* bagi ruang untuk footer */
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  position: static; /* ✅ tidak terapung */
+  margin: 0 auto;
   width: 100%;
   max-width: 390px;
   background-color: white;
-  z-index: 999;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
-  max-height: 80vh;
-  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
   animation: slideUp 0.3s ease-in-out;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
+
 
 .popup-overlay.active {
   display: block;
+ margin-top: 20px;
 }
 
 .popup-section {
