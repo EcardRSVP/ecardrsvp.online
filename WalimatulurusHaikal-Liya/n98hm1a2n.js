@@ -154,18 +154,18 @@ function togglePopup(nama) {
 
   // Kalau popup sekarang terbuka dan ditekan semula → tutup
   if (popupTerbuka === idPopup) {
-    popup.style.display = "none";
+    popup.classList.remove("show"); 
     mainContent.style.display = "block";
     popupTerbuka = null;
   } else {
     // Tutup semua popup lain dulu
     Object.values(popupMap).forEach(id => {
       const el = document.getElementById(id);
-      if (el) el.style.display = "none";
+      if (el) el.classList.remove("show");
     });
 
     // Buka popup yang diminta
-    popup.style.display = "block";
+    popup.classList.add("show");
     mainContent.style.display = "none";
     popupTerbuka = idPopup;
   }
