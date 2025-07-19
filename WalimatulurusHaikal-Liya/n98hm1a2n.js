@@ -144,7 +144,37 @@ function toggleSection(id) {
     target.classList.add('show');
     target.scrollIntoView({ behavior: 'smooth' });
     seksyenTerbuka = id;
-  } else {
-    console.warn("Seksyen tidak dijumpai:", id);
   }
 }
+
+// SENARAI ID popup & ikon yang berkaitan
+const popupMap = {
+  RSVP: "popup-RSVP",
+  MoneyGift: "popup-MoneyGift",
+  Wishlist: "popup-Wishlist",
+  Contact: "popup-Contact",
+  Location: "popup-Location"
+};
+
+let popupTerbuka = null;
+
+function togglePopup(nama) {
+  const id = `popup-${nama}`; 
+  const semuaPopup = document.querySelectorAll('.popup-section');
+
+  if (popupTerbuka === id) {
+    semuaPopup.forEach(p => p.classList.remove('show'));
+    popupTerbuka = null;
+    return;
+  }
+
+  semuaPopup.forEach(p => p.classList.remove('show'));
+
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('show');
+    target.scrollIntoView({ behavior: 'smooth' });
+    popupTerbuka = id;
+  }
+}
+ (yang mana kenaa ganti?)
