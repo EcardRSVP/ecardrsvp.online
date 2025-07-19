@@ -572,6 +572,7 @@ hr {
   bottom: 70px;
   left: 0;
   right: 0;
+  transform: translateX(-50%);
   margin: 0 auto;
   max-width: 390px;
   width: 100%;
@@ -598,8 +599,10 @@ hr {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 80px; /* dah control posisi via overlay */
-}
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 390px;
+}}
 
 
 @media (min-width: 768px) {
