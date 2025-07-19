@@ -154,17 +154,24 @@
   background-color: #222;
 }
 
-    .btn.pay {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background-color: maroon;
+.btn.pay {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff5c8a; /* boleh tukar ikut tema */
   color: white;
+  padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
+  white-space: nowrap;
+  max-width: 100%;
 }
+
+.btn.pay i {
+  font-size: 1.1rem;
+}
+
 
     .package-title {
   font-size: 1.4rem;
