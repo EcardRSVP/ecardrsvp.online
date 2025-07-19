@@ -567,18 +567,21 @@ hr {
 
 /* ✅ Popup Styling */
 .popup-overlay {
-  display: none;
-  position: fixed;           /* BUKAN fixed */
-  bottom: 60px;                 /* Atas footer */
+  display: none; 
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 100%;
   max-width: 390px;
-  background: transparent;      /* TIADA background penuh */
+  width: 100%;
+  background: white;
   z-index: 999;
-  padding: 0;
   box-sizing: border-box;
+  padding: 20px;
+  overflow-y: auto;           /* ✅ Scroll kalau kandungan panjang */
+  max-height: calc(100dvh - 100px); /* ✅ responsive, elak tindih footer */
+  padding-bottom: 100px; /* ✅ ruang lebih supaya footer tak kena */
 }
 
 .popup-overlay,
@@ -594,12 +597,11 @@ hr {
 }
 
 .popup-section {
-  background: white;            /* ✅ KAD PUTIH SAHAJA */
+  background: white;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-  width: 100%;
+  margin-bottom: 80px; /* dah control posisi via overlay */
 }
 
 
