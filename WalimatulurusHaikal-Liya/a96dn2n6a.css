@@ -586,8 +586,9 @@ hr {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 80px; /* untuk elak footer overlap */
+  margin: 20px auto 80px auto; /* ✅ penting untuk jarak footer & center */
   width: 100%;
+  max-width: 390px;
   box-sizing: border-box;
 }
 
@@ -597,6 +598,13 @@ hr {
   box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  .popup-overlay,
+  .popup-section {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
 
 @media (min-width: 768px) {
   .popup-section {
