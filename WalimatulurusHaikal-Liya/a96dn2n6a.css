@@ -567,9 +567,9 @@ hr {
 
 /* ✅ Popup Styling */
 .popup-overlay {
-  display: none; 
+  display: none;
   position: fixed;
-  top: 0;
+  bottom: 70px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -577,12 +577,9 @@ hr {
   width: 100%;
   background: none;
   z-index: 999;
-  box-sizing: border-box;
   padding: 0;
-  overflow-y: auto;           /* ✅ Scroll kalau kandungan panjang */
-  max-height: calc(100dvh - 100px); /* ✅ responsive, elak tindih footer */
-  padding-bottom: 100px; /* ✅ ruang lebih supaya footer tak kena */
 }
+
 
 .popup-overlay,
 .popup-section {
