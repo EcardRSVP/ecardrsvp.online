@@ -571,13 +571,13 @@ hr {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0;
+  margin: 0 auto;
+  max-width: 390px;
+  width: 100%;
   background: white;
   z-index: 999;
-  width: 100%;
-  max-width: 390px;
-  margin: 0 auto;
   box-sizing: border-box;
+  padding-bottom: 80px; /* supaya cukup ruang bawah */
 }
 
 .popup-overlay,
