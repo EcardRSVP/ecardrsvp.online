@@ -570,8 +570,9 @@ hr {
   display: none;
   position: fixed;
   bottom: 60px; /* bagi ruang untuk footer */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: 100%;
   max-width: 390px;
   background-color: white;
@@ -583,6 +584,7 @@ hr {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+
 
 .popup-overlay.active {
   display: block;
