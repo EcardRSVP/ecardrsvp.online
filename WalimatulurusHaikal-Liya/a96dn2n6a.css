@@ -567,14 +567,17 @@ hr {
 
 /* ✅ Popup Styling */
 .popup-overlay {
-  display: none;
-  position: static; /* biar flow biasa */
+  position: fixed;
+  left: 50%;
+  bottom: 60px; /* tinggi footer */
+  transform: translateX(-50%);
   width: 100%;
   max-width: 390px;
   margin: 0 auto;
   padding: 0;
-  background-color: transparent; /* tak perlu background besar */
+  background: transparent;
   box-sizing: border-box;
+  z-index: 999;
 }
 
 .popup-overlay.active {
@@ -586,12 +589,8 @@ hr {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin: 20px auto 80px auto; /* ✅ penting untuk jarak footer & center */
-  width: 100%;
-  max-width: 390px;
-  box-sizing: border-box;
+  margin-bottom: 0; /* dah control posisi via overlay */
 }
-
 
 .popup-overlay,
 .popup-section {
