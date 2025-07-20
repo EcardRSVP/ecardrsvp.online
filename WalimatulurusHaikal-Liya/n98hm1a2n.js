@@ -177,4 +177,3 @@ function togglePopup(nama) {
     popupTerbuka = id;
   }
 }
- (yang mana kenaa ganti?)
