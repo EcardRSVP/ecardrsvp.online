@@ -73,11 +73,17 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
-      if (!nama.value.trim() || !kehadiran || !bilangan.value) {
-        e.preventDefault();
-        alert("Sila lengkapkan semua maklumat.");
-        return;
-      }
+if (!nama.value.trim() || !kehadiran) {
+  e.preventDefault();
+  alert("Sila lengkapkan semua maklumat.");
+  return;
+}
+
+if (kehadiran.value === "Hadir" && !bilangan.value) {
+  e.preventDefault();
+  alert("Sila isi bilangan kehadiran jika anda akan hadir.");
+  return;
+}
 
       submitted = true;
     });
