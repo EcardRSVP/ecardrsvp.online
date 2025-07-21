@@ -674,7 +674,7 @@ hr {
   position: fixed;
   top: -10px;
   border-radius: 50%;
-  opacity: 0.65; /* ✅ ini buat salji sedikit transparent */
+  opacity: 0.40; /* ✅ ini buat salji sedikit transparent */
   pointer-events: none;
   z-index: 9999;
   animation-name: jatuh;
@@ -686,7 +686,7 @@ hr {
 @keyframes jatuh {
   to {
     transform: translateY(100vh);
-    opacity: 0.3;
+    opacity: 0.2;
   }
 }
 
