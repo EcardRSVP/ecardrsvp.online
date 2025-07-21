@@ -568,6 +568,7 @@ hr {
 /* ✅ Popup Styling */
 .popup-overlay {
   display: none; 
+  position: static; /* default – ikut aliran biasa */
   top: 0;
   left: 0;
   right: 0;
@@ -576,12 +577,11 @@ hr {
   max-width: 390px;
   width: 100%;
   background: transparent !important;
-  z-index: 999;
+  z-index: 1;
   box-sizing: border-box;
   overflow-y: visible;
   height: auto;
   max-height: none;  
-  position: static; /* default – ikut aliran biasa */
 }
 
 .popup-overlay,
