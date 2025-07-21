@@ -123,27 +123,14 @@ function rsvpSuccessHandler() {
 window.rsvpSuccessHandler = rsvpSuccessHandler;
 
 // ✅ Fungsi untuk tukar seksyen berdasarkan ID
-let seksyenTerbuka = null;
-
 function toggleSection(id) {
-  const semuaPopup = document.querySelectorAll('.popup-section');
+  const allSections = document.querySelectorAll('.hidden-section');
+  allSections.forEach(section => section.style.display = 'none');
 
-  if (seksyenTerbuka === id) {
-    // Tutup semua jika seksyen yang sama ditekan lagi
-    semuaPopup.forEach(p => p.classList.remove('show'));
-    seksyenTerbuka = null;
-    return;
-  }
-
-  // Tutup semua popup
-  semuaPopup.forEach(p => p.classList.remove('show'));
-
-  // Buka seksyen yang diminta
   const target = document.getElementById(id);
   if (target) {
-    target.classList.add('show');
-    target.scrollIntoView({ behavior: 'smooth' });
-    seksyenTerbuka = id;
+    target.style.display = 'block';
+    target.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -159,21 +146,27 @@ const popupMap = {
 let popupTerbuka = null;
 
 function togglePopup(nama) {
-  const id = `popup-${nama}`; 
-  const semuaPopup = document.querySelectorAll('.popup-section');
+  const idPopup = popupMap[nama];
+  const popup = document.getElementById(idPopup);
+  const mainContent = document.getElementById("main-content");
 
-  if (popupTerbuka === id) {
-    semuaPopup.forEach(p => p.classList.remove('show'));
+  if (!popup || !mainContent) return;
+
+  // Kalau popup sekarang terbuka dan ditekan semula → tutup
+  if (popupTerbuka === idPopup) {
+    popup.style.display = "none";
+    mainContent.style.display = "block";
     popupTerbuka = null;
-    return;
-  }
+  } else {
+    // Tutup semua popup lain dulu
+    Object.values(popupMap).forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = "none";
+    });
 
-  semuaPopup.forEach(p => p.classList.remove('show'));
-
-  const target = document.getElementById(id);
-  if (target) {
-    target.classList.add('show');
-    target.scrollIntoView({ behavior: 'smooth' });
-    popupTerbuka = id;
+    // Buka popup yang diminta
+    popup.style.display = "flex";
+    mainContent.style.display = "none";
+    popupTerbuka = idPopup;
   }
 }
