@@ -569,10 +569,7 @@ hr {
 .popup-overlay {
   display: none; 
   position: static; /* default – ikut aliran biasa */
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 100px auto 0 auto;
+  margin: 400px auto 0 auto;
   padding-top: 40px;
   max-width: 390px;
   width: 100%;
