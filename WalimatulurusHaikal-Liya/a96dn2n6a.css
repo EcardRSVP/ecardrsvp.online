@@ -575,7 +575,7 @@ hr {
   margin: 0 auto;
   max-width: 390px;
   width: 100%;
-  background: yellow;
+  background: transparent !important;
   z-index: 999;
   box-sizing: border-box;
   padding: 20px;
