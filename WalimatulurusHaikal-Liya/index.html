@@ -1403,11 +1403,13 @@ function toggleMainSection(id) {
   if (sudah) {
     // kalau ikon sama ditekan → tutup popup & tunjuk main
     main.style.display = 'block';
+    footer.style.display = 'flex'; // ✅ Tambah line ni
     currentVisibleSection = null;
   } else {
     // buka section, sembunyi main-content
     section.style.display = 'block';
     main.style.display = 'none';
+    footer.style.display = 'none'; // ✅ Tambah line ni
     // kuatkan class show untuk anim animate
     setTimeout(() => section.classList.add('show'), 10);
     currentVisibleSection = id;
