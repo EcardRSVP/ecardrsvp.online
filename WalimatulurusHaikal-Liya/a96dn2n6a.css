@@ -566,22 +566,18 @@ hr {
 }
 
 .popup-section {
-  background: pink; /* Boleh kekal kalau untuk debug */
+  background: pink !important;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin: 40px auto 80px;
+  margin: 40px auto;
   max-width: 390px;
   width: 100%;
   display: none;
-  position: relative;          /* ✅ BUKAN fixed atau absolute */
-  z-index: 1;                  /* ✅ Pastikan bawah footer */
-  transition: all 0.3s ease;
 }
 
 .popup-section.show {
   display: block;
-  opacity: 1;  
 }
 
 @media (min-width: 768px) {

@@ -121,3 +121,59 @@ function rsvpSuccessHandler() {
   }
 }
 window.rsvpSuccessHandler = rsvpSuccessHandler;
+
+// ✅ Fungsi untuk tukar seksyen berdasarkan ID
+let seksyenTerbuka = null;
+
+function toggleSection(id) {
+  const semuaPopup = document.querySelectorAll('.popup-section');
+
+  if (seksyenTerbuka === id) {
+    // Tutup semua jika seksyen yang sama ditekan lagi
+    semuaPopup.forEach(p => p.classList.remove('show'));
+    seksyenTerbuka = null;
+    return;
+  }
+
+  // Tutup semua popup
+  semuaPopup.forEach(p => p.classList.remove('show'));
+
+  // Buka seksyen yang diminta
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('show');
+    target.scrollIntoView({ behavior: 'smooth' });
+    seksyenTerbuka = id;
+  }
+}
+
+// SENARAI ID popup & ikon yang berkaitan
+const popupMap = {
+  RSVP: "popup-RSVP",
+  MoneyGift: "popup-MoneyGift",
+  Wishlist: "popup-Wishlist",
+  Contact: "popup-Contact",
+  Location: "popup-Location"
+};
+
+let popupTerbuka = null;
+
+function togglePopup(nama) {
+  const id = `popup-${nama}`; 
+  const semuaPopup = document.querySelectorAll('.popup-section');
+
+  if (popupTerbuka === id) {
+    semuaPopup.forEach(p => p.classList.remove('show'));
+    popupTerbuka = null;
+    return;
+  }
+
+  semuaPopup.forEach(p => p.classList.remove('show'));
+
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('show');
+    target.scrollIntoView({ behavior: 'smooth' });
+    popupTerbuka = id;
+  }
+}
