@@ -1386,34 +1386,34 @@ let currentVisibleSection = null;
 function toggleMainSection(id) {
   const section = document.getElementById(id);
   const main = document.getElementById("main-content");
-  const all = document.querySelectorAll('.hidden-section');
+  const footer = document.querySelector(".footer");
+  const all = document.querySelectorAll('.popup-section');
 
-  if (!section || !main) return;
+  if (!section || !main || !footer) return;
 
-  const sudah = (currentVisibleSection === id);
+  const sama = (currentVisibleSection === id);
 
-  // ✅ Sembunyi semua
-  all.forEach(sec => {
-    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
-    setTimeout(() => {
-      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
-    }, 300); // ikut masa transition CSS
+  // ✅ Sembunyi semua dengan animasi keluar
+  all.forEach(p => {
+    p.classList.remove('show');
+    setTimeout(() => p.style.display = 'none', 300);
   });
 
-  if (sudah) {
-    // kalau ikon sama ditekan → tutup popup & tunjuk main
+  if (sama) {
     main.style.display = 'block';
-    footer.style.display = 'flex'; // ✅ Tambah line ni
+    footer.style.display = 'flex';
     currentVisibleSection = null;
-  } else {
-    // buka section, sembunyi main-content
-    section.style.display = 'block';
-    main.style.display = 'none';
-    footer.style.display = 'none'; // ✅ Tambah line ni
-    // kuatkan class show untuk anim animate
-    setTimeout(() => section.classList.add('show'), 10);
-    currentVisibleSection = id;
+    return;
   }
+
+  // ✅ Tunjuk popup yang diminta
+  section.style.display = 'block';
+  setTimeout(() => section.classList.add('show'), 10);
+  main.style.display = 'none';
+  footer.style.display = 'none';
+  section.scrollIntoView({ behavior: 'smooth' });
+
+  currentVisibleSection = id;
 }
   
 function copyRek() {
