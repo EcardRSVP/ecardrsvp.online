@@ -121,26 +121,3 @@ function rsvpSuccessHandler() {
   }
 }
 window.rsvpSuccessHandler = rsvpSuccessHandler;
-
-// SENARAI ID popup & ikon yang berkaitan
-let popupTerbuka = null;
-
-function togglePopup(nama) {
-  const id = `popup-${nama}`; 
-  const semuaPopup = document.querySelectorAll('.popup-section');
-
-  if (popupTerbuka === id) {
-    semuaPopup.forEach(p => p.classList.remove('show'));
-    popupTerbuka = null;
-    return;
-  }
-
-  semuaPopup.forEach(p => p.classList.remove('show'));
-
-  const target = document.getElementById(id);
-  if (target) {
-    target.classList.add('show');
-    target.scrollIntoView({ behavior: 'smooth' });
-    popupTerbuka = id;
-  }
-}
