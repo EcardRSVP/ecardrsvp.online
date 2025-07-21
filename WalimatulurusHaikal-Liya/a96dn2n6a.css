@@ -348,7 +348,7 @@ form button[type="submit"] {
 
 /* ✅ Font Custom Styles */
 .font-a {
-  font-family: 'Libertinus Math', serif;
+  font-family: 'Ephesis', cursive;
   font-size: 1.6rem;
   color: black;
 }
@@ -360,7 +360,7 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Ephesis', cursive;
+  font-family: 'Tangerine', cursive;
   font-size: 2.5rem;
   color: black;
 }
