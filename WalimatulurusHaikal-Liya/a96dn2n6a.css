@@ -577,10 +577,11 @@ hr {
   background: transparent !important;
   z-index: 999;
   box-sizing: border-box;
-  padding: 20px;
-  overflow-y: auto;           /* ✅ Scroll kalau kandungan panjang */
-  max-height: calc(100dvh - 100px); /* ✅ responsive, elak tindih footer */
-  padding-bottom: 100px; /* ✅ ruang lebih supaya footer tak kena */
+  padding: 0;
+  overflow-y: visible;
+  height: auto;
+  max-height: none;  
+  position: static; /* default – ikut aliran biasa */
 }
 
 .popup-overlay,
