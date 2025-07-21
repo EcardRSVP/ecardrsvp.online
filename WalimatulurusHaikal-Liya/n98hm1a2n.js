@@ -165,7 +165,7 @@ function togglePopup(nama) {
     });
 
     // Buka popup yang diminta
-    popup.style.display = "flex";
+    popup.style.display = "block";
     mainContent.style.display = "none";
     popupTerbuka = idPopup;
   }
