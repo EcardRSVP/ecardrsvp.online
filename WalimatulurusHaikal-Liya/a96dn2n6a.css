@@ -597,7 +597,7 @@ hr {
   background: transparent !important;
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: none;
   margin-bottom: 80px; /* dah control posisi via overlay */
 }
 
