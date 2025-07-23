@@ -221,7 +221,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"] {
-  background-color: #cd7f32;
+  background-color: #cd7f32; !important;
   color: white;
   border: none;
 }
