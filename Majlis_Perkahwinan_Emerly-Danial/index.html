@@ -211,25 +211,6 @@
       setInterval(updateCountdown, 1000);
     </script>
 </section>
-      
-     <hr> 
-
-  <section class="galeri transparent-section">
-  <h1 class="font-e">GALERI</h1>
-  <div class="gallery-slider">
-    <button class="gallery-prev">&#10094;</button>
-    
-    <div class="gallery-viewport"> 
-    <div class="gallery-track">
-      <div class="gallery-slide"><img src="GambarGaleri1.jpg" alt="Gambar 1"></div>
-      <div class="gallery-slide"><img src="GambarGaleri2.jpg" alt="Gambar 2"></div>
-      <div class="gallery-slide"><img src="GambarGaleri3.jpeg" alt="Gambar 3"></div>
-      </div>
-    </div>
-    
-    <button class="gallery-next">&#10095;</button>
-  </div>
-</section>
 
   <hr> 
       
@@ -274,6 +255,7 @@
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
   <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
+  <div class="footer-icon money" onclick="togglePopup('MoneyGift')">💵<span>Money Gift</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
 </div>
@@ -356,7 +338,20 @@
   </div>
 </div>
      
-
+<!-- ✅ Seksyen Money Gift -->
+  <div id="popup-MoneyGift" class="popup-overlay">
+  <div class="popup-section">
+  <h2>MONEY GIFT</h2>
+  <br>
+  <p><strong>Nama Bank :</strong> Maybank Berhad</p>
+  <p><strong>Nama :</strong> Emerly Farissa</p>
+  <p><strong>Nombor Akaun:</strong> <span id="rek">169972158534</span></p>
+  <button onclick="copyRek()">Copy</button>
+  <p>Imbas kod QR</p>
+  <img src="IMG_0706 - Ems Farissa.jpeg" alt="Kod QR" class="qr-image" /><br><br><br><br>
+  </div>
+</div>
+     
 <!-- ✅ POPUP OVERLAY -->
 <div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
   <div id="popupContent" class="popup-section" onclick="event.stopPropagation()">
