@@ -186,3 +186,16 @@ footer {
     width: 90%;
   }
 }
+
+/* ✅ Font Custom Styles */
+.font-a {
+  font-family: 'Noto Serif Dives Akuru', serif;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.font-b {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: black;
+}
