@@ -22,8 +22,8 @@ function mulakanSalji() {
 
   const warnaSalji = [
     {
-      color: "#ffffff",
-      glow: "0 0 10px rgba(255, 255, 255, 0.7)"
+      color: "rgba(250, 218, 221, 0.8)", // warna pink lembut sedikit transparent
+      glow: "0 0 10px rgba(250, 218, 221, 0.3)" // glow pink lembut
     }
   ];
 
