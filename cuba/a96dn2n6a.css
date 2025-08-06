@@ -9,23 +9,41 @@ body {
   background-color: #FADADD;
   font-family: sans-serif;
   padding: 20px;
+  padding-top: 80px; /* tolak tinggi header */
 }
 
+/* Header */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0; /* grey cair */
   padding: 10px 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo dan tulisan RSVP */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo h1 {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
 }
 
+.logo img {
+  height: 50px;
+}
+
+/* Seksyen Pakej */
 .pakej-section {
   text-align: center;
   margin-bottom: 40px;
@@ -114,7 +132,7 @@ body {
   z-index: 1000;
 }
 
-/* Bayaran */
+/* Bayaran dan Borang */
 .bayaran, .borang-maklumat {
   background: #fff;
   padding: 25px;
@@ -154,7 +172,7 @@ footer {
   font-size: 14px;
 }
 
-/* Responsif */
+/* RESPONSIF */
 @media (max-width: 960px) {
   .pakej {
     flex-direction: column;
@@ -164,27 +182,4 @@ footer {
   .card {
     width: 90%;
   }
-
-.header {
-  background-color: #f0f0f0; /* grey cair */
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
 }
-
-.logo-row {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo-row h1 {
-  font-size: 26px;
-  color: #333;
-  margin: 0;
-}
-
-.logo-row img {
-  height: 50px;
-}
-
