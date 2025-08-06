@@ -142,6 +142,7 @@ body {
   border-radius: 15px;
   margin: 20px 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 /* Borang */
@@ -157,14 +158,14 @@ form input, form textarea {
 }
 form button {
   padding: 10px;
-  background-color: #8B0000;
+  background-color: #800000;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 form button:hover {
-  background-color: #a52a2a;
+  background-color: #F08080;
 }
 
 /* Footer */
@@ -202,7 +203,7 @@ footer {
 
 .pilih-pakej-btn {
   padding: 10px;
-  background-color: maroon;
+  background-color: #800000;
   color: white;
   border: none;
   border-radius: 5px;
@@ -211,17 +212,17 @@ footer {
 }
 
 .pilih-pakej-btn:hover {
-  background-color: #800000;
+  background-color: #F08080;
 }
 
 .card a {
-  color: #8B0000; /* Merah gelap */
+  color: #800000; /* Merah gelap */
   text-decoration: underline; /* Kalau nak garis bawah */
   font-weight: bold;
 }
 
 .card a:hover {
-  color: #B22222; /* Hover jadi merah lebih terang */
+  color: #F08080; /* Hover jadi merah lebih terang */
 }
 
 .preview-kad {
@@ -252,7 +253,7 @@ footer {
 }
 
 .preview-btn {
-  background-color: #8B0000;
+  background-color: #800000;
   color: white;
   padding: 8px 20px;
   text-decoration: none;
@@ -262,5 +263,20 @@ footer {
 }
 
 .preview-btn:hover {
-  background-color: #a52a2a;
+  background-color: #F08080;
+}
+
+.pilih-pakej-btn {
+  background-color: #800000;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pilih-pakej-btn:hover {
+  background-color: #F08080;
 }
