@@ -191,7 +191,7 @@ footer {
 .font-a {
   font-family: 'Noto Serif Dives Akuru', serif;
   font-size: 1.5rem;
-  color: black;
+  color: Maroon;
 }
 
 .font-b {
@@ -199,3 +199,20 @@ footer {
   font-size: 1.3rem;
   color: black;
 }
+
+.preview-btn {
+  background-color: maroon;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.preview-btn:hover {
+  background-color: #800000; /* Maroon gelap sikit bila hover */
+}
+
