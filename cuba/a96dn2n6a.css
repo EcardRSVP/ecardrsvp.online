@@ -224,3 +224,43 @@ footer {
   color: #B22222; /* Hover jadi merah lebih terang */
 }
 
+.preview-kad {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsif */
+  gap: 20px;
+  justify-items: center;
+}
+
+.kad-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.kad-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.preview-btn {
+  background-color: #8B0000;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.preview-btn:hover {
+  background-color: #a52a2a;
+}
