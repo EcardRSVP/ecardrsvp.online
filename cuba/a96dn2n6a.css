@@ -70,14 +70,14 @@ body {
 
 .card h3 {
   font-size: 20px;
-  margin-bottom: 2px;
+  margin-bottom: 2px; !important;
 }
 
 .card .price {
   font-weight: bold;
   color: #c14400;
   margin-bottom: 5px;
-  margin-top: 0;
+  margin-top: 0; !important;
 }
 
 .card ul {
