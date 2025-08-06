@@ -200,20 +200,19 @@ footer {
   color: black;
 }
 
-.preview-btn {
+.pilih-pakej-btn {
+  width: 100%;
+  padding: 10px;
   background-color: maroon;
   color: white;
-  padding: 8px 16px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-size: 14px;
-  display: inline-block;
-  margin-top: 5px;
-  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.preview-btn:hover {
-  background-color: #800000; /* Maroon gelap sikit bila hover */
+.pilih-pakej-btn:hover {
+  background-color: #800000;
 }
 
 .card a {
