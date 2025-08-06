@@ -70,15 +70,16 @@ body {
 
 .card h3 {
   font-size: 20px;
-  margin-bottom: 2px; !important;
+  margin: 0 0 2px 0 !important;
+  padding: 0;
 }
 
 .card .price {
+  margin: 0 0 5px 0 !important;
   font-weight: bold;
   color: #c14400;
-  margin-bottom: 5px;
-  margin-top: 0; !important;
 }
+
 
 .card ul {
   list-style: none;
