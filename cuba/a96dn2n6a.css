@@ -94,16 +94,10 @@ body {
   color: black;
 }
 
-.gold {
-  border-top: 5px solid gold;
-}
-
-.silver {
-  border-top: 5px solid silver;
-}
-
+.gold,
+.silver,
 .bronze {
-  border-top: 5px solid #cd7f32;
+  border-top: none;
 }
 
 /* Preview Kad */
