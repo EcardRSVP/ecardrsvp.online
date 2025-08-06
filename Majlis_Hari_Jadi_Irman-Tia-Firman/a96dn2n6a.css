@@ -349,7 +349,7 @@ form button[type="submit"] {
 /* ✅ Font Custom Styles */
 .font-a {
   font-family: 'Ephesis', cursive;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -361,7 +361,7 @@ form button[type="submit"] {
 
 .font-c {
   font-family: 'Tangerine', cursive;
-  font-size: 2.0rem;
+  font-size: 2.2rem;
   color: black;
 }
 
