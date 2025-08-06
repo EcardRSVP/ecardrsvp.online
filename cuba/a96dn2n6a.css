@@ -58,7 +58,7 @@ body {
 
 .card {
   background-color: #fff;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   border-radius: 15px;
   width: 300px;
   min-height: 480px;
@@ -83,7 +83,7 @@ body {
 .card-price {
   font-size: 18px;
   color: #c14400;
-  margin-top: 5px; /* kalau masih jauh, buang margin-top ni */
+  margin-top: 0;
 }
 
 .card ul {
@@ -95,7 +95,7 @@ body {
 }
 
 .card ul li {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .card ul li i {
