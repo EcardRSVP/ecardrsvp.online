@@ -68,17 +68,22 @@ body {
   justify-content: space-between;
 }
 
-.card h3 {
-  font-size: 20px;
-  margin: 0 !important;
+.card-title, .card-price {
+  margin: 0;
   padding: 0;
-  line-height: 1; /* rapatkan lagi */
+  line-height: 1.1; /* boleh cuba 1.0 juga kalau nak betul2 rapat */
+  font-weight: bold;
 }
 
-.card .price {
-  margin: 0 !important;
-  padding: 0;
-  line-height: 1; /* rapatkan lagi */
+.card-title {
+  font-size: 20px;
+  color: #000;
+}
+
+.card-price {
+  font-size: 18px;
+  color: #c14400;
+  margin-top: 5px; /* kalau masih jauh, buang margin-top ni */
 }
 
 .card ul {
