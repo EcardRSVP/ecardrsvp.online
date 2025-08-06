@@ -165,8 +165,26 @@ footer {
     width: 90%;
   }
 
-  .header {
-    flex-direction: column;
-    gap: 10px;
-  }
+.header {
+  background-color: #f0f0f0; /* grey cair */
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-row h1 {
+  font-size: 26px;
+  color: #333;
+  margin: 0;
+}
+
+.logo-row img {
+  height: 50px;
+}
+
