@@ -216,3 +216,13 @@ footer {
   background-color: #800000; /* Maroon gelap sikit bila hover */
 }
 
+.card a {
+  color: #8B0000; /* Merah gelap */
+  text-decoration: underline; /* Kalau nak garis bawah */
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #B22222; /* Hover jadi merah lebih terang */
+}
+
