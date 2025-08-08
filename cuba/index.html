@@ -612,5 +612,25 @@
   </footer>
 
   <script src="n98hm1a2n.js"></script>
+
+  <!-- Skrip popup yang kamu tanya -->
+  <script>
+    // Bila user klik butang untuk tengok popup
+    document.querySelectorAll('.preview-btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = this.getAttribute('data-target');
+        document.getElementById(target).style.display = 'flex';
+      });
+    });
+
+    // Bila user klik butang X
+    document.querySelectorAll('.close-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        this.closest('.popup-overlay').style.display = 'none';
+      });
+    });
+  </script>
+  
 </body>
 </html>
