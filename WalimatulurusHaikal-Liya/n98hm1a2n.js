@@ -71,20 +71,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.1546600119"]:checked');
 
-      if (!nama.value.trim() || !kehadiran || !bilangan.value) {
-        e.preventDefault();
-        alert("Sila lengkapkan semua maklumat.");
-        return;
-      }
+if (!nama.value.trim() || !kehadiran) {
+  e.preventDefault();
+  alert("Sila lengkapkan semua maklumat.");
+  return;
+}
+
+if (kehadiran.value === "Hadir" && !bilangan.value) {
+  e.preventDefault();
+  alert("Sila isi bilangan kehadiran jika anda akan hadir.");
+  return;
+}
 
       submitted = true;
     });
   } else {
     console.error("❌ Elemen penting (form/popup) tidak dijumpai.");
   }
-
   // 🎬 Butang BUKA - Tunjuk kandungan utama
   if (startBtn) {
     startBtn.addEventListener("click", function () {
