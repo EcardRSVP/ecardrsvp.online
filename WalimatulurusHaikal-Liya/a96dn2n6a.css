@@ -467,7 +467,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E2DAF9
+  background-color: #E2DAF9;
   color: #333;
   font-size: 14px;
   margin-top: 20px;
@@ -478,12 +478,12 @@ section *, .wishlist *, #main-content * {
 
 #hadiah-table th, #hadiah-table td {
   padding: 12px 14px;
-  border-bottom: 1px solid #ebddd5;
+  border-bottom: 1px solid #E2DAF9;
   text-align: left;
 }
 
 #hadiah-table th {
-  background-color: #f7dccc; /* warna lembut untuk header */
+  background-color: #E2DAF9;
   font-weight: bold;
   color: #5a3731;
 }
