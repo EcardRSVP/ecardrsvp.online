@@ -90,7 +90,6 @@ if (kehadiran.value === "Hadir" && !bilangan.value) {
   } else {
     console.error("❌ Elemen penting (form/popup) tidak dijumpai.");
   }
-
   // 🎬 Butang BUKA - Tunjuk kandungan utama
   if (startBtn) {
     startBtn.addEventListener("click", function () {
