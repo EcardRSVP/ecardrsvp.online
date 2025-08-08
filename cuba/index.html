@@ -30,7 +30,12 @@
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
         <p><i class="fas fa-gift"></i> Wishlist (Hadiah Mengikut Link pilihan anda sendiri)<br>
-        <a href="#">Lihat Contoh</a></p>
+         <a href="javascript:void(0);" onclick="toggleGambar('wishlist-img')">Lihat Contoh</a>
+         </p>
+
+<img id="wishlist-img" src="wishlist-example.jpg" alt="Contoh Wishlist" 
+     style="display: none; width: 100%; max-width: 300px; border-radius: 8px; margin-top: 5px;">
+
         <p><i class="fas fa-phone"></i> Contact</p>
         <p><i class="fas fa-location-dot"></i> Location</p>
         <p><i class="fas fa-clock"></i> Countdown</p>
@@ -98,6 +103,7 @@
       <p><strong>B1</strong></p><br>
       <a href="https://ecardrsvp.online/WalimatulurusHaikal_-Liya/" target="_blank" class="preview-btn">PREVIEW</a>
     </div>
+
     
     <div class="kad-item">
       <img src="B2.png" alt="Kad 2">
@@ -588,6 +594,18 @@
     <p>Hak Cipta Terpelihara © 2025 NNA Design</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="n98hm1a2n.js"></script>
+
+  <script>
+function toggleGambar(id) {
+  var img = document.getElementById(id);
+  if (img.style.display === "none") {
+    img.style.display = "block";
+  } else {
+    img.style.display = "none";
+  }
+}
+</script>
+
 </body>
 </html>
