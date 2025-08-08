@@ -243,14 +243,14 @@ form button[type="submit"] {
       padding: 12px 24px;
       font-size: 16px;
       color: white;
-      background-color: #28a745;
+      background-color: #8B4513;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #218838;
+  background-color: #A0522D;
 }
 
 .location-button {
@@ -263,7 +263,7 @@ form button[type="submit"] {
   padding: 12px 24px;
   font-size: 16px;
   color: white;
-  background-color: #28a745;
+  background-color: #8B4513;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -272,7 +272,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #218838;
+  background-color: #A0522D;
 }
     
 .location-button img {
@@ -329,7 +329,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #28a745;
+  background-color: #8B4513;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -343,7 +343,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #a50000;
+  background-color: #A0522D;
 }
 
 /* ✅ Font Custom Styles */
