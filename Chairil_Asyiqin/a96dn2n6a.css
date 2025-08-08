@@ -329,7 +329,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #28a745;
+  background-color: #8B4513;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -343,7 +343,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #a50000;
+  background-color: #A0522D;
 }
 
 /* ✅ Font Custom Styles */
