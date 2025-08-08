@@ -23,31 +23,21 @@
   <h2>Senarai Pakej</h2><br><br>
   <div class="pakej">
     
-<div class="card gold">
-  <h3 class="font-a" style="margin: 0;">GOLD PACKAGE</h3>
-  <h3 class="font-b" style="margin: 0;">RM 40.99</h3><br>
-
-  <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
-  <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
-
-  <!-- Lihat Contoh (Wishlist) -->
-  <p>
-    <i class="fas fa-gift"></i> Wishlist (Hadiah Mengikut Link pilihan anda sendiri)<br>
-    <a href="#" onclick="openPopup('popupWishlist'); return false;">Lihat Contoh</a>
-  </p>
-
-  <p><i class="fas fa-phone"></i> Contact</p>
-  <p><i class="fas fa-location-dot"></i> Location</p>
-  <p><i class="fas fa-clock"></i> Countdown</p>
-  <p><i class="fas fa-music"></i> Musik</p>
-  <p><i class="fas fa-image"></i> Galeri</p>
-
-  <!-- Lihat Contoh (PDF) -->
-  <p>
-    <i class="fas fa-file-pdf"></i> PDF (2 Page/Saiz A6)<br>
-    <a href="#" onclick="openPopup('popupPDF'); return false;">Lihat Contoh</a>
-  </p><br>
-</div>
+    <div class="card gold">
+      <h3 class="font-a" style="margin: 0;">GOLD PACKAGE</h3>
+      <h3 class="font-b" style="margin: 0;">RM 40.99</h3><br>
+      
+        <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
+        <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
+        <p><i class="fas fa-gift"></i> Wishlist (Hadiah Mengikut Link pilihan anda sendiri)<br>
+        <a href="#">Lihat Contoh</a></p>
+        <p><i class="fas fa-phone"></i> Contact</p>
+        <p><i class="fas fa-location-dot"></i> Location</p>
+        <p><i class="fas fa-clock"></i> Countdown</p>
+        <p><i class="fas fa-music"></i> Musik</p>
+        <p><i class="fas fa-image"></i> Galeri</p>
+        <p><i class="fas fa-file-pdf"></i> PDF (2 Page/Saiz A6)<br>
+        <a href="#">Lihat Contoh</a></p><br>
 
       <div style="text-align: center;">
 <a href="https://ecardrsvp.online/WalimatulurusHaikal_-Liya/" target="_blank">
@@ -593,48 +583,11 @@
 </section>
 
 
- <!-- Popup Wishlist -->
-<div id="popupWishlist" class="popup-overlay" onclick="closePopup('popupWishlist')">
-  <div class="popup-content" onclick="event.stopPropagation();">
-    <span class="close-btn" onclick="closePopup('popupWishlist')">&times;</span>
-    <img src="ContohHadiah2.PNG" alt="Contoh Wishlist" class="popup-image">
-  </div>
-</div>
-
-<!-- Popup PDF -->
-<div id="popupPDF" class="popup-overlay" onclick="closePopup('popupPDF')">
-  <div class="popup-content" onclick="event.stopPropagation();">
-    <span class="close-btn" onclick="closePopup('popupPDF')">&times;</span>
-    <img src="ContohKad1.png" alt="Contoh PDF" class="popup-image">
-  </div>
-</div>
-
-  
   <!-- Footer -->
   <footer>
     <p>Hak Cipta Terpelihara © 2025 NNA Design</p>
   </footer>
 
-  <script src="n98hm1a2n.js"></script>
-
-  <!-- Skrip popup yang kamu tanya -->
-  <script>
-    // Bila user klik butang untuk tengok popup
-    document.querySelectorAll('.preview-btn').forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = this.getAttribute('data-target');
-        document.getElementById(target).style.display = 'flex';
-      });
-    });
-
-    // Bila user klik butang X
-    document.querySelectorAll('.close-btn').forEach(button => {
-      button.addEventListener('click', function() {
-        this.closest('.popup-overlay').style.display = 'none';
-      });
-    });
-  </script>
-  
+  <script src="script.js"></script>
 </body>
 </html>
