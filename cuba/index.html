@@ -592,20 +592,24 @@
   </div>
 </section>
 
-<div id="popupWishlist" class="popup-overlay">
-  <div class="popup-content">
+
+ <!-- Popup Wishlist -->
+<div id="popupWishlist" class="popup-overlay" onclick="closePopup('popupWishlist')">
+  <div class="popup-content" onclick="event.stopPropagation();">
     <span class="close-btn" onclick="closePopup('popupWishlist')">&times;</span>
-    <img src="ContohHadiah2.PNG" alt="Contoh Hadiah">
+    <img src="ContohHadiah2.PNG" alt="Contoh Wishlist" class="popup-image">
   </div>
 </div>
 
- <div id="popupPDF" class="popup-overlay">
-  <div class="popup-content">
+<!-- Popup PDF -->
+<div id="popupPDF" class="popup-overlay" onclick="closePopup('popupPDF')">
+  <div class="popup-content" onclick="event.stopPropagation();">
     <span class="close-btn" onclick="closePopup('popupPDF')">&times;</span>
-    <img src="ContohKad1.png" alt="Contoh Kad PDF">
+    <img src="ContohKad1.png" alt="Contoh PDF" class="popup-image">
   </div>
 </div>
- 
+
+  
   <!-- Footer -->
   <footer>
     <p>Hak Cipta Terpelihara © 2025 NNA Design</p>
