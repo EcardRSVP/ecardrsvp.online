@@ -485,7 +485,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table th {
   background-color: maroon;
   font-weight: bold;
-  color: #5a3731;
+  color: white;
 }
 
 #hadiah-table tr:last-child td {
