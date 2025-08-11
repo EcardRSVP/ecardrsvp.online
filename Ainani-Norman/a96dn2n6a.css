@@ -467,7 +467,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #FADADD;
+  background-color: #FDEDF0;
   color: #333;
   font-size: 14px;
   margin-top: 20px;
@@ -478,14 +478,14 @@ section *, .wishlist *, #main-content * {
 
 #hadiah-table th, #hadiah-table td {
   padding: 12px 14px;
-  border-bottom: 1px solid #FADADD;
+  border-bottom: 1px solid #FDEDF0;
   text-align: left;
 }
 
 #hadiah-table th {
-  background-color: maroon;
+  background-color: #FADADD;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 
 #hadiah-table tr:last-child td {
