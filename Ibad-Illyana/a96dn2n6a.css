@@ -329,7 +329,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #6A4FAE;
+  background-color: #4B4B4B;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -343,7 +343,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #a50000;
+  background-color: #A9A9A9;
 }
 
 /* ✅ Font Custom Styles */
@@ -467,8 +467,8 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E2DAF9;
-  color: #333;
+  background-color: #C0C0C0;
+  color: #000000;
   font-size: 14px;
   margin-top: 20px;
   border-radius: 10px;
@@ -478,14 +478,14 @@ section *, .wishlist *, #main-content * {
 
 #hadiah-table th, #hadiah-table td {
   padding: 12px 14px;
-  border-bottom: 1px solid #E2DAF9;
+  border-bottom: 1px solid #C0C0C0;
   text-align: left;
 }
 
 #hadiah-table th {
-  background-color: #C6B8F0;
+  background-color: #4B4B4B;
   font-weight: bold;
-  color: #5a3731;
+  color: #ffffff;
 }
 
 #hadiah-table tr:last-child td {
