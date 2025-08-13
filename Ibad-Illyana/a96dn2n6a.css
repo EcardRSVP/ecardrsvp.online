@@ -84,7 +84,7 @@ input {
 }
 
 button {
-  background-color: #6A4FAE;
+  background-color: #4B4B4B;
   border: none;
   color: white;
   font-size: 16px;
@@ -94,11 +94,11 @@ button {
 }
 
 button:hover {
-  background-color: #8463C4;
+  background-color: #A9A9A9;
 }
 
 button.copy-btn {
-  background-color: #6A4FAE;
+  background-color: #4B4B4B;
   color: white;
   border: none;
   border-radius: 8px;
@@ -108,7 +108,7 @@ button.copy-btn {
 }
 
 button.copy-btn:hover {
-  background-color: #8463C4;
+  background-color: #A9A9A9;
 }
 
 
