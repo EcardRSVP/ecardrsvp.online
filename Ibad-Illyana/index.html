@@ -350,90 +350,7 @@
   </div>
 </div>
 
-<!-- ✅ POPUP OVERLAY -->
-<div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
-  <div id="popupContent" class="popup-section" onclick="event.stopPropagation()">
-    <!-- Kandungan popup akan dimasukkan sini -->
-  </div>
-</div>
 
-<style>
-  .popup-section {
-    max-width: 390px;
-    width: 100%;
-    padding: 20px;
-    color: black;
-  }
-
-  .popup-section h2 {
-    text-align: center;
-    font-weight: bold;
-  }
-</style>          
-
-
-<!-- ✅ JavaScript -->
-<script>
-let currentVisibleSection = null;
-
-function toggleSection(id) {
-  const section = document.getElementById(id);
-  const main = document.getElementById("main-content");
-  const all = document.querySelectorAll('.hidden-section');
-
-  if (!section || !main) return;
-
-  const sudah = (currentVisibleSection === id);
-
-  // ✅ Sembunyi semua
-  all.forEach(sec => {
-    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
-    setTimeout(() => {
-      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
-    }, 300); // ikut masa transition CSS
-  });
-
-  if (sudah) {
-    // kalau ikon sama ditekan → tutup popup & tunjuk main
-    main.style.display = 'block';
-    currentVisibleSection = null;
-  } else {
-    // buka section, sembunyi main-content
-    section.style.display = 'block';
-    main.style.display = 'none';
-    // kuatkan class show untuk anim animate
-    setTimeout(() => section.classList.add('show'), 10);
-    currentVisibleSection = id;
-  }
-}
-  
-function copyRek() {
-    const text = document.getElementById("rek").innerText;
-    navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
-  }
-  
-  function copyToClipboard(elementId) {
-    const text = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Disalin ke papan klip!");
-    }).catch(err => {
-      alert("Gagal menyalin: " + err);
-    });
-  }
-  
-  window.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const ref = urlParams.get("ref");
-
-    if (ref === "hadiahRSVP") {
-      document.getElementById("form-hadiah").style.display = "block";
-      document.getElementById("hadiah-message").style.display = "none";
-    } else {
-      document.getElementById("form-hadiah").style.display = "none";
-      document.getElementById("hadiah-message").style.display = "block";
-    }
-  });
-</script>
 
 <!-- ✅ Seksyen Wishlist (Ringkasan) -->
   <div id="popup-Wishlist" class="popup-overlay">
@@ -461,7 +378,7 @@ function copyRek() {
 
    target="_blank"
    class="btn btn-form"
-   style="display: inline-block; padding: 12px 20px; background-color: #E2DAF9; color: black; border: none; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: bold; text-align: center;">
+   style="display: inline-block; padding: 12px 20px; background-color: #A9A9A9; color: black; border: none; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: bold; text-align: center;">
   Google Form Maklumat Pemberian Hadiah
 </a>
   <br><br>
@@ -1473,7 +1390,90 @@ window.addEventListener("DOMContentLoaded", fetchCSVData);
   }
 </script>
 
+<!-- ✅ POPUP OVERLAY -->
+<div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
+  <div id="popupContent" class="popup-section" onclick="event.stopPropagation()">
+    <!-- Kandungan popup akan dimasukkan sini -->
+  </div>
+</div>
 
+<style>
+  .popup-section {
+    max-width: 390px;
+    width: 100%;
+    padding: 20px;
+    color: black;
+  }
+
+  .popup-section h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+</style>          
+
+
+<!-- ✅ JavaScript -->
+<script>
+let currentVisibleSection = null;
+
+function toggleSection(id) {
+  const section = document.getElementById(id);
+  const main = document.getElementById("main-content");
+  const all = document.querySelectorAll('.hidden-section');
+
+  if (!section || !main) return;
+
+  const sudah = (currentVisibleSection === id);
+
+  // ✅ Sembunyi semua
+  all.forEach(sec => {
+    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
+    setTimeout(() => {
+      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
+    }, 300); // ikut masa transition CSS
+  });
+
+  if (sudah) {
+    // kalau ikon sama ditekan → tutup popup & tunjuk main
+    main.style.display = 'block';
+    currentVisibleSection = null;
+  } else {
+    // buka section, sembunyi main-content
+    section.style.display = 'block';
+    main.style.display = 'none';
+    // kuatkan class show untuk anim animate
+    setTimeout(() => section.classList.add('show'), 10);
+    currentVisibleSection = id;
+  }
+}
+  
+function copyRek() {
+    const text = document.getElementById("rek").innerText;
+    navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
+  }
+  
+  function copyToClipboard(elementId) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      alert("Disalin ke papan klip!");
+    }).catch(err => {
+      alert("Gagal menyalin: " + err);
+    });
+  }
+  
+  window.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref = urlParams.get("ref");
+
+    if (ref === "hadiahRSVP") {
+      document.getElementById("form-hadiah").style.display = "block";
+      document.getElementById("hadiah-message").style.display = "none";
+    } else {
+      document.getElementById("form-hadiah").style.display = "none";
+      document.getElementById("hadiah-message").style.display = "block";
+    }
+  });
+</script>
 
 
     
