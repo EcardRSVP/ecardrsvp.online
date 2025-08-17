@@ -380,6 +380,12 @@ form button[type="submit"] {
   font-size: 1.1rem;
 }
 
+.font-g {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.0rem;
+  color: black; /* warna boleh tukar ikut tema */
+}
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
