@@ -22,8 +22,8 @@ function mulakanSalji() {
 
   const warnaSalji = [
     {
-      color: "rgba(220, 198, 160, 0.4)",
-      glow: "0 0 8px rgba(220, 198, 160, 0.2)"
+      color: "rgba(245, 227, 215, 0.8)", // 🌸 nude cair
+      glow: "0 0 8px rgba(245, 227, 215, 0.4)" // soft glow nude
     }
   ];
 
