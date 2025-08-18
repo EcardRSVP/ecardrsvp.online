@@ -2,7 +2,7 @@ body {
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
   background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-  color: #333;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   padding-bottom: 150px;
@@ -50,23 +50,23 @@ section.doa {
 .hero h1 {
   font-family: 'Ancizar Sans', sans-serif;
   font-size: 36px;
-  color: #8B0000;
+  color: #ffffff;;
 }
 
 .hero p {
   font-size: 20px;
-  color: #5A5A5A;
+  color: #ffffff;;
 }
 
 h2 {
   font-size: 28px;
-  color: #000000;
+  color: #ffffff;;
   margin-bottom: 10px;
 }
 
 h3 {
   font-size: 16px;
-  color: #000000;
+  color: #ffffff;;
   margin-bottom: 10px;
 }
 
@@ -84,37 +84,47 @@ input {
 }
 
 button {
-  background-color: #8B0000;
+  background: linear-gradient(45deg, #FFD700, #FFC107, #FFB700);
   border: none;
   color: white;
   font-size: 16px;
+  font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
   max-width: 100%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-  background-color: #A52A2A;
+  background: linear-gradient(45deg, #FFDF00, #FFD700, #FFA500);
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
+
 button.copy-btn {
-  background-color: #8B0000;
+  background: linear-gradient(45deg, #FFD700, #FFC107, #FFB700);
   color: white;
   border: none;
   border-radius: 8px;
   padding: 10px 16px;
   margin-top: 8px;
   cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 button.copy-btn:hover {
-  background-color: #a50000;
+  background: linear-gradient(45deg, #FFDF00, #FFD700, #FFA500);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
-
 
 footer {
   font-size: 14px;
-  color: #777;
+  color: #ffffff;
   margin-top: 40px;
 }
 
@@ -234,47 +244,33 @@ form button[type="submit"] {
       color: red;
     }
 
-    .phone-button {
-      font-family: 'Ancizar Sans', sans-serif;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 10px;
-      padding: 12px 24px;
-      font-size: 16px;
-      color: white;
-      background-color: #8B4513;
-      border: none;
-      border-radius: 12px;
-      text-decoration: none;
-    }
-
-.phone-button:hover {
-  background-color: #A0522D;
-}
-
+.phone-button,
 .location-button {
   font-family: 'Ancizar Sans', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 20px auto;
+  margin: 12px auto;
   padding: 12px 24px;
   font-size: 16px;
   color: white;
-  background-color: #8B4513;
+  background: linear-gradient(45deg, #FFD700, #FFC107, #FFB700);
   border: none;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.phone-button:hover,
 .location-button:hover {
-  background-color: #A0522D;
+  background: linear-gradient(45deg, #FFDF00, #FFD700, #FFA500);
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
-    
+  
 .location-button img {
   width: 24px;
   height: 24px;
@@ -350,19 +346,19 @@ form button[type="submit"] {
 .font-a {
   font-family: 'Ephesis', cursive;
   font-size: 1.9rem;
-  color: black;
+  color: #ffffff;
 }
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
-  color: black;
+  color: #ffffff;
 }
 
 .font-c {
   font-family: 'Tangerine', cursive;
   font-size: 2.8rem;
-  color: black;
+  color: #ffffff;
 }
 
 .font-d {
@@ -468,7 +464,7 @@ section *, .wishlist *, #main-content * {
   width: 100%;
   border-collapse: collapse;
   background-color: #fdf0e5; /* 🎨 peach soft */
-  color: #333;
+  color: #ffffff;
   font-size: 14px;
   margin-top: 20px;
   border-radius: 10px;
@@ -485,7 +481,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table th {
   background-color: #f7dccc; /* warna lembut untuk header */
   font-weight: bold;
-  color: #5a3731;
+  color: #ffffff;
 }
 
 #hadiah-table tr:last-child td {
@@ -697,7 +693,7 @@ hr {
   transform: translateX(-50%);      /* Betul-betul tengah */
   width: 100%;
   max-width: 390px;                 /* Ikut saiz skrin phone */
-  background-color: white;
+  background-color: yellow;
   text-align: center;
   padding: 20px;
   font-size: 16px;
@@ -707,7 +703,7 @@ hr {
   z-index: 1001;
   transition: top 0.4s ease;
   font-weight: bold;
-  color: black;
+  color: #ffffff;
 }
 
 /* Bila class "show" ditambah → turun dari atas */
