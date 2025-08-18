@@ -84,7 +84,7 @@ input {
 }
 
 button {
-  background-color: maroon;
+  background-color: #8B0000;
   border: none;
   color: white;
   font-size: 16px;
@@ -94,11 +94,11 @@ button {
 }
 
 button:hover {
-  background-color: #B22222;
+  background-color: #A52A2A;
 }
 
 button.copy-btn {
-  background-color: maroon;
+  background-color: #8B0000;
   color: white;
   border: none;
   border-radius: 8px;
@@ -108,7 +108,7 @@ button.copy-btn {
 }
 
 button.copy-btn:hover {
-  background-color: #B22222;
+  background-color: #a50000;
 }
 
 
@@ -243,14 +243,14 @@ form button[type="submit"] {
       padding: 12px 24px;
       font-size: 16px;
       color: white;
-      background-color: maroon;
+      background-color: #28a745;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #B22222;
+  background-color: #218838;
 }
 
 .location-button {
@@ -263,7 +263,7 @@ form button[type="submit"] {
   padding: 12px 24px;
   font-size: 16px;
   color: white;
-  background-color: maroon;
+  background-color: #28a745;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -272,7 +272,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #B22222;
+  background-color: #218838;
 }
     
 .location-button img {
@@ -329,7 +329,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #6A4FAE;
+  background-color: #28a745;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -349,7 +349,7 @@ form button[type="submit"] {
 /* ✅ Font Custom Styles */
 .font-a {
   font-family: 'Ephesis', cursive;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -361,7 +361,7 @@ form button[type="submit"] {
 
 .font-c {
   font-family: 'Tangerine', cursive;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: black;
 }
 
@@ -467,7 +467,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E2DAF9;
+  background-color: #fdf0e5; /* 🎨 peach soft */
   color: #333;
   font-size: 14px;
   margin-top: 20px;
@@ -478,12 +478,12 @@ section *, .wishlist *, #main-content * {
 
 #hadiah-table th, #hadiah-table td {
   padding: 12px 14px;
-  border-bottom: 1px solid #E2DAF9;
+  border-bottom: 1px solid #ebddd5;
   text-align: left;
 }
 
 #hadiah-table th {
-  background-color: #C6B8F0;
+  background-color: #f7dccc; /* warna lembut untuk header */
   font-weight: bold;
   color: #5a3731;
 }
