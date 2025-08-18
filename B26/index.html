@@ -39,16 +39,26 @@
       text-align: center;
       color: black;
     }
-    .front-page button {
-      margin-top: 20px;
-      padding: 10px 25px;
-      background-color: #8B4513;
-      color: white;
-      font-size: 18px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-    }
+.front-page button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: linear-gradient(45deg, #FFD700, #FFC107, #FFB700);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.front-page button:hover {
+  background: linear-gradient(45deg, #FFDF00, #FFD700, #FFA500);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
     .popup-section {
       width: 100%;
       max-width: 420px;
