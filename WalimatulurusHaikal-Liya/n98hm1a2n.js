@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.339953648"]:checked');
 
 if (!nama.value.trim() || !kehadiran) {
   e.preventDefault();
@@ -138,6 +138,27 @@ function toggleSection(id) {
     target.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+// ✅ Fetch Ucapan (PapaParse)
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQqf8-Wn3nSCci462_7mkMVsuIVAV02cNdxotj7uIbQf-CpbKXKkzQoX8PVIvBeV3O-LuXVPOrFKWyL/pub?gid=860271466&single=true&output=csv")
+  .then(response => response.text())
+  .then(data => {
+    const parsed = Papa.parse(data, { header: true });
+    const ucapanList = document.getElementById("ucapanList");
+
+    if (ucapanList) {
+      ucapanList.innerHTML = "";
+      parsed.data.forEach(row => {
+        const nama = row["Nama"]?.trim();
+        const ucapan = row["Ucapan"]?.trim();
+        if (nama && ucapan) {
+          const item = document.createElement("p");
+          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+          ucapanList.appendChild(item);
+        }
+      });
+    }
+  });
 
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
