@@ -119,10 +119,10 @@ function rsvpSuccessHandler() {
         popup.classList.remove("show");
       }, 5000);
     } else {
-      console.warn("⚠ Elemen #submit-popup tidak dijumpai.");
+      console.warn("⚠️ Elemen #submit-popup tidak dijumpai.");
     }
   } else {
-    console.log("ℹ iframe reload tanpa submitted");
+    console.log("ℹ️ iframe reload tanpa submitted");
   }
 }
 window.rsvpSuccessHandler = rsvpSuccessHandler;
@@ -139,25 +139,31 @@ function toggleSection(id) {
   }
 }
 
-const rows = data.split("\n").map(row => row.split(","));
+  
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQqf8-Wn3nSCci462_7mkMVsuIVAV02cNdxotj7uIbQf-CpbKXKkzQoX8PVIvBeV3O-LuXVPOrFKWyL/pub?gid=860271466&single=true&output=csv")
+  .then(response => response.text())
+  .then(data => {
+    // ✅ PapaParse untuk parse CSV dengan betul
+    const parsed = Papa.parse(data, { header: true });
     const ucapanList = document.getElementById("ucapanList");
 
     if (ucapanList) {
       ucapanList.innerHTML = ""; // kosongkan dulu
 
-      rows.forEach((row, index) => {
-        if (index === 0) return; // skip header
-        const nama = row[1]?.trim();
-        const ucapan = row[4]?.trim(); // ✅ kolum ke-4 = ucapan
+      parsed.data.forEach(row => {
+        const nama = row["Nama"]?.trim();
+        const ucapan = row["Ucapan"]?.trim(); // ikut nama header di Google Sheet
 
         if (nama && ucapan) {
           const item = document.createElement("p");
-          item.innerHTML = <strong>${nama}</strong>: ${ucapan};
+          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
           ucapanList.appendChild(item);
         }
-      });
-    }
-  });
+      });
+    }
+  });
+</script>
+
 
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
@@ -192,6 +198,6 @@ function togglePopup(nama) {
     // Buka popup yang diminta
     popup.style.display = "block";
     mainContent.style.display = "none";
-    popupTerbuka = idPopup;
-  }
-}
+    popupTerbuka = idPopup;
+  }
+} 
