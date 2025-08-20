@@ -209,6 +209,7 @@ section.doa {
 /* ✅ RSVP Form Styling */
 form input[type="text"],
 form input[type="number"],
+form textarea,
 form button[type="submit"] {
   width: 90%;
   max-width: 400px;
