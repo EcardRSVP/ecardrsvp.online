@@ -1,5 +1,19 @@
-<!-- 🔹 External library dulu -->
-<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+// ✅ Tanda tempahan "Bakul Baju" jika sudah dipilih di Google Sheet
+fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTPi4cVVJVAYtYrDQRfhBMX0qCMllBMgjYqesb64WKf-5M4BvxIrabnse_Fq_Iu6EHsrnI8Rv1AEv7T/pub?output=csv')
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.split("\n").map(row => row.split(","));
+    rows.forEach(row => {
+      const barang = row[2].trim();
+      if (barang === "Bakul Baju") {
+        const btn = document.getElementById("btn-bakul");
+        if (btn) {
+          btn.innerText = "Telah Ditempah";
+          btn.disabled = true;
+        }
+      }
+    });
+  });
 
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
@@ -124,6 +138,9 @@ function toggleSection(id) {
     target.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+<!-- 🔹 External library dulu -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 
 <!-- 🔹 Lepas tu baru script awak sendiri -->  
 <script>
