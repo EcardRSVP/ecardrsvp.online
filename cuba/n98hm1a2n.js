@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.339953648"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
 if (!nama.value.trim() || !kehadiran) {
   e.preventDefault();
@@ -139,32 +139,6 @@ function toggleSection(id) {
   }
 }
 
-  
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQqf8-Wn3nSCci462_7mkMVsuIVAV02cNdxotj7uIbQf-CpbKXKkzQoX8PVIvBeV3O-LuXVPOrFKWyL/pub?gid=860271466&single=true&output=csv")
-  .then(response => response.text())
-  .then(data => {
-    // ✅ PapaParse untuk parse CSV dengan betul
-    const parsed = Papa.parse(data, { header: true });
-    const ucapanList = document.getElementById("ucapanList");
-
-    if (ucapanList) {
-      ucapanList.innerHTML = ""; // kosongkan dulu
-
-      parsed.data.forEach(row => {
-        const nama = row["Nama"]?.trim();
-        const ucapan = row["Ucapan"]?.trim(); // ikut nama header di Google Sheet
-
-        if (nama && ucapan) {
-          const item = document.createElement("p");
-          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
-          ucapanList.appendChild(item);
-        }
-      });
-    }
-  });
-</script>
-
-
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
   RSVP: "popup-RSVP",
@@ -200,4 +174,4 @@ function togglePopup(nama) {
     mainContent.style.display = "none";
     popupTerbuka = idPopup;
   }
-} 
+}
