@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.339953648"]:checked');
 
 if (!nama.value.trim() || !kehadiran) {
   e.preventDefault();
@@ -138,6 +138,30 @@ function toggleSection(id) {
     target.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+// ✅ Fetch Ucapan dari Google Sheet & Papar di Guestbook
+fetch('https://docs.google.com/spreadsheets/d/e/1m3saNENvfE3du4me7BaXpkXH07xNybLkN2BMcYPiVF/pub?output=csv')
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.split("\n").map(row => row.split(","));
+    const ucapanList = document.getElementById("ucapanList");
+
+    if (ucapanList) {
+      ucapanList.innerHTML = ""; // kosongkan dulu
+
+      rows.forEach((row, index) => {
+        if (index === 0) return; // skip header
+        const nama = row[0]?.trim();
+        const ucapan = row[3]?.trim(); // ✅ kolum ke-4 = ucapan
+
+        if (nama && ucapan) {
+          const item = document.createElement("p");
+          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+          ucapanList.appendChild(item);
+        }
+      });
+    }
+  });
 
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
