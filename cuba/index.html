@@ -237,39 +237,6 @@
     <p>Ucapan akan dipaparkan di sini...</p>
   </div>
 </section>
-
-<script>
-async function fetchUcapan() {
-  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQqf8-Wn3nSCci462_7mkMVsuIVAV02cNdxotj7uIbQf-CpbKXKkzQoX8PVIvBeV3O-LuXVPOrFKWyL/pubhtml?gid=860271466&single=true"; // Ganti dengan link CSV Google Sheet awak
-  try {
-    const response = await fetch(url);
-    const text = await response.text();
-    const rows = text.split("\n").slice(1); // skip header row
-
-    let html = "";
-    rows.forEach(row => {
-      const cols = row.split(",");
-      const nama = cols[1] || "Tetamu";
-      const ucapan = cols[4] || ""; // anggap kolum ke-4 adalah ucapan
-
-      if (ucapan.trim() !== "") {
-        html += `
-          <div style="background:#f9f9f9; padding:10px; margin-bottom:10px; border-radius:8px; text-align:left;">
-            <strong>${nama}</strong><br>
-            <span>${ucapan}</span>
-          </div>`;
-      }
-    });
-
-    document.getElementById("ucapanList").innerHTML = html || "<p>Belum ada ucapan lagi.</p>";
-  } catch (err) {
-    console.error("Error load ucapan:", err);
-  }
-}
-
-window.addEventListener("DOMContentLoaded", fetchUcapan);
-</script>
-
       
 <div class="footer-credit" style="margin-top: 3px; text-align: center;">
   <p>#liyaterciptauntukhaikal</p>
