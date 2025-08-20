@@ -140,7 +140,7 @@ function toggleSection(id) {
 }
 
 // ✅ Fetch Ucapan dari Google Sheet & Papar di Guestbook
-fetch('https://docs.google.com/spreadsheets/d/e/1m3saNENvfE3du4me7BaXpkXH07xNybLkN2BMcYPiVF/pub?output=csv')
+fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQqf8-Wn3nSCci462_7mkMVsuIVAV02cNdxotj7uIbQf-CpbKXKkzQoX8PVIvBeV3O-LuXVPOrFKWyL/pub?gid=860271466&single=true&output=csv')
   .then(response => response.text())
   .then(data => {
     const rows = data.split("\n").map(row => row.split(","));
