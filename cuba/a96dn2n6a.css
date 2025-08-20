@@ -219,6 +219,7 @@ form button[type="submit"] {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
+  font-family: inherit;  /* ✅ Paksa ikut font laman */
   border: 1px solid #ccc; /* ⬅️ samakan border */
 }
 
