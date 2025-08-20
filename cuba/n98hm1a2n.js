@@ -151,8 +151,8 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQqf8-Wn3nSCci462_7mkMVsu
 
       rows.forEach((row, index) => {
         if (index === 0) return; // skip header
-        const nama = row[0]?.trim();
-        const ucapan = row[3]?.trim(); // ✅ kolum ke-4 = ucapan
+        const nama = row[1]?.trim();
+        const ucapan = row[4]?.trim(); // ✅ kolum ke-4 = ucapan
 
         if (nama && ucapan) {
           const item = document.createElement("p");
