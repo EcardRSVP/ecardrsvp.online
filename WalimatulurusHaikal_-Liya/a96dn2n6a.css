@@ -209,6 +209,7 @@ section.doa {
 /* ✅ RSVP Form Styling */
 form input[type="text"],
 form input[type="number"],
+form textarea,
 form button[type="submit"] {
   width: 90%;
   max-width: 400px;
@@ -218,6 +219,8 @@ form button[type="submit"] {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
+  font-family: inherit;  /* ✅ Paksa ikut font laman */
+  border: 1px solid #ccc; /* ⬅️ samakan border */
 }
 
 form button[type="submit"] {
@@ -726,3 +729,9 @@ hr {
     opacity: 1;
   }
 }  
+
+#ucapanList p {
+  white-space: normal;   /* biar text wrap */
+  word-wrap: break-word; /* potong word panjang */
+  overflow-wrap: break-word;
+}
