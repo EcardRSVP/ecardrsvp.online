@@ -726,3 +726,9 @@ hr {
     opacity: 1;
   }
 }  
+
+#ucapanList p {
+  white-space: normal;   /* biar text wrap */
+  word-wrap: break-word; /* potong word panjang */
+  overflow-wrap: break-word;
+}
