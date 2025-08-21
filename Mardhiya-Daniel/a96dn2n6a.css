@@ -84,7 +84,7 @@ input {
 }
 
 button {
-  background-color: #6A4FAE;
+  background-color: #8B4513;
   border: none;
   color: white;
   font-size: 16px;
@@ -94,11 +94,11 @@ button {
 }
 
 button:hover {
-  background-color: #8463C4;
+  background-color: #A0522D;
 }
 
 button.copy-btn {
-  background-color: #6A4FAE;
+  background-color: #8B4513;
   color: white;
   border: none;
   border-radius: 8px;
@@ -108,7 +108,7 @@ button.copy-btn {
 }
 
 button.copy-btn:hover {
-  background-color: #8463C4;
+  background-color: #A0522D;
 }
 
 
@@ -246,14 +246,14 @@ form button[type="submit"] {
       padding: 12px 24px;
       font-size: 16px;
       color: white;
-      background-color: #6A4FAE;
+      background-color: #8B4513;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #8463C4;
+  background-color: #A0522D;
 }
 
 .location-button {
@@ -266,7 +266,7 @@ form button[type="submit"] {
   padding: 12px 24px;
   font-size: 16px;
   color: white;
-  background-color: #6A4FAE;
+  background-color: #8B4513;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -275,7 +275,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #8463C4;
+  background-color: #A0522D;
 }
     
 .location-button img {
@@ -332,7 +332,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #6A4FAE;
+  background-color: #8B4513;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -346,7 +346,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #a50000;
+  background-color: #A0522D;
 }
 
 /* ✅ Font Custom Styles */
@@ -470,8 +470,8 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E2DAF9;
-  color: #333;
+  background-color: #DEB887;
+  color: #000000;
   font-size: 14px;
   margin-top: 20px;
   border-radius: 10px;
@@ -486,9 +486,9 @@ section *, .wishlist *, #main-content * {
 }
 
 #hadiah-table th {
-  background-color: #C6B8F0;
+  background-color: #8B4513;
   font-weight: bold;
-  color: #5a3731;
+  color: #ffffff;
 }
 
 #hadiah-table tr:last-child td {
