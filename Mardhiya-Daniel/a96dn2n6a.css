@@ -84,7 +84,7 @@ input {
 }
 
 button {
-  background-color: #8B0000;
+  background-color: #6A4FAE;
   border: none;
   color: white;
   font-size: 16px;
@@ -94,11 +94,11 @@ button {
 }
 
 button:hover {
-  background-color: #A52A2A;
+  background-color: #8463C4;
 }
 
 button.copy-btn {
-  background-color: #8B0000;
+  background-color: #6A4FAE;
   color: white;
   border: none;
   border-radius: 8px;
@@ -108,7 +108,7 @@ button.copy-btn {
 }
 
 button.copy-btn:hover {
-  background-color: #a50000;
+  background-color: #8463C4;
 }
 
 
@@ -209,6 +209,7 @@ section.doa {
 /* ✅ RSVP Form Styling */
 form input[type="text"],
 form input[type="number"],
+form textarea,
 form button[type="submit"] {
   width: 90%;
   max-width: 400px;
@@ -218,10 +219,12 @@ form button[type="submit"] {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
+  font-family: inherit;  /* ✅ Paksa ikut font laman */
+  border: 1px solid #ccc; /* ⬅️ samakan border */
 }
 
 form button[type="submit"] {
-  background-color: maroon;
+  background-color: #6A4FAE;
   color: white;
   border: none;
 }
@@ -243,14 +246,14 @@ form button[type="submit"] {
       padding: 12px 24px;
       font-size: 16px;
       color: white;
-      background-color: #8B4513;
+      background-color: #6A4FAE;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 .location-button {
@@ -263,7 +266,7 @@ form button[type="submit"] {
   padding: 12px 24px;
   font-size: 16px;
   color: white;
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -272,7 +275,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
     
 .location-button img {
@@ -329,7 +332,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #28a745;
+  background-color: #6A4FAE;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -467,7 +470,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fdf0e5; /* 🎨 peach soft */
+  background-color: #E2DAF9;
   color: #333;
   font-size: 14px;
   margin-top: 20px;
@@ -478,12 +481,12 @@ section *, .wishlist *, #main-content * {
 
 #hadiah-table th, #hadiah-table td {
   padding: 12px 14px;
-  border-bottom: 1px solid #ebddd5;
+  border-bottom: 1px solid #E2DAF9;
   text-align: left;
 }
 
 #hadiah-table th {
-  background-color: #f7dccc; /* warna lembut untuk header */
+  background-color: #C6B8F0;
   font-weight: bold;
   color: #5a3731;
 }
@@ -650,7 +653,7 @@ hr {
 .countdown-box {
   width: 60px;
   height: 65px;
-  background: #FFFFFF;
+  background: white;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
@@ -726,3 +729,9 @@ hr {
     opacity: 1;
   }
 }  
+
+#ucapanList p {
+  white-space: normal;   /* biar text wrap */
+  word-wrap: break-word; /* potong word panjang */
+  overflow-wrap: break-word;
+}
