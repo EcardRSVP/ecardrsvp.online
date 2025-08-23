@@ -251,14 +251,14 @@ form button[type="submit"] {
       padding: 12px 24px;
       font-size: 16px;
       color: white;
-      background-color: #8B4513;
+      background-color: #6A4FAE;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 .location-button {
@@ -271,7 +271,7 @@ form button[type="submit"] {
   padding: 12px 24px;
   font-size: 16px;
   color: white;
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -280,7 +280,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
     
 .location-button img {
