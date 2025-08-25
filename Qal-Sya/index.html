@@ -352,10 +352,10 @@
 
 <script>
 const LIMIT = 5; // limit jemputan
-const API_URL = "https://script.google.com/macros/s/AKfycbz-tH-PgahmU0fXr955GBL95tLS0RkVBNIOR4bxvXV10t6sO_2Os2JsVRL4egnMJxF7/exec"; // paste link script tadi
+const API_URL = "https://script.google.com/macros/s/AKfycbz-tH-PgahmU0fXr955GBL95tLS0RkVBNIOR4bxvXV10t6sO_2Os2JsVRL4egnMJxF7/exec";
 
 document.getElementById("rsvp-form").addEventListener("submit", async function(e) {
-  e.preventDefault();
+  e.preventDefault(); // block default submit dulu
 
   try {
     // Semak kiraan dari Google Sheet
@@ -363,20 +363,30 @@ document.getElementById("rsvp-form").addEventListener("submit", async function(e
     const data = await res.json();
 
     if (data.totalHadir >= LIMIT) {
-      alert("Terima kasih atas kesudian anda. Pendaftaran ke majlis perkahwinan ini telah penuh kerana kapasiti maksimum jemputan telah dicapai.");
-      return; // stop submit
+      alert("Terima kasih atas kesudian anda. Pendaftaran telah penuh kerana kapasiti maksimum jemputan telah dicapai.");
+      return; // terus stop, jangan submit
     }
 
-    // Kalau masih ada slot → submit Google Form
-    e.target.submit();
+    // Kalau masih ada slot → submit form
+    const form = e.target;
+    const formData = new FormData(form);
+
+    await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      mode: "no-cors"
+    });
+
     document.getElementById("submit-popup").style.display = "block";
+    form.reset();
 
   } catch (err) {
     console.error("Ralat semak quota:", err);
-    e.target.submit(); // fallback → tetap submit kalau API gagal
+    alert("Ada masalah teknikal, sila cuba lagi nanti.");
   }
 });
 </script>
+
      
 
 <!-- ✅ Seksyen Contact -->
