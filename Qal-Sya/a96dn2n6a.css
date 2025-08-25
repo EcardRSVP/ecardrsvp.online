@@ -726,3 +726,20 @@ hr {
     opacity: 1;
   }
 }  
+
+#ucapanList p {
+  white-space: normal;   /* biar text wrap */
+  word-wrap: break-word; /* potong word panjang */
+  overflow-wrap: break-word;
+}
+
+/* Samakan lebar kotak alamat, telefon & Google Form dengan butang Copy */
+#alamat-text,
+#telefon-text,
+.btn-form {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  margin: 5px auto;  /* auto center */
+  box-sizing: border-box;
+}
