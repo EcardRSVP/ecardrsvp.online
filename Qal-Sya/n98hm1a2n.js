@@ -139,6 +139,27 @@ function toggleSection(id) {
   }
 }
 
+// ✅ Fetch Ucapan (PapaParse)
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLqwbKZEpOgtbq7dLUb01pSMefeGQSwhUvk4izpHskKM6ICoW86JoisIt9VSqnSR3stZylJTo9Y2h/pub?gid=1444739843&single=true&output=csv")
+  .then(response => response.text())
+  .then(data => {
+    const parsed = Papa.parse(data, { header: true });
+    const ucapanList = document.getElementById("ucapanList");
+
+    if (ucapanList) {
+      ucapanList.innerHTML = "";
+      parsed.data.forEach(row => {
+        const nama = row["Nama"]?.trim();
+        const ucapan = row["Ucapan"]?.trim();
+        if (nama && ucapan) {
+          const item = document.createElement("p");
+          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+          ucapanList.appendChild(item);
+        }
+      });
+    }
+  });
+
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
   RSVP: "popup-RSVP",
