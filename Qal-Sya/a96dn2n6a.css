@@ -98,13 +98,18 @@ button:hover {
 }
 
 button.copy-btn {
-  background-color: maroon;
+  background-color: #6A4FAE;
   color: white;
   border: none;
   border-radius: 8px;
   padding: 10px 16px;
   margin-top: 8px;
   cursor: pointer;
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  margin: 5px auto;  /* auto center */
+  box-sizing: border-box;
 }
 
 button.copy-btn:hover {
@@ -209,6 +214,7 @@ section.doa {
 /* ✅ RSVP Form Styling */
 form input[type="text"],
 form input[type="number"],
+form textarea,
 form button[type="submit"] {
   width: 90%;
   max-width: 400px;
@@ -218,6 +224,8 @@ form button[type="submit"] {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
+  font-family: inherit;  /* ✅ Paksa ikut font laman */
+  border: 1px solid #ccc; /* ⬅️ samakan border */
 }
 
 form button[type="submit"] {
