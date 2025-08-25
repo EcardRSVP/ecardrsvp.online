@@ -98,7 +98,7 @@ button:hover {
 }
 
 button.copy-btn {
-  background-color: #6A4FAE;
+  background-color: maroon;
   color: white;
   border: none;
   border-radius: 8px;
@@ -337,7 +337,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #6A4FAE;
+  background-color: maroon;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -351,7 +351,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #a50000;
+  background-color: #B22222;
 }
 
 /* ✅ Font Custom Styles */
