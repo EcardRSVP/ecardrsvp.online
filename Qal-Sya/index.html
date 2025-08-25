@@ -342,6 +342,35 @@
   </div>
 </div>
 
+<script>
+const LIMIT = 5; // limit jemputan
+const API_URL = "https://script.google.com/macros/s/AKfycbznoKG7vrCxda_-JkdnZNm8PH2utX_m55RAQmUc4ilI4ybSrGO4Y5Yzr5lYqQjwzK4G/exec"; // paste link script tadi
+
+document.getElementById("rsvp-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  try {
+    // Semak kiraan dari Google Sheet
+    const res = await fetch(API_URL);
+    const data = await res.json();
+
+    if (data.totalHadir >= LIMIT) {
+      alert("Terima kasih atas kesudian anda. Pendaftaran ke majlis perkahwinan ini telah penuh kerana kapasiti maksimum jemputan telah dicapai.");
+      return; // stop submit
+    }
+
+    // Kalau masih ada slot → submit Google Form
+    e.target.submit();
+    document.getElementById("submit-popup").style.display = "block";
+
+  } catch (err) {
+    console.error("Ralat semak quota:", err);
+    e.target.submit(); // fallback → tetap submit kalau API gagal
+  }
+});
+</script>
+     
+
 <!-- ✅ Seksyen Contact -->
   <div id="popup-Contact" class="popup-overlay">
   <div class="popup-section">
@@ -407,8 +436,9 @@
     0142127812 / 0122466008
   </div>
   <button class="copy-btn" onclick="copyToClipboard('telefon-text')" style="max-width: 320px; width: 100%;">Copy</button>
+  </div>
 </div>
-</script>
+
 
 
      
