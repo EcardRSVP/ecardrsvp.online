@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1623996062"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.1596645026"]:checked');
 
 if (!nama.value.trim() || !kehadiran) {
   e.preventDefault();
@@ -140,7 +140,7 @@ function toggleSection(id) {
 }
 
 // ✅ Fetch Ucapan (PapaParse)
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRwLqwbKZEpOgtbq7dLUb01pSMefeGQSwhUvk4izpHskKM6ICoW86JoisIt9VSqnSR3stZylJTo9Y2h/pub?gid=1444739843&single=true&output=csv")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQqFpa_kUInn8Qup550xE-9nkUUd88PmbsHm9er3uM-wxSjJpwH_l1Y0J1PBK0bL--Z1n6vM2iBB0nS/pub?gid=1428644971&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
     const parsed = Papa.parse(data, { header: true });
