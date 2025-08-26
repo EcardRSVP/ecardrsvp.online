@@ -140,23 +140,25 @@ function toggleSection(id) {
 }
 
 // ✅ Fetch Ucapan (PapaParse)
+console.log("🚀 Mula fetch ucapan...");
+
 fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-wiQLrMIXSpmo-c_uIVkan1sdrT9o9kPohRm7Q5fQ773r35feNDgYXZS/pub?gid=339206299&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
+    console.log("✅ CSV berjaya fetch:", data.substring(0, 200)); // preview 200 aksara pertama
+
     const parsed = Papa.parse(data, { header: true });
+    console.log("✅ Parsed data:", parsed);
+
     const ucapanList = document.getElementById("ucapanList");
 
     if (ucapanList) {
       ucapanList.innerHTML = "";
-
       parsed.data.forEach((row, i) => {
-        const values = Object.values(row);
-        console.log("📌 Row", i, values);   // 🔹 DEBUG: tengok apa keluar dari CSV
+        console.log("📌 Row", i, row); // <-- debug row satu2
 
-        if (!values || values.length < 5) return;
-
-        const nama = values[1]?.trim();
-        const ucapan = values[4]?.trim();
+        const nama = row["Nama"]?.trim();
+        const ucapan = row["Ucapan"]?.trim();
 
         if (nama && ucapan) {
           const item = document.createElement("p");
