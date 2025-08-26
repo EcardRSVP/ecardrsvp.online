@@ -140,35 +140,41 @@ function toggleSection(id) {
 }
 
 // ✅ Fetch Ucapan (PapaParse)
-console.log("🚀 Mula fetch ucapan...");
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("🚀 Mula fetch ucapan...");
 
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-wiQLrMIXSpmo-c_uIVkan1sdrT9o9kPohRm7Q5fQ773r35feNDgYXZS/pub?gid=339206299&single=true&output=csv")
-  .then(response => response.text())
-  .then(data => {
-    console.log("✅ CSV berjaya fetch:", data.substring(0, 200)); // preview 200 aksara pertama
+  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-wiQLrMIXSpmo-c_uIVkan1sdrT9o9kPohRm7Q5fQ773r35feNDgYXZS/pub?gid=339206299&single=true&output=csv";
 
-    const parsed = Papa.parse(data, { header: true });
-    console.log("✅ Parsed data:", parsed);
+  fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      console.log("✅ CSV berjaya fetch:", data.substring(0, 200));
 
-    const ucapanList = document.getElementById("ucapanList");
+      const parsed = Papa.parse(data, { header: true });
+      console.log("✅ Parsed data:", parsed);
 
-    if (ucapanList) {
+      const ucapanList = document.getElementById("ucapanList");
+
+      if (!ucapanList) {
+        console.error("❌ Elemen #ucapanList tak dijumpai");
+        return;
+      }
+
       ucapanList.innerHTML = "";
-      parsed.data.forEach((row, i) => {
-        console.log("📌 Row", i, row); // <-- debug row satu2
 
+      parsed.data.forEach((row, i) => {
+        if (!row) return; // skip row kosong
         const nama = row["Nama"]?.trim();
         const ucapan = row["Ucapan"]?.trim();
+        if (!nama || !ucapan) return; // skip row tak lengkap
 
-        if (nama && ucapan) {
-          const item = document.createElement("p");
-          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
-          ucapanList.appendChild(item);
-        }
+        const item = document.createElement("p");
+        item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+        ucapanList.appendChild(item);
       });
-    }
-  })
-  .catch(err => console.error("❌ Error fetch ucapan:", err));
+    })
+    .catch(err => console.error("❌ Error fetch ucapan:", err));
+});
 
 
 
