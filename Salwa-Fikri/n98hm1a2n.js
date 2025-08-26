@@ -1,20 +1,3 @@
-// ✅ Tanda tempahan "Bakul Baju" jika sudah dipilih di Google Sheet
-fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTPi4cVVJVAYtYrDQRfhBMX0qCMllBMgjYqesb64WKf-5M4BvxIrabnse_Fq_Iu6EHsrnI8Rv1AEv7T/pub?output=csv')
-  .then(response => response.text())
-  .then(data => {
-    const rows = data.split("\n").map(row => row.split(","));
-    rows.forEach(row => {
-      const barang = row[2].trim();
-      if (barang === "Bakul Baju") {
-        const btn = document.getElementById("btn-bakul");
-        if (btn) {
-          btn.innerText = "Telah Ditempah";
-          btn.disabled = true;
-        }
-      }
-    });
-  });
-
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
   const wrapper = document.getElementById("snow-wrapper");
@@ -67,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
   const startBtn = document.getElementById("start-btn");
-https://docs.google.com/forms/d/e/1FAIpQLSce4dXeWiYbQRE2laZvIopS5byeZ5v-53KRpi5PKdF_ugdwtg/viewform?usp=pp_url&entry.2025809905=1&entry.72944951=Hadir&entry.1775042785=1&entry.2030618544=1
+
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
@@ -141,36 +124,30 @@ function toggleSection(id) {
 
 // ✅ Fetch Ucapan (PapaParse)
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("🚀 Mula fetch ucapan...");
+  console.log("🚀 Mula fetch ucapan (pubhtml)...");
 
-  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-wiQLrMIXSpmo-c_uIVkan1sdrT9o9kPohRm7Q5fQ773r35feNDgYXZS/pub?gid=339206299&single=true&output=csv";
+  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-wiQLrMIXSpmo-c_uIVkan1sdrT9o9kPohRm7Q5fQ773r35feNDgYXZS/pubhtml?gid=339206299&single=true";
 
   fetch(url)
-    .then(response => response.text())
-    .then(data => {
-      console.log("✅ CSV berjaya fetch:", data.substring(0, 200));
-
-      const parsed = Papa.parse(data, { header: true });
-      console.log("✅ Parsed data:", parsed);
+    .then(res => res.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const rows = doc.querySelectorAll("table tbody tr");
 
       const ucapanList = document.getElementById("ucapanList");
-
-      if (!ucapanList) {
-        console.error("❌ Elemen #ucapanList tak dijumpai");
-        return;
-      }
+      if (!ucapanList) return;
 
       ucapanList.innerHTML = "";
 
-      parsed.data.forEach((row, i) => {
-        if (!row) return; // skip row kosong
-        const nama = row["Nama"]?.trim();
-        const ucapan = row["Ucapan"]?.trim();
-        if (!nama || !ucapan) return; // skip row tak lengkap
-
-        const item = document.createElement("p");
-        item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
-        ucapanList.appendChild(item);
+      rows.forEach(tr => {
+        const nama = tr.children[1]?.textContent.trim();
+        const ucapan = tr.children[4]?.textContent.trim();
+        if (nama && ucapan) {
+          const p = document.createElement("p");
+          p.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+          ucapanList.appendChild(p);
+        }
       });
     })
     .catch(err => console.error("❌ Error fetch ucapan:", err));
