@@ -175,7 +175,59 @@
       <strong>Ketibaan Pengantin :</strong>
        12.00 pm</p>
 
+      <hr> 
 
+<section id="countdown-page" class="transparent-section">
+    <h1 class="font-e">COUNTDOWN</h1>
+
+    <div class="countdown">
+      <div class="countdown-box">
+        <div class="countdown-number" id="days">0</div>
+        <div class="countdown-label">Hari</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="hours">0</div>
+        <div class="countdown-label">Jam</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="minutes">0</div>
+        <div class="countdown-label">Minit</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-number" id="seconds">0</div>
+        <div class="countdown-label">Saat</div>
+      </div>
+    </div>
+
+    <script>
+      const weddingDate = new Date("2025-09-13T11:00:00").getTime();
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance < 0) {
+          ["days", "hours", "minutes", "seconds"].forEach(id => {
+            document.getElementById(id).textContent = "0";
+          });
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+</section>
+      
      <hr> 
 
   <section class="galeri transparent-section">
