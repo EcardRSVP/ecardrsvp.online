@@ -124,25 +124,19 @@ function toggleSection(id) {
 
 // ✅ Fetch Ucapan (PapaParse)
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("🚀 Mula fetch ucapan (pubhtml)...");
-
-  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-wiQLrMIXSpmo-c_uIVkan1sdrT9o9kPohRm7Q5fQ773r35feNDgYXZS/pubhtml?gid=339206299&single=true";
+  const url = "https://script.google.com/macros/s/AKfycbzX91o_iN4jdKgdivID4OeQz1r_3-xo44nmIHP6yJLXCkZlqbG-V1Rq804BTWJl1wgE6A/exec";
 
   fetch(url)
-    .then(res => res.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      const rows = doc.querySelectorAll("table tbody tr");
-
+    .then(res => res.json())
+    .then(data => {
       const ucapanList = document.getElementById("ucapanList");
       if (!ucapanList) return;
 
       ucapanList.innerHTML = "";
 
-      rows.forEach(tr => {
-        const nama = tr.children[1]?.textContent.trim();
-        const ucapan = tr.children[4]?.textContent.trim();
+      data.forEach(row => {
+        const nama = row.Nama?.trim();
+        const ucapan = row.Ucapan?.trim();
         if (nama && ucapan) {
           const p = document.createElement("p");
           p.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
