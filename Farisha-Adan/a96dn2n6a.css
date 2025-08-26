@@ -471,7 +471,7 @@ section *, .wishlist *, #main-content * {
   width: 100%;
   border-collapse: collapse;
   background-color: #E6A6A6;
-  color: #FFFFFF;
+  color: black;
   font-size: 14px;
   margin-top: 20px;
   border-radius: 10px;
@@ -488,7 +488,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table th {
   background-color: #E6A6A6;
   font-weight: bold;
-  color: #FFFFFF;
+  color: black;
 }
 
 #hadiah-table tr:last-child td {
