@@ -210,7 +210,8 @@ section.doa {
 form input[type="text"],
 form input[type="number"],
 form textarea,
-form button[type="submit"] {
+form button[type="submit"],
+form button.copy-btn {  
   width: 90%;
   max-width: 400px;
   padding: 12px;
@@ -221,6 +222,7 @@ form button[type="submit"] {
   font-size: 16px;
   font-family: inherit;  /* ✅ Paksa ikut font laman */
   border: 1px solid #ccc; /* ⬅️ samakan border */
+  cursor: pointer;  
 }
 
 form button[type="submit"] {
