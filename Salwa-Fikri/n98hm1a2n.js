@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
   const startBtn = document.getElementById("start-btn");
-
+https://docs.google.com/forms/d/e/1FAIpQLSce4dXeWiYbQRE2laZvIopS5byeZ5v-53KRpi5PKdF_ugdwtg/viewform?usp=pp_url&entry.2025809905=1&entry.72944951=Hadir&entry.1775042785=1&entry.2030618544=1
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
