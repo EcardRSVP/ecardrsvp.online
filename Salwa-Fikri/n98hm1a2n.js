@@ -149,8 +149,10 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-w
     if (ucapanList) {
       ucapanList.innerHTML = "";
       parsed.data.forEach(row => {
-        const nama = row["Nama"]?.trim();
-        const ucapan = row["Ucapan"]?.trim();
+        const values = Object.values(row);
+        const nama = values[1]?.trim();     // Kolum ke-2
+        const ucapan = values[4]?.trim();   // Kolum ke-5
+        
         if (nama && ucapan) {
           const item = document.createElement("p");
           item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
