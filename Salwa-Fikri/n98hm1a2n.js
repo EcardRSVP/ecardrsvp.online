@@ -148,11 +148,16 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-w
 
     if (ucapanList) {
       ucapanList.innerHTML = "";
-      parsed.data.forEach(row => {
+
+      parsed.data.forEach((row, i) => {
         const values = Object.values(row);
-        const nama = values[1]?.trim();     // Kolum ke-2
-        const ucapan = values[4]?.trim();   // Kolum ke-5
-        
+        console.log("📌 Row", i, values);   // 🔹 DEBUG: tengok apa keluar dari CSV
+
+        if (!values || values.length < 5) return;
+
+        const nama = values[1]?.trim();
+        const ucapan = values[4]?.trim();
+
         if (nama && ucapan) {
           const item = document.createElement("p");
           item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
@@ -160,7 +165,10 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-w
         }
       });
     }
-  });
+  })
+  .catch(err => console.error("❌ Error fetch ucapan:", err));
+
+
 
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
