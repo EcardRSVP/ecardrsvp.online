@@ -371,19 +371,21 @@ document.getElementById("rsvp-form").addEventListener("submit", async function(e
     const form = e.target;
     const formData = new FormData(form);
 
-    await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      mode: "no-cors"
-    });
+try {
+  await fetch(form.action, {
+    method: form.method,
+    body: formData,
+    mode: "no-cors"
+  });
 
-    document.getElementById("submit-popup").style.display = "block";
-    form.reset();
+  // Walaupun Google Form tak reply apa², kita terus anggap berjaya
+  document.getElementById("submit-popup").style.display = "block";
+  form.reset();
 
-  } catch (err) {
-    console.error("Ralat semak quota:", err);
-    alert("Ada masalah teknikal, sila cuba lagi nanti.");
-  }
+} catch (submitErr) {
+  console.error("Ralat submit form:", submitErr);
+  alert("Gagal hantar borang, sila cuba lagi.");
+}
 });
 </script>
 
