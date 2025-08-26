@@ -123,31 +123,25 @@ function toggleSection(id) {
 }
 
 // ✅ Fetch Ucapan (PapaParse)
-document.addEventListener("DOMContentLoaded", function() {
-  const url = "https://script.google.com/macros/s/AKfycbzX91o_iN4jdKgdivID4OeQz1r_3-xo44nmIHP6yJLXCkZlqbG-V1Rq804BTWJl1wgE6A/exec";
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTw5PZ0FaKrDdahDeT3oDlH-wiQLrMIXSpmo-c_uIVkan1sdrT9o9kPohRm7Q5fQ773r35feNDgYXZS/pub?gid=339206299&single=true&output=csv")
+  .then(response => response.text())
+  .then(data => {
+    const parsed = Papa.parse(data, { header: true });
+    const ucapanList = document.getElementById("ucapanList");
 
-  fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      const ucapanList = document.getElementById("ucapanList");
-      if (!ucapanList) return;
-
+    if (ucapanList) {
       ucapanList.innerHTML = "";
-
-      data.forEach(row => {
-        const nama = row.Nama?.trim();
-        const ucapan = row.Ucapan?.trim();
+      parsed.data.forEach(row => {
+        const nama = row["Nama"]?.trim();
+        const ucapan = row["Ucapan"]?.trim();
         if (nama && ucapan) {
-          const p = document.createElement("p");
-          p.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
-          ucapanList.appendChild(p);
+          const item = document.createElement("p");
+          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+          ucapanList.appendChild(item);
         }
       });
-    })
-    .catch(err => console.error("❌ Error fetch ucapan:", err));
-});
-
-
+    }
+  });
 
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
