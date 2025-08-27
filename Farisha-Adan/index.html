@@ -136,6 +136,7 @@
 
  <!-- Gabungan Page 2–4 -->
     <section class="page">
+      <br>
       <h2 class="font-f">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
      <p class="nama-ayah"><strong>KAMARUZAMAN BIN ALLANG</strong></p>
       <p class="simbol-dan">&</p>  
@@ -300,7 +301,6 @@
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
   <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
-  <div class="footer-icon money" onclick="togglePopup('MoneyGift')">💵<span>Money Gift</span></div>
   <div class="footer-icon wishlist" onclick="togglePopup('Wishlist')">🎁<span>Wishlist</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
@@ -396,24 +396,24 @@
   <br><br>    
   <h2>WISHLIST</h2>
 
-  <div style="text-align: center; margin-bottom: 20px;">
+<div style="text-align: center; margin-bottom: 20px;">
   <h3><strong>Alamat Penghantaran</strong></h3>
-  <div id="alamat-text" style="background-color: #f2f2f2; padding: 10px; border-radius: 8px; max-width: 320px; margin: 0 auto;">
+  <div id="alamat-text">
       No 409,<br>
       Taman Makmur Persiaran 20,<br>
       Sungai Siput (U)
   </div>
-  <button class="copy-btn" onclick="copyToClipboard('alamat-text')" style="max-width: 320px; width: 100%;">Copy</button>
+  <button class="copy-btn" onclick="copyToClipboard('alamat-text')">Copy</button>
 
   <h3 style="margin-top: 20px;"><strong>Nombor Telefon</strong></h3>
-  <div id="telefon-text" style="background-color: #f2f2f2; padding: 10px; border-radius: 8px; max-width: 320px; margin: 0 auto;">
+  <div id="telefon-text">
     01164108223
   </div>
-  <button class="copy-btn" onclick="copyToClipboard('telefon-text')" style="max-width: 320px; width: 100%;">Copy</button>
-  </div>
+  <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
+</div>
   </div>  
 
-     
+    
 <!-- ✅ POPUP OVERLAY -->
 <div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
   <div id="popupContent" class="popup-section" onclick="event.stopPropagation()">
