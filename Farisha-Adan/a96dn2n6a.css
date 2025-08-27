@@ -97,19 +97,25 @@ button:hover {
   background-color: #B22222;
 }
 
-button.copy-btn {
+/* ✅ Styling khas untuk butang Copy */
+.copy-btn {
   background-color: maroon;
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 10px 16px;
-  margin-top: 8px;
+  padding: 12px;                 /* sama dengan input */
+  margin: 10px auto;
+  width: 90%;                    /* sama panjang macam input */
+  max-width: 400px;
+  display: block;
+  font-size: 16px;
   cursor: pointer;
 }
 
-button.copy-btn:hover {
+.copy-btn:hover {
   background-color: #B22222;
 }
+
 
 
 footer {
