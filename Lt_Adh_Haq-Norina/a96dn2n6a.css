@@ -91,7 +91,7 @@ button,
   border-radius: 8px;
   padding: 12px;
   margin: 10px auto;
-  width: 90%
+  width: 90%;
   max-width: 400px;
   display: block;
   font-size: 16px;
@@ -133,7 +133,7 @@ button,
 }
 
 .btn-form:hover {
-  background-color: #D48484
+  background-color: #D48484;
 }
 
 
@@ -239,11 +239,11 @@ form button[type="submit"],
 form button.copy-btn,
 #alamat-text,
 #telefon-text {   /* ⬅️ tambah div alamat & telefon */
-  width: 90%; !important;
-  max-width: 400px; !important;
+  width: 90%;
+  max-width: 400px;
   padding: 12px;
   margin: 10px auto;
-  display: block; !important;
+  display: block;
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
@@ -260,7 +260,7 @@ form button.copy-btn,
 
 
 form button[type="submit"] {
-  background-color:maroon;
+  background-color: maroon;
   color: white;
   border: none;
 }
@@ -790,3 +790,4 @@ hr {
 #popup-MoneyGift button:hover {
   background-color: #B22222;
 }
+
