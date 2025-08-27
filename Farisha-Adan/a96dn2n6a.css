@@ -211,7 +211,9 @@ form input[type="text"],
 form input[type="number"],
 form textarea,
 form button[type="submit"],
-form button.copy-btn {  
+form button.copy-btn,
+#alamat-text,
+#telefon-text {   /* ⬅️ tambah div alamat & telefon */
   width: 90%;
   max-width: 400px;
   padding: 12px;
@@ -220,10 +222,17 @@ form button.copy-btn {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
-  font-family: inherit;  /* ✅ Paksa ikut font laman */
-  border: 1px solid #ccc; /* ⬅️ samakan border */
-  cursor: pointer;  
+  font-family: inherit;  
+  border: 1px solid #ccc;
 }
+
+/* ✅ Bagi background khas untuk kotak alamat & telefon */
+#alamat-text,
+#telefon-text {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
 
 form button[type="submit"] {
   background-color: maroon;
