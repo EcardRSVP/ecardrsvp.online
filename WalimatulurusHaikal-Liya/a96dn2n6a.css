@@ -102,12 +102,12 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: maroon;
+  background-color: #6A4FAE;
   color: white;
 }
 
 .copy-btn:hover {
-  background-color: #B22222;
+  background-color: #8463C4;
 }
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
