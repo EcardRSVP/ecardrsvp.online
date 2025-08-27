@@ -83,38 +83,45 @@ input {
   border-radius: 6px;
 }
 
-button {
-  background-color: maroon;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  max-width: 100%;
-}
-
-button:hover {
-  background-color: #B22222;
-}
-
-/* ✅ Styling khas untuk butang Copy */
-.copy-btn {
-  background-color: maroon;
-  color: white;
+/* ✅ Styling umum untuk semua butang */
+button, 
+.copy-btn, 
+.btn-form {
   border: none;
   border-radius: 8px;
-  padding: 12px;                 /* sama dengan input */
+  padding: 12px;
   margin: 10px auto;
-  width: 90%;                    /* sama panjang macam input */
+  width: 90%;
   max-width: 400px;
   display: block;
   font-size: 16px;
+  font-family: inherit;
   cursor: pointer;
+  text-align: center;
+}
+
+/* ✅ Copy button */
+.copy-btn {
+  background-color: maroon;
+  color: white;
 }
 
 .copy-btn:hover {
   background-color: #B22222;
 }
+
+/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
+.btn-form {
+  background-color: #E2DAF9;
+  color: black;
+  font-weight: bold;
+  text-decoration: none; /* untuk <a> */
+}
+
+.btn-form:hover {
+  background-color: #cfc4f5;
+}
+
 
 
 
