@@ -83,33 +83,46 @@ input {
   border-radius: 6px;
 }
 
-button {
-  background-color: #6A4FAE;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  max-width: 100%;
-}
-
-button:hover {
-  background-color: #8463C4;
-}
-
-button.copy-btn {
-  background-color: #6A4FAE;
-  color: white;
+/* ✅ Styling umum untuk semua butang */
+button, 
+.copy-btn, 
+.btn-form {
   border: none;
   border-radius: 8px;
-  padding: 10px 16px;
-  margin-top: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  font-size: 16px;
+  font-family: inherit;
   cursor: pointer;
+  text-align: center;
 }
 
-button.copy-btn:hover {
-  background-color: #8463C4;
+/* ✅ Copy button */
+.copy-btn {
+  background-color: maroon;
+  color: white;
 }
+
+.copy-btn:hover {
+  background-color: #B22222;
+}
+
+/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
+.btn-form {
+  background-color: #E2DAF9;
+  color: black;
+  font-weight: bold;
+  text-decoration: none; /* untuk <a> */
+}
+
+.btn-form:hover {
+  background-color: #cfc4f5;
+}
+
+
 
 
 footer {
@@ -210,7 +223,10 @@ section.doa {
 form input[type="text"],
 form input[type="number"],
 form textarea,
-form button[type="submit"] {
+form button[type="submit"],
+form button.copy-btn,
+#alamat-text,
+#telefon-text {   /* ⬅️ tambah div alamat & telefon */
   width: 90%;
   max-width: 400px;
   padding: 12px;
@@ -219,9 +235,17 @@ form button[type="submit"] {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
-  font-family: inherit;  /* ✅ Paksa ikut font laman */
-  border: 1px solid #ccc; /* ⬅️ samakan border */
+  font-family: inherit;  
+  border: 1px solid #ccc;
 }
+
+/* ✅ Bagi background khas untuk kotak alamat & telefon */
+#alamat-text,
+#telefon-text {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
 
 form button[type="submit"] {
   background-color: #6A4FAE;
