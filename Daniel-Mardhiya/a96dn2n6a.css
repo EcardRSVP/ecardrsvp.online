@@ -102,12 +102,12 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: #8B0000;
+  background-color: #8B4513;
   color: white;
 }
 
 .copy-btn:hover {
-  background-color: #A52A2A;
+  background-color: #A0522D;
 }
 
 
