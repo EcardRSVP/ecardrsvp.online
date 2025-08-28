@@ -765,7 +765,6 @@ hr {
 }
 
 html, body {
-  background: #fff !important;  /* Background sentiasa putih */
   color: #000 !important;       /* Teks sentiasa hitam */
   color-scheme: light;          /* ⚡ Elak auto dark mode */
 }
