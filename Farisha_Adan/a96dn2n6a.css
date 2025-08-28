@@ -763,3 +763,21 @@ hr {
 #bg-video::-webkit-media-controls {
   display: none !important;
 }
+
+html, body {
+  background: #fff !important;  /* Background sentiasa putih */
+  color: #000 !important;       /* Teks sentiasa hitam */
+  color-scheme: light;          /* ⚡ Elak auto dark mode */
+}
+
+/* Footer bar fixed bawah */
+.footer {
+  background-color: #ffffff !important; /* Putih */
+  color: #000 !important;               /* Ikon + teks hitam */
+}
+
+/* Elemen <footer> (kalau ada teks copyright dsb.) */
+footer {
+  background: #fff !important;
+  color: #000 !important;
+}
