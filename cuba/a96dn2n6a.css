@@ -15,18 +15,6 @@ html {
   padding: 0;
 }
 
-/* 🎥 Latar Video */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-}
-
 section {
   background-color: transparent !important;
   margin: 30px auto;
@@ -546,18 +534,11 @@ hr {
   z-index: 1;
 }
 
-/* Ubah video supaya tidak penuh satu skrin laptop */
 @media (min-width: 768px) {
-  #bg-video {
-    width: 390px;
-    height: 100vh;
-    left: 50%;
-    transform: translateX(-50%);
-    object-fit: cover;
-    position: fixed;
+  #bg-image {
+    background-size: contain; /* contoh: gambar fit dalam skrin */
   }
 }
-
 
 .gift-item {
   display: flex;
