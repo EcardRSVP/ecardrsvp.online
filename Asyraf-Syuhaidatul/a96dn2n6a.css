@@ -811,3 +811,8 @@ footer {
   background: #fff !important;
   color: #000 !important;
 }
+
+@media (min-width: 768px) {
+  #bg-image {
+    background-size: contain; /* contoh: gambar fit dalam skrin */
+  }
