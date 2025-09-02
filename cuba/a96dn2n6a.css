@@ -148,7 +148,7 @@ body, html {
   overflow-x: hidden;
 }
 
-.container, .page, section, #main-content {
+.container, .page, section, #main-content, .front-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,20 +161,6 @@ body, html {
   box-sizing: border-box;
   min-height: auto;
 }
-
-.front-page {
-  height: 100vh !important;             /* penuh tinggi skrin */
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;  /* mula dari atas */
-  align-items: center !important;
-  text-align: center !important;
-  padding-top: 30vh !important;         /* naikkan sikit */
-  padding-bottom: 0 !important;         /* buang padding bawah body */
-  margin: 0 auto !important;
-  box-sizing: border-box !important;
-}
-
 
 img {
   max-width: 100%;
