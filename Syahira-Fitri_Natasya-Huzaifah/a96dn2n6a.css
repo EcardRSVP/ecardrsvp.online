@@ -815,7 +815,6 @@ hr {
 
 /* Paksa page sentiasa light */
 html, body {
-  background: #fff !important;
   color: #000 !important;
   -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
   color-scheme: only light;
@@ -823,7 +822,6 @@ html, body {
 
 /* Footer confirm putih */
 footer, .footer {
-  background: #fff !important;
   color: #000 !important;
   -webkit-text-fill-color: #000 !important;
 }
@@ -841,8 +839,10 @@ footer, .footer {
     color: #000 !important;
     -webkit-text-fill-color: #000 !important;
   }
+}  /* ✅ tutup di sini */
   
 @media (min-width: 768px) {
   #bg-image {
     background-size: contain; /* contoh: gambar fit dalam skrin */
   }
+}
