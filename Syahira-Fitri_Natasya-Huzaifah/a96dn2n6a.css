@@ -163,14 +163,14 @@ body, html {
 }
 
 .front-page {
-  min-height: 100vh;           /* penuh tinggi skrin */
+  height: 100vh;                   /* penuh tinggi skrin */
   display: flex;
   flex-direction: column;
-  justify-content: center;     /* center menegak */
-  align-items: center;         /* center melintang */
+  justify-content: flex-start;     /* mula dari atas */
+  align-items: center;
   text-align: center;
-  margin: 0 auto;
-  padding: 0 20px;             /* kiri kanan je */
+  padding-top: 20vh;               /* tolak turun sikit dari atas */
+  box-sizing: border-box;
 }
 
 img {
