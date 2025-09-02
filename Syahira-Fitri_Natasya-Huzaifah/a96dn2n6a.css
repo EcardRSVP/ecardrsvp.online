@@ -148,7 +148,7 @@ body, html {
   overflow-x: hidden;
 }
 
-.container, .page, section, #main-content, .front-page {
+.container, .page, section, #main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,6 +160,17 @@ body, html {
   padding: 20px;
   box-sizing: border-box;
   min-height: auto;
+}
+
+.front-page {
+  min-height: 100vh;           /* penuh tinggi skrin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* center menegak */
+  align-items: center;         /* center melintang */
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20px;             /* kiri kanan je */
 }
 
 img {
