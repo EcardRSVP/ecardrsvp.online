@@ -169,7 +169,7 @@ body, html {
   justify-content: flex-start !important;  /* mula dari atas */
   align-items: center !important;
   text-align: center !important;
-  padding-top: 25vh !important;         /* naikkan sikit */
+  padding-top: 30vh !important;         /* naikkan sikit */
   padding-bottom: 0 !important;         /* buang padding bawah body */
   margin: 0 auto !important;
   box-sizing: border-box !important;
@@ -814,20 +814,15 @@ hr {
 }
 
 html, body {
-  color: #000 !important;       /* Teks sentiasa hitam */
-  color-scheme: light;          /* ⚡ Elak auto dark mode */
+  background: #fff !important;   /* Putih confirm */
+  color: #000 !important;        /* Teks hitam confirm */
+  color-scheme: only light;      /* Paksa light mode sahaja */
 }
 
-/* Footer bar fixed bawah */
-.footer {
-  background-color: #ffffff !important; /* Putih */
-  color: #000 !important;               /* Ikon + teks hitam */
-}
-
-/* Elemen <footer> (kalau ada teks copyright dsb.) */
-footer {
-  background: #fff !important;
-  color: #000 !important;
+footer, .footer {
+  background: #fff !important;   /* Putih kekal */
+  color: #000 !important;        /* Hitam kekal */
+  -webkit-text-fill-color: #000 !important; /* Fix untuk Safari iOS */
 }
 
 @media (min-width: 768px) {
