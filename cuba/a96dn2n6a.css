@@ -148,7 +148,7 @@ body, html {
   overflow-x: hidden;
 }
 
-.container, .page, section, #main-content {
+.container, .page, section, #main-content, .front-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,20 +161,6 @@ body, html {
   box-sizing: border-box;
   min-height: auto;
 }
-
-.front-page {
-  height: 100vh !important;             /* penuh tinggi skrin */
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;  /* mula dari atas */
-  align-items: center !important;
-  text-align: center !important;
-  padding-top: 22vh !important;         /* naikkan sikit */
-  padding-bottom: 0 !important;         /* buang padding bawah body */
-  margin: 0 auto !important;
-  box-sizing: border-box !important;
-}
-
 
 img {
   max-width: 100%;
@@ -433,10 +419,6 @@ form button[type="submit"] {
   font-size: 1.1rem;
 }
 
-.font-g {
-  font-family: 'TASA Orbiter', serif;
-  font-size: 1.1rem;
-}
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
@@ -813,34 +795,23 @@ hr {
   display: none !important;
 }
 
-/* Paksa page sentiasa light */
 html, body {
-  color: #000 !important;
-  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
-  color-scheme: only light;
+  color: #000 !important;       /* Teks sentiasa hitam */
+  color-scheme: light;          /* ⚡ Elak auto dark mode */
 }
 
-/* Footer confirm putih */
-footer, .footer {
-  color: #000 !important;
-  -webkit-text-fill-color: #000 !important;
+/* Footer bar fixed bawah */
+.footer {
+  background-color: #ffffff !important; /* Putih */
+  color: #000 !important;               /* Ikon + teks hitam */
 }
 
-/* Semua teks dalam footer */
-.footer * {
+/* Elemen <footer> (kalau ada teks copyright dsb.) */
+footer {
+  background: #fff !important;
   color: #000 !important;
-  fill: #000 !important;   /* kalau ada inline SVG */
 }
 
-/* Override bila user device pakai dark mode */
-@media (prefers-color-scheme: dark) {
-  html, body, footer, .footer {
-    background: #fff !important;
-    color: #000 !important;
-    -webkit-text-fill-color: #000 !important;
-  }
-}  /* ✅ tutup di sini */
-  
 @media (min-width: 768px) {
   #bg-image {
     background-size: contain; /* contoh: gambar fit dalam skrin */
