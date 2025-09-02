@@ -163,15 +163,18 @@ body, html {
 }
 
 .front-page {
-  height: 100vh;                   /* penuh tinggi skrin */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;     /* mula dari atas */
-  align-items: center;
-  text-align: center;
-  padding-top: 20vh;               /* tolak turun sikit dari atas */
-  box-sizing: border-box;
+  height: 100vh !important;             /* penuh tinggi skrin */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;  /* mula dari atas */
+  align-items: center !important;
+  text-align: center !important;
+  padding-top: 20vh !important;         /* naikkan sikit */
+  padding-bottom: 0 !important;         /* buang padding bawah body */
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
 }
+
 
 img {
   max-width: 100%;
