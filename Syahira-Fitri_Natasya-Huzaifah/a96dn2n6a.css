@@ -169,7 +169,7 @@ body, html {
   justify-content: flex-start !important;  /* mula dari atas */
   align-items: center !important;
   text-align: center !important;
-  padding-top: 20vh !important;         /* naikkan sikit */
+  padding-top: 25vh !important;         /* naikkan sikit */
   padding-bottom: 0 !important;         /* buang padding bawah body */
   margin: 0 auto !important;
   box-sizing: border-box !important;
