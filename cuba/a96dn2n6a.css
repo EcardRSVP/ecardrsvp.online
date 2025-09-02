@@ -841,6 +841,7 @@ footer, .footer {
     color: #000 !important;
     -webkit-text-fill-color: #000 !important;
   }
+}  /* ✅ tutup di sini */
   
 @media (min-width: 768px) {
   #bg-image {
