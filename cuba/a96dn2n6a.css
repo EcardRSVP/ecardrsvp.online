@@ -795,24 +795,36 @@ hr {
   display: none !important;
 }
 
+/* Paksa page sentiasa light */
 html, body {
-  color: #000 !important;       /* Teks sentiasa hitam */
-  color-scheme: light;          /* ⚡ Elak auto dark mode */
-}
-
-/* Footer bar fixed bawah */
-.footer {
-  background-color: #ffffff !important; /* Putih */
-  color: #000 !important;               /* Ikon + teks hitam */
-}
-
-/* Elemen <footer> (kalau ada teks copyright dsb.) */
-footer {
-  background: #fff !important;
   color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
+  color-scheme: only light;
 }
 
+/* Footer confirm putih */
+footer, .footer {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Semua teks dalam footer */
+.footer * {
+  color: #000 !important;
+  fill: #000 !important;   /* kalau ada inline SVG */
+}
+
+/* Override bila user device pakai dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body, footer, .footer {
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}  /* ✅ tutup di sini */
+  
 @media (min-width: 768px) {
   #bg-image {
     background-size: contain; /* contoh: gambar fit dalam skrin */
   }
+}
