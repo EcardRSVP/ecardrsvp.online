@@ -15,6 +15,18 @@ html {
   padding: 0;
 }
 
+/* 🎥 Latar Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
 section {
   background-color: transparent !important;
   margin: 30px auto;
@@ -71,32 +83,57 @@ input {
   border-radius: 6px;
 }
 
-button {
-  background-color: #6A4FAE;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  max-width: 100%;
-}
-
-button:hover {
-  background-color: #8463C4;
-}
-
-button.copy-btn {
-  background-color: #6A4FAE;
-  color: white;
+/* ✅ Styling umum untuk semua butang */
+button, 
+.copy-btn, 
+.btn-form {
   border: none;
   border-radius: 8px;
-  padding: 10px 16px;
-  margin-top: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* ✅ Copy button */
+.copy-btn {
+  background-color: #8B4513;
+  color: white;
+}
+
+.copy-btn:hover {
+  background-color: #A0522D;
+}
+
+
+/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
+.btn-form {
+  background-color: #F5E6D3;
+  color: black;
+  font-weight: bold;
+  text-decoration: none; /* untuk <a> */
+  
+  /* 🔽 Tambah supaya selaras dengan .copy-btn */
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%; !important;
+  max-width: 400px; !important;
+  display: block; !important;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
   cursor: pointer;
 }
 
-button.copy-btn:hover {
-  background-color: #8463C4;
+.btn-form:hover {
+  background-color: #E6D1B8;
 }
 
 
@@ -111,7 +148,7 @@ body, html {
   overflow-x: hidden;
 }
 
-.container, .page, section, #main-content, .front-page {
+.container, .page, section, #main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,6 +161,20 @@ body, html {
   box-sizing: border-box;
   min-height: auto;
 }
+
+.front-page {
+  height: 100vh !important;             /* penuh tinggi skrin */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;  /* mula dari atas */
+  align-items: center !important;
+  text-align: center !important;
+  padding-top: 30vh !important;         /* naikkan sikit */
+  padding-bottom: 0 !important;         /* buang padding bawah body */
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
 
 img {
   max-width: 100%;
@@ -198,7 +249,10 @@ section.doa {
 form input[type="text"],
 form input[type="number"],
 form textarea,
-form button[type="submit"] {
+form button[type="submit"],
+form button.copy-btn,
+#alamat-text,
+#telefon-text {   /* ⬅️ tambah div alamat & telefon */
   width: 90%;
   max-width: 400px;
   padding: 12px;
@@ -207,12 +261,20 @@ form button[type="submit"] {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
-  font-family: inherit;  /* ✅ Paksa ikut font laman */
-  border: 1px solid #ccc; /* ⬅️ samakan border */
+  font-family: inherit;  
+  border: 1px solid #ccc;
 }
 
+/* ✅ Bagi background khas untuk kotak alamat & telefon */
+#alamat-text,
+#telefon-text {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+
 form button[type="submit"] {
-  background-color: #6A4FAE;
+  background-color: #8B4513;
   color: white;
   border: none;
 }
@@ -234,14 +296,14 @@ form button[type="submit"] {
       padding: 12px 24px;
       font-size: 16px;
       color: white;
-      background-color: #6A4FAE;
+      background-color: #8B4513;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #8463C4;
+  background-color: #A0522D;
 }
 
 .location-button {
@@ -254,7 +316,7 @@ form button[type="submit"] {
   padding: 12px 24px;
   font-size: 16px;
   color: white;
-  background-color: #6A4FAE;
+  background-color: #8B4513;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -263,7 +325,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #8463C4;
+  background-color: #A0522D;
 }
     
 .location-button img {
@@ -320,7 +382,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #6A4FAE;
+  background-color: #8B4513;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -334,7 +396,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #a50000;
+  background-color: #A0522D;
 }
 
 /* ✅ Font Custom Styles */
@@ -371,6 +433,10 @@ form button[type="submit"] {
   font-size: 1.1rem;
 }
 
+.font-g {
+  font-family: 'TASA Orbiter', serif;
+  font-size: 1.1rem;
+}
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
@@ -458,8 +524,8 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E2DAF9;
-  color: #333;
+  background-color: #F5E6D3;
+  color: black;
   font-size: 14px;
   margin-top: 20px;
   border-radius: 10px;
@@ -474,9 +540,9 @@ section *, .wishlist *, #main-content * {
 }
 
 #hadiah-table th {
-  background-color: #C6B8F0;
+  background-color: #F5E6D3;
   font-weight: bold;
-  color: #5a3731;
+  color: black;
 }
 
 #hadiah-table tr:last-child td {
@@ -534,11 +600,18 @@ hr {
   z-index: 1;
 }
 
+/* Ubah video supaya tidak penuh satu skrin laptop */
 @media (min-width: 768px) {
-  #bg-image {
-    background-size: contain; /* contoh: gambar fit dalam skrin */
+  #bg-video {
+    width: 390px;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    position: fixed;
   }
 }
+
 
 .gift-item {
   display: flex;
@@ -716,3 +789,60 @@ hr {
   word-wrap: break-word; /* potong word panjang */
   overflow-wrap: break-word;
 }
+
+/* ✅ Styling khas untuk butang Copy dalam Money Gift */
+#popup-MoneyGift button {
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#popup-MoneyGift button:hover {
+  background-color: #A0522D;
+}
+
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Paksa page sentiasa light */
+html, body {
+  background: #fff !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
+  color-scheme: only light;
+}
+
+/* Footer confirm putih */
+footer, .footer {
+  background: #fff !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Semua teks dalam footer */
+.footer * {
+  color: #000 !important;
+  fill: #000 !important;   /* kalau ada inline SVG */
+}
+
+/* Override bila user device pakai dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body, footer, .footer {
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+  
+@media (min-width: 768px) {
+  #bg-image {
+    background-size: contain; /* contoh: gambar fit dalam skrin */
+  }
