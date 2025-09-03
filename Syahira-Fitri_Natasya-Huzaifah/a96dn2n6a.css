@@ -281,7 +281,8 @@ form button[type="submit"] {
       margin: 10px;
       padding: 12px 24px;
       font-size: 16px;
-      color: white;
+      color: white; !important;  
+      -webkit-text-fill-color: white !important; /* untuk Safari */
       background-color: #8B4513;
       border: none;
       border-radius: 12px;
@@ -301,7 +302,8 @@ form button[type="submit"] {
   margin: 20px auto;
   padding: 12px 24px;
   font-size: 16px;
-  color: white;
+  color: white; !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   background-color: #8B4513;
   border: none;
   border-radius: 12px;
