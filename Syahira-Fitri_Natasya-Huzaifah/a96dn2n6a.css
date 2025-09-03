@@ -795,12 +795,23 @@ hr {
   background-color: #A0522D;
 }
 
+/* Pastikan butang ikut warna sendiri */
+button,
+.copy-btn,
+.btn-form,
+#popup-MoneyGift button {
+  color: white !important;   /* paksa teks putih */
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+}
+
+
 #bg-video::-webkit-media-controls {
   display: none !important;
 }
 
 /* Paksa page sentiasa light */
 html, body {
+  background: transparent !important;      /* ✅ tembus, tak kacau background */
   color: #000 !important;
   -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
   color-scheme: only light;
@@ -821,7 +832,7 @@ footer, .footer {
 /* Override bila user device pakai dark mode */
 @media (prefers-color-scheme: dark) {
   html, body, footer, .footer {
-    background: #fff !important;
+    background: transparent !important; 
     color: #000 !important;
     -webkit-text-fill-color: #000 !important;
   }
