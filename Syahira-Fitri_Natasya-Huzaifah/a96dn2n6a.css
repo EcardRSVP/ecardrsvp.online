@@ -833,13 +833,19 @@ footer, .footer {
 
 /* Override bila user device pakai dark mode */
 @media (prefers-color-scheme: dark) {
-  html, body, footer, .footer {
-    background: transparent !important; 
+  html, body {
+    background: transparent !important;    /* biar background asal (image/video) nampak */
     color: #000 !important;
     -webkit-text-fill-color: #000 !important;
   }
-}  /* ✅ tutup di sini */
-  
+
+  footer, .footer {
+    background: #fff !important;           /* footer confirm putih */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
 @media (min-width: 768px) {
   #bg-image {
     background-size: contain; /* contoh: gambar fit dalam skrin */
