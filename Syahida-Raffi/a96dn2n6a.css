@@ -371,7 +371,8 @@ form button[type="submit"] {
 
 .gift-links a {
   background-color: #8B4513;
-  color: white;
+  color: white; !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
