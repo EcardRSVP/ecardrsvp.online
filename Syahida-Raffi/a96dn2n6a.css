@@ -114,11 +114,12 @@ button,
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
 .btn-form {
   background-color: #F5E6D3;
-  color: black; !important;
+  color: black !important;                /* betul */
   -webkit-text-fill-color: black !important; /* Safari */
   font-weight: bold;
   text-decoration: none; /* untuk <a> */
-  
+}
+
   /* 🔽 Tambah supaya selaras dengan .copy-btn */
   border: none;
   border-radius: 8px;
