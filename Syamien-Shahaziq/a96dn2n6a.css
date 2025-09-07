@@ -110,20 +110,6 @@ button,
   background-color: #A0522D;
 }
 
-  /* 🔽 Tambah supaya selaras dengan .copy-btn */
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 10px auto;
-  width: 90%; !important;
-  max-width: 400px; !important;
-  display: block; !important;
-  font-size: 16px;
-  font-family: inherit;
-  text-align: center;
-  cursor: pointer;
-}
-
 .btn-form:hover {
   background-color: #E6D1B8;
 }
@@ -851,3 +837,17 @@ footer, .footer {
   color: black !important;
   font-weight: bold;
   text-decoration: none; /* untuk <a> */
+
+  /* 🔽 Tambah supaya selaras dengan .copy-btn */
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%; !important;
+  max-width: 400px; !important;
+  display: block; !important;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+}
