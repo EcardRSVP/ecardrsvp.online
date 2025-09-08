@@ -349,7 +349,8 @@ form button[type="submit"] {
 
 .gift-links a {
   background-color: #8B4513;
-  color: white;
+  color: white; !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -835,6 +836,7 @@ footer, .footer {
 .btn-form {
   background-color: #F5E6D3;
   color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   font-weight: bold;
   text-decoration: none; /* untuk <a> */
 
