@@ -22,8 +22,8 @@ function mulakanSalji() {
 
   const warnaSalji = [
     {
-      color: "#ffffff",
-      glow: "0 0 10px rgba(255, 255, 255, 0.7)"
+      color: "rgba(220, 198, 160, 0.4)",
+      glow: "0 0 8px rgba(220, 198, 160, 0.2)"
     }
   ];
 
@@ -57,6 +57,7 @@ function mulakanSalji() {
     }, 15000);
   }
 }
+
 
 // ✅ RSVP Popup & Validasi
 let submitted = false;
