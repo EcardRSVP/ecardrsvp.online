@@ -102,12 +102,12 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: #8B4513;
+  background-color: maroon;
   color: white;
 }
 
 .copy-btn:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 
@@ -260,7 +260,7 @@ form button.copy-btn,
 
 
 form button[type="submit"] {
-  background-color: #8B4513;
+  background-color: maroon;
   color: white;
   border: none;
 }
@@ -283,14 +283,14 @@ form button[type="submit"] {
       font-size: 16px;
       color: white; !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
-      background-color: #8B4513;
+      background-color: maroon;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 .location-button {
@@ -304,7 +304,7 @@ form button[type="submit"] {
   font-size: 16px;
   color: white; !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
-  background-color: #8B4513;
+  background-color: maroon;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -313,7 +313,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
     
 .location-button img {
@@ -370,7 +370,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #8B4513;
+  background-color: maroon;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -384,7 +384,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 /* ✅ Font Custom Styles */
@@ -780,8 +780,9 @@ hr {
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
-  background-color: #8B4513;
-  color: white;
+  color: white; !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+  background-color: maroon;
   border: none;
   border-radius: 8px;
   padding: 12px;
@@ -794,7 +795,7 @@ hr {
 }
 
 #popup-MoneyGift button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 /* Pastikan butang ikut warna sendiri */
