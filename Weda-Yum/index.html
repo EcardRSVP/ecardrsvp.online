@@ -324,35 +324,35 @@
   <div class="popup-section">
   <h2>RSVP</h2>
 <form id="rsvp-form" 
-      action="https://docs.google.com/forms/d/e/1FAIpQLSctFZPtIPc-DjVA1ITj4ubWGEjPNp6rbXivMx3W51xkbWkAkg/formResponse" 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSd0-2fT86bPTVS6qE8VytjGxNKc6oYtKSjlRKBUYb9GxnLZiw/formResponse" 
       method="POST" 
       target="hidden_iframe">
 
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1068313222" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
+    <input type="text" id="nama" name="entry.1580836768" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
 
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
       <label>
-        <input type="radio" name="entry.1510687059" value="Hadir" required> Hadir
+        <input type="radio" name="entry.1060121131" value="Hadir" required> Hadir
       </label>
       <label>
-        <input type="radio" name="entry.1510687059" value="Tidak Hadir"> Tidak Hadir
+        <input type="radio" name="entry.1060121131" value="Tidak Hadir"> Tidak Hadir
       </label>
     </div>
 
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.105647628" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+    <input type="number" id="bilangan" name="entry.1253291485" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
 
     <!-- Tambah selepas Bilangan Kehadiran -->
     <br>
     <label for="ucapan"><strong>Ucapan</strong></label>
     <textarea id="ucapan" 
-          name="entry.535145471" 
+          name="entry.1002029739" 
           placeholder="Ucapan anda" 
           style="width: 100%; padding: 10px; margin-bottom: 20px; height: 100px;"></textarea>
   
@@ -439,7 +439,7 @@
   <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
 </div>  
 
-<a href="https://docs.google.com/forms/d/1g3AEle381P6SaBGe08M05ALilG9IAZn3khpeVivZ_3Q/viewform?usp=header" 
+<a href="https://docs.google.com/forms/d/1yTGtgmpyheRyz8F5QPzrgHvBOe-Q--bqOj7KAjBTS7Y/viewform?usp=header" 
    target="_blank" 
    class="btn btn-form">
    Google Form Maklumat Pemberian Hadiah
@@ -1426,7 +1426,7 @@
 window.addEventListener("DOMContentLoaded", fetchCSVData);
 
   async function fetchCSVData() {
-    const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
+    const url = "https://docs.google.com/spreadsheets/d/1a1o2Fta9Pba7YagU8j2Y2xB0GiL90bPIoN281Z8dH1g/gviz/tq?tqx=out:csv";
 
     try {
       const response = await fetch(url);
