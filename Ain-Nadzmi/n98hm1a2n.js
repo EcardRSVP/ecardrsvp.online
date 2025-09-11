@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1129653678"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.1647513030"]:checked');
 
 if (!nama.value.trim() || !kehadiran) {
   e.preventDefault();
