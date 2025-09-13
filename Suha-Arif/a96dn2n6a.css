@@ -465,6 +465,8 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   display: block;
 }
 
+.gallery-prev,
+.gallery-next {
   background: none !important;
   color: black; !important;
   -webkit-text-fill-color: black !important; /* Safari */
