@@ -349,7 +349,8 @@ form button[type="submit"] {
 
 .gift-links a {
   background-color: #4B4B4B;
-  color: white;
+  color: white; !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -491,7 +492,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #5a3731;
+  background-color: #4B4B4B;
   color: black;
   font-size: 14px;
   margin-top: 20px;
@@ -507,7 +508,7 @@ section *, .wishlist *, #main-content * {
 }
 
 #hadiah-table th {
-  background-color: #5a3731;
+  background-color: #4B4B4B;
   font-weight: bold;
   color: black;
 }
