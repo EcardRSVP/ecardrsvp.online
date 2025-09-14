@@ -1,12 +1,11 @@
 
 body {
-  font-family: 'Ancizar Sans', sans-serif;
-  text-align: center;
-  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-  color: #333;
   margin: 0;
   padding: 0;
   height: 100%;   /* penting untuk sokong layout penuh */
+  font-family: 'Ancizar Sans', sans-serif;
+  text-align: center;
+  color: #333;
   padding-bottom: 150px;
   position: relative;
   
