@@ -15,6 +15,18 @@ html {
   padding: 0;
 }
 
+/* 🎥 Latar Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
 section {
   background-color: transparent !important;
   margin: 30px auto;
@@ -269,15 +281,16 @@ form button[type="submit"] {
       margin: 10px;
       padding: 12px 24px;
       font-size: 16px;
-      color: white;
-      background-color: #8B4513;
+      color: white; !important;  
+      -webkit-text-fill-color: white !important; /* untuk Safari */
+      background-color: maroon;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 .location-button {
@@ -289,8 +302,9 @@ form button[type="submit"] {
   margin: 20px auto;
   padding: 12px 24px;
   font-size: 16px;
-  color: white;
-  background-color: #8B4513;
+  color: white; !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+  background-color: maroon;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -299,7 +313,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
     
 .location-button img {
@@ -407,6 +421,10 @@ form button[type="submit"] {
   font-size: 1.1rem;
 }
 
+.font-g {
+  font-family: 'TASA Orbiter', serif;
+  font-size: 1.1rem;
+}
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
@@ -450,7 +468,8 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 .gallery-prev,
 .gallery-next {
   background: none !important;
-  color: black;
+  color: black; !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   border: none;
   font-size: 28px;
   padding: 5px;
@@ -570,10 +589,18 @@ hr {
   z-index: 1;
 }
 
+/* Ubah video supaya tidak penuh satu skrin laptop */
 @media (min-width: 768px) {
-  #bg-image {
-    background-size: contain; /* contoh: gambar fit dalam skrin */
+  #bg-video {
+    width: 390px;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    position: fixed;
   }
+}
+
 
 .gift-item {
   display: flex;
@@ -771,23 +798,57 @@ hr {
   background-color: #A0522D;
 }
 
+/* Pastikan butang ikut warna sendiri */
+button,
+.copy-btn,
+.btn-form,
+#popup-MoneyGift button {
+  color: white !important;   /* paksa teks putih */
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+}
+
+
 #bg-video::-webkit-media-controls {
   display: none !important;
 }
 
+/* Paksa page sentiasa light */
 html, body {
-  color: #000 !important;       /* Teks sentiasa hitam */
-  color-scheme: light;          /* ⚡ Elak auto dark mode */
-}
-
-/* Footer bar fixed bawah */
-.footer {
-  background-color: #ffffff !important; /* Putih */
-  color: #000 !important;               /* Ikon + teks hitam */
-}
-
-/* Elemen <footer> (kalau ada teks copyright dsb.) */
-footer {
-  background: #fff !important;
+  background: transparent !important;      /* ✅ tembus, tak kacau background */
   color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
+  color-scheme: only light;
+}
+
+/* Footer confirm putih */
+footer, .footer {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Semua teks dalam footer */
+.footer * {
+  color: #000 !important;
+  fill: #000 !important;   /* kalau ada inline SVG */
+}
+
+/* Override bila user device pakai dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: transparent !important;    /* biar background asal (image/video) nampak */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  footer, .footer {
+    background: #fff !important;           /* footer confirm putih */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #bg-image {
+    background-size: contain; /* contoh: gambar fit dalam skrin */
+  }
 }
