@@ -111,7 +111,7 @@ button,
 }
 
 .btn-form:hover {
-  background-color: #1A1A1A;
+  background-color: #4B4B4B;
 }
 
 
@@ -834,7 +834,7 @@ footer, .footer {
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
 .btn-form {
-  background-color: #808080;
+  background-color: #CCCCCC;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   font-weight: bold;
