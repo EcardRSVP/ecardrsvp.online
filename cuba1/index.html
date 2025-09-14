@@ -53,11 +53,23 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 390px;         /* ikut saiz phone */
   height: 100vh;        /* penuh tinggi skrin */
-  background: url('B49.png') center/cover no-repeat;
+  background: url('B49.png') center center / contain no-repeat;
   z-index: -1;          /* belakang semua content */
 }
+  /* 📱 Telefon → penuh skrin, statik */
+  @media (max-width: 767px) {
+    .bg-fixed {
+      width: 100vw;   /* ikut penuh skrin telefon */
+    }
+  }
+
+  /* 💻 Laptop / tablet → kekal macam telefon (390px), statik tengah */
+  @media (min-width: 768px) {
+    .bg-fixed {
+      width: 390px;   /* maintain macam view telefon */
+    }
+  }    
     .page {
       padding: 30px 20px;
       margin-bottom: 30px;
