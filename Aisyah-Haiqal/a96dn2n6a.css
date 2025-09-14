@@ -281,16 +281,15 @@ form button[type="submit"] {
       margin: 10px;
       padding: 12px 24px;
       font-size: 16px;
-      color: white; !important;  
-      -webkit-text-fill-color: white !important; /* untuk Safari */
-      background-color: #8B4513;
+      color: white;
+      background-color: #6A4FAE;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 .location-button {
@@ -302,9 +301,8 @@ form button[type="submit"] {
   margin: 20px auto;
   padding: 12px 24px;
   font-size: 16px;
-  color: white; !important;  
-  -webkit-text-fill-color: white !important; /* untuk Safari */
-  background-color: #8B4513;
+  color: white;
+  background-color: #6A4FAE;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -313,7 +311,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
     
 .location-button img {
