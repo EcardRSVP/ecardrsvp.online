@@ -1,11 +1,10 @@
-
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;   /* penting untuk sokong layout penuh */
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
+  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
   color: #333;
+  margin: 0;
+  padding: 0;
   padding-bottom: 150px;
   position: relative;
   
@@ -14,7 +13,18 @@ body {
 html {
   margin: 0;
   padding: 0;
-  height: 100%;   /* penting untuk sokong layout penuh */
+}
+
+/* 🎥 Latar Video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
 }
 
 section {
@@ -579,6 +589,19 @@ hr {
   z-index: 1;
 }
 
+/* Ubah video supaya tidak penuh satu skrin laptop */
+@media (min-width: 768px) {
+  #bg-video {
+    width: 390px;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    position: fixed;
+  }
+}
+
+
 .gift-item {
   display: flex;
   flex-direction: column;
@@ -821,5 +844,11 @@ footer, .footer {
     background: #fff !important;           /* footer confirm putih */
     color: #000 !important;
     -webkit-text-fill-color: #000 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #bg-image {
+    background-size: contain; /* contoh: gambar fit dalam skrin */
   }
 }
