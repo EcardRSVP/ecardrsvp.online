@@ -102,19 +102,20 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: #8B4513;
+  background-color: #4B4B4B;
   color: white;
 }
 
 .copy-btn:hover {
-  background-color: #A0522D;
+  background-color: #A9A9A9;
 }
 
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
 .btn-form {
   background-color: #F5E6D3;
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   font-weight: bold;
   text-decoration: none; /* untuk <a> */
   
@@ -260,7 +261,7 @@ form button.copy-btn,
 
 
 form button[type="submit"] {
-  background-color: #8B4513;
+  background-color: #4B4B4B;
   color: white;
   border: none;
 }
@@ -283,14 +284,14 @@ form button[type="submit"] {
       font-size: 16px;
       color: white; !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
-      background-color: #8B4513;
+      background-color: #4B4B4B;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #A9A9A9;
 }
 
 .location-button {
@@ -304,7 +305,7 @@ form button[type="submit"] {
   font-size: 16px;
   color: white; !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
-  background-color: #8B4513;
+  background-color: #4B4B4B;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -313,7 +314,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #A9A9A9;
 }
     
 .location-button img {
@@ -370,7 +371,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #8B4513;
+  background-color: #4B4B4B;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -384,7 +385,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #A0522D;
+  background-color: #A9A9A9;
 }
 
 /* ✅ Font Custom Styles */
@@ -512,7 +513,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #F5E6D3;
+  background-color: #5a3731;
   color: black;
   font-size: 14px;
   margin-top: 20px;
@@ -528,7 +529,7 @@ section *, .wishlist *, #main-content * {
 }
 
 #hadiah-table th {
-  background-color: #F5E6D3;
+  background-color: #5a3731;
   font-weight: bold;
   color: black;
 }
@@ -780,7 +781,7 @@ hr {
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
-  background-color: #8B4513;
+  background-color: #4B4B4B;
   color: white;
   border: none;
   border-radius: 8px;
@@ -794,7 +795,7 @@ hr {
 }
 
 #popup-MoneyGift button:hover {
-  background-color: #A0522D;
+  background-color: #A9A9A9;
 }
 
 /* Pastikan butang ikut warna sendiri */
