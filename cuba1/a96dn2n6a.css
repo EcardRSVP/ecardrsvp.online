@@ -1,7 +1,6 @@
 body {
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
-  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
   color: #333;
   margin: 0;
   padding: 0;
@@ -131,10 +130,7 @@ footer {
   margin-top: 40px;
 }
 
-body, html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
 
 .container, .page, section, #main-content, .front-page {
   display: flex;
@@ -574,8 +570,8 @@ hr {
   margin: 0 auto;
   width: 100%;
   position: relative;
-  z-index: 0;   /* turunkan supaya tak kacau background */
-  background: transparent !important; /* pastikan tembus */
+  z-index: 1;
+}
 
 .gift-item {
   display: flex;
@@ -782,11 +778,6 @@ button,
   -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
-
-#bg-video::-webkit-media-controls {
-  display: none !important;
-}
-
 /* Paksa page sentiasa light */
 html, body {
   background: transparent !important;      /* ✅ tembus, tak kacau background */
@@ -827,3 +818,13 @@ footer, .footer {
     background-size: contain; /* contoh: gambar fit dalam skrin */
   }
 }
+
+html, body {
+  background: transparent !important;  /* tembus, biar nampak .bg-fixed */
+  overflow-x: hidden;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
+  color-scheme: only light;
+  max-width: 100%;
+}
+
