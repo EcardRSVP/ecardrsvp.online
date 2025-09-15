@@ -574,8 +574,8 @@ hr {
   margin: 0 auto;
   width: 100%;
   position: relative;
-  z-index: 1;
-}
+  z-index: 0;   /* turunkan supaya tak kacau background */
+  background: transparent !important; /* pastikan tembus */
 
 .gift-item {
   display: flex;
