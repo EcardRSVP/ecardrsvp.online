@@ -1,7 +1,6 @@
 body {
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
-  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
   color: #333;
   margin: 0;
   padding: 0;
@@ -13,18 +12,6 @@ body {
 html {
   margin: 0;
   padding: 0;
-}
-
-/* 🎥 Latar Video */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
 }
 
 section {
@@ -143,10 +130,7 @@ footer {
   margin-top: 40px;
 }
 
-body, html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
 
 .container, .page, section, #main-content, .front-page {
   display: flex;
@@ -589,19 +573,6 @@ hr {
   z-index: 1;
 }
 
-/* Ubah video supaya tidak penuh satu skrin laptop */
-@media (min-width: 768px) {
-  #bg-video {
-    width: 390px;
-    height: 100vh;
-    left: 50%;
-    transform: translateX(-50%);
-    object-fit: cover;
-    position: fixed;
-  }
-}
-
-
 .gift-item {
   display: flex;
   flex-direction: column;
@@ -807,11 +778,6 @@ button,
   -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
-
-#bg-video::-webkit-media-controls {
-  display: none !important;
-}
-
 /* Paksa page sentiasa light */
 html, body {
   background: transparent !important;      /* ✅ tembus, tak kacau background */
@@ -852,3 +818,13 @@ footer, .footer {
     background-size: contain; /* contoh: gambar fit dalam skrin */
   }
 }
+
+html, body {
+  background: transparent !important;  /* tembus, biar nampak .bg-fixed */
+  overflow-x: hidden;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
+  color-scheme: only light;
+  max-width: 100%;
+}
+
