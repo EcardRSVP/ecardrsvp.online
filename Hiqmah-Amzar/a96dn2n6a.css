@@ -448,7 +448,8 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 .gallery-prev,
 .gallery-next {
   background: none !important;
-  color: black;
+  color: black; !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   border: none;
   font-size: 28px;
   padding: 5px;
