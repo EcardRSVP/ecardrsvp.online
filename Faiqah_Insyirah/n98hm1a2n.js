@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1129653678"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.388638091"]:checked');
 
 if (!nama.value.trim() || !kehadiran) {
   e.preventDefault();
@@ -139,6 +139,26 @@ function toggleSection(id) {
   }
 }
 
+// ✅ Fetch Ucapan (PapaParse)
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSRd9yKo1cplBTyD3gQ4IbVRAf9XYZe5xAwJ5Twg-fBMaepirshCNOZgUYxDovTceSPjhOB4IFHptXy/pub?gid=709719923&single=true&output=csv")
+  .then(response => response.text())
+  .then(data => {
+    const parsed = Papa.parse(data, { header: true });
+    const ucapanList = document.getElementById("ucapanList");
+
+    if (ucapanList) {
+      ucapanList.innerHTML = "";
+      parsed.data.forEach(row => {
+        const nama = row["Nama"]?.trim();
+        const ucapan = row["Ucapan"]?.trim();
+        if (nama && ucapan) {
+          const item = document.createElement("p");
+          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+          ucapanList.appendChild(item);
+        }
+      });
+    }
+  });
 
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
