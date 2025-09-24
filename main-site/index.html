@@ -23,6 +23,14 @@
 
     <!-- Button bawah RSVP -->
     <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: nowrap;">
+          <a href="#borang" 
+         style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
+                text-decoration: none; border-radius: 8px; display: inline-block; 
+                text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
+         onmouseover="this.style.backgroundColor='#f497b6';" 
+         onmouseout="this.style.backgroundColor='#f8b6c9';">
+        BORANG
+      </a>
       <a href="#pembayaran" 
          style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
                 text-decoration: none; border-radius: 8px; display: inline-block; 
@@ -31,13 +39,13 @@
          onmouseout="this.style.backgroundColor='#f8b6c9';">
         PEMBAYARAN
       </a>
-      <a href="#borang" 
+      <a href="#FAQ" 
          style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
                 text-decoration: none; border-radius: 8px; display: inline-block; 
                 text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
          onmouseover="this.style.backgroundColor='#f497b6';" 
          onmouseout="this.style.backgroundColor='#f8b6c9';">
-        BORANG MAKLUMAT
+        FAQ
       </a>
     </div>
   </div>
@@ -668,6 +676,25 @@
 </a>
 
 
+<!-- Borang Maklumat -->
+<section id="borang" class="borang-maklumat">
+  <h2>BORANG PENGISIAN MAKLUMAT</h2><br><br>
+  <div style="text-align: center;">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpZGSwL6C_UVm72VK_56pV8cSr8yOAqgPr_EQw4uFJfljY7w/viewform" target="_blank">
+      <button class="pilih-pakej-btn">
+        <i class="fas fa-edit"></i> Isi Borang
+      </button>
+    </a>
+  </div>
+  
+  <p style="font-size:13px; color:#b22222; text-align:center; margin-top:15px; line-height:1.4;">
+    ⚠️ Reminder: Sekiranya selepas anda mendapat link RSVP, anda tidak membuat pembayaran dalam tempoh <strong>12 jam</strong>,  
+    seller berhak untuk memadam semula link tanpa persetujuan anda.
+  </p>
+</section>
+
+<br>
+  
 <!-- Cara Pembayaran -->
 <section id="pembayaran" class="bayaran">
   <h2>PEMBAYARAN</h2><br>
@@ -709,28 +736,126 @@ function copyTNG() {
 </script>
 
 <br>
+  
+<!-- Q&A Section -->
+<section id="faq" class="faq-section">
+  <h2>Frequently Asked Questions (FAQ)</h2><br>
 
-<!-- Borang Maklumat -->
-<section id="borang" class="borang-maklumat">
-  <h2>BORANG PENGISIAN MAKLUMAT</h2><br><br>
-  <div style="text-align: center;">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpZGSwL6C_UVm72VK_56pV8cSr8yOAqgPr_EQw4uFJfljY7w/viewform" target="_blank">
-      <button class="pilih-pakej-btn">
-        <i class="fas fa-edit"></i> Isi Borang
-      </button>
-    </a>
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">Q: Berapa lama tempoh RSVP akan siap?</button>
+      <div class="faq-answer">A: Dalam tempoh 3 hari selepas maklumat lengkap diisi</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke saya nak tukar font?</button>
+      <div class="faq-answer">A: Boleh, namun akan dikenakan caj tambahan RM 3.00 untuk setiap kali perubahan</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke nak lagu starting dari chorus?</button>
+      <div class="faq-answer">A: Boleh, tapi perlu mention terus dalam google form starting lagu dari mana ya (Jika tidak, seller berhak untuk mengenakan caj tambahan RM 2.00 untuk setiap kali perubahan lagu)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke nak tukar lagu?</button>
+      <div class="faq-answer">A: Perubahan lagu hanya sekali seperti yg diisi didalam google form (Sekiranya nak tukar juga, seller akan mengenakan caj tambahan RM 2.00 untuk setiap kali perubahan lagu)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Berapa lama tempoh untuk saya check maklumat di RSVP Link?</button>
+      <div class="faq-answer">A: Dalam tempoh 24 jam</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke saya nak version Bahasa Inggris?</button>
+      <div class="faq-answer">A: Maaf, hanya ada version Bahasa Melayu sahaja</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Berapa kali saya boleh tukar maklumat selepas seller share RSVP Link?</button>
+      <div class="faq-answer">A: Perubahan maklumat hanya dibenarkan sebanyak 2 kali sahaja (Tidak termasuk perubahan gambar)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Kalau saya ubah fikiran untuk tukar gambar selepas isi maklumat, boleh ke?</button>
+      <div class="faq-answer">A: Perubahan gambar akan dikenakan caj tambahan RM 1.00 untuk setiap kali perubahan gambar</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke kalau saya nak urgent?</button>
+      <div class="faq-answer">A: Boleh, tapi perlu membuat double pembayaran mengikut harga pakej (Akan siap dalam tempoh 24 jam)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Akan dapat ayat untuk hebahan/jemput tetamu ke?</button>
+      <div class="faq-answer">A: Ya, anda hanya perlu scan di "STEP PENGGUNAAN RSVP & TEKS JEMPUTAN TETAMU" untuk ke google form Koleksi teks/ayat jemputan</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Saya beli Bronze Package (RM 12.81) tapi saya nak buang bahagian gambar dan ditukarkan dengan Money Gift, dll?</button>
+      <div class="faq-answer">A: Tidak dibenarkan</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Saya buat majlis kecil-kecilan, boleh hadkan tetamu ke?</button>
+      <div class="faq-answer">A: RSVP tiada limit tetamu, namun jika mahu limitkan tetamu, boleh nyatakan terus dalam ayat jemputan, contoh boleh dilihat di Koleksi Ucapan/Teks Edaran Kad Digital</div>
+    </div>
   </div>
-
-  <p style="font-size:13px; color:#b22222; text-align:center; margin-top:15px; line-height:1.4;">
-    ⚠️ Reminder: Sekiranya selepas mendapat link RSVP, anda tidak membuat pembayaran dalam tempoh <strong>12 jam</strong>,  
-    seller berhak untuk memadam semula link tanpa persetujuan anda.
-  </p>
 </section>
 
+<!-- FAQ CSS -->
+<style>
+.faq-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
 
+.faq-question {
+  width: 100%;
+  background-color: #f8b6c9;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #f497b6;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  font-size: 13px;
+  background: #fff0f5;
+  border-left: 3px solid #f497b6;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+</style>
+
+<!-- FAQ Script -->
+<script>
+const faqBtns = document.querySelectorAll(".faq-question");
+
+faqBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const answer = btn.nextElementSibling;
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+  
   <!-- Footer -->
   <footer>
-    <p>Hak Cipta Terpelihara © 2025 NNA Design</p>
+    <p>NNA Design</p>
   </footer>
 
   <script src="n98hm1a2n.js"></script>
