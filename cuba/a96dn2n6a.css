@@ -110,28 +110,6 @@ button,
   background-color: #A0522D;
 }
 
-
-/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
-.btn-form {
-  background-color: #F5E6D3;
-  color: black;
-  font-weight: bold;
-  text-decoration: none; /* untuk <a> */
-  
-  /* 🔽 Tambah supaya selaras dengan .copy-btn */
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 10px auto;
-  width: 90%; !important;
-  max-width: 400px; !important;
-  display: block; !important;
-  font-size: 16px;
-  font-family: inherit;
-  text-align: center;
-  cursor: pointer;
-}
-
 .btn-form:hover {
   background-color: #E6D1B8;
 }
@@ -281,7 +259,8 @@ form button[type="submit"] {
       margin: 10px;
       padding: 12px 24px;
       font-size: 16px;
-      color: white;
+      color: white; !important;  
+      -webkit-text-fill-color: white !important; /* untuk Safari */
       background-color: #8B4513;
       border: none;
       border-radius: 12px;
@@ -301,7 +280,8 @@ form button[type="submit"] {
   margin: 20px auto;
   padding: 12px 24px;
   font-size: 16px;
-  color: white;
+  color: white; !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   background-color: #8B4513;
   border: none;
   border-radius: 12px;
@@ -369,7 +349,8 @@ form button[type="submit"] {
 
 .gift-links a {
   background-color: #8B4513;
-  color: white;
+  color: white; !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -419,6 +400,14 @@ form button[type="submit"] {
   font-size: 1.1rem;
 }
 
+.font-g {
+  font-family: 'TASA Orbiter', serif;
+  font-size: 1.1rem;
+}
+
+.heart-black {
+  color: black;
+}
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
@@ -791,12 +780,23 @@ hr {
   background-color: #A0522D;
 }
 
+/* Pastikan butang ikut warna sendiri */
+button,
+.copy-btn,
+.btn-form,
+#popup-MoneyGift button {
+  color: white !important;   /* paksa teks putih */
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+}
+
+
 #bg-video::-webkit-media-controls {
   display: none !important;
 }
 
 /* Paksa page sentiasa light */
 html, body {
+  background: transparent !important;      /* ✅ tembus, tak kacau background */
   color: #000 !important;
   -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
   color-scheme: only light;
@@ -816,15 +816,42 @@ footer, .footer {
 
 /* Override bila user device pakai dark mode */
 @media (prefers-color-scheme: dark) {
-  html, body, footer, .footer {
-    background: #fff !important;
+  html, body {
+    background: transparent !important;    /* biar background asal (image/video) nampak */
     color: #000 !important;
     -webkit-text-fill-color: #000 !important;
   }
-}  /* ✅ tutup di sini */
-  
+
+  footer, .footer {
+    background: #fff !important;           /* footer confirm putih */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
 @media (min-width: 768px) {
   #bg-image {
     background-size: contain; /* contoh: gambar fit dalam skrin */
   }
+}
+
+.btn-form {
+  background-color: #F5E6D3;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  font-weight: bold;
+  text-decoration: none; /* untuk <a> */
+  
+  /* 🔽 Tambah supaya selaras dengan .copy-btn */
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%; !important;
+  max-width: 400px; !important;
+  display: block; !important;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
 }
