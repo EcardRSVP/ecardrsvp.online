@@ -671,17 +671,44 @@
 <!-- Cara Pembayaran -->
 <section id="pembayaran" class="bayaran">
   <h2>PEMBAYARAN</h2><br>
-  <p>Hanya menerima pembayaran melalui Shopee</p><br><br>
+  <p>Pembayaran boleh dilakukan selepas dapat link RSVP.</p><br>
+
+  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
+    <strong>No. Akaun TNG:</strong> 
+    <span id="tngAcc" style="font-weight:bold; font-size:16px;">9988000739814</span>
+    <button onclick="copyTNG()" 
+            style="background-color:#f8b6c9; color:black; border:none; padding:6px 12px; 
+                   border-radius:6px; cursor:pointer; font-size:12px;"
+            onmouseover="this.style.backgroundColor='#f497b6';" 
+            onmouseout="this.style.backgroundColor='#f8b6c9';">
+      Copy
+    </button>
+  </div>
+  <p id="copyMsg" style="color:black; font-size:12px; display:none; margin-top:8px; text-align:center;">
+    Nombor akaun berjaya dicopy
+  </p>
+
+  <br><br>
+  <p style="text-align:center;">Atau boleh juga terus scan QR Code TNG di bawah:</p><br>
   <div style="text-align: center;">
-    <a href="https://shopee.com.my/nna_95" target="_blank">
-      <button class="pilih-pakej-btn">
-        <i class="fas fa-shopping-bag"></i> Shopee
-      </button>
-    </a>
+    <img src="WhatsApp Image 2025-04-12 at 7.05.30 PM.jpeg" alt="QR TNG" style="max-width: 200px; border: 2px solid #ccc; border-radius: 8px;">
   </div>
 </section>
 
-<br>
+<script>
+function copyTNG() {
+  var tngNo = document.getElementById("tngAcc").innerText;
+  navigator.clipboard.writeText(tngNo).then(function() {
+    document.getElementById("copyMsg").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("copyMsg").style.display = "none";
+    }, 2000);
+  });
+}
+</script>
+
+
+<hr>
 
 <!-- Borang Maklumat -->
 <section id="borang" class="borang-maklumat"
