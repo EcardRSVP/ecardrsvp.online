@@ -140,7 +140,7 @@ function toggleSection(id) {
 }
 
 // ✅ Fetch Ucapan (PapaParse)
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vReyp3BOUCQ604jAGCFWMTFF-iVQjXicxNZwm3KllGTYowTLcp0BoZNW0hUG87IGJP-DilM7mI5pR73/pub?gid=1589834496&single=true&output=csv")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vR3ao9hlCdfEUDKCwedZ1mt02sfCR5f8kKpKeRO0_QRMEudHmSKoFxBxWde2bmST0hPoL3uSWqjfFUr/pub?gid=13754478&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
     const parsed = Papa.parse(data, { header: true });
