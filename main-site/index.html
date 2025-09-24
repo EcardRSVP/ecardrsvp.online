@@ -673,9 +673,9 @@
   <h2>PEMBAYARAN</h2><br>
   <p>Pembayaran boleh dilakukan selepas dapat link RSVP</p><br>
 
-  <div style="display: flex; align-items: center; gap: 10px; justify-content: center;">
-    <strong>No. Akaun TNG:</strong> 
-    <span id="tngAcc" style="font-weight:bold; font-size:16px;">111023701317</span>
+  <div style="text-align: center;">
+    <strong>No. Akaun TNG:</strong><br>
+    <span id="tngAcc" style="font-weight:bold; font-size:16px;">111023701317</span><br><br>
     <button onclick="copyTNG()" 
             style="background-color:#f8b6c9; color:black; border:none; padding:6px 12px; 
                    border-radius:6px; cursor:pointer; font-size:12px;"
@@ -684,12 +684,13 @@
       Copy
     </button>
   </div>
+
   <p id="copyMsg" style="color:black; font-size:12px; display:none; margin-top:8px; text-align:center;">
     Nombor akaun berjaya disalin
   </p>
 
   <br><br>
-  <p style="text-align:center;">Atau imbas QR TNG di bawah:</p><br>
+  <p style="text-align:center;">Atau imbas QR TNG di bawah</p><br>
   <div style="text-align: center;">
     <img src="QR TNG.png" alt="QR TNG" style="max-width: 200px; border: 2px solid #ccc; border-radius: 8px;">
   </div>
@@ -707,8 +708,7 @@ function copyTNG() {
 }
 </script>
 
-
-<hr>
+<br>
 
 <!-- Borang Maklumat -->
 <section id="borang" class="borang-maklumat">
@@ -720,6 +720,11 @@ function copyTNG() {
       </button>
     </a>
   </div>
+
+  <p style="font-size:13px; color:#b22222; text-align:center; margin-top:15px; line-height:1.4;">
+    ⚠️ Reminder: Sekiranya selepas mendapat link RSVP, anda tidak membuat pembayaran dalam tempoh <strong>12 jam</strong>,  
+    seller berhak untuk memadam semula link tanpa persetujuan anda.
+  </p>
 </section>
 
 
