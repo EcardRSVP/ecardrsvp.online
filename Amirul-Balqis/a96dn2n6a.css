@@ -102,12 +102,34 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: #8B4513;
+  background-color: maroon;
   color: white;
 }
 
 .copy-btn:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
+}
+
+
+/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
+.btn-form {
+  background-color: #F5E6D3;
+  color: black;
+  font-weight: bold;
+  text-decoration: none; /* untuk <a> */
+  
+  /* 🔽 Tambah supaya selaras dengan .copy-btn */
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%; !important;
+  max-width: 400px; !important;
+  display: block; !important;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
 }
 
 .btn-form:hover {
@@ -261,14 +283,14 @@ form button[type="submit"] {
       font-size: 16px;
       color: white; !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
-      background-color: #8B4513;
+      background-color: maroon;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 .location-button {
@@ -282,7 +304,7 @@ form button[type="submit"] {
   font-size: 16px;
   color: white; !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
-  background-color: #8B4513;
+  background-color: maroon;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -291,7 +313,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
     
 .location-button img {
@@ -348,9 +370,8 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #8B4513;
-  color: white; !important;
-  -webkit-text-fill-color: white !important; /* Safari */
+  background-color: maroon;
+  color: white;
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -363,7 +384,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 /* ✅ Font Custom Styles */
@@ -403,10 +424,6 @@ form button[type="submit"] {
 .font-g {
   font-family: 'TASA Orbiter', serif;
   font-size: 1.1rem;
-}
-
-.heart-black {
-  color: black;
 }
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
@@ -763,7 +780,7 @@ hr {
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
-  background-color: #8B4513;
+  background-color: maroon;
   color: white;
   border: none;
   border-radius: 8px;
@@ -777,7 +794,7 @@ hr {
 }
 
 #popup-MoneyGift button:hover {
-  background-color: #A0522D;
+  background-color: #B22222;
 }
 
 /* Pastikan butang ikut warna sendiri */
@@ -833,25 +850,4 @@ footer, .footer {
   #bg-image {
     background-size: contain; /* contoh: gambar fit dalam skrin */
   }
-}
-
-.btn-form {
-  background-color: #F5E6D3;
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
-  font-weight: bold;
-  text-decoration: none; /* untuk <a> */
-  
-  /* 🔽 Tambah supaya selaras dengan .copy-btn */
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 10px auto;
-  width: 90%; !important;
-  max-width: 400px; !important;
-  display: block; !important;
-  font-size: 16px;
-  font-family: inherit;
-  text-align: center;
-  cursor: pointer;
 }
