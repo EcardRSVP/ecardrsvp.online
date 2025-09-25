@@ -23,14 +23,13 @@
 }
 
 .menu-btn {
-  font-size: 22px;
-  cursor: pointer;
-  background: transparent; /* buang pink */
-  color: black;            /* tulisan & ikon hitam */
+  background: none;
+  border: none;      /* buang border */
+  outline: none;     /* buang outline bila klik */
+  font-size: 12px;
   padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid black; /* tambah border hitam simple */
-  box-shadow: none;        /* buang shadow */
+  cursor: pointer;
+  color: black;            /* tulisan & ikon hitam */
 }
 
 
@@ -48,8 +47,8 @@
 
 .dropdown-menu a {
   display: block;
-  padding: 10px 12px;
-  font-size: 14px;
+  padding: 6px 10px;
+  font-size: 10px;
   text-decoration: none;
   text-align: center;   /* perkataan center */
   color: black;
@@ -124,7 +123,13 @@
   justify-items: center;
   margin-top: 20px;
 }
-
+  
+.kad-item img {
+  max-width: 100%;   /* ikut lebar parent */
+  height: auto;      /* maintain ratio */
+  display: block;
+  margin: 0 auto;    /* centerkan */
+}
 .kad-item {
   background: #fff;
   padding: 6px;
@@ -132,7 +137,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
   max-width: 180px; /* kawal supaya tak besar sangat */
-  max-height: 250px;  
+  max-height: 280px;  
 }
 
 .kad-item img {
@@ -175,6 +180,27 @@
   background: #f8b6c9;
   cursor: pointer;
 }    
+
+  .pakej {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center semua kotak di tengah */
+  gap: 20px;               /* jarak antara kotak */
+}
+  
+.package-item {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}  
   </style>
 
   
@@ -191,12 +217,13 @@
   <div class="menu-container">
     <div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
     <div class="dropdown-menu" id="dropdownMenu">
+      <a href="javascript:void(0)" onclick="showSection('utama')">LAMAN UTAMA</a>
       <a href="javascript:void(0)" onclick="showSection('designkad')">DESIGN KAD</a>
       <a href="javascript:void(0)" onclick="showSection('borang')">BORANG</a>
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
       <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
     </div>
-  </nav>
+   </div>
 </header>
   
 
@@ -944,10 +971,9 @@ window.onclick = function(e) {
 
 // fungsi show/hide section lain (pakej sentiasa stay)
 function showSection(id) {
-  document.querySelectorAll('#designkad, #borang, #pembayaran, #faq')
-    .forEach(sec => sec.style.display = 'none'); 
-  document.getElementById(id).style.display = 'block';
-  document.getElementById("dropdownMenu").classList.remove("show");
+  document.querySelectorAll('.section').forEach(sec => sec.style.display = "none");
+  document.getElementById(id).style.display = "block";
+  document.getElementById("dropdownMenu").style.display = "none";
 }
 </script>
 
@@ -967,10 +993,6 @@ function showSection(id) {
   <i class="fab fa-whatsapp"></i>
 </a>
   
-  <!-- Footer -->
-  <footer>
-    <p>NNA Design</p>
-  </footer>
 
   <script src="n98hm1a2n.js"></script>
 
