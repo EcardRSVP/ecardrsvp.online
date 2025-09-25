@@ -22,36 +22,74 @@
   </div>
 </header>
 
-    <!-- Button bawah RSVP -->
-  <header class="sub-header">
-    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: nowrap;">
-          <a href="#borang" 
-         style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
-                text-decoration: none; border-radius: 8px; display: inline-block; 
-                text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
-         onmouseover="this.style.backgroundColor='#f497b6';" 
-         onmouseout="this.style.backgroundColor='#f8b6c9';">
-        BORANG
-      </a>
-      <a href="#pembayaran" 
-         style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
-                text-decoration: none; border-radius: 8px; display: inline-block; 
-                text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
-         onmouseover="this.style.backgroundColor='#f497b6';" 
-         onmouseout="this.style.backgroundColor='#f8b6c9';">
-        PEMBAYARAN
-      </a>
-      <a href="#FAQ" 
-         style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
-                text-decoration: none; border-radius: 8px; display: inline-block; 
-                text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
-         onmouseover="this.style.backgroundColor='#f497b6';" 
-         onmouseout="this.style.backgroundColor='#f8b6c9';">
-        FAQ
-      </a>
+<header class="sub-header">
+  <div class="menu-container">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="design.html">DESIGN KAD</a>
+      <a href="borang.html">BORANG</a>
+      <a href="pembayaran.html">PEMBAYARAN</a>
+      <a href="faq.html">FAQ</a>
     </div>
+  </div>
 </header>
-  
+
+<script>
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+// Tutup bila klik luar
+window.onclick = function(e) {
+  if (!e.target.matches('.menu-btn')) {
+    let menu = document.getElementById("dropdownMenu");
+    if (menu.classList.contains('show')) {
+      menu.classList.remove('show');
+    }
+  }
+}
+</script>
+
+<style>
+.sub-header {
+  text-align: center;
+  margin-top: 10px;
+}
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+.menu-btn {
+  font-size: 20px;
+  cursor: pointer;
+  background: #f8b6c9;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  margin-top: 5px;
+  z-index: 1000;
+}
+.dropdown-menu a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+.dropdown-menu a:hover {
+  background-color: #f497b6;
+}
+.show {
+  display: block;
+}
+</style>
 
   <!-- Seksyen Pakej -->
 <section class="pakej-section">
@@ -91,14 +129,6 @@
       <div style="text-align: center;">
 <a href="https://ecardrsvp.online/WalimatulurusHaikal_-Liya/" target="_blank">
   <button class="pilih-pakej-btn">PREVIEW</button>
-</a><br>
-<a href="https://s.shopee.com.my/AA7GqBGiCu" target="_blank">
-<button class="pilih-pakej-btn" 
-        style="background-color: #f8b6c9; color: black; margin-top:8px;" 
-        onmouseover="this.style.backgroundColor='#f497b6'; this.style.color='black';" 
-        onmouseout="this.style.backgroundColor='#f06b9c'; this.style.color='black';">
-  Shopee
-</button>
   </a> 
       </div>
     </div>
@@ -130,14 +160,6 @@
       <div style="text-align: center;">
 <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya/" target="_blank">
   <button class="pilih-pakej-btn">PREVIEW</button>
-</a><br>
-<a href="https://s.shopee.com.my/8fIT3NZwKR" target="_blank">
-<button class="pilih-pakej-btn" 
-        style="background-color: #f8b6c9; color: black; margin-top:8px;" 
-        onmouseover="this.style.backgroundColor='#f497b6'; this.style.color='black';" 
-        onmouseout="this.style.backgroundColor='#f06b9c'; this.style.color='black';">
-  Shopee
-</button>
   </a> 
       </div>
     </div>
@@ -160,14 +182,6 @@
       <div style="text-align: center;">
 <a href="https://ecardrsvp.online/WalimatulurusHaikal_Liya/" target="_blank">
   <button class="pilih-pakej-btn">PREVIEW</button>
-</a><br>
-<a href="https://s.shopee.com.my/7pjM3l2qBA" target="_blank">
-<button class="pilih-pakej-btn" 
-        style="background-color: #f8b6c9; color: black; margin-top:8px;" 
-        onmouseover="this.style.backgroundColor='#f497b6'; this.style.color='black';" 
-        onmouseout="this.style.backgroundColor='#f06b9c'; this.style.color='black';">
-  Shopee
-</button>
   </a>      
       </div>
     </div>
@@ -176,7 +190,7 @@
 </section> <!-- ✅ TUTUP .pakej-section -->
 
 <!-- Preview Kad Kahwin -->
-<section class="preview-kad">
+<section id="designkad" class="preview-kad">
   <h2>DESIGN KAD</h2>
   <div class="preview-grid">
     
@@ -670,15 +684,8 @@
 </section>
 
 
-<!-- Butang WhatsApp -->
-<a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
-   class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-
 <!-- Borang Maklumat -->
-<section id="borang" class="borang-maklumat">
+<section id="borang" class="borang-section">
   <h2>BORANG PENGISIAN MAKLUMAT</h2><br><br>
   <div style="text-align: center;">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpZGSwL6C_UVm72VK_56pV8cSr8yOAqgPr_EQw4uFJfljY7w/viewform" target="_blank">
@@ -694,33 +701,33 @@
   </p>
 </section>
 
-<br>
   
-<!-- Cara Pembayaran -->
-<section id="pembayaran" class="bayaran">
-  <h2>PEMBAYARAN</h2><br>
-  <p>Pembayaran boleh dilakukan selepas dapat link RSVP</p><br>
+  
+<!-- Seksyen Pembayaran -->
+<section id="pembayaran" class="pembayaran-section">
+  <h2>PEMBAYARAN</h2>
+  <p>Sila buat pembayaran ke akaun berikut:</p>
+  <ul style="list-style: none; padding: 0; text-align: center;">
+    <li><strong>Bank:</strong> Touch 'n Go</li>
+    <li><strong>No. Akaun:</strong> <span id="tngAcc">111023701317</span> 
+      <button onclick="copyTNG()" 
+              style="margin-left:8px; padding:4px 8px; font-size:12px; border:none; border-radius:5px; background:#f8b6c9; cursor:pointer;">
+        Salin
+      </button>
+    </li>
+    <li><strong>Nama:</strong> Nurnabilah Atiqah</li>
+  </ul>
 
-  <div style="text-align: center;">
-    <strong>No. Akaun TNG:</strong><br>
-    <span id="tngAcc" style="font-weight:bold; font-size:16px;">111023701317</span><br><br>
-    <button onclick="copyTNG()" 
-            style="background-color:#f8b6c9; color:black; border:none; padding:6px 12px; 
-                   border-radius:6px; cursor:pointer; font-size:12px;"
-            onmouseover="this.style.backgroundColor='#f497b6';" 
-            onmouseout="this.style.backgroundColor='#f8b6c9';">
-      Copy
-    </button>
-  </div>
-
-  <p id="copyMsg" style="color:black; font-size:12px; display:none; margin-top:8px; text-align:center;">
-    Nombor akaun berjaya disalin
+  <!-- Mesej salinan berjaya -->
+  <p id="copyMsg" style="display:none; color:green; text-align:center; font-size:13px; margin-top:10px;">
+    ✅ Nombor akaun berjaya disalin!
   </p>
 
-  <br><br>
-  <p style="text-align:center;">Atau imbas QR TNG di bawah</p><br>
-  <div style="text-align: center;">
-    <img src="QR TNG.png" alt="QR TNG" style="max-width: 200px; border: 2px solid #ccc; border-radius: 8px;">
+  <p style="margin-top: 20px; text-align:center;">Atau imbas QR TNG di bawah</p>
+
+  <div style="text-align: center; margin-top: 10px;">
+    <img src="QR TNG.png" alt="QR TNG" 
+         style="max-width: 200px; width: 100%; border: 2px solid #ccc; border-radius: 8px;">
   </div>
 </section>
 
@@ -736,9 +743,9 @@ function copyTNG() {
 }
 </script>
 
-<br>
+
   
-<!-- Q&A Section -->
+<!-- FAQ Section -->
 <section id="faq" class="faq-section">
   <h2>Frequently Asked Questions (FAQ)</h2><br>
 
@@ -853,6 +860,12 @@ faqBtns.forEach(btn => {
   });
 });
 </script>
+  
+<!-- Butang WhatsApp -->
+<a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
+   class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
   
   <!-- Footer -->
   <footer>
