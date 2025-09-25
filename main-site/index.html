@@ -14,6 +14,30 @@
 </head>
 <body style="background-color: #FADADD; font-family: sans-serif;">
 
+<style>
+    body { background:#FADADD; font-family:sans-serif; margin:0; padding:0; }
+    header { text-align:center; padding:10px; }
+    .menu-container { position:relative; display:inline-block; }
+    .menu-btn {
+      font-size:20px; cursor:pointer;
+      background:#f8b6c9; padding:8px 12px; border-radius:8px;
+    }
+    .dropdown-menu {
+      display:none; position:absolute; background:#fff;
+      min-width:150px; box-shadow:0 8px 16px rgba(0,0,0,0.2);
+      border-radius:8px; margin-top:5px; z-index:1000;
+    }
+    .dropdown-menu a {
+      display:block; padding:10px 12px; font-size:14px; text-decoration:none; color:black;
+    }
+    .dropdown-menu a:hover { background:#f497b6; }
+    .show { display:block; }
+
+    section { padding:20px; text-align:center; }
+    #designkad, #borang, #pembayaran, #faq { display:none; } /* 🔒 mula-mula sembunyi */
+  </style>
+
+  
 <!-- Header -->
 <header class="header">
   <div class="logo">
@@ -21,78 +45,23 @@
     <h1>RSVP (LINK)</h1><br>
   </div>
 </header>
-
-<header class="sub-header">
+  
+<!-- Menu -->
+<header class="sub-header" style="text-align:center;">
   <div class="menu-container">
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
     <div class="dropdown-menu" id="dropdownMenu">
-      <a href="design.html">DESIGN KAD</a>
-      <a href="borang.html">BORANG</a>
-      <a href="pembayaran.html">PEMBAYARAN</a>
-      <a href="faq.html">FAQ</a>
+      <a href="javascript:void(0)" onclick="showSection('designkad')">DESIGN KAD</a>
+      <a href="javascript:void(0)" onclick="showSection('borang')">BORANG</a>
+      <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
+      <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
     </div>
   </div>
 </header>
+  
 
-<script>
-function toggleMenu() {
-  document.getElementById("dropdownMenu").classList.toggle("show");
-}
-
-// Tutup bila klik luar
-window.onclick = function(e) {
-  if (!e.target.matches('.menu-btn')) {
-    let menu = document.getElementById("dropdownMenu");
-    if (menu.classList.contains('show')) {
-      menu.classList.remove('show');
-    }
-  }
-}
-</script>
-
-<style>
-.sub-header {
-  text-align: center;
-  margin-top: 10px;
-}
-.menu-container {
-  position: relative;
-  display: inline-block;
-}
-.menu-btn {
-  font-size: 20px;
-  cursor: pointer;
-  background: #f8b6c9;
-  padding: 8px 12px;
-  border-radius: 8px;
-}
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 120px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  margin-top: 5px;
-  z-index: 1000;
-}
-.dropdown-menu a {
-  color: black;
-  padding: 8px 12px;
-  text-decoration: none;
-  display: block;
-  font-size: 14px;
-}
-.dropdown-menu a:hover {
-  background-color: #f497b6;
-}
-.show {
-  display: block;
-}
-</style>
-
-  <!-- Seksyen Pakej -->
-<section class="pakej-section">
+<!-- Main Page: Senarai Pakej -->
+<section id="pakej">
   <h2>SENARAI PAKEJ</h2><br><br>
   <div class="pakej">
     
@@ -190,9 +159,10 @@ window.onclick = function(e) {
 </section> <!-- ✅ TUTUP .pakej-section -->
 
 <!-- Preview Kad Kahwin -->
-<section id="designkad" class="preview-kad">
+<section id="designkad">
   <h2>DESIGN KAD</h2>
   <div class="preview-grid">
+
     
     <div class="kad-item">
       <img src="B1.png" alt="Kad 1">
@@ -685,8 +655,8 @@ window.onclick = function(e) {
 
 
 <!-- Borang Maklumat -->
-<section id="borang" class="borang-section">
-  <h2>BORANG PENGISIAN MAKLUMAT</h2><br><br>
+<section id="borang">
+  <h2>BORANG</h2>
   <div style="text-align: center;">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpZGSwL6C_UVm72VK_56pV8cSr8yOAqgPr_EQw4uFJfljY7w/viewform" target="_blank">
       <button class="pilih-pakej-btn">
@@ -704,7 +674,7 @@ window.onclick = function(e) {
   
   
 <!-- Seksyen Pembayaran -->
-<section id="pembayaran" class="pembayaran-section">
+<section id="pembayaran">
   <h2>PEMBAYARAN</h2>
   <p>Sila buat pembayaran ke akaun berikut:</p>
   <ul style="list-style: none; padding: 0; text-align: center;">
@@ -720,7 +690,7 @@ window.onclick = function(e) {
 
   <!-- Mesej salinan berjaya -->
   <p id="copyMsg" style="display:none; color:green; text-align:center; font-size:13px; margin-top:10px;">
-    ✅ Nombor akaun berjaya disalin!
+    Nombor akaun berjaya disalin!
   </p>
 
   <p style="margin-top: 20px; text-align:center;">Atau imbas QR TNG di bawah</p>
@@ -745,8 +715,8 @@ function copyTNG() {
 
 
   
-<!-- FAQ Section -->
-<section id="faq" class="faq-section">
+<section id="faq">
+  <h2>FAQ</h2>
   <h2>Frequently Asked Questions (FAQ)</h2><br>
 
   <div class="faq-container">
@@ -847,6 +817,50 @@ function copyTNG() {
   margin-bottom: 10px;
   border-radius: 4px;
 }
+
+/* GRID DESIGN KAD */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* responsive */
+  gap: 15px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.kad-item {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 180px; /* kawal supaya tak besar sangat */
+}
+
+.kad-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.kad-item p {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.preview-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f8b6c9;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.preview-btn:hover {
+  background: #f497b6;
+}  
 </style>
 
 <!-- FAQ Script -->
@@ -860,6 +874,37 @@ faqBtns.forEach(btn => {
   });
 });
 </script>
+
+<script>
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.menu-btn')) {
+    let menu = document.getElementById("dropdownMenu");
+    if (menu.classList.contains('show')) menu.classList.remove('show');
+  }
+}
+
+// fungsi show/hide section lain (pakej sentiasa stay)
+function showSection(id) {
+  document.querySelectorAll('#designkad, #borang, #pembayaran, #faq')
+    .forEach(sec => sec.style.display = 'none'); 
+  document.getElementById(id).style.display = 'block';
+  document.getElementById("dropdownMenu").classList.remove("show");
+}
+</script>
+
+
+
+
+
+
+
+
+
+
   
 <!-- Butang WhatsApp -->
 <a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
@@ -886,4 +931,5 @@ function toggleGambar(id) {
 </script>
 
 </body>
+</html>
 </html>
