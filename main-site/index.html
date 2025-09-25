@@ -26,7 +26,7 @@
   background: none;
   border: none;      /* buang border */
   outline: none;     /* buang outline bila klik */
-  font-size: 14px;
+  font-size: 18px;
   padding: 8px 12px;
   cursor: pointer;
   color: black;            /* tulisan & ikon hitam */
@@ -48,7 +48,7 @@
 .dropdown-menu a {
   display: block;
   padding: 6px 10px;
-  font-size: 14px;
+  font-size: 18px;
   text-decoration: none;
   text-align: center;   /* perkataan center */
   color: black;
@@ -68,10 +68,6 @@
   .dropdown-menu.show {
     display: block;
   }
-
-  #designkad, #borang, #pembayaran, #faq {
-    display: none;
-  }  
 
 #pakej h2,
 #designkad h2,
@@ -201,6 +197,13 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
+}  
+
+#designkad, #borang, #pembayaran, #faq {
+  display: none;
+}
+#pakej {
+  display: block;
 }  
   </style>
 
@@ -980,6 +983,23 @@ function showSection(id) {
 }
 </script>
 
+<script>
+function showSection(id) {
+  // Senarai semua section
+  const sections = ["pakej", "designkad", "borang", "pembayaran", "faq"];
+
+  // Sembunyikan semua section
+  sections.forEach(sec => {
+    document.getElementById(sec).style.display = "none";
+  });
+
+  // Tunjukkan hanya section yang dipilih
+  document.getElementById(id).style.display = "block";
+
+  // Tutup menu dropdown lepas klik
+  document.getElementById("dropdownMenu").style.display = "none";
+}
+</script>
 
 
 
