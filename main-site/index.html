@@ -26,7 +26,7 @@
   background: none;
   border: none;      /* buang border */
   outline: none;     /* buang outline bila klik */
-  font-size: 12px;
+  font-size: 14px;
   padding: 8px 12px;
   cursor: pointer;
   color: black;            /* tulisan & ikon hitam */
@@ -48,7 +48,7 @@
 .dropdown-menu a {
   display: block;
   padding: 6px 10px;
-  font-size: 10px;
+  font-size: 14px;
   text-decoration: none;
   text-align: center;   /* perkataan center */
   color: black;
@@ -960,24 +960,25 @@ faqBtns.forEach(btn => {
 
 <script>
 function toggleMenu() {
-  document.getElementById("dropdownMenu").classList.toggle("show");
-}
-
-window.onclick = function(e) {
-  if (!e.target.matches('.menu-btn')) {
-    let menu = document.getElementById("dropdownMenu");
-    if (menu.classList.contains('show')) menu.classList.remove('show');
+  const menu = document.getElementById("dropdownMenu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
   }
 }
 
-// fungsi show/hide section lain (pakej sentiasa stay)
 function showSection(id) {
+  // hide semua section
   document.querySelectorAll('.section').forEach(sec => sec.style.display = "none");
+
+  // tunjuk section yang dipilih
   document.getElementById(id).style.display = "block";
+
+  // auto tutup dropdown lepas klik (supaya kemas)
   document.getElementById("dropdownMenu").style.display = "none";
 }
 </script>
-
 
 
 
