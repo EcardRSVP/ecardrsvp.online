@@ -15,26 +15,61 @@
 <body style="background-color: #FADADD; font-family: sans-serif;">
 
 <style>
-    body { background:#FADADD; font-family:sans-serif; margin:0; padding:0; }
-    header { text-align:center; padding:10px; }
-    .menu-container { position:relative; display:inline-block; }
-    .menu-btn {
-      font-size:20px; cursor:pointer;
-      background:#f8b6c9; padding:8px 12px; border-radius:8px;
-    }
-    .dropdown-menu {
-      display:none; position:absolute; background:#fff;
-      min-width:150px; box-shadow:0 8px 16px rgba(0,0,0,0.2);
-      border-radius:8px; margin-top:5px; z-index:1000;
-    }
-    .dropdown-menu a {
-      display:block; padding:10px 12px; font-size:14px; text-decoration:none; color:black;
-    }
-    .dropdown-menu a:hover { background:#f497b6; }
-    .show { display:block; }
+  .menu-container {
+  position: fixed;   /* sentiasa nampak walau scroll */
+  top: 10px;
+  right: 10px;
+  z-index: 2000;
+}
 
-    section { padding:20px; text-align:center; }
-    #designkad, #borang, #pembayaran, #faq { display:none; } /* 🔒 mula-mula sembunyi */
+.menu-btn {
+  font-size: 22px;
+  cursor: pointer;
+  background: #f497b6; 
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  margin-top: 5px;
+  z-index: 2001;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background: #f497b6;
+  color: white;
+}
+
+.dropdown-menu a.active {
+  background: #f497b6;
+  color: white;
+  font-weight: bold;
+}
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  #designkad, #borang, #pembayaran, #faq {
+    display: none;
+  }  
   </style>
 
   
@@ -931,5 +966,4 @@ function toggleGambar(id) {
 </script>
 
 </body>
-</html>
 </html>
