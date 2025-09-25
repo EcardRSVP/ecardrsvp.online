@@ -25,12 +25,14 @@
 .menu-btn {
   font-size: 22px;
   cursor: pointer;
-  background: #f497b6; 
-  color: white;
+  background: transparent; /* buang pink */
+  color: black;            /* tulisan & ikon hitam */
   padding: 8px 12px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border: 1px solid black; /* tambah border hitam simple */
+  box-shadow: none;        /* buang shadow */
 }
+
 
 .dropdown-menu {
   display: none;
@@ -49,6 +51,7 @@
   padding: 10px 12px;
   font-size: 14px;
   text-decoration: none;
+  text-align: center;   /* perkataan center */
   color: black;
 }
 
@@ -70,6 +73,108 @@
   #designkad, #borang, #pembayaran, #faq {
     display: none;
   }  
+
+#pakej h2,
+#designkad h2,
+#borang h2,
+#pembayaran h2,
+#faq h2 {
+  text-align: center;
+}
+
+.faq-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #f8b6c9;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #f497b6;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  font-size: 13px;
+  background: #fff0f5;
+  border-left: 3px solid #f497b6;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* GRID DESIGN KAD */
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* responsive */
+  gap: 15px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.kad-item {
+  background: #fff;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 180px; /* kawal supaya tak besar sangat */
+  max-height: 250px;  
+}
+
+.kad-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.kad-item p {
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.preview-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f8b6c9;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: background 0.3s;
+}
+
+.preview-btn:hover {
+  background: #f497b6;
+}  
+
+/* Pembayaran: salin di bawah */
+#pembayaran ul li {
+  margin-bottom: 8px;
+}
+.copy-btn {
+  display: block;
+  margin: 8px auto 0; /* auto center bawah no akaun */
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  background: #f8b6c9;
+  cursor: pointer;
+}    
   </style>
 
   
@@ -91,7 +196,7 @@
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
       <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
     </div>
-  </div>
+  </nav>
 </header>
   
 
@@ -711,20 +816,16 @@
 <!-- Seksyen Pembayaran -->
 <section id="pembayaran">
   <h2>PEMBAYARAN</h2>
-  <p>Sila buat pembayaran ke akaun berikut:</p>
+  <p>Sila buat pembayaran ke akaun berikut selepas menerima RSVP Link</p>
   <ul style="list-style: none; padding: 0; text-align: center;">
     <li><strong>Bank:</strong> Touch 'n Go</li>
-    <li><strong>No. Akaun:</strong> <span id="tngAcc">111023701317</span> 
-      <button onclick="copyTNG()" 
-              style="margin-left:8px; padding:4px 8px; font-size:12px; border:none; border-radius:5px; background:#f8b6c9; cursor:pointer;">
-        Salin
-      </button>
+    <li><strong>No. Akaun:</strong> <span id="tngAcc">111023701317</span></li> 
+<li>
+      <button class="copy-btn" onclick="copyTNG()">Salin</button>
     </li>
     <li><strong>Nama:</strong> Nurnabilah Atiqah</li>
   </ul>
-
-  <!-- Mesej salinan berjaya -->
-  <p id="copyMsg" style="display:none; color:green; text-align:center; font-size:13px; margin-top:10px;">
+  <p id="copyMsg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
     Nombor akaun berjaya disalin!
   </p>
 
@@ -816,87 +917,6 @@ function copyTNG() {
     </div>
   </div>
 </section>
-
-<!-- FAQ CSS -->
-<style>
-.faq-section {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.faq-question {
-  width: 100%;
-  background-color: #f8b6c9;
-  color: black;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  text-align: left;
-  font-size: 14px;
-  cursor: pointer;
-  margin-bottom: 5px;
-  transition: background-color 0.3s;
-}
-
-.faq-question:hover {
-  background-color: #f497b6;
-}
-
-.faq-answer {
-  display: none;
-  padding: 10px;
-  font-size: 13px;
-  background: #fff0f5;
-  border-left: 3px solid #f497b6;
-  margin-bottom: 10px;
-  border-radius: 4px;
-}
-
-/* GRID DESIGN KAD */
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* responsive */
-  gap: 15px;
-  justify-items: center;
-  margin-top: 20px;
-}
-
-.kad-item {
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  max-width: 180px; /* kawal supaya tak besar sangat */
-}
-
-.kad-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.kad-item p {
-  margin: 8px 0;
-  font-size: 13px;
-}
-
-.preview-btn {
-  display: inline-block;
-  padding: 6px 12px;
-  background: #f8b6c9;
-  color: black;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 12px;
-  transition: background 0.3s;
-}
-
-.preview-btn:hover {
-  background: #f497b6;
-}  
-</style>
 
 <!-- FAQ Script -->
 <script>
