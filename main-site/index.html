@@ -125,6 +125,14 @@
   justify-items: center;
   margin-top: 8px;
 }
+
+/* Untuk telefon kecil (<=480px) paksa 2 kotak */
+@media (max-width: 480px) {
+  .preview-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ sentiasa 2 kotak */
+    gap: 8px;
+  }
+}
   
 .kad-item img {
   max-width: 100%;   /* ikut lebar parent */
@@ -342,7 +350,7 @@
 
 <!-- Preview Kad Kahwin -->
 <section id="designkad">
-  <h2>DESIGN KAD</h2>
+  <h2>DESIGN KAD</h2><br><br>
   <div class="preview-grid">
 
     
