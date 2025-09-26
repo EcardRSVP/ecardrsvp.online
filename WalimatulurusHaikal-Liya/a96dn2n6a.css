@@ -110,33 +110,6 @@ button,
   background-color: #8463C4;
 }
 
-
-/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
-.btn-form {
-  background-color: #E2DAF9;
-  color: black;
-  font-weight: bold;
-  text-decoration: none; /* untuk <a> */
-  
-  /* 🔽 Tambah supaya selaras dengan .copy-btn */
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 10px auto;
-  width: 90%; !important;
-  max-width: 400px; !important;
-  display: block; !important;
-  font-size: 16px;
-  font-family: inherit;
-  text-align: center;
-  cursor: pointer;
-}
-
-.btn-form:hover {
-  background-color: #cfc4f5;
-}
-
-
 footer {
   font-size: 14px;
   color: #777;
@@ -281,7 +254,8 @@ form button[type="submit"] {
       margin: 10px;
       padding: 12px 24px;
       font-size: 16px;
-      color: white;
+      color: white !important;  
+      -webkit-text-fill-color: white !important; /* untuk Safari */
       background-color: #6A4FAE;
       border: none;
       border-radius: 12px;
@@ -301,7 +275,8 @@ form button[type="submit"] {
   margin: 20px auto;
   padding: 12px 24px;
   font-size: 16px;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   background-color: #6A4FAE;
   border: none;
   border-radius: 12px;
@@ -369,7 +344,8 @@ form button[type="submit"] {
 
 .gift-links a {
   background-color: #6A4FAE;
-  color: white;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -419,6 +395,12 @@ form button[type="submit"] {
   font-size: 1.1rem;
 }
 
+.font-g {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.0rem;
+  color: black; /* warna boleh tukar ikut tema */
+}
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
@@ -462,7 +444,8 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 .gallery-prev,
 .gallery-next {
   background: none !important;
-  color: black;
+  color: black; !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   border: none;
   font-size: 28px;
   padding: 5px;
@@ -775,7 +758,8 @@ hr {
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
   background-color: #6A4FAE;
-  color: white;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   border: none;
   border-radius: 8px;
   padding: 12px;
@@ -791,3 +775,83 @@ hr {
   background-color: #8463C4;
 }
 
+/* Pastikan butang ikut warna sendiri */
+button,
+.copy-btn,
+.btn-form,
+#popup-MoneyGift button {
+  color: white !important;   /* paksa teks putih */
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+}
+
+
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Paksa page sentiasa light */
+html, body {
+  background: transparent !important;      /* ✅ tembus, tak kacau background */
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
+  color-scheme: only light;
+}
+
+/* Footer confirm putih */
+footer, .footer {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Semua teks dalam footer */
+.footer * {
+  color: #000 !important;
+  fill: #000 !important;   /* kalau ada inline SVG */
+}
+
+/* Override bila user device pakai dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: transparent !important;    /* biar background asal (image/video) nampak */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  footer, .footer {
+    background: #fff !important;           /* footer confirm putih */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #bg-image {
+    background-size: contain; /* contoh: gambar fit dalam skrin */
+  }
+}
+
+/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
+.btn-form {
+  background-color: #E2DAF9;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  font-weight: bold;
+  text-decoration: none; /* untuk <a> */
+  
+  /* 🔽 Tambah supaya selaras dengan .copy-btn */
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90% !important;
+  max-width: 400px !important;
+  display: block !important;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-form:hover {
+  background-color: #cfc4f5;
+}
