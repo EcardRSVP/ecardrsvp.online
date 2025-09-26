@@ -499,8 +499,8 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E2DAF9;
-  color: #333;
+  background-color: #E99696;
+  color: black;
   font-size: 14px;
   margin-top: 20px;
   border-radius: 10px;
@@ -515,9 +515,9 @@ section *, .wishlist *, #main-content * {
 }
 
 #hadiah-table th {
-  background-color: #C6B8F0;
+  background-color: #E99696;
   font-weight: bold;
-  color: #5a3731;
+  color: black;
 }
 
 #hadiah-table tr:last-child td {
@@ -842,7 +842,7 @@ footer, .footer {
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
 .btn-form {
-  background-color: #F5E6D3;
+  background-color: #E99696;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   font-weight: bold;
@@ -863,5 +863,5 @@ footer, .footer {
 }
 
 .btn-form:hover {
-  background-color: #E6D1B8;
+  background-color: #D97C7C;
 }
