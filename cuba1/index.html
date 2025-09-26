@@ -273,6 +273,8 @@
       <a href="javascript:void(0)" onclick="showSection('designkad')">DESIGN KAD</a>
       <a href="javascript:void(0)" onclick="showSection('borang')">BORANG</a>
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
+      <a href="javascript:void(0)" onclick="showSection('video')">VIDEO KAD DIGITAL/a>
+      <a href="javascript:void(0)" onclick="showSection('video1')">VIDEO KAD DIGITAL/a>
       <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
     </div>
    </div>
@@ -949,7 +951,61 @@ function copyTNG() {
 }
 </script>
 
+  
+<!-- Preview Video Kad Kahwin -->
+<section id="video">
+  <h2>VIDEO KAD DIGITAL</h2><br><br>
+  <div class="preview-grid">
 
+    <div class="kad-item">
+      <img src="V21.png" alt="Kad 1">
+      <p><strong>V21</strong></p><br>
+      <a href="https://www.youtube.com/shorts/pu39OV6r900" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="V21.png" alt="Kad 1">
+      <p><strong>V21</strong></p><br>
+      <a href="https://www.youtube.com/shorts/pu39OV6r900" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+  </div>
+</section>
+
+<!-- Preview Kad Kahwin -->
+<section id="video1">
+  <h2>VIDEO KAD DIGITA</h2><br><br>
+  <div class="preview-grid">
+
+    <div class="kad-item">
+      <img src="V21.png" alt="Kad 1">
+      <p><strong>V21</strong></p><br>
+      <button onclick="openVideo(''pu39OV6r900')" class="preview-btn">PREVIEW</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Popup Modal -->
+<div id="videoModal" class="modal" style="display:none;">
+  <div class="modal-content" style="position:relative; max-width:800px; margin:auto; padding:0;">
+    <span onclick="closeVideo()" style="position:absolute; top:10px; right:15px; font-size:28px; cursor:pointer;">&times;</span>
+    <iframe id="youtubeFrame" width="100%" height="450" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<script>
+function openVideo(id){
+  document.getElementById("videoModal").style.display = "block";
+  document.getElementById("youtubeFrame").src = "https://www.youtube.com/embed/" + id + "?autoplay=1";
+}
+function closeVideo(){
+  document.getElementById("videoModal").style.display = "none";
+  document.getElementById("youtubeFrame").src = "";
+}
+</script>  
   
 <section id="faq">
   <h2>Frequently Asked Questions (FAQ)</h2><br><br>
