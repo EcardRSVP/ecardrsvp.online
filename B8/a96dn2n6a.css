@@ -83,34 +83,42 @@ input {
   border-radius: 6px;
 }
 
-button {
-  background-color: #6A4FAE;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  max-width: 100%;
+.btn-hantar {
+  background-color: maroon;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
-button:hover {
-  background-color: #8463C4;
+.btn-hantar:hover {
+  background-color: #B22222;
 }
 
-button.copy-btn {
-  background-color: #6A4FAE;
-  color: white;
+/* ✅ Styling umum untuk semua butang */
+button, 
+.copy-btn, 
+.btn-form {
   border: none;
   border-radius: 8px;
-  padding: 10px 16px;
-  margin-top: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  font-size: 16px;
+  font-family: inherit;
   cursor: pointer;
+  text-align: center;
 }
 
-button.copy-btn:hover {
-  background-color: #8463C4;
+/* ✅ Copy button */
+.copy-btn {
+  background-color: maroon;
+  color: white;
 }
 
+.copy-btn:hover {
+  background-color: #B22222;
+}
 
 footer {
   font-size: 14px;
@@ -209,7 +217,11 @@ section.doa {
 /* ✅ RSVP Form Styling */
 form input[type="text"],
 form input[type="number"],
-form button[type="submit"] {
+form textarea,
+form button[type="submit"],
+form button.copy-btn,
+#alamat-text,
+#telefon-text {   /* ⬅️ tambah div alamat & telefon */
   width: 90%;
   max-width: 400px;
   padding: 12px;
@@ -218,10 +230,20 @@ form button[type="submit"] {
   box-sizing: border-box;
   border-radius: 8px;
   font-size: 16px;
+  font-family: inherit;  
+  border: 1px solid #ccc;
 }
 
+/* ✅ Bagi background khas untuk kotak alamat & telefon */
+#alamat-text,
+#telefon-text {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+
 form button[type="submit"] {
-  background-color: #6A4FAE;
+  background-color: maroon;
   color: white;
   border: none;
 }
@@ -242,15 +264,16 @@ form button[type="submit"] {
       margin: 10px;
       padding: 12px 24px;
       font-size: 16px;
-      color: white;
-      background-color: #003366;
+      color: white !important;  
+      -webkit-text-fill-color: white !important; /* untuk Safari */
+      background-color: maroon;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #336699;
+  background-color: #B22222;
 }
 
 .location-button {
@@ -262,8 +285,9 @@ form button[type="submit"] {
   margin: 20px auto;
   padding: 12px 24px;
   font-size: 16px;
-  color: white;
-  background-color: #003366;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+  background-color: maroon;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -272,7 +296,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #336699;
+  background-color: #B22222;
 }
     
 .location-button img {
@@ -329,8 +353,9 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #6A4FAE;
-  color: white;
+  background-color: maroon;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -343,7 +368,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #a50000;
+  background-color: #B22222;
 }
 
 /* ✅ Font Custom Styles */
@@ -380,6 +405,12 @@ form button[type="submit"] {
   font-size: 1.1rem;
 }
 
+.font-g {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.0rem;
+  color: black; /* warna boleh tukar ikut tema */
+}
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
@@ -423,7 +454,8 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 .gallery-prev,
 .gallery-next {
   background: none !important;
-  color: black;
+  color: black; !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   border: none;
   font-size: 28px;
   padding: 5px;
@@ -467,8 +499,8 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E2DAF9;
-  color: #333;
+  background-color: #E99696;
+  color: black;
   font-size: 14px;
   margin-top: 20px;
   border-radius: 10px;
@@ -483,9 +515,9 @@ section *, .wishlist *, #main-content * {
 }
 
 #hadiah-table th {
-  background-color: #C6B8F0;
+  background-color: #E99696;
   font-weight: bold;
-  color: #5a3731;
+  color: black;
 }
 
 #hadiah-table tr:last-child td {
@@ -726,3 +758,110 @@ hr {
     opacity: 1;
   }
 }  
+
+#ucapanList p {
+  white-space: normal;   /* biar text wrap */
+  word-wrap: break-word; /* potong word panjang */
+  overflow-wrap: break-word;
+}
+
+/* ✅ Styling khas untuk butang Copy dalam Money Gift */
+#popup-MoneyGift button {
+  background-color: maroon;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#popup-MoneyGift button:hover {
+  background-color: #B22222;
+}
+
+/* Pastikan butang ikut warna sendiri */
+button,
+.copy-btn,
+.btn-form,
+#popup-MoneyGift button {
+  color: white !important;   /* paksa teks putih */
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+}
+
+
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Paksa page sentiasa light */
+html, body {
+  background: transparent !important;      /* ✅ tembus, tak kacau background */
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important; /* elak Safari auto-invert */
+  color-scheme: only light;
+}
+
+/* Footer confirm putih */
+footer, .footer {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Semua teks dalam footer */
+.footer * {
+  color: #000 !important;
+  fill: #000 !important;   /* kalau ada inline SVG */
+}
+
+/* Override bila user device pakai dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: transparent !important;    /* biar background asal (image/video) nampak */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+
+  footer, .footer {
+    background: #fff !important;           /* footer confirm putih */
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #bg-image {
+    background-size: contain; /* contoh: gambar fit dalam skrin */
+  }
+}
+
+/* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
+.btn-form {
+  background-color: #E99696;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  font-weight: bold;
+  text-decoration: none; /* untuk <a> */
+  
+  /* 🔽 Tambah supaya selaras dengan .copy-btn */
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px auto;
+  width: 90% !important;
+  max-width: 400px !important;
+  display: block !important;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-form:hover {
+  background-color: #D97C7C;
+}
