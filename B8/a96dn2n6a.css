@@ -84,13 +84,13 @@ input {
 }
 
 .btn-hantar {
-  background-color: maroon;
+  background-color: #003366;
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
 .btn-hantar:hover {
-  background-color: #B22222;
+  background-color: #336699;
 }
 
 /* ✅ Styling umum untuk semua butang */
@@ -112,12 +112,12 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: maroon;
+  background-color: #003366;
   color: white;
 }
 
 .copy-btn:hover {
-  background-color: #B22222;
+  background-color: #336699;
 }
 
 footer {
@@ -243,7 +243,7 @@ form button.copy-btn,
 
 
 form button[type="submit"] {
-  background-color: maroon;
+  background-color: #003366;
   color: white;
   border: none;
 }
@@ -266,14 +266,14 @@ form button[type="submit"] {
       font-size: 16px;
       color: white !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
-      background-color: maroon;
+      background-color: #003366;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #B22222;
+  background-color: #336699;
 }
 
 .location-button {
@@ -287,7 +287,7 @@ form button[type="submit"] {
   font-size: 16px;
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
-  background-color: maroon;
+  background-color: #003366;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -296,7 +296,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #B22222;
+  background-color: #336699;
 }
     
 .location-button img {
@@ -353,7 +353,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: maroon;
+  background-color: #003366;
   color: white !important;
   -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
@@ -368,7 +368,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #B22222;
+  background-color: #336699;
 }
 
 /* ✅ Font Custom Styles */
@@ -767,7 +767,7 @@ hr {
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
-  background-color: maroon;
+  background-color: #003366;
   color: white !important;
   -webkit-text-fill-color: white !important; /* Safari */
   border: none;
@@ -782,7 +782,7 @@ hr {
 }
 
 #popup-MoneyGift button:hover {
-  background-color: #B22222;
+  background-color: #336699;
 }
 
 /* Pastikan butang ikut warna sendiri */
@@ -842,7 +842,7 @@ footer, .footer {
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
 .btn-form {
-  background-color: #E99696;
+  background-color: #6699CC;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   font-weight: bold;
@@ -863,5 +863,5 @@ footer, .footer {
 }
 
 .btn-form:hover {
-  background-color: #D97C7C;
+  background-color: #4A7EB5;
 }
