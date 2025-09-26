@@ -83,6 +83,21 @@ input {
   border-radius: 6px;
 }
 
+.btn-hantar {
+  width: 100%;
+  padding: 10px;
+  background-color: #6A4FAE;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-hantar:hover {
+  background-color: #8463C4;
+}
+
 /* ✅ Styling umum untuk semua butang */
 button, 
 .copy-btn, 
