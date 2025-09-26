@@ -111,10 +111,17 @@
 </head>
 <body>
 
-      <!-- 🎥 Video Latar Global -->
-  <video autoplay muted playsinline loop id="bg-video">
-  <source src="B1.mp4" type="video/mp4">
-</video>
+<!-- 🌸 Latar belakang gambar versi "kecil 390px macam video" -->
+<div style="
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 390px;
+  height: 100vh;
+  background: url('B1.png') center/cover no-repeat;
+  z-index: -1;">
+</div>
 
 <!-- ✅ SALJI DALAM WRAPPER -->
 <div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
@@ -130,7 +137,7 @@
      <!-- SEMUA KANDUNGAN TERMASUK section.front-page DAN #main-content -->
      
   <!-- ✅ HALAMAN DEPAN -->
-  <section class="page front-page">
+<section class="page front-page" style="position: relative; top: -8vh;">
     <h1 class="font-b">WALIMATULURUS</h1>
     <h2><span class="font-c">Haikal</span></h2>
     <h2><span class="font-a">&</span></h2>
