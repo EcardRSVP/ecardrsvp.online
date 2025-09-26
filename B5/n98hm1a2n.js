@@ -1,20 +1,3 @@
-// ✅ Tanda tempahan "Bakul Baju" jika sudah dipilih di Google Sheet
-fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTPi4cVVJVAYtYrDQRfhBMX0qCMllBMgjYqesb64WKf-5M4BvxIrabnse_Fq_Iu6EHsrnI8Rv1AEv7T/pub?output=csv')
-  .then(response => response.text())
-  .then(data => {
-    const rows = data.split("\n").map(row => row.split(","));
-    rows.forEach(row => {
-      const barang = row[2].trim();
-      if (barang === "Bakul Baju") {
-        const btn = document.getElementById("btn-bakul");
-        if (btn) {
-          btn.innerText = "Telah Ditempah";
-          btn.disabled = true;
-        }
-      }
-    });
-  });
-
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
   const wrapper = document.getElementById("snow-wrapper");
@@ -22,8 +5,8 @@ function mulakanSalji() {
 
   const warnaSalji = [
     {
-      color: "rgba(220, 198, 160, 0.4)",
-      glow: "0 0 8px rgba(220, 198, 160, 0.2)"
+      color: "#ffffff",
+      glow: "0 0 10px rgba(255, 255, 255, 0.7)"
     }
   ];
 
@@ -71,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 📨 Validasi RSVP sebelum hantar
   if (form && popup) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1511841499"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
 if (!nama.value.trim() || !kehadiran) {
   e.preventDefault();
@@ -138,6 +121,27 @@ function toggleSection(id) {
     target.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+// ✅ Fetch Ucapan (PapaParse)
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRyk8BLqcP2bSKwSTjMl76FCVnwr05Eow0r8K5Cn1J1N1cI-KFVPpQGq4/pub?gid=241095374&single=true&output=csv")
+  .then(response => response.text())
+  .then(data => {
+    const parsed = Papa.parse(data, { header: true });
+    const ucapanList = document.getElementById("ucapanList");
+
+    if (ucapanList) {
+      ucapanList.innerHTML = "";
+      parsed.data.forEach(row => {
+        const nama = row["Nama"]?.trim();
+        const ucapan = row["Ucapan"]?.trim();
+        if (nama && ucapan) {
+          const item = document.createElement("p");
+          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
+          ucapanList.appendChild(item);
+        }
+      });
+    }
+  });
 
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
