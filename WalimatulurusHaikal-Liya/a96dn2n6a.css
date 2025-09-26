@@ -84,14 +84,9 @@ input {
 }
 
 .btn-hantar {
-  width: 100%;
-  padding: 10px;
   background-color: #6A4FAE;
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
 }
 
 .btn-hantar:hover {
