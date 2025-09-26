@@ -406,10 +406,8 @@ form button[type="submit"] {
 }
 
 .font-g {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 1.0rem;
-  color: black; /* warna boleh tukar ikut tema */
+  font-family: 'TASA Orbiter', serif;
+  font-size: 1.1rem;
 }
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
