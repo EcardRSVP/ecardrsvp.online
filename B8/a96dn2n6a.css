@@ -499,7 +499,7 @@ section *, .wishlist *, #main-content * {
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #E99696;
+  background-color: #6699CC;
   color: black;
   font-size: 14px;
   margin-top: 20px;
@@ -515,7 +515,7 @@ section *, .wishlist *, #main-content * {
 }
 
 #hadiah-table th {
-  background-color: #E99696;
+  background-color: #6699CC;
   font-weight: bold;
   color: black;
 }
