@@ -253,6 +253,42 @@
   display: block;
   margin: 10px auto;         /* gambar auto center */
 }  
+
+/* Popup overlay */
+.popup-overlay {
+  display: none; 
+  position: fixed; 
+  z-index: 9999; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.8); 
+  justify-content: center; 
+  align-items: center;
+}
+
+/* Gambar popup */
+.popup-overlay img {
+  max-width: 90%; 
+  max-height: 90%; 
+  border-radius: 8px; 
+  box-shadow: 0 0 15px #000;
+}
+
+/* Butang close */
+.close-btn {
+  position: absolute; 
+  top: 20px; 
+  right: 35px; 
+  color: white; 
+  font-size: 40px; 
+  font-weight: bold; 
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: red;
+}  
   </style>
 
   
@@ -968,29 +1004,21 @@ function copyTNG() {
       <a href="https://www.youtube.com/shorts/0hmshdQCu0w" target="_blank" class="preview-btn">PREVIEW</a>
     </div>
 
-    <div class="kad-item">
-      <img src="V35.png" alt="Kad 3">
-      <p><strong>V35</strong></p>
-      <!-- Link toggle -->
-      <a href="javascript:void(0);" onclick="toggleGambar('PDF-img-V35')" 
-      style="font-size: 10px; color: black;">Warna Pilihan</a>
-      <!-- Gambar tersembunyi -->
-      <img id="PDF-img-V35" src="7.jpg" alt="Warna Pilihan" 
-           style="display: none; width: 100%; max-width: 300px; margin-top: 3px;">
-      <!-- Butang PREVIEW -->
-      <a href="https://www.youtube.com/shorts/m7IpYlCdOp4" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>
-
-    <div class="kad-item">
+<!-- Kad Item -->
+<div class="kad-item">
   <img src="V35.png" alt="Kad 3">
   <p><strong>V35</strong></p>
   <!-- Link toggle -->
-  <a href="javascript:void(0);" onclick="toggleGambar('PDF-img-V35')" 
-     class="warna-pilihan">Warna Pilihan</a>
-  <!-- Gambar tersembunyi -->
-  <img id="PDF-img-V35" src="7.jpg" alt="Warna Pilihan" class="warna-img">
+  <a href="javascript:void(0);" onclick="openPopup('7.jpg')" 
+     style="font-size: 10px; color: black;">Warna Pilihan</a>
   <!-- Butang PREVIEW -->
   <a href="https://www.youtube.com/shorts/m7IpYlCdOp4" target="_blank" class="preview-btn">PREVIEW</a>
+</div>
+
+<!-- Popup Container -->
+<div id="popup-gambar" class="popup-overlay">
+  <span class="close-btn" onclick="closePopup()">&times;</span>
+  <img id="popup-img" src="" alt="Popup Gambar">
 </div>
 
     <div class="kad-item">
@@ -1208,5 +1236,15 @@ function toggleGambar(id) {
 }
 </script>
 
+<script>
+function openPopup(imgSrc) {
+  document.getElementById("popup-img").src = imgSrc;
+  document.getElementById("popup-gambar").style.display = "flex";
+}
+function closePopup() {
+  document.getElementById("popup-gambar").style.display = "none";
+}
+</script>
+  
 </body>
 </html>
