@@ -252,18 +252,18 @@
 .card img {
   display: block;
   margin: 10px auto;         /* gambar auto center */
+  text-align: center;
 }  
 
 /* Popup overlay */
 .popup-overlay {
   display: none; 
   position: fixed; 
-  z-index: 9999; 
-  left: 0; 
-  top: 0; 
+  z-index: 10000;
+  top: 0; left: 0;
   width: 100%; 
   height: 100%; 
-  background-color: rgba(0,0,0,0.8); 
+  background-color: rgba(0,0,0,0.7); 
   justify-content: center; 
   align-items: center;
 }
@@ -280,7 +280,7 @@
 .close-btn {
   position: absolute; 
   top: 20px; 
-  right: 35px; 
+  right: 30px; 
   color: white; 
   font-size: 40px; 
   font-weight: bold; 
@@ -1008,17 +1008,19 @@ function copyTNG() {
 <div class="kad-item">
   <img src="V35.png" alt="Kad 3">
   <p><strong>V35</strong></p>
-  <!-- Link toggle -->
-  <a href="javascript:void(0);" onclick="openPopup('7.jpg')" 
-     style="font-size: 10px; color: black;">Warna Pilihan</a>
+
+  <!-- Gambar tersembunyi -->
+<img id="PDF-img-V35" src="7.jpg" alt="Warna Pilihan" 
+     style="display: none; width: 100%; max-width: 300px; margin: 10px auto; display: block; font-size: 10px; color: black;">
+
   <!-- Butang PREVIEW -->
   <a href="https://www.youtube.com/shorts/m7IpYlCdOp4" target="_blank" class="preview-btn">PREVIEW</a>
 </div>
 
-<!-- Popup Container -->
-<div id="popup-gambar" class="popup-overlay">
+<!-- Popup Overlay Global (letak luar grid, sekali je dalam page) -->
+<div id="popupOverlay" class="popup-overlay">
   <span class="close-btn" onclick="closePopup()">&times;</span>
-  <img id="popup-img" src="" alt="Popup Gambar">
+  <img id="popupImage" src="" alt="Preview">
 </div>
 
     <div class="kad-item">
@@ -1244,6 +1246,14 @@ function openPopup(imgSrc) {
 function closePopup() {
   document.getElementById("popup-gambar").style.display = "none";
 }
+
+function openPopup(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-img").src = src;
+}
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}  
 </script>
   
 </body>
