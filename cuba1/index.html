@@ -168,6 +168,21 @@
   font-size: 13px;
 }
 
+.preview-btn {
+  display: inline-block;
+  margin-top: 0px;
+  padding: 4px 8px;
+  background: #f8b6c9;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+
+.preview-btn:hover {
+  background: #f497b6;
+}  
 
 /* Pembayaran: salin di bawah */
 #pembayaran ul li {
@@ -237,70 +252,7 @@
 .card img {
   display: block;
   margin: 10px auto;         /* gambar auto center */
-  text-align: center;
 }  
-
- .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    z-index: 9999;
-
-     /* Tengah secara flexbox */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-  .popup-overlay img {
-    max-width: 90%;
-    max-height: 80vh;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  }
-
-.popup-overlay.active {
-  display: flex; /* aktif → jadi flexbox */
-}
-
-  .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 35px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-  }
-
-  .warna-btn {
-    display: inline-block;
-    margin-top: 5px;
-    font-size: 12px;
-    color: black;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .preview-btn {
-  display: inline-block;
-  margin-top: 0px;
-  padding: 4px 8px;
-  background: #f8b6c9;
-  color: black;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 13px;
-  transition: background 0.3s;
-}
-
-.preview-btn:hover {
-  background: #f497b6;
-}  
-  
   </style>
 
   
@@ -321,7 +273,6 @@
       <a href="javascript:void(0)" onclick="showSection('designkad')">DESIGN KAD</a>
       <a href="javascript:void(0)" onclick="showSection('borang')">BORANG</a>
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
-      <a href="javascript:void(0)" onclick="showSection('video')">VIDEO KAD DIGITAL</a>
       <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
     </div>
    </div>
@@ -998,69 +949,6 @@ function copyTNG() {
 }
 </script>
 
-  
-<!-- Preview Video Kad Kahwin -->
-<section id="video">
-  <h2>VIDEO KAD DIGITAL</h2><br><br>
-  <div class="preview-grid">
-
-    <div class="kad-item">
-      <img src="V21.png" alt="Kad 1">
-      <p><strong>V21</strong></p><br>
-      <a href="https://www.youtube.com/shorts/pu39OV6r900" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>
-
-    <div class="kad-item">
-      <img src="V25.png" alt="Kad 2">
-      <p><strong>V25</strong></p><br>
-      <a href="https://www.youtube.com/shorts/0hmshdQCu0w" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>
-
-<!-- Kad Item -->
-<div class="kad-item">
-  <img src="V35.png" alt="Kad 3">
-  <p><strong>V35</strong></p>
-
-  <!-- Butang untuk buka gambar warna pilihan -->
-  <a href="javascript:void(0);" onclick="openPopup('7.jpg')" class="warna-btn">Warna Pilihan</a>
-
-  <!-- Butang PREVIEW -->
-  <a href="https://www.youtube.com/shorts/m7IpYlCdOp4" target="_blank" class="preview-btn">PREVIEW</a>
-</div>
-
-<!-- Popup Overlay (sekali je dalam page) -->
-<div id="popupOverlay" class="popup-overlay">
-  <span class="close-btn" onclick="closePopup()">&times;</span>
-  <img id="popupImage" src="" alt="Preview">
-</div>
-
-    <div class="kad-item">
-      <img src="V57.png" alt="Kad 4">
-      <p><strong>V57</strong></p><br>
-      <a href="https://www.youtube.com/shorts/2LQGaVObtt8" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>
-
-    <div class="kad-item">
-      <img src="V59.png" alt="Kad 5">
-      <p><strong>V59</strong></p><br>
-      <a href="https://www.youtube.com/shorts/2m0D-g2wwy0" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>    
-
-    <div class="kad-item">
-      <img src="V60.png" alt="Kad 5">
-      <p><strong>V60</strong></p><br>
-      <a href="https://www.youtube.com/shorts/S2Y19qH-U-A" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>  
-  </div>
-</section>
-
-<!-- JavaScript untuk toggle -->
-<script>
-function toggleGambar(id) {
-  var img = document.getElementById(id);
-  img.style.display = (img.style.display === "none") ? "block" : "none";
-}
-</script>
 
   
 <section id="faq">
@@ -1249,35 +1137,5 @@ function toggleGambar(id) {
 }
 </script>
 
-<script>
-function openPopup(imgSrc) {
-  document.getElementById("popup-img").src = imgSrc;
-  document.getElementById("popup-gambar").style.display = "flex";
-}
-function closePopup() {
-  document.getElementById("popup-gambar").style.display = "none";
-}
-
-function openPopup(src) {
-  document.getElementById("popup").style.display = "flex";
-  document.getElementById("popup-img").src = src;
-}
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}  
-</script>
-
- <!-- JS -->
-<script>
-  function openPopup(imgSrc) {
-    document.getElementById("popupImage").src = imgSrc;
-    document.getElementById("popupOverlay").classList.add("active");
-  }
-
-  function closePopup() {
-    document.getElementById("popupOverlay").classList.remove("active");
-  }
-</script>
-  
 </body>
 </html>
