@@ -237,7 +237,7 @@
   min-height: 400px;         /* tinggi tetap */
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* align menegak */
+  justify-content: flex-start; /* pastikan atas */
   align-items: center;       /* align mendatar */
   text-align: center;        /* pastikan semua text center */
   margin: 10px;
@@ -254,6 +254,19 @@
   display: block;
   margin: 10px auto;         /* gambar auto center */
 }  
+
+/* Bahagian header (tajuk & harga) */
+.card h3.font-a,
+.card h3.font-b {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Kalau nak pastikan header sentiasa duduk atas */
+.card .font-a,
+.card .font-b {
+  flex-shrink: 0;
+} 
   </style>
 
   
