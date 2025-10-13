@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,9 @@
   <!-- Favicon / Logo -->
   <link rel="icon" type="image/png" href="NNA.png">
 
-  <!-- CSS -->function openPopup(imgSrc) {m/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="a96dn2n6a.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body style="background-color: #FADADD; font-family: sans-serif;">
 
@@ -235,7 +237,7 @@
   min-height: 400px;         /* tinggi tetap */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* pastikan atas */
+  justify-content: center;   /* align menegak */
   align-items: center;       /* align mendatar */
   text-align: center;        /* pastikan semua text center */
   margin: 10px;
@@ -252,19 +254,6 @@
   display: block;
   margin: 10px auto;         /* gambar auto center */
 }  
-
-/* Bahagian header (tajuk & harga) */
-.card h3.font-a,
-.card h3.font-b {
-  text-align: center;
-  margin: 5px 0;
-}
-
-/* Kalau nak pastikan header sentiasa duduk atas */
-.card .font-a,
-.card .font-b {
-  flex-shrink: 0;
-} 
   </style>
 
   
@@ -311,13 +300,13 @@
       
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
-        <p><i class="fas fa-gift"></i> Wishlist<br>
-          (Hadiah Mengikut Link pilihan anda sendiri)<br>
+        <p><i class="fas fa-gift"></i> Wishlist (Hadiah Mengikut Link pilihan anda sendiri)<br>
          <a href="javascript:void(0);" onclick="toggleGambar('wishlist-img')">Lihat Contoh</a>
          </p>
 
 <img id="wishlist-img" src="ContohHadiah2.PNG" alt="Contoh Wishlist" 
-     style="display: none; width: 100%; max-width: 300px; margin-top: 5px; margin-bottom: 10px;">
+     style="display: none; width: 100%; max-width: 300px; margin-top: 5px;">
+        <br>
         <p><i class="fas fa-phone"></i> Contact</p>
         <p><i class="fas fa-location-dot"></i> Location</p>
         <p><i class="fas fa-clock"></i> Countdown</p>
@@ -352,13 +341,13 @@
 
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
-        <p><i class="fas fa-gift"></i> Wishlist<br>
-          (Boleh Pilih Hadiah Existing)<br>
+        <p><i class="fas fa-gift"></i> Wishlist (Boleh Pilih Hadiah Existing)<br>
          <a href="javascript:void(0);" onclick="toggleGambar('WISHLIST EXISTING-img')">Lihat Contoh</a>
          </p>
 
 <img id="WISHLIST EXISTING-img" src="ContohHadiah1.png" alt="Contoh WISHLIST" 
-     style="display: none; width: 100%; max-width: 300px; margin-top: 5px; margin-bottom: 10px;">
+     style="display: none; width: 100%; max-width: 300px; margin-top: 5px;">
+        <br>
         <p><i class="fas fa-phone"></i> Contact</p>
         <p><i class="fas fa-location-dot"></i> Location</p>
         <p><i class="fas fa-clock"></i> Countdown</p>
@@ -381,7 +370,7 @@
        RM 13.00  
   </span>
 
-    </h3><br><br><br>  
+    </h3><br>    
       
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-phone"></i> Contact</p>
@@ -1186,6 +1175,12 @@ function showSection(id) {
 
 
 
+
+
+
+
+
+  
 <!-- Butang WhatsApp -->
 <a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
    class="whatsapp-float" target="_blank">
