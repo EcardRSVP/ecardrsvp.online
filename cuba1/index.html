@@ -277,7 +277,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   z-index: 9999;
@@ -1026,46 +1026,39 @@ function copyTNG() {
   <a href="https://www.youtube.com/shorts/m7IpYlCdOp4" target="_blank" class="preview-btn">PREVIEW</a>
 </div>
 
-<!-- Popup Overlay (sekali je dalam page) -->
-<div id="popupOverlay" class="popup-overlay">
-  <span class="close-btn" onclick="closePopup()">&times;</span>
-  <img id="popupImage" src="" alt="Preview">
-</div>
-
     <div class="kad-item">
-      <img src="V36.png" alt="Kad 5">
+      <img src="V36.png" alt="Kad 4">
       <p><strong>V36</strong></p><br>
       <a href="https://www.youtube.com/shorts/owF4dMIVhj4" target="_blank" class="preview-btn">PREVIEW</a>
     </div>
     
     <div class="kad-item">
-      <img src="V57.png" alt="Kad 6">
+      <img src="V57.png" alt="Kad 5">
       <p><strong>V57</strong></p><br>
       <a href="https://www.youtube.com/shorts/2LQGaVObtt8" target="_blank" class="preview-btn">PREVIEW</a>
     </div>
 
     <div class="kad-item">
-      <img src="V59.png" alt="Kad 7">
+      <img src="V59.png" alt="Kad 6">
       <p><strong>V59</strong></p><br>
       <a href="https://www.youtube.com/shorts/2m0D-g2wwy0" target="_blank" class="preview-btn">PREVIEW</a>
     </div>    
 
     <div class="kad-item">
-      <img src="V60.png" alt="Kad 8">
+      <img src="V60.png" alt="Kad 7">
       <p><strong>V60</strong></p><br>
       <a href="https://www.youtube.com/shorts/S2Y19qH-U-A" target="_blank" class="preview-btn">PREVIEW</a>
     </div>  
-  </div>
-</section>
 
-<!-- JavaScript untuk toggle -->
-<script>
-function toggleGambar(id) {
-  var img = document.getElementById(id);
-  img.style.display = (img.style.display === "none") ? "block" : "none";
-}
-</script>
- 
+    <div class="kad-item">
+      <img src="V61.png" alt="Kad 8">
+      <p><strong>V61</strong></p><br>
+      <a href="https://www.youtube.com/shorts/s9n3IF1RqEs" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>  
+  </div>
+</section>  
+
+
 <section id="faq">
   <h2>Frequently Asked Questions (FAQ)</h2><br><br>
 
@@ -1172,6 +1165,12 @@ function toggleGambar(id) {
   </div>  
 </section>
 
+<!-- Popup Overlay (sekali je dalam page) -->
+<div id="popupOverlay" class="popup-overlay">
+  <span class="close-btn" onclick="closePopup()">&times;</span>
+  <img id="popupImage" src="" alt="Preview">
+</div>
+  
 <!-- FAQ Script -->
 <script>
 const faqBtns = document.querySelectorAll(".faq-question");
@@ -1184,6 +1183,14 @@ faqBtns.forEach(btn => {
 });
 </script>
 
+<!-- JavaScript untuk toggle -->
+<script>
+function toggleGambar(id) {
+  var img = document.getElementById(id);
+  img.style.display = (img.style.display === "none") ? "block" : "none";
+}
+</script>
+  
 <script>
 function toggleMenu() {
   const menu = document.getElementById("dropdownMenu");
@@ -1225,13 +1232,6 @@ function showSection(id) {
 </script>
 
 
-
-
-
-
-
-
-  
 <!-- Butang WhatsApp -->
 <a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
    class="whatsapp-float" target="_blank">
