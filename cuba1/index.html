@@ -8,9 +8,7 @@
   <!-- Favicon / Logo -->
   <link rel="icon" type="image/png" href="NNA.png">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="a96dn2n6a.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS -->function openPopup(imgSrc) {m/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body style="background-color: #FADADD; font-family: sans-serif;">
 
@@ -1186,7 +1184,20 @@ function showSection(id) {
 }
 </script>
 
+<script>
+function openPopup(imgSrc) {
+  const popupOverlay = document.getElementById("popupOverlay");
+  const popupImage = document.getElementById("popupImage");
+  
+  popupImage.src = imgSrc;      // masukkan gambar yang dipilih
+  popupOverlay.style.display = "flex";  // tunjuk popup
+}
 
+function closePopup() {
+  const popupOverlay = document.getElementById("popupOverlay");
+  popupOverlay.style.display = "none";  // tutup popup
+}
+</script>
 
 
 
