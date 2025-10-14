@@ -66,15 +66,6 @@ function showSection(id) {
   document.getElementById("dropdownMenu").classList.remove("show");
 }
 
-// FAQ Toggle
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".faq-question").forEach(btn => {
-    btn.addEventListener("click", function() {
-      const answer = this.nextElementSibling;
-      answer.style.display = (answer.style.display === "block") ? "none" : "block";
-    });
-  });
-});
 
 // Gambar Toggle
 function toggleGambar(imgId) {
