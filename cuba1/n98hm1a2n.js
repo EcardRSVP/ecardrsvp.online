@@ -1,4 +1,3 @@
-
 // Popup fullscreen
 function openPopup(imgSrc) {
   const popup = document.getElementById('popupOverlay');
@@ -16,7 +15,7 @@ function closePopup() {
 // Klik luar gambar pun boleh tutup
 document.getElementById('popupOverlay').addEventListener('click', function(e) {
   if (e.target === this) closePopup();
-}
+});
 
  // Tunggu DOM siap dulu supaya popupOverlay dah wujud
 document.addEventListener("DOMContentLoaded", () => {
@@ -62,12 +61,20 @@ function toggleMenu() {
 
 function showSection(id) {
   document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
-  document.getElementById(id).style.display = "block";
+  const selected = document.getElementById(id);
+  if (selected) selected.style.display = "block";
   document.getElementById("dropdownMenu").classList.remove("show");
 }
 
-
-
+// FAQ Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", function() {
+      const answer = this.nextElementSibling;
+      answer.style.display = (answer.style.display === "block") ? "none" : "block";
+    });
+  });
+});
 
 // Gambar Toggle
 function toggleGambar(imgId) {
