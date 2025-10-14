@@ -80,3 +80,12 @@ function toggleGambar(imgId) {
   if (!img) return;
   img.style.display = img.style.display === "none" ? "block" : "none";
 }
+
+function copyTeks(button) {
+  const teks = button.previousElementSibling.innerText; // ambil teks dari <p>
+  navigator.clipboard.writeText(teks).then(() => {
+    alert("Teks telah disalin!");
+  }).catch(err => {
+    alert("Gagal menyalin teks: " + err);
+  });
+}
