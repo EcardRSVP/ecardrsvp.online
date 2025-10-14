@@ -414,7 +414,7 @@
        RM 13.00  
   </span>
 
-    </h3><br><br><br>    
+    </h3><br><br>    
       
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-phone"></i> Contact</p>
@@ -1058,21 +1058,33 @@ function copyTNG() {
 
 
 <!-- Warna Pilihan Baju - Slider Single Image -->
-<section id="warna-pilihan" style="background-color:#ffffff; padding:20px; margin-top:50px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center; max-width:400px; margin-left:auto; margin-right:auto;">
+<section id="warna-pilihan" 
+  style="background-color:#ffffff; padding:20px; margin-top:50px; border-radius:10px; 
+         box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center; max-width:400px; 
+         margin-left:auto; margin-right:auto;">
+  
   <h2 style="font-size:18px; margin-bottom:15px;">WARNA PILIHAN</h2>
 
   <div style="position:relative;">
-    <!-- Gambar Slider -->
-    <img id="slider-image" src="CodeA" alt="Code A" style="width:100%; border-radius:5px;">
+    
+   <!-- Gambar Slider -->
+    <img id="slider-image" src="CodeA.png" alt="Code A"
+         style="width:100%; border-radius:5px; cursor:pointer;"
+         onclick="openPopup(this.src)"> <!-- ✅ Tambahan penting di sini -->
 
     <!-- Tombol Kiri -->
-    <button onclick="prevSlide()" style="position:absolute; top:50%; left:5px; transform:translateY(-50%); background-color:#000; color:#fff; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer;">&#10094;</button>
+    <button onclick="prevSlide()" 
+      style="position:absolute; top:50%; left:5px; transform:translateY(-50%);
+             background-color:#000; color:#fff; border:none; border-radius:50%; 
+             width:30px; height:30px; cursor:pointer;">&#10094;</button>
 
     <!-- Tombol Kanan -->
-    <button onclick="nextSlide()" style="position:absolute; top:50%; right:5px; transform:translateY(-50%); background-color:#000; color:#fff; border:none; border-radius:50%; width:30px; height:30px; cursor:pointer;">&#10095;</button>
+    <button onclick="nextSlide()" 
+      style="position:absolute; top:50%; right:5px; transform:translateY(-50%);
+             background-color:#000; color:#fff; border:none; border-radius:50%; 
+             width:30px; height:30px; cursor:pointer;">&#10095;</button>
   </div>
 </section>
-
       
 <section id="faq">
   <h2>Frequently Asked Questions (FAQ)</h2><br><br>
