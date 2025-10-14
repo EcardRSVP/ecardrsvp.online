@@ -1,4 +1,5 @@
-// Popup Gambar
+
+// Popup fullscreen
 function openPopup(imgSrc) {
   const popup = document.getElementById('popupOverlay');
   const popupImg = document.getElementById('popupImage');
@@ -6,20 +7,41 @@ function openPopup(imgSrc) {
   popup.style.display = 'flex';
 }
 
+// Tutup popup
 function closePopup() {
   const popup = document.getElementById('popupOverlay');
   popup.style.display = 'none';
 }
 
-// Slider Gambar
+// Klik luar gambar pun boleh tutup
+document.getElementById('popupOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+}
+
+ // Tunggu DOM siap dulu supaya popupOverlay dah wujud
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById('popupOverlay');
+  if (overlay) {
+    overlay.addEventListener('click', function (e) {
+      if (e.target === this) closePopup();
+    });
+  }
+});
+
+
+
+// Slider Gambar (Warna Pilihan)
 const images = ["CodeA.png", "CodeB.png", "CodeC.png", "CodeD.png"];
 let currentIndex = 0;
 
 function showSlide(index) {
   const slider = document.getElementById("slider-image");
+  if (!slider) return; // elak error jika elemen tak jumpa
+
   if (index < 0) currentIndex = images.length - 1;
   else if (index >= images.length) currentIndex = 0;
   else currentIndex = index;
+
   slider.src = images[currentIndex];
 }
 
@@ -30,6 +52,8 @@ function prevSlide() {
 function nextSlide() {
   showSlide(currentIndex + 1);
 }
+
+
 
 // Menu & Section
 function toggleMenu() {
@@ -42,8 +66,12 @@ function showSection(id) {
   document.getElementById("dropdownMenu").classList.remove("show");
 }
 
+
+
+
 // Gambar Toggle
 function toggleGambar(imgId) {
   const img = document.getElementById(imgId);
+  if (!img) return;
   img.style.display = img.style.display === "none" ? "block" : "none";
 }
