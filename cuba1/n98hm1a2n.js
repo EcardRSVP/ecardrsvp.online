@@ -81,11 +81,13 @@ function toggleGambar(imgId) {
   img.style.display = img.style.display === "none" ? "block" : "none";
 }
 
-function copyTeks(button) {
-  const teks = button.previousElementSibling.innerText; // ambil teks dari <p>
+
+// Untuk teks ucapan / semua kotak
+function copyTeks(button, msgId) {
+  const teks = button.closest('.teks-kotak').querySelector('.teks-isi').innerText.trim();
   navigator.clipboard.writeText(teks).then(() => {
-    alert("Teks telah disalin!");
-  }).catch(err => {
-    alert("Gagal menyalin teks: " + err);
+    const msg = document.getElementById(msgId);
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 2500);
   });
 }
