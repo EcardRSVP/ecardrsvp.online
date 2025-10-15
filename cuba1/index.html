@@ -981,7 +981,7 @@
       <button class="copy-btn" onclick="copyTNG()">Copy</button>
     </li>
   </ul>
-  <p id="copyMsg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+  <p id="copyMsgTNG" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
     Nombor akaun berjaya disalin!
   </p>
   <br>
@@ -997,9 +997,9 @@
 function copyTNG() {
   var tngNo = document.getElementById("tngAcc").innerText;
   navigator.clipboard.writeText(tngNo).then(function() {
-    document.getElementById("copyMsg").style.display = "block";
+    document.getElementById("copyMsgTNG").style.display = "block";
     setTimeout(() => {
-      document.getElementById("copyMsg").style.display = "none";
+      document.getElementById("copyMsgTNG").style.display = "none";
     }, 2000);
   });
 }
@@ -1193,14 +1193,13 @@ TERIMA KASIH 🌹<br><br>
       
  <!-- Button copy di tengah bawah -->
   <div style="text-align:center; margin-top:15px;">
-    <button class="copy-btn" onclick="copyTeks(this)">Copy</button>
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg2')">Copy</button>
   </div>
-</div>
 
 <!-- Mesej berjaya disalin -->
-<p id="copyMsg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
-  DISALIN!
-</p>
+  <p id="copyMsg2" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
     </div>
   </div>
 </section>
