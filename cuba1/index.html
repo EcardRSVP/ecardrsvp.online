@@ -59,12 +59,14 @@
   font-size: 18px;
   text-decoration: none;
   text-align: center;   /* perkataan center */
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */  
 }
 
 .dropdown-menu a:hover {
   background: #f497b6;
-  color: white;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */  
 }
 
 .dropdown-menu a.active {
@@ -83,6 +85,7 @@
 #borang h2,
 #pembayaran h2,
 #faq h2,
+#teks-edar h2, 
 #video h2 {  
   text-align: center;
 }
@@ -106,10 +109,6 @@
   cursor: pointer;
   margin-bottom: 5px;
   transition: background-color 0.3s;
-}
-
-.faq-question:hover {
-  background-color: #f497b6;
 }
 
 .faq-answer {
@@ -183,7 +182,8 @@
   margin-top: 0px;
   padding: 4px 8px;
   background: #f8b6c9;
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */  
   border-radius: 5px;
   text-decoration: none;
   font-size: 13px;
@@ -230,7 +230,7 @@
   min-height: 200px;
 }  
 
-#designkad, #borang, #pembayaran, #faq, #video {
+#designkad, #borang, #pembayaran, #faq, #video, #teks-edar {
   display: none;
 }
 #pakej {
@@ -301,7 +301,8 @@
   position: absolute;
   top: 20px;
   right: 30px;
-  color: white;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */  
   font-size: 40px;
   cursor: pointer;
 }  
@@ -1102,8 +1103,8 @@ function copyTNG() {
 
   
 <!-- Section Teks Edaran -->
-<section id="teks-edar" style="padding: 50px 20px; background-color: #F5E6D3;">
-  <h2 style="text-align: center; margin-bottom: 40px; color: #333;">TEKS EDARAN / UCAPAN</h2>
+<section id="teks-edar" style="padding: 50px 20px;">
+  <h2 style="text-align: center; margin-bottom: 40px; color: black;">TEKS EDARAN / UCAPAN</h2>
   
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
     
@@ -1124,23 +1125,23 @@ function copyTNG() {
         & Salam Sejahtera.<br><br>
 
 Dengan penuh kesyukuran ke hadrat Ilahi, kami<br>
-<p><strong>BAPA PENGANTIN</strong></p><br>
+<p><strong>BAPA PENGANTIN</strong></p>
 &<br>
 <p><strong>IBU PENGANTIN</strong></p><br><br>
 
 Dengan penuh hormat & takzim,<br>
 sukacita menjemput<br>
-YBhg Tan Sri/ Puan Sri/ Dato'/ Datin/<br>
-Tuan/ Puan & keluarga<br>
+YBhg Tan Sri/ Puan Sri/ Dato'/<br>
+Datin/ Tuan/ Puan & keluarga<br>
 ke Perkahwinan Anakanda kami<br><br><br>
 
 <p>🤵🏻 <strong>NAMA PENGANTIN</strong></p><br>
 <p>🤍</p><br>
 <p>👰🏻 <strong>NAMA PENGANTIN</strong></p><br><br><br>
       
-<p>🗓 01 FEBRUARI 2025 (SABTU)</p><br>
-<p>⏰ 11.00 AM - 5.00 PM</p><br>
-<p>🏢 DEWAN ORANG RAMAI TAMAN MELATI</p><br><br>
+<p><strong> 🗓 01 FEBRUARI 2025 (SABTU)</strong></p>
+<p><strong>⏰ 11.00 AM - 5.00 PM</strong></p>
+<p><strong>🏢 DEWAN ORANG RAMAI TAMAN MELATI</strong></p><br><br>
 
 🚗 Pautan Google Maps :<br>
 link url<br><br>
@@ -1148,30 +1149,34 @@ link url<br><br>
 🚗 Pautan Waze :<br>
 link url<br><br><br>
 
-Sila Klik pautan dibawah bagi<br>
-mengesahkan kehadiran melalui RSVP<br><br>
+Sila Klik pautan di bawah untuk<br>
+mengesahkan kehadiran anda melalui RSVP<br>
+<p><strong>link url</strong></p><br><br><br>
 
-link url<br><br><br>
-
-Semoga dengan kehadiran dan doa dari kalian<br>
-dapat menyerikan lagi majlis serta menambah<br>
-keberkatan dan keredhaan Allah swt agar<br>
-perkahwinan yang bakal dibina ini sentiasa<br>
-dalam keredhaanNya, dilimpahi dengan sakinah,<br>
+Semoga dengan kehadiran dan
+doa dari kalian dapat menyerikan<br>
+lagi majlis serta menambah<br>
+keberkatan dan keredhaan Allah swt<br>
+agar perkahwinan yang bakal dibina ini<br>
+sentiasa dalam keredhaanNya,<br>
+dilimpahi dengan sakinah,<br>
 mawaddah dan rahmat Allah swt.<br><br>
 
-TERIMA KASIH 🌹
+TERIMA KASIH 🌹<br><br>
       </p>
-      <button onclick="copyTeks(this)" style="
-        background-color: #8B5CF6;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        cursor: pointer;
-      ">Copy</button>
-    </div>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg1')">Copy</button>
+  </div>
 
+<!-- Mesej berjaya disalin -->
+  <p id="copyMsg1" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
+</div>
+
+    
     <!-- Kotak Teks 2 -->
     <div class="teks-kotak" style="
       background-color: white;
@@ -1185,14 +1190,17 @@ TERIMA KASIH 🌹
       <p class="teks-isi" style="color: #555; font-size: 16px; margin-bottom: 15px;">
         "Kami berbesar hati menjemput anda ke majlis istimewa kami pada 21 Disember 2025 di Hotel Melati. Kehadiran anda amat bermakna bagi kami."
       </p>
-      <button onclick="copyTeks(this)" style="
-        background-color: #8B5CF6;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        cursor: pointer;
-      ">Copy</button>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this)">Copy</button>
+  </div>
+</div>
+
+<!-- Mesej berjaya disalin -->
+<p id="copyMsg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+  DISALIN!
+</p>
     </div>
   </div>
 </section>
