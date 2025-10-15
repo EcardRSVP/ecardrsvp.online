@@ -26,10 +26,12 @@
   background: none;
   border: none;      /* buang border */
   outline: none;     /* buang outline bila klik */
-  font-size: 18px;
+  font-size: 19px;
   padding: 8px 12px;
   cursor: pointer;
   color: black;            /* tulisan & ikon hitam */
+  margin-top: -8px;   /* naikkan ke atas sikit */
+  font-weight: bold;   /* tulisan jadi tebal */
 }
 
 .sub-header {
@@ -57,12 +59,14 @@
   font-size: 18px;
   text-decoration: none;
   text-align: center;   /* perkataan center */
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */  
 }
 
 .dropdown-menu a:hover {
   background: #f497b6;
-  color: white;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */  
 }
 
 .dropdown-menu a.active {
@@ -80,7 +84,9 @@
 #designkad h2,
 #borang h2,
 #pembayaran h2,
-#faq h2 {
+#faq h2,
+#teks-edar h2, 
+#video h2 {  
   text-align: center;
 }
 
@@ -105,20 +111,23 @@
   transition: background-color 0.3s;
 }
 
-.faq-question:hover {
-  background-color: #f497b6;
-}
-
 .faq-answer {
-  display: none;
+  display: block !important;
   padding: 10px;
   font-size: 13px;
+  font-weight: bold;
   background: #fff0f5;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   border-left: 3px solid #f497b6;
   margin-bottom: 10px;
   border-radius: 4px;
 }
 
+.faq-item {
+  margin-bottom: 15px;
+}
+  
 /* GRID DESIGN KAD */
 .preview-grid {
   display: grid;
@@ -173,7 +182,8 @@
   margin-top: 0px;
   padding: 4px 8px;
   background: #f8b6c9;
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */  
   border-radius: 5px;
   text-decoration: none;
   font-size: 13px;
@@ -220,7 +230,7 @@
   min-height: 200px;
 }  
 
-#designkad, #borang, #pembayaran, #faq {
+#designkad, #borang, #pembayaran, #faq, #video, #teks-edar {
   display: none;
 }
 #pakej {
@@ -253,6 +263,49 @@
   display: block;
   margin: 10px auto;         /* gambar auto center */
 }  
+
+/* Bahagian header (tajuk & harga) */
+.card h3.font-a,
+.card h3.font-b {
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* Kalau nak pastikan header sentiasa duduk atas */
+.card .font-a,
+.card .font-b {
+  flex-shrink: 0;
+} 
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */  
+  font-size: 40px;
+  cursor: pointer;
+}  
   </style>
 
   
@@ -269,10 +322,12 @@
   <div class="menu-container">
     <div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
     <div class="dropdown-menu" id="dropdownMenu">
-      <a href="javascript:void(0)" onclick="showSection('pakej')">LAMAN UTAMA</a>
+      <a href="javascript:void(0)" onclick="showSection('pakej')">PAKEJ</a>
       <a href="javascript:void(0)" onclick="showSection('designkad')">DESIGN KAD</a>
       <a href="javascript:void(0)" onclick="showSection('borang')">BORANG</a>
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
+      <a href="javascript:void(0)" onclick="showSection('video')">VIDEO KAD DIGITAL</a>
+      <a href="javascript:void(0)" onclick="showSection('teks-edar')">TEKS EDARAN</a>     
       <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
     </div>
    </div>
@@ -298,13 +353,13 @@
       
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
-        <p><i class="fas fa-gift"></i> Wishlist (Hadiah Mengikut Link pilihan anda sendiri)<br>
+        <p><i class="fas fa-gift"></i> Wishlist<br>
+          (Hadiah Mengikut Link pilihan anda sendiri)<br>
          <a href="javascript:void(0);" onclick="toggleGambar('wishlist-img')">Lihat Contoh</a>
          </p>
 
 <img id="wishlist-img" src="ContohHadiah2.PNG" alt="Contoh Wishlist" 
      style="display: none; width: 100%; max-width: 300px; margin-top: 5px;">
-        <br>
         <p><i class="fas fa-phone"></i> Contact</p>
         <p><i class="fas fa-location-dot"></i> Location</p>
         <p><i class="fas fa-clock"></i> Countdown</p>
@@ -339,13 +394,13 @@
 
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
-        <p><i class="fas fa-gift"></i> Wishlist (Boleh Pilih Hadiah Existing)<br>
+        <p><i class="fas fa-gift"></i> Wishlist<br>
+          (Boleh Pilih Hadiah Existing)<br>
          <a href="javascript:void(0);" onclick="toggleGambar('WISHLIST EXISTING-img')">Lihat Contoh</a>
          </p>
 
 <img id="WISHLIST EXISTING-img" src="ContohHadiah1.png" alt="Contoh WISHLIST" 
      style="display: none; width: 100%; max-width: 300px; margin-top: 5px;">
-        <br>
         <p><i class="fas fa-phone"></i> Contact</p>
         <p><i class="fas fa-location-dot"></i> Location</p>
         <p><i class="fas fa-clock"></i> Countdown</p>
@@ -368,7 +423,7 @@
        RM 13.00  
   </span>
 
-    </h3><br>    
+    </h3><br><br>    
       
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-phone"></i> Contact</p>
@@ -438,13 +493,13 @@
     <div class="kad-item">
       <img src="B8.png" alt="Kad 7">
       <p><strong>B8</strong></p><br>
-      <a href="https://ecardrsvp.online/B8/" target="_blank" class="preview-btn">PREVIEW</a>
+      <a href="https://ecardrsvp.online/B68/" target="_blank" class="preview-btn">PREVIEW</a>
     </div>
 
     <div class="kad-item">
       <img src="B9.png" alt="Kad 8">
       <p><strong>B9</strong></p><br>
-      <a href="https://ecardrsvp.online/B9/" target="_blank" class="preview-btn">PREVIEW</a>
+      <a href="https://ecardrsvp.online/KadKahwinContoh3/" target="_blank" class="preview-btn">PREVIEW</a>
     </div>
 
     <div class="kad-item">
@@ -878,6 +933,13 @@
       <p><strong>A71</strong></p><br>
       <a href="https://ecardrsvp.online/A71/" target="_blank" class="preview-btn">PREVIEW</a>
     </div>
+
+     <div class="kad-item">
+      <img src="ContohMajlis2Pengantin.jpg" alt="Kad 77">
+      <p style="margin: 0; line-height: 0.7;"><strong>Contoh Majlis Gabung</strong></p>
+      <p style="margin: 0; line-height: 0.7;"><strong>2 Pengantin</strong></p>
+      <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
     
   </div>
 </section>
@@ -886,6 +948,7 @@
 <!-- Borang Maklumat -->
 <section id="borang">
   <h2>BORANG</h2>
+  <br>
     <p style="text-align:center; font-size:14px; margin-top:10px; line-height:1.5;">
     1) Pembayaran hanya perlu dibuat selepas<br>
       menerima link RSVP<br><br>
@@ -922,10 +985,10 @@
     <li><strong>Nama:</strong> Nurnabilah Atiqah</li>
     <li><strong>No. Akaun:</strong> <span id="tngAcc">111023701317</span></li> 
 <li>
-      <button class="copy-btn" onclick="copyTNG()">Salin</button>
+      <button class="copy-btn" onclick="copyTNG()">Copy</button>
     </li>
   </ul>
-  <p id="copyMsg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+  <p id="copyMsgTNG" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
     Nombor akaun berjaya disalin!
   </p>
   <br>
@@ -933,7 +996,7 @@
 
   <div style="text-align: center; margin-top: 10px;">
     <img src="QR TNG.png" alt="QR TNG" 
-         style="max-width: 200px; width: 100%; border: 2px solid #ccc; border-radius: 8px;">
+         style="max-width: 200px; width: 100%; border-radius: 8px;">
   </div>
 </section>
 
@@ -941,27 +1004,523 @@
 function copyTNG() {
   var tngNo = document.getElementById("tngAcc").innerText;
   navigator.clipboard.writeText(tngNo).then(function() {
-    document.getElementById("copyMsg").style.display = "block";
+    document.getElementById("copyMsgTNG").style.display = "block";
     setTimeout(() => {
-      document.getElementById("copyMsg").style.display = "none";
+      document.getElementById("copyMsgTNG").style.display = "none";
     }, 2000);
   });
 }
 </script>
 
 
+ <!-- Preview Video Kad Kahwin -->
+<section id="video">
+  <h2>VIDEO KAD DIGITAL</h2><br>
+    <p style="text-align:center; font-size:15px; margin-top:10px; line-height:1.5;">
+      Hanya <strong>RM 5.00 - RM 6.00</strong> Sahaja !!<br>
+  <i class="fas fa-cart-shopping" style="color:#000000; margin-right:5px;"></i> Tempah Sekarang
+</p>
+<br>
+    
+    <div class="preview-grid"> 
+      
+    <div class="kad-item">
+      <img src="V21.png" alt="Kad 1">
+      <p><strong>V21</strong></p><br>
+      <a href="https://www.youtube.com/shorts/pu39OV6r900" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="V25.png" alt="Kad 2">
+      <p><strong>V25</strong></p><br>
+      <a href="https://www.youtube.com/shorts/0hmshdQCu0w" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+       <div class="kad-item">
+      <img src="V35.png" alt="Kad 3">
+      <p><strong>V35</strong></p><br>
+      <a href="https://www.youtube.com/shorts/m7IpYlCdOp4" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="V36.png" alt="Kad 4">
+      <p><strong>V36</strong></p><br>
+      <a href="https://www.youtube.com/shorts/owF4dMIVhj4" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="V57.png" alt="Kad 5">
+      <p><strong>V57</strong></p><br>
+      <a href="https://www.youtube.com/shorts/2LQGaVObtt8" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="V59.png" alt="Kad 6">
+      <p><strong>V59</strong></p><br>
+      <a href="https://www.youtube.com/shorts/2m0D-g2wwy0" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>    
+
+    <div class="kad-item">
+      <img src="V60.png" alt="Kad 7">
+      <p><strong>V60</strong></p><br>
+      <a href="https://www.youtube.com/shorts/S2Y19qH-U-A" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>  
+
+    <div class="kad-item">
+      <img src="V61.png" alt="Kad 8">
+      <p><strong>V61</strong></p><br>
+      <a href="https://www.youtube.com/shorts/s9n3IF1RqEs" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>  
+
+     <div class="kad-item">
+      <img src="Video Majlis Aqiqah & Kesyukuran (Code 1).png" alt="Kad 9">
+      <p><strong>A1</strong></p><br>
+      <a href="https://www.youtube.com/shorts/12atbybH62k" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>  
+      
+  </div> <!-- ✅ Tamat grid video -->
   
+<!-- Warna Pilihan Baju - Slider Single Image -->
+<div id="warna-pilihan" 
+  style="background-color:#ffffff; padding:20px; margin-top:50px; border-radius:10px; 
+         box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center;
+         width:90%; max-width:600px; /* responsive */ 
+         margin:50px auto; /* center */">
+
+  <h2 style="font-size:18px; margin-bottom:15px;">WARNA PILIHAN</h2>
+
+  <div style="position:relative; width:100%;">
+
+    <!-- Gambar utama -->
+    <img id="slider-image" src="CodeA.png" alt="Code A"
+         style="width:100%; height:auto; border-radius:10px; cursor:pointer;"
+         onclick="openPopup(this.src)"> <!-- ✅ klik gambar buka popup -->
+
+      <!-- Label untuk code -->
+    <p id="slider-label" style="margin-top:10px; font-weight:bold; font-size:14px;">Code A</p>  
+
+    <!-- Tombol Kiri -->
+    <button onclick="prevSlide()" 
+      style="position:absolute; top:50%; left:5px; transform:translateY(-50%);
+             background-color:#000; color:#fff; border:none; border-radius:50%; 
+             width:30px; height:30px; cursor:pointer;">&#10094;</button>
+
+    <!-- Tombol Kanan -->
+    <button onclick="nextSlide()" 
+      style="position:absolute; top:50%; right:5px; transform:translateY(-50%);
+             background-color:#000; color:#fff; border:none; border-radius:50%; 
+             width:30px; height:30px; cursor:pointer;">&#10095;</button>
+    </div>
+  </div>
+</section> <!-- ✅ Tutup section #video di sini -->
+
+
+  
+<!-- Section Teks Edaran -->
+<section id="teks-edar">
+  <h2 style="text-align: center; margin-bottom: 40px; color: black;">TEKS EDARAN / UCAPAN</h2>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    
+    <!-- Kotak Teks 1 -->
+    <div class="teks-kotak" style="
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <p class="teks-isi" style="color: black; font-size: 15px; margin-bottom: 15px;">
+        💍 JEMPUTAN MAJLIS MAJLIS PERKAHWINAN💍<br><br>
+        ‎بِسۡـــــــــمِ ٱللهِ ٱلرَّحۡـمَـٰنِ ٱلرَّحِـــــــيمِ .<br>
+        ‎السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ .<br>
+        & Salam Sejahtera.<br><br>
+
+Dengan penuh kesyukuran<br>
+ke hadrat Ilahi, kami<br><br>
+        
+<strong>BAPA PENGANTIN</strong><br>
+&<br>
+<strong>IBU PENGANTIN</strong><br><br>
+
+Dengan penuh hormat & takzim,<br>
+sukacita menjemput<br>
+YBhg Tan Sri/ Puan Sri/ Dato'/<br>
+Datin/ Tuan/ Puan/ Cik & keluarga<br>
+ke Perkahwinan Anakanda kami<br><br><br>
+
+🤵🏻 <strong>NAMA PENGANTIN</strong><br>
+🤍<br>
+👰🏻 <strong>NAMA PENGANTIN</strong><br><br><br>
+      
+<strong> 🗓 01 FEBRUARI 2025 (SABTU)</strong><br>
+<strong>⏰ 11.00 AM - 5.00 PM</strong><br>
+<strong>🏢 DEWAN ORANG RAMAI TAMAN MELATI</strong><br><br>
+
+🚗 Pautan Google Maps :<br>
+<strong>link url</strong><br><br>
+
+🚗 Pautan Waze :<br>
+<strong>link url</strong><br><br><br>
+
+Sila Klik pautan di bawah untuk<br>
+mengesahkan kehadiran anda melalui RSVP<br>
+<strong>link url</strong><br><br>
+
+Semoga dengan kehadiran dan<br>
+doa dari kalian dapat menyerikan<br>
+lagi majlis serta menambah<br>
+keberkatan dan keredhaan Allah<br>
+swt agar perkahwinan yang bakal<br>
+dibina ini sentiasa dalam<br>
+keredhaanNya, dilimpahi dengan<br>
+sakinah, mawaddah dan rahmat<br>
+Allah swt.<br><br>
+
+TERIMA KASIH 🌹<br><br>
+      </p>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg1')">Copy</button>
+  </div>
+
+<!-- Mesej berjaya disalin -->
+  <p id="copyMsg1" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
+</div>
+
+    
+    <!-- Kotak Teks 2 -->
+    <div class="teks-kotak" style="
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <p class="teks-isi" style="color: black; font-size: 15px; margin-bottom: 15px;">
+          🌷بِسۡـــــــــمِٱللهِٱلرَّحۡـمَـٰنِٱلرَّحِـــــــيم🌷<br><br>
+
+Semarak kasih jalinan budi,<br>
+undangan diberi seikhlas hati<br>
+dengan penuh rasa hormatnya kami,<br><br>
+        
+<strong>BAPA PENGANTIN</strong><br>
+&<br>
+<strong>IBU PENGANTIN</strong><br><br>
+
+ingin menjemput<br>
+Dato/Datin/Tuan/Puan/Encik/Cik<br>
+sekeluarga untuk hadir ke<br>
+Majlis Perkahwinan puteri/putera kami<br><br><br>
+
+🤵🏻 <strong>NAMA PENGANTIN</strong><br>
+🤍<br>
+👰🏻 <strong>NAMA PENGANTIN</strong><br><br><br>
+
+ 🗓 Tarikh :<br>
+  <strong>01 Februari 2025 (Sabtu)</strong><br><br>
+
+⏰ Aturcara Majlis :<br>
+ <strong>11.00 am - 5.00 pm</strong><br><br>
+
+🏢 Lokasi :<br>
+<strong>Dewan Orang Ramai Taman Melati</strong><br><br>
+        
+🚗 Pautan Google Maps :<br>
+link url<br><br>
+
+🚗 Pautan Waze :<br>
+link url<br><br>
+
+💌Pautan RSVP :<br>
+link url<br><br><br>
+        
+Semoga kedatangan kalian<br>
+membawa seribu satu barakah<br>
+di dalam majlis ini.<br>
+Amin..<br><br>
+
+TERIMA KASIH 🥰<br><br>
+</p>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg2')">Copy</button>
+  </div>
+
+<!-- Mesej berjaya disalin -->
+  <p id="copyMsg2" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
+    </div>
+
+
+    <!-- Kotak Teks 3 -->
+    <div class="teks-kotak" style="
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <p class="teks-isi" style="color: black; font-size: 15px; margin-bottom: 15px;">
+          JEMPUTAN MAJLIS PERKAHWINAN<br>
+          NAMA SINGKATAN PENGANTIN (L) 💍 (P)<br><br>
+
+        ‎بِسۡـــــــــمِ ٱللهِ ٱلرَّحۡـمَـٰنِ ٱلرَّحِـــــــيمِ<br>
+        ‎السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ<br><br>
+
+Dengan penuh rasa kesyukuran<br>
+ke hadrat Ilahi, kami:<br><br>
+        
+<strong>BAPA PENGANTIN</strong><br>
+&<br>
+<strong>IBU PENGANTIN</strong><br><br>
+
+ingin menjemput<br>
+Dato/Datin/Tuan/Puan/Encik/Cik<br>
+seisi keluarga untuk hadir ke<br>
+Majlis Perkahwinan Puteri/Putera kami<br><br><br>
+
+<strong>NAMA PENGANTIN</strong><br>
+dengan pasangannya<br>
+<strong>NAMA PENGANTIN</strong><br><br><br>
+
+ 🗓 Tarikh: Sabtu, 1 Februari 2025<br>
+⏰ Masa: 11.00 am - 5.00 pm<br>
+🏡 Alamat:  Dewan Orang Ramai Taman Melati<br>
+🚗 Pautan Google Maps : link url<br>
+🚗 Pautan Waze : link url<br><br>
+
+
+📌 Sila klik pautan dibawah bagi<br>
+bagi mengesahkan kehadiran melalui RSVP.<br>
+link url<br><br><br>
+        
+Semoga dengan kehadiran<br>
+Tuan/Puan akan memeriahkan lagi<br>
+majlis kami dan diberkati<br>
+Allah SWT hendaknya.<br>
+Amin..<br><br>
+</p>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg3')">Copy</button>
+  </div>
+
+<!-- Mesej berjaya disalin -->
+  <p id="copyMsg3" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
+    </div>
+
+
+    <!-- Kotak Teks 4 -->
+    <div class="teks-kotak" style="
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <p class="teks-isi" style="color: black; font-size: 15px; margin-bottom: 15px;">
+          JEMPUTAN MAJLIS PERKAHWINAN💍<br><br>
+
+        ‎بِسۡـــــــــمِ ٱللهِ ٱلرَّحۡـمَـٰنِ ٱلرَّحِـــــــيمِ<br>
+        ‎السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ<br><br>
+
+Sekapur sireh, seulas pinang,<br>
+semekar senyuman seikhlas hati,<br>
+dengan rasa penuh kesyukuran kami<br><br>
+        
+<strong>BAPA PENGANTIN</strong><br>
+&<br>
+<strong>IBU PENGANTIN</strong><br><br>
+
+ingin menjemput<br>
+Dato/Datin/Tuan/Puan/Encik/Cik<br>
+seisi keluarga untuk hadir ke<br>
+Majlis Perkahwinan Puteri/Putera kami<br><br><br>
+
+<strong>NAMA PENGANTIN</strong><br>
+dengan pasangannya<br>
+<strong>NAMA PENGANTIN</strong><br><br><br>
+
+ 🗓 Tarikh: Sabtu, 1 Februari 2025<br>
+⏰ Masa: 11.00 am - 5.00 pm<br>
+🏡 Alamat:  Dewan Orang Ramai Taman Melati<br>
+🚗 Google Maps : link url<br>
+🚗 Waze : link url<br><br>
+
+
+📌 Sila klik pautan dibawah bagi<br>
+bagi mengesahkan kehadiran melalui RSVP.<br>
+link url<br><br><br>
+        
+Bunga rampai kami taburi,<br>
+Air mawar direnjis wangi,<br>
+Berkembang kasih menabur budi,<br>
+Undangan kami setulus hati,<br>
+Harap sudi datang menyeri,        
+Mendoakan mempelai diberkati Illahi 🤲🏻<br><br>
+</p>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg4')">Copy</button>
+  </div>
+
+<!-- Mesej berjaya disalin -->
+  <p id="copyMsg4" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
+    </div>
+
+    <!-- Kotak Teks 5 -->
+    <div class="teks-kotak" style="
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <p class="teks-isi" style="color: black; font-size: 15px; margin-bottom: 15px;">
+          JEMPUTAN MAJLIS PERKAHWINAN<br><br>
+
+‎بِسۡـــــــــمِ ٱللهِ ٱلرَّحۡـمَـٰنِ ٱلرَّحِـــــــيمِ<br>
+"Dan Kami menciptakan kamu<br>
+ berpasang-pasangan"<br>
+(Surah An-Naba' : 8)<br><br>
+
+Dengan penuh kesyukuran kehadrat Ilahi,<br>
+kami menjemput Tuan/Puan "sekeluarga/dan pasangan"<br>
+ke Majlis Perkahwinan Puteri/Putera kami<br><br>        
+        
+<strong>NAMA PENGANTIN</strong><br>
+❤️<br>
+<strong>NAMA PENGANTIN</strong><br><br><br>
+
+ 🗓 Tarikh: Sabtu, 1 Februari 2025<br>
+⏰ Masa: 11.00 am - 5.00 pm<br>
+🏡 Alamat:  Dewan Orang Ramai Taman Melati<br>
+🚗 Google Maps : link url<br>
+🚗 Waze : link url<br><br>
+
+
+📌 Sila klik pautan dibawah bagi<br>
+bagi mengesahkan kehadiran melalui RSVP.<br>
+link url<br><br><br>
+        
+Semoga dengan kehadiran serta<br>
+iringan doa kalian semua dapat<br>
+menyerikan lagi majlis serta<br>
+menambah keberkatan dan redha Allah.<br><br>
+</p>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg5')">Copy</button>
+  </div>
+
+<!-- Mesej berjaya disalin -->
+  <p id="copyMsg5" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
+    </div>
+
+    <!-- Kotak Teks 6 -->
+    <div class="teks-kotak" style="
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 16px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.1)'">
+      <p class="teks-isi" style="color: black; font-size: 15px; margin-bottom: 15px;">
+        💍 JEMPUTAN MAJLIS MAJLIS PERKAHWINAN💍<br><br>
+        ‎بِسۡـــــــــمِ ٱللهِ ٱلرَّحۡـمَـٰنِ ٱلرَّحِـــــــيمِ .<br>
+        ‎السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ .<br>
+        
+Dengan penuh kesyukuran ke hadrat<br>
+Ilahi, kami<br><br>  
+        
+<strong>BAPA PENGANTIN</strong><br>
+&<br>
+<strong>IBU PENGANTIN</strong><br><br>
+        
+ingin menjemput<br>
+Dato'/ Datin/ Tuan/ Puan/ Cik<br>
+dan pasangan ke Majlis Perkahwinan<br>
+Puteri/Putera kami yang diadakan<br>        
+secara sederhana bersama keluarga<br>
+& kenalan terdekat bagi meraikan<br><br>
+        
+<strong>NAMA PENGANTIN</strong><br>
+❤️<br>
+<strong>NAMA PENGANTIN</strong><br><br><br>
+
+🗓 Tarikh: Sabtu, 1 Februari 2025<br>
+⏰ Masa: 11.00 am - 5.00 pm<br>
+🏡 Alamat:  Dewan Orang Ramai Taman Melati<br>
+🚗 Google Maps : link url<br>
+🚗 Waze : link url<br><br>
+
+
+📌 Sila klik pautan dibawah bagi<br>
+bagi mengesahkan kehadiran melalui RSVP.<br>
+link url<br><br><br>
+        
+Semoga dengan kehadiran serta<br>
+iringan doa kalian semua dapat<br>
+menyerikan lagi majlis serta<br>
+menambah keberkatan dan redha Allah.<br><br>
+        
+TERIMA KASIH 🌹<br><br>
+</p>
+      
+ <!-- Button copy di tengah bawah -->
+  <div style="text-align:center; margin-top:15px;">
+    <button class="copy-btn" onclick="copyTeks(this, 'copyMsg6')">Copy</button>
+  </div>
+
+<!-- Mesej berjaya disalin -->
+  <p id="copyMsg6" class="copy-msg" style="display:none; color:maroon; text-align:center; font-size:13px; margin-top:10px;">
+    DISALIN!
+  </p>
+    </div> 
+  </div>
+</section>
+
+
+  
+<!-- FAQ Section -->     
 <section id="faq">
   <h2>Frequently Asked Questions (FAQ)</h2><br><br>
 
   <div class="faq-container">
     <div class="faq-item">
-      <button class="faq-question">Q: Berapa lama tempoh RSVP akan siap?</button>
+      <div class="faq-question">Q: Berapa lama tempoh RSVP akan siap?</div>
       <div class="faq-answer">A: Dalam tempoh 3 hari selepas maklumat lengkap diisi</div>
     </div>
-
-     <div class="faq-item">
-      <button class="faq-question">Q: Boleh ke saya bayar dulu baru isi maklumat?</button>
+    
+    <div class="faq-item">
+      <div class="faq-question">Q: Boleh ke saya bayar dulu baru isi maklumat?</div>
       <div class="faq-answer">A: Boleh</div>
     </div>
     
@@ -975,6 +1534,11 @@ function copyTNG() {
       <div class="faq-answer">A: Selepas tiada perubahan maklumat</div>
     </div>   
 
+           <div class="faq-item">
+      <button class="faq-question">Q: Kalau saya beli Pakej Silver / Bronze boleh ke saya nak beli softcopy kad jemputan bersaiz A6?</button>
+      <div class="faq-answer">A: Boleh, pembelian softcopy kad jemputan hanya RM 3.00 sahaja</div>
+    </div>   
+
        <div class="faq-item">
       <button class="faq-question">Q: Ada buat servis printing ke?</button>
       <div class="faq-answer">A: Maaf, buat masa ini saya tidak menawarkan servis printing</div>
@@ -982,7 +1546,7 @@ function copyTNG() {
 
     <div class="faq-item">
       <button class="faq-question">Q: Boleh ke saya nak tukar font?</button>
-      <div class="faq-answer">A: Boleh, namun akan dikenakan caj tambahan RM 3.00 untuk setiap kali perubahan</div>
+      <div class="faq-answer">A: Boleh, namun akan dikenakan caj tambahan RM 3.00 untuk setiap font (Jenis font boleh tengok di "https://fonts.google.com/")</div>
     </div>
 
     <div class="faq-item">
@@ -1007,7 +1571,7 @@ function copyTNG() {
 
     <div class="faq-item">
       <button class="faq-question">Q: Berapa kali saya boleh tukar maklumat selepas seller share RSVP Link?</button>
-      <div class="faq-answer">A: Perubahan maklumat hanya dibenarkan sebanyak 2 kali sahaja (Tidak termasuk perubahan gambar)</div>
+      <div class="faq-answer">A: Perubahan maklumat hanya dibenarkan sebanyak 2 kali sahaja (Tiada perubahan untuk gambar)</div>
     </div>
 
     <div class="faq-item">
@@ -1026,13 +1590,13 @@ function copyTNG() {
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">Q: Saya beli Bronze Package (RM 13.00) tapi saya nak buang bahagian gambar dan ditukarkan dengan Money Gift, Ucapan, Wishlist?</button>
-      <div class="faq-answer">A: Anda dibenarkan untuk membuang bahagian gambar, namun pertukaran ke "Money Gift, Ucapan, Wishlist" tidak dibenarkan</div>
+      <button class="faq-question">Q: Saya beli Bronze Package (RM 13.00) tapi saya nak buang bahagian gambar dan ditukarkan dengan Money Gift/ Ucapan/ Wishlist?</button>
+      <div class="faq-answer">A: Anda dibenarkan untuk membuang bahagian gambar, namun pertukaran ke "Money Gift/ Ucapan/ Wishlist" tidak dibenarkan</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">Q: Saya buat majlis kecil-kecilan, boleh hadkan tetamu ke?</button>
-      <div class="faq-answer">A: RSVP tiada limit tetamu, namun jika anda mahu limitkan tetamu, boleh nyatakan terus dalam ayat jemputan, contoh boleh dilihat di Koleksi Ucapan/Teks Edaran Kad Digital</div>
+      <div class="faq-answer">A: RSVP tiada limit tetamu. Namun, sekiranya anda ingin mengehadkan jumlah tetamu, sila nyatakan secara jelas dalam Teks Edaran. Contoh boleh rujuk di Koleksi Ucapan/Teks Edaran Kad Digital, ATAU nyatakan bahawa jemputan hanya ditujukan kepada 'rakan dan pasangan mereka' sahaja di dalam RSVP & Teks Edaran</div>
     </div>
 
     <div class="faq-item">
@@ -1054,9 +1618,35 @@ function copyTNG() {
       <button class="faq-question">Q: Boleh ke saya nak beli juga video kad kahwin?</button>
       <div class="faq-answer">A: Boleh</div>
     </div>
-  </div>  
-</section>
 
+     <div class="faq-item">
+      <button class="faq-question">Q: Berapa harga untuk video kad kahwin?</button>
+      <div class="faq-answer">A: RM 5.00 untuk majlis sebelah pihak / RM 6.00 untuk majlis gabung</div>
+    </div>
+  
+     <div class="faq-item">
+      <button class="faq-question">Q: Maksud Majlis Gabung?</button>
+      <div class="faq-answer">A: Majlis yang ada nama 2 pihak keluarga (L) & (P) / 2 pasangan pengantin / 2 Majlis (Contoh: M. Perkahwinan & Aqiqah)</div>
+    </div>
+  </div>  
+</section>    
+
+      
+<div id="popupOverlay" 
+     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+            background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; 
+            z-index:1000;">
+  
+  <!-- Gambar fullscreen -->
+  <img id="popupImage" src="" alt="Fullscreen" 
+       style="max-width:90%; max-height:90%; border-radius:10px;">
+
+  <!-- Butang tutup -->
+  <span onclick="closePopup()" 
+        style="position:absolute; top:20px; right:30px; color:white; font-size:40px; 
+               font-weight:bold; cursor:pointer;">&times;</span>
+</div>
+  
 <!-- FAQ Script -->
 <script>
 const faqBtns = document.querySelectorAll(".faq-question");
@@ -1069,6 +1659,14 @@ faqBtns.forEach(btn => {
 });
 </script>
 
+<!-- JavaScript untuk toggle -->
+<script>
+function toggleGambar(id) {
+  var img = document.getElementById(id);
+  img.style.display = (img.style.display === "none") ? "block" : "none";
+}
+</script>
+  
 <script>
 function toggleMenu() {
   const menu = document.getElementById("dropdownMenu");
@@ -1094,7 +1692,7 @@ function showSection(id) {
 <script>
 function showSection(id) {
   // Senarai semua section
-  const sections = ["pakej", "designkad", "borang", "pembayaran", "faq"];
+  const sections = ["pakej", "designkad", "borang", "pembayaran", "faq", "video"];
 
   // Sembunyikan semua section
   sections.forEach(sec => {
@@ -1110,13 +1708,6 @@ function showSection(id) {
 </script>
 
 
-
-
-
-
-
-
-  
 <!-- Butang WhatsApp -->
 <a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
    class="whatsapp-float" target="_blank">
