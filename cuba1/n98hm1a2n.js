@@ -79,11 +79,11 @@ function showStepSlide(index) {
   label.innerText = stepLabels[currentStepIndex];
 }
 
-function prevStepSlide() {
+function prevStepSlider() {
   showStepSlide(currentStepIndex - 1);
 }
 
-function nextStepSlide() {
+function nextStepSlider() {
   showStepSlide(currentStepIndex + 1);
 }
 
