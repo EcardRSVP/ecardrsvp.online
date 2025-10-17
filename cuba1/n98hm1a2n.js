@@ -69,7 +69,6 @@ let currentStepIndex = 0;
 
 function showStepSlide(index) {
   const img = document.getElementById("step-slider-image");
-  const label = document.getElementById("step-slider-label");
   if (!img || !label) return;
 
   if (index < 0) currentStepIndex = stepImages.length - 1;
