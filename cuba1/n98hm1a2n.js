@@ -69,14 +69,13 @@ let currentStepIndex = 0;
 
 function showStepSlide(index) {
   const img = document.getElementById("step-slider-image");
-  if (!img || !label) return;
+  if (!img) return;
 
   if (index < 0) currentStepIndex = stepImages.length - 1;
   else if (index >= stepImages.length) currentStepIndex = 0;
   else currentStepIndex = index;
 
   img.src = stepImages[currentStepIndex];
-  label.innerText = stepLabels[currentStepIndex];
 }
 
 function prevStepSlider() {
