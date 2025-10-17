@@ -327,7 +327,8 @@
       <a href="javascript:void(0)" onclick="showSection('borang')">BORANG</a>
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
       <a href="javascript:void(0)" onclick="showSection('video')">VIDEO KAD DIGITAL</a>
-      <a href="javascript:void(0)" onclick="showSection('teks-edar')">TEKS EDARAN</a>     
+      <a href="javascript:void(0)" onclick="showSection('teks-edar')">TEKS EDARAN</a> 
+      <a href="javascript:void(0)" onclick="showSection('step-rsvp')">STEP PENGGUNAAN RSVP</a>       
       <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
     </div>
    </div>
@@ -1507,7 +1508,56 @@ TERIMA KASIH 🌹<br><br>
   </div>
 </section>
 
+  
 
+<!-- Seksyen STEP PENGGUNAAN RSVP -->
+<section id="step-rsvp">
+  <h2>STEP PENGGUNAAN RSVP</h2><br><br>
+
+ <!-- Pilihan muat turun PDF -->
+  <div style="margin-bottom: 30px;">
+    <a href="STEP PENGGUNAAN RSVP (LINK).pdf" download class="btn-download"
+       style="background:#f8b6c9; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">
+       📄 Muat Turun Panduan (PDF)
+    </a>
+  </div>
+
+  
+  <!-- Gambar Panduan dengan Butang Kiri/Kanan -->
+ <div id="step-rsvp" 
+  style="background-color:#ffffff; padding:20px; margin-top:50px; border-radius:10px; 
+         box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center;
+         width:90%; max-width:600px; /* responsive */ 
+         margin:50px auto; /* center */">
+
+  <h2 style="font-size:18px; margin-bottom:15px;">TUTORIAL PENGGUNAAN RSVP (LINK)</h2>
+
+  <div style="position:relative; width:100%;">
+
+    <!-- Gambar utama -->
+    <img id="slider-image" src="1.png" alt="Step 1"
+         style="width:100%; height:auto; border-radius:10px; cursor:pointer;"
+         onclick="openPopup(this.src)"> <!-- ✅ klik gambar buka popup -->
+
+      <!-- Label untuk code -->
+    <p id="slider-label" style="margin-top:10px; font-weight:bold; font-size:14px;">Step 1/p>  
+
+    <!-- Tombol Kiri -->
+    <button onclick="prevSlide()" 
+      style="position:absolute; top:50%; left:5px; transform:translateY(-50%);
+             background-color:#000; color:#fff; border:none; border-radius:50%; 
+             width:30px; height:30px; cursor:pointer;">&#10094;</button>
+
+    <!-- Tombol Kanan -->
+    <button onclick="nextSlide()" 
+      style="position:absolute; top:50%; right:5px; transform:translateY(-50%);
+             background-color:#000; color:#fff; border:none; border-radius:50%; 
+             width:30px; height:30px; cursor:pointer;">&#10095;</button>
+    </div>
+  </div>
+</section> <!-- ✅ Tutup section #video di sini -->
+
+  
   
 <!-- FAQ Section -->     
 <section id="faq">
