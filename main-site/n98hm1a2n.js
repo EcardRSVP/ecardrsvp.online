@@ -60,6 +60,37 @@ document.addEventListener("DOMContentLoaded", () => {
   showSlide(currentIndex);
 });
 
+// Slider Gambar (Step Penggunaan RSVP)
+const stepImages = [
+  "1.png", "2.png", "3.png", "4.png", "5.png", 
+  "6.png", "7.png", "8.png", "9.png", "10.png", "11.png"
+];
+let currentStepIndex = 0;
+
+function showStepSlide(index) {
+  const img = document.getElementById("step-slider-image");
+  if (!img) return;
+
+  if (index < 0) currentStepIndex = stepImages.length - 1;
+  else if (index >= stepImages.length) currentStepIndex = 0;
+  else currentStepIndex = index;
+
+  img.src = stepImages[currentStepIndex];
+}
+
+function prevStepSlider() {
+  showStepSlide(currentStepIndex - 1);
+}
+
+function nextStepSlider() {
+  showStepSlide(currentStepIndex + 1);
+}
+
+// Papar slide pertama bila halaman siap
+document.addEventListener("DOMContentLoaded", () => {
+  showStepSlide(currentStepIndex);
+});
+
 
 // Menu & Section
 function toggleMenu() {
