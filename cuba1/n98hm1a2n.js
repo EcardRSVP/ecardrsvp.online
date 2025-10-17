@@ -65,10 +65,6 @@ const stepImages = [
   "1.png", "2.png", "3.png", "4.png", "5.png", 
   "6.png", "7.png", "8.png", "9.png", "10.png", "11.png"
 ];
-const stepLabels = [
-  "Step 1", "Step 2", "Step 3", "Step 4", "Step 5",
-  "Step 6", "Step 7", "Step 8", "Step 9", "Step 10", "Step 11"
-];
 let currentStepIndex = 0;
 
 function showStepSlide(index) {
