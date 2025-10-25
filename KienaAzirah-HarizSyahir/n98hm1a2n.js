@@ -123,7 +123,7 @@ function toggleSection(id) {
 }
 
 // ✅ Fetch Ucapan (PapaParse)
-fetch("")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSDGBwnnKoIQRt1LvvSyws5e_5tKDJn2Q1eXFn4WRSUgXB8iaV7WPn1osEfYNPSZmhOA6SdbheiRjik/pub?gid=645703123&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
     const parsed = Papa.parse(data, { header: true });
