@@ -89,26 +89,32 @@ function rsvpSuccessHandler() {
   if (submitted) {
     submitted = false;
 
-    const popup = document.getElementById("submit-popup");
     const form = document.getElementById("rsvp-form");
-
     if (form) form.reset();
 
-    if (popup) {
-      popup.classList.add("show");
-      console.log("✅ Popup muncul");
-
-      setTimeout(() => {
-        popup.classList.remove("show");
-      }, 5000);
+    // ✅ Guna popup tengah skrin (bukan #submit-popup)
+    const alertBox = document.getElementById("rsvp-alert");
+    if (alertBox) {
+      alertBox.style.display = "block";
+      console.log("✅ Popup alert tengah skrin muncul");
     } else {
-      console.warn("⚠️ Elemen #submit-popup tidak dijumpai.");
+      console.warn("⚠️ Elemen #rsvp-alert tidak dijumpai.");
     }
   } else {
     console.log("ℹ️ iframe reload tanpa submitted");
   }
 }
 window.rsvpSuccessHandler = rsvpSuccessHandler;
+
+function closeRsvpAlert() {
+  const alertBox = document.getElementById("rsvp-alert");
+  if (alertBox) alertBox.style.display = "none";
+
+  // Tutup juga popup RSVP (kalau nak)
+  const popupRSVP = document.getElementById("popup-RSVP");
+  if (popupRSVP) popupRSVP.style.display = "none";
+}
+
 
 // ✅ Fungsi untuk tukar seksyen berdasarkan ID
 function toggleSection(id) {
