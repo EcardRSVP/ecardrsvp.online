@@ -326,10 +326,12 @@
 <div id="popup-RSVP" class="popup-overlay">
   <div class="popup-section">
   <h2>RSVP</h2>
+    
 <form id="rsvp-form" 
       action="https://docs.google.com/forms/d/e/1FAIpQLSedlvRozEgmCPlheAte9YGIS-VxcumFs7FBSSeqURJLB9chiA/formResponse" 
       method="POST" 
-      target="hidden_iframe">
+      target="hidden_iframe"
+      onsubmit="submitted=true">
 
     <!-- Nama -->
     <br>
@@ -362,29 +364,30 @@
   
 <button type="submit" class="btn-hantar" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;">
   Hantar
-</button>
-</form>
+      </button>
+    </form>
 
 
-<!-- Popup gaya alert browser -->
-<div id="rsvp-alert" class="alert-box">
-  <div class="alert-header">ecardrsvp.online says:</div>
-  <div class="alert-body">
-    <p>Terima kasih! Kehadiran anda telah direkodkan.</p>
-    <button onclick="closeRsvpAlert()">OK</button>
-  </div>
-</div>
+    <!-- ✅ Popup gaya alert browser -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Terima kasih! Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
     
 
-<iframe
-  name="hidden_iframe"
-  id="hidden_iframe"
-  style="display:none;"
-  onload="if (window.rsvpSuccessHandler) rsvpSuccessHandler();">
-   </iframe>
+    <!-- ✅ iframe tersembunyi (penting: trigger popup bila reload) -->
+    <iframe name="hidden_iframe"
+            id="hidden_iframe"
+            style="display:none;"
+            onload="if (submitted) rsvpSuccessHandler();"></iframe>
+
   </div>
 </div>
 
+     
 <!-- ✅ Seksyen Contact -->
   <div id="popup-Contact" class="popup-overlay">
   <div class="popup-section">
