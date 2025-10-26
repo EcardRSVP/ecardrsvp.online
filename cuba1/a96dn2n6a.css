@@ -722,6 +722,56 @@ hr {
   }
 }
 
+/* 🌸 Popup ala "ecardrsvp.online says" */
+.alert-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f0f0f0;
+  border: 2px solid #444;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+.alert-header {
+  background: #444;
+  color: white;
+  padding: 8px 12px;
+  font-size: 13px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: left;
+}
+
+.alert-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.alert-body p {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 15px;
+}
+
+.alert-body button {
+  background: #ddd;
+  border: 1px solid #777;
+  border-radius: 4px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.alert-body button:hover {
+  background: #ccc;
+}
+
 #submit-popup {
   position: fixed;
   top: -100%;                       /* Sembunyi di atas */
