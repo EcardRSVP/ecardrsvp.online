@@ -1616,6 +1616,24 @@ function copyRek() {
   });
 </script>
 
+
+ <!-- ✅ Letakkan script di bawah sekali sebelum </body> -->
+<script>
+function rsvpSuccessHandler() {
+  // Tunjuk popup selepas submit berjaya
+  document.getElementById('rsvp-alert').style.display = 'block';
+}
+
+function closeRsvpAlert() {
+  // Tutup popup bila klik OK
+  document.getElementById('rsvp-alert').style.display = 'none';
+  // Tutup juga popup RSVP (kalau nak)
+  document.getElementById('popup-RSVP').style.display = 'none';
+}
+</script>
+
+      
+      
       <!-- 🔹 External library PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
      
