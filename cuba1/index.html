@@ -310,7 +310,43 @@
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
 </div>
      
-    <!-- Page 5 -->
+
+<!-- ✅ Seksyen Money Gift -->
+  <div id="popup-MoneyGift" class="popup-overlay">
+  <div class="popup-section">
+  <h2>MONEY GIFT</h2>
+  <p><strong>Nama Bank :</strong> Maybank Berhad</p>
+  <p><strong>Nama :</strong> Nor Azirah Binti Nasip Supiadi</p>
+  <p><strong>Nombor Akaun:</strong> <span id="rek">1630 9115 3509</span></p>
+  <button onclick="copyRek()">Copy</button>
+  <br>
+  <img src="MAE_QR_20251025_153059 - NOR AZIRAH NASIP SUPIADI.png" alt="Kod QR" class="qr-image" /><br><br><br><br>
+  </div>
+</div>
+
+<!-- ✅ Seksyen Wishlist (Ringkasan) -->
+  <div id="popup-Wishlist" class="popup-overlay">
+  <div class="popup-section">
+  <h2>WISHLIST</h2>
+
+  <div style="text-align: center; margin-bottom: 20px;">
+  <h3><strong>Alamat Penghantaran</strong></h3>
+  <div id="alamat-text">
+      No 75, Peringkat 1,<br>
+      Taman Permai,<br>
+      Bandar Ceneh Baru,<br>
+      24000 Kemaman, Terengganu
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('alamat-text')">Copy</button>
+
+  <h3 style="margin-top: 20px;"><strong>Nombor Telefon</strong></h3>
+  <div id="telefon-text">
+    01129395978
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
+  </div>
+</div>
+     
 <!-- ✅ Seksyen RSVP -->
 <div id="popup-RSVP" class="popup-overlay">
   <div class="popup-section">
@@ -399,43 +435,6 @@
 </div>
 
      
-<!-- ✅ Seksyen Money Gift -->
-  <div id="popup-MoneyGift" class="popup-overlay">
-  <div class="popup-section">
-  <h2>MONEY GIFT</h2>
-  <p><strong>Nama Bank :</strong> Maybank Berhad</p>
-  <p><strong>Nama :</strong> Nor Azirah Binti Nasip Supiadi</p>
-  <p><strong>Nombor Akaun:</strong> <span id="rek">1630 9115 3509</span></p>
-  <button onclick="copyRek()">Copy</button>
-  <br>
-  <img src="MAE_QR_20251025_153059 - NOR AZIRAH NASIP SUPIADI.png" alt="Kod QR" class="qr-image" /><br><br><br><br>
-  </div>
-</div>
-
-<!-- ✅ Seksyen Wishlist (Ringkasan) -->
-  <div id="popup-Wishlist" class="popup-overlay">
-  <div class="popup-section">
-  <h2>WISHLIST</h2>
-
-  <div style="text-align: center; margin-bottom: 20px;">
-  <h3><strong>Alamat Penghantaran</strong></h3>
-  <div id="alamat-text">
-      No 75, Peringkat 1,<br>
-      Taman Permai,<br>
-      Bandar Ceneh Baru,<br>
-      24000 Kemaman, Terengganu
-  </div>
-  <button class="copy-btn" onclick="copyToClipboard('alamat-text')">Copy</button>
-
-  <h3 style="margin-top: 20px;"><strong>Nombor Telefon</strong></h3>
-  <div id="telefon-text">
-    01129395978
-  </div>
-  <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
-  </div>
-</div>
-
-    
 <!-- ✅ POPUP OVERLAY -->
 <div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
   <div id="popupContent" class="popup-section" onclick="event.stopPropagation()">
