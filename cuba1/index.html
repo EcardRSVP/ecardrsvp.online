@@ -1620,21 +1620,41 @@ function copyRek() {
 </script>
 
 
- <!-- ✅ Letakkan script di bawah sekali sebelum </body> -->
 <script>
+/* Pastikan 'submitted' adalah global (dinamakan sama seperti di form onsubmit) */
+window.submitted = window.submitted || false;
+
+/* Dipanggil apabila iframe tersembunyi selesai reload */
 function rsvpSuccessHandler() {
-  // Tunjuk popup selepas submit berjaya
-  document.getElementById('rsvp-alert').style.display = 'block';
+  console.log("rsvpSuccessHandler called — submitted:", window.submitted);
+  if (!window.submitted) return;      // hanya jalankan jika form memang baru disubmit
+
+  window.submitted = false;           // reset flag supaya tak trigger berkali-kali
+
+  // Kosongkan form
+  const form = document.getElementById('rsvp-form');
+  if (form) form.reset();
+
+  // Papar popup tengah skrin
+  const alertBox = document.getElementById('rsvp-alert');
+  if (alertBox) alertBox.style.display = 'block';
+  else console.warn('rsvp-alert element not found');
 }
 
+/* Tutup popup bila klik OK */
 function closeRsvpAlert() {
-  // Tutup popup bila klik OK
-  document.getElementById('rsvp-alert').style.display = 'none';
-  // Tutup juga popup RSVP (kalau nak)
-  document.getElementById('popup-RSVP').style.display = 'none';
-}
-</script>
+  const alertBox = document.getElementById('rsvp-alert');
+  if (alertBox) alertBox.style.display = 'none';
 
+  // (Opsional) tutup seluruh popup RSVP
+  const popupRSVP = document.getElementById('popup-RSVP');
+  if (popupRSVP) popupRSVP.style.display = 'none';
+}
+
+/* Eksport ke global supaya iframe onload inline handler boleh akses */
+window.rsvpSuccessHandler = rsvpSuccessHandler;
+window.closeRsvpAlert = closeRsvpAlert;
+</script>
       
       
       <!-- 🔹 External library PapaParse -->
