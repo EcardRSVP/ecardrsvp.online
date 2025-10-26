@@ -366,9 +366,15 @@
 </form>
 
 
-<div id="submit-popup">
-  Terima kasih! Kehadiran anda telah direkodkan.
+<!-- Popup gaya alert browser -->
+<div id="rsvp-alert" class="alert-box">
+  <div class="alert-header">ecardrsvp.online says:</div>
+  <div class="alert-body">
+    <p>Terima kasih! Kehadiran anda telah direkodkan.</p>
+    <button onclick="closeRsvpAlert()">OK</button>
+  </div>
 </div>
+    
 
 <iframe
   name="hidden_iframe"
