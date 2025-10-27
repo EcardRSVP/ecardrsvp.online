@@ -1691,6 +1691,27 @@ function closeCustomAlert() {
   
   currentSection = null; // reset
 }
+
+// 🔹 Fungsi salin teks — untuk Money Gift
+function copyRek() {
+  const text = document.getElementById("rek").innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    showCustomAlert("Disalin", "popup-MoneyGift");
+  }).catch(() => {
+    showCustomAlert("Gagal menyalin nombor akaun.", "popup-MoneyGift");
+  });
+}
+
+// 🔹 Fungsi salin teks — untuk Wishlist (alamat & telefon)
+function copyToClipboard(elementId) {
+  const text = document.getElementById(elementId).innerText;
+  const sectionId = "popup-Wishlist"; // tetap untuk Wishlist
+  navigator.clipboard.writeText(text).then(() => {
+    showCustomAlert("Disalin", sectionId);
+  }).catch(() => {
+    showCustomAlert("Gagal menyalin teks.", sectionId);
+  });
+}  
 </script>
 
 
@@ -1702,6 +1723,14 @@ function copyText(text) {
 }
 </script>
 
+
+<!-- ✅ Popup Alert Gaya RSVP -->
+<div id="rsvp-alert" class="alert-box">
+  <div class="alert-content">
+    <p id="alert-message">Teks mesej akan muncul di sini</p>
+    <button onclick="closeCustomAlert()">OK</button>
+  </div>
+</div>
       
       <!-- 🔹 External library PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
