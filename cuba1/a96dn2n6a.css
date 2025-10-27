@@ -764,8 +764,8 @@ hr {
 
 .alert-body button {
   background: #003366;
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */  
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */  
   border: none;
   border-radius: 4px;
   padding: 5px 15px;
