@@ -422,7 +422,10 @@
   <p><strong>Nama Bank :</strong> Maybank Berhad</p>
   <p><strong>Nama :</strong> Muhammad Haikal Bin Zulkefli</p>
   <p><strong>Nombor Akaun:</strong> <span id="rek">1234567890</span></p>
-  <button onclick="copyRek()">Copy</button>
+    <!-- 🧩 Gantikan butang asal -->
+    <button onclick="copyText('1234567890'); showCustomAlert('Disalin', 'popup-MoneyGift')">
+      Copy
+    </button>
   <br>
   <img src="Contoh QR.jpg" alt="Kod QR" class="qr-image" /><br><br><br><br>
   </div>
@@ -440,13 +443,17 @@
       Bandar Sultan Suleiman<br>
       42000 Klang, Selangor
   </div>
-  <button class="copy-btn" onclick="copyToClipboard('alamat-text')">Copy</button>
-
+      <button onclick="copyText(document.getElementById('alamat-text').innerText); showCustomAlert('Disalin', 'popup-Wishlist')">
+        Copy
+      </button>
+    
   <h3 style="margin-top: 20px;"><strong>Nombor Telefon</strong></h3>
   <div id="telefon-text">
     0123456789
   </div>
-  <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
+      <button onclick="copyText(document.getElementById('telefon-text').innerText); showCustomAlert('Disalin', 'popup-Wishlist')">
+        Copy
+      </button>
 </div>  
 
 <a href="https://docs.google.com/forms/d/1g3AEle381P6SaBGe08M05ALilG9IAZn3khpeVivZ_3Q/viewform?usp=header" 
@@ -1646,16 +1653,55 @@ function closeRsvpAlert() {
   const alertBox = document.getElementById('rsvp-alert');
   if (alertBox) alertBox.style.display = 'none';
 
-  // (Opsional) tutup seluruh popup RSVP
-  const popupRSVP = document.getElementById('popup-RSVP');
-  if (popupRSVP) popupRSVP.style.display = 'none';
+  // ❌ Jangan tutup popup RSVP — biar kekal terbuka
+  // const popupRSVP = document.getElementById('popup-RSVP');
+  // if (popupRSVP) popupRSVP.style.display = 'none';
 }
 
 /* Eksport ke global supaya iframe onload inline handler boleh akses */
 window.rsvpSuccessHandler = rsvpSuccessHandler;
 window.closeRsvpAlert = closeRsvpAlert;
 </script>
+
       
+<script>
+let currentSection = null; // simpan section yang aktif
+
+// 🔹 Fungsi untuk tunjuk popup custom
+function showCustomAlert(message, sectionId) {
+  const alertBox = document.getElementById('rsvp-alert');
+  const alertMsg = document.getElementById('alert-message');
+  if (alertBox && alertMsg) {
+    alertMsg.textContent = message;      // ubah mesej popup
+    alertBox.style.display = 'block';    // tunjuk popup
+  }
+  currentSection = sectionId; // simpan section aktif
+}
+
+// 🔹 Fungsi bila tekan OK
+function closeCustomAlert() {
+  const alertBox = document.getElementById('rsvp-alert');
+  if (alertBox) alertBox.style.display = 'none';
+  
+  // Tutup popup semasa (kalau ada)
+  if (currentSection) {
+    const popup = document.getElementById(currentSection);
+    if (popup) popup.style.display = 'none';
+  }
+  
+  currentSection = null; // reset
+}
+</script>
+
+
+<script>
+function copyText(text) {
+  navigator.clipboard.writeText(text)
+    .then(() => console.log("📋 Teks disalin:", text))
+    .catch(err => console.error("Gagal salin teks:", err));
+}
+</script>
+
       
       <!-- 🔹 External library PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
