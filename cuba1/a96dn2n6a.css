@@ -756,7 +756,9 @@ hr {
 
 .alert-body p {
   margin-bottom: 20px;
-  color: #000;
+  color: #003366;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */  
   font-size: 15px;
 }
 
