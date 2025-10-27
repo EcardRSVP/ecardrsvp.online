@@ -107,12 +107,16 @@ function rsvpSuccessHandler() {
 window.rsvpSuccessHandler = rsvpSuccessHandler;
 
 function closeRsvpAlert() {
-  const alertBox = document.getElementById("rsvp-alert");
-  if (alertBox) alertBox.style.display = "none";
+  const alertBox = document.getElementById('rsvp-alert');
+  if (alertBox) alertBox.style.display = 'none';
 
-  // Tutup juga popup RSVP (kalau nak)
-  const popupRSVP = document.getElementById("popup-RSVP");
-  if (popupRSVP) popupRSVP.style.display = "none";
+  // Tutup popup RSVP
+  const popupRSVP = document.getElementById('popup-RSVP');
+  if (popupRSVP) popupRSVP.style.display = 'none';
+
+  // ✅ Papar semula main content lepas RSVP ditutup
+  const mainContent = document.getElementById('main-content');
+  if (mainContent) mainContent.style.display = 'block';
 }
 
 
