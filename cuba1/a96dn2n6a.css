@@ -921,3 +921,29 @@ footer, .footer {
   background-color: #4A7EB5;
 }
 
+/* ✅ Elak overlay block klik footer */
+.popup-overlay {
+  pointer-events: none !important; /* tak ganggu klik */
+}
+
+/* ✅ Tapi kalau popup dibuka (melalui togglePopup), aktifkan semula klik */
+.popup-overlay.active,
+.popup-overlay[style*="display: block"] {
+  pointer-events: auto !important;
+}
+
+/* ✅ Pastikan main content tak block footer */
+#main-content {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ Footer mesti sentiasa di atas */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999 !important; /* pastikan atas semua */
+}
