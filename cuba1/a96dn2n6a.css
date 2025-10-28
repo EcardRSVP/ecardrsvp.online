@@ -953,4 +953,15 @@ footer, .footer {
   z-index: 0 !important;
 }
 
+/* 🔧 PATCH: pastikan front-page betul2 hilang bila dah BUKA */
+.front-page[style*="display: none"],
+.front-page.hidden {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: static !important;
+  z-index: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
 
