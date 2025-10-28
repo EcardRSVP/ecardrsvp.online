@@ -1661,6 +1661,22 @@ function closeRsvpAlert() {
 /* Eksport ke global supaya iframe onload inline handler boleh akses */
 window.rsvpSuccessHandler = rsvpSuccessHandler;
 window.closeRsvpAlert = closeRsvpAlert;
+
+/* ✅ Wajib isi bilangan jika pilih 'Hadir' */
+document.addEventListener("DOMContentLoaded", function () {
+  const hadirInputs = document.querySelectorAll("input[name='entry.727555102']");
+  const bilanganInput = document.getElementById("bilangan");
+
+  hadirInputs.forEach(radio => {
+    radio.addEventListener("change", function() {
+      if (this.value === "Hadir") {
+        bilanganInput.setAttribute("required", "required");
+      } else {
+        bilanganInput.removeAttribute("required");
+      }
+    });
+  });
+});   
 </script>
 
       
