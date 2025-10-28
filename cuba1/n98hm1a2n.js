@@ -22,6 +22,8 @@ function mulakanSalji() {
     let snow = document.createElement("div");
     snow.classList.add("snow");
 
+    snow.style.pointerEvents = "none"; // ✅ Tambah baris ni!
+
     const pilihan = warnaSalji[Math.floor(Math.random() * warnaSalji.length)];
     snow.style.backgroundColor = pilihan.color;
     snow.style.boxShadow = pilihan.glow;
