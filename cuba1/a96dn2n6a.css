@@ -923,3 +923,63 @@ footer, .footer {
 
 
 
+
+/* ✅ 1. Pastikan overlay tak tangkap klik bila tidak aktif */
+.popup-overlay {
+  position: relative !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  background: transparent !important;
+}
+
+/* Bila popup aktif (melalui togglePopup) baru boleh klik */
+.popup-overlay.active,
+.popup-overlay[style*="display: block"] {
+  position: fixed !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  background: rgba(0,0,0,0.3); /* optional */
+}
+
+/* ✅ 2. Main content biasa tak block footer */
+#main-content {
+  position: relative !important;
+  z-index: 1 !important;
+  pointer-events: auto !important;
+  background: transparent !important;
+}
+
+/* ✅ 3. Front page hanya aktif sebelum tekan "BUKA" */
+.front-page {
+  position: fixed !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1000 !important;
+}
+.front-page[style*="display: none"] {
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* ✅ 4. Footer mesti sentiasa di atas & boleh klik */
+.footer {
+  position: fixed !important;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+/* ✅ 5. Pastikan snow tak block klik */
+#snow-wrapper,
+#snow-wrapper .snow {
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* ✅ 6. Buang outline debug kalau masih ada */
+* {
+  outline: none !important;
+}
+
