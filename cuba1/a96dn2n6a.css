@@ -603,22 +603,6 @@ hr {
   padding: 2px 8px;
 }
 
-/* ✅ Popup Styling */
-.popup-overlay {
-  display: none; 
-  position: static; /* default – ikut aliran biasa */
-  margin: 100px auto 0 auto;
-  padding-top: 40px;
-  max-width: 390px;
-  width: 100%;
-  background: transparent !important;
-  z-index: 1;
-  box-sizing: border-box;
-  overflow-y: visible;
-  height: auto;
-  max-height: none;  
-}
-
 .popup-overlay,
 .popup-section {
   max-width: 390px;
@@ -923,45 +907,37 @@ footer, .footer {
 
 
 
-
-/* ✅ 1. Pastikan overlay tak tangkap klik bila tidak aktif */
+/* 🔧 Pastikan overlay tidak aktif masa load */
 .popup-overlay {
-  position: relative !important;
+  display: none !important;
   pointer-events: none !important;
-  z-index: 1 !important;
-  background: transparent !important;
+  position: fixed !important;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Bila popup aktif (melalui togglePopup) baru boleh klik */
+/* Bila popup dibuka */
 .popup-overlay.active,
 .popup-overlay[style*="display: block"] {
-  position: fixed !important;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 999 !important;
+  display: flex !important;
   pointer-events: auto !important;
-  background: rgba(0,0,0,0.3); /* optional */
+  opacity: 1;
 }
 
-/* ✅ 2. Main content biasa tak block footer */
-#main-content {
-  position: relative !important;
-  z-index: 1 !important;
-  pointer-events: auto !important;
-  background: transparent !important;
-}
-
-/* ✅ 3. Front page hanya aktif sebelum tekan "BUKA" */
-.front-page {
-  position: fixed !important;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 1000 !important;
-}
+/* Pastikan front-page tak block selepas BUKA */
 .front-page[style*="display: none"] {
   pointer-events: none !important;
   z-index: 0 !important;
 }
 
-/* ✅ 4. Footer mesti sentiasa di atas & boleh klik */
+/* Footer sentiasa di atas dan boleh klik */
 .footer {
   position: fixed !important;
   bottom: 0;
@@ -971,15 +947,10 @@ footer, .footer {
   pointer-events: auto !important;
 }
 
-/* ✅ 5. Pastikan snow tak block klik */
-#snow-wrapper,
-#snow-wrapper .snow {
+/* Snow tidak ganggu klik */
+#snow-wrapper, #snow-wrapper .snow {
   pointer-events: none !important;
   z-index: 0 !important;
 }
 
-/* ✅ 6. Buang outline debug kalau masih ada */
-* {
-  outline: none !important;
-}
 
