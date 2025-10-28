@@ -366,9 +366,14 @@
 </form>
 
 
-<div id="submit-popup">
-  Terima kasih! Kehadiran anda telah direkodkan.
-</div>
+    <!-- ✅ Popup gaya alert browser -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
 
 <iframe
   name="hidden_iframe"
@@ -1609,6 +1614,60 @@ function copyRek() {
     }
   });
 </script>
+
+<script>
+/* Pastikan 'submitted' adalah global (dinamakan sama seperti di form onsubmit) */
+window.submitted = window.submitted || false;
+
+/* Dipanggil apabila iframe tersembunyi selesai reload */
+function rsvpSuccessHandler() {
+  console.log("rsvpSuccessHandler called — submitted:", window.submitted);
+  if (!window.submitted) return;      // hanya jalankan jika form memang baru disubmit
+
+  window.submitted = false;           // reset flag supaya tak trigger berkali-kali
+
+  // Kosongkan form
+  const form = document.getElementById('rsvp-form');
+  if (form) form.reset();
+
+  // Papar popup tengah skrin
+  const alertBox = document.getElementById('rsvp-alert');
+  if (alertBox) alertBox.style.display = 'block';
+  else console.warn('rsvp-alert element not found');
+}
+
+/* Tutup popup bila klik OK */
+function closeRsvpAlert() {
+  const alertBox = document.getElementById('rsvp-alert');
+  if (alertBox) alertBox.style.display = 'none';
+
+  // ❌ Jangan tutup popup RSVP — biar kekal terbuka
+  // const popupRSVP = document.getElementById('popup-RSVP');
+  // if (popupRSVP) popupRSVP.style.display = 'none';
+}
+
+/* Eksport ke global supaya iframe onload inline handler boleh akses */
+window.rsvpSuccessHandler = rsvpSuccessHandler;
+window.closeRsvpAlert = closeRsvpAlert;
+
+/* ✅ Wajib isi bilangan jika pilih 'Hadir' */
+document.addEventListener("DOMContentLoaded", function () {
+  const hadirInputs = document.querySelectorAll("input[name='entry.727555102']");
+  const bilanganInput = document.getElementById("bilangan");
+
+  hadirInputs.forEach(radio => {
+    radio.addEventListener("change", function() {
+      if (this.value === "Hadir") {
+        bilanganInput.setAttribute("required", "required");
+      } else {
+        bilanganInput.removeAttribute("required");
+      }
+    });
+  });
+});  
+</script>
+
+      
 
       <!-- 🔹 External library PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
