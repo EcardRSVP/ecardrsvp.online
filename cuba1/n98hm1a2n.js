@@ -164,6 +164,19 @@ const popupMap = {
 
 let popupTerbuka = null;
 
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById("rsvp-form");
+  if (!form) return;
+  submitted = true;
+  form.submit();
+  setTimeout(() => {
+    const alertBox = document.getElementById("rsvp-alert");
+    if (alertBox) alertBox.style.display = "block";
+  }, 1000);
+  setTimeout(() => form.reset(), 1500);
+}
+
 function togglePopup(nama) {
   const idPopup = popupMap[nama];
   const popup = document.getElementById(idPopup);
