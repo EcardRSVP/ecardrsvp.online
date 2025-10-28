@@ -947,3 +947,19 @@ footer, .footer {
   transform: translateX(-50%);
   z-index: 9999 !important; /* pastikan atas semua */
 }
+
+/* 🔧 Debug mode sementara */
+.footer {
+  z-index: 999999 !important;
+  position: fixed !important;
+}
+
+.popup-overlay,
+#main-content,
+.front-page {
+  z-index: 1 !important;
+}
+
+* {
+  pointer-events: auto !important;
+}
