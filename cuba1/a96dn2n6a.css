@@ -920,3 +920,7 @@ footer, .footer {
 .btn-form:hover {
   background-color: #4A7EB5;
 }
+
+* {
+  pointer-events: auto !important;
+}
