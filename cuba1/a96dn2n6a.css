@@ -131,19 +131,21 @@ body, html {
   overflow-x: hidden;
 }
 
-.container, .page, section, #main-content, .front-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.container,
+#main-content,
+.page,
+section {
+  display: block !important;   /* 🔥 tukar dari flex ke block */
   text-align: center;
   width: 100%;
-  max-width: 390px;         /* ✅ ikut saiz iPhone */
-  margin: 0 auto;           /* ✅ center horizontal */
+  max-width: 390px;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-  min-height: auto;
+  position: relative !important;
+  z-index: 1 !important;
 }
+
 
 img {
   max-width: 100%;
@@ -931,11 +933,7 @@ footer, .footer {
   opacity: 1;
 }
 
-/* Pastikan front-page tak block selepas BUKA */
-.front-page[style*="display: none"] {
-  pointer-events: none !important;
-  z-index: 0 !important;
-}
+
 
 /* Footer sentiasa di atas dan boleh klik */
 .footer {
@@ -988,4 +986,34 @@ section#countdown-page {
   height: 120px; /* lebih kurang tinggi footer */
   pointer-events: none !important;
   background: transparent;
+}
+
+
+
+
+/* ✅ Front page (muka depan sebelum BUKA) */
+.front-page {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* penuh satu skrin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* atau transparent kalau nak nampak video */
+  z-index: 1000 !important; /* atas semua content */
+}
+
+/* Bila sudah ditekan BUKA → terus hilang sepenuhnya */
+.front-page[style*="display: none"],
+.front-page.hidden {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: static !important;
+  z-index: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
