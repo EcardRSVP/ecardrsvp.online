@@ -948,18 +948,28 @@ footer, .footer {
   z-index: 9999 !important; /* pastikan atas semua */
 }
 
-/* 🔧 Debug mode sementara */
+/* 🔍 DEBUG MODE – SEMAK LAPISAN & KLIK */
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.2); /* Garisan merah nipis untuk nampak sempadan semua elemen */
+}
+
+/* Pastikan semua elemen boleh diklik */
+* {
+  pointer-events: auto !important;
+}
+
+/* Footer confirm paling atas */
 .footer {
   z-index: 999999 !important;
   position: fixed !important;
+  pointer-events: auto !important;
 }
 
+/* Overlay, front-page, main-content turunkan */
 .popup-overlay,
 #main-content,
 .front-page {
   z-index: 1 !important;
-}
-
-* {
   pointer-events: auto !important;
 }
+
