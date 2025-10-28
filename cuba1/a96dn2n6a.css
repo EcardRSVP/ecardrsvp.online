@@ -991,20 +991,26 @@ section#countdown-page {
 
 
 
-/* ✅ Front page (muka depan sebelum BUKA) */
+/* ✅ FRONT PAGE — tengah responsif, gambar background */
 .front-page {
   position: fixed !important;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  height: 100vh; /* penuh satu skrin */
+  max-width: 390px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white; /* atau transparent kalau nak nampak video */
-  z-index: 1000 !important; /* atas semua content */
+  text-align: center;
+  background: url('B8.png') no-repeat center center / cover; /* 🌸 guna gambar */
+  z-index: 1000 !important;
+  box-sizing: border-box;
+  padding: 20px;
 }
+
 
 /* Bila sudah ditekan BUKA → terus hilang sepenuhnya */
 .front-page[style*="display: none"],
