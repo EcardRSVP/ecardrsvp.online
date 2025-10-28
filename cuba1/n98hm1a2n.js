@@ -114,9 +114,17 @@ function closeRsvpAlert() {
   const popupRSVP = document.getElementById('popup-RSVP');
   if (popupRSVP) popupRSVP.style.display = 'none';
 
-  // ✅ Papar semula main content lepas RSVP ditutup
-  const mainContent = document.getElementById('main-content');
-  if (mainContent) mainContent.style.display = 'block';
+  // ❌ Jangan tutup popup RSVP
+  // const popupRSVP = document.getElementById('popup-RSVP');
+  // if (popupRSVP) popupRSVP.style.display = 'none';
+
+  // ❌ Jangan papar main content balik
+  // const mainContent = document.getElementById('main-content');
+  // if (mainContent) mainContent.style.display = 'block';
+
+  // ✅ Scroll balik ke bahagian RSVP supaya user nampak semula form (optional)
+  const popupRSVP = document.getElementById('popup-RSVP');
+  if (popupRSVP) popupRSVP.scrollIntoView({ behavior: "smooth" });
 }
 
 
