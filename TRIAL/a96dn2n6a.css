@@ -113,6 +113,7 @@ button,
 .copy-btn {
   background-color: #003366;
   color: white;
+  -webkit-text-fill-color: white !important; /* Safari */
 }
 
 .copy-btn:hover {
@@ -967,29 +968,38 @@ footer, .footer {
 }
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
-.btn-form {
-  background-color: #6699CC;
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
-  font-weight: bold;
-  text-decoration: none; /* untuk <a> */
-  
-  /* 🔽 Tambah supaya selaras dengan .copy-btn */
+.wishlist-btn {
   border: none;
   border-radius: 8px;
   padding: 12px;
   margin: 10px auto;
-  width: 90% !important;
-  max-width: 400px !important;
-  display: block !important;
+  width: 90%;
+  max-width: 400px;
+  display: block;
   font-size: 16px;
   font-family: inherit;
-  text-align: center;
   cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+
+  /* gradient dan warna asas */
+  background: linear-gradient(135deg, #6699CC, #336699);
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+
+  /* border & shadow */
+  border: 2px solid #336699;
+  box-shadow: 0 4px 12px rgba(51, 102, 153, 0.4);
+
+  /* smooth hover transition */
+  transition: all 0.3s ease;
 }
 
-.btn-form:hover {
-  background-color: #4A7EB5;
+/* Hover effect */
+.wishlist-btn:hover {
+  background: linear-gradient(135deg, #336699, #6699CC);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(51, 102, 153, 0.6);
 }
 
 
