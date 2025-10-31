@@ -772,11 +772,11 @@ hr {
 
 /* 🌸 Kotak ucapan boleh scroll — transparent, lebar & minimal */
 #ucapanList {
-  max-height: 250px;          /* tinggi maksimum kotak ucapan */
+  max-height: 230px;          /* tinggi maksimum kotak ucapan */
   overflow-y: auto;           /* aktifkan skrol menegak */
   overflow-x: hidden;         /* elak skrol sisi */
-  padding: 10px 15px;
-  margin-top: 10px;
+  padding: 8px 8px;
+  margin-top: 5px;
 
   /* ✅ Transparent penuh — nampak background B8.png */
   background: transparent !important;
