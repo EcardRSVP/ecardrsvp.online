@@ -1023,3 +1023,66 @@ section#countdown-page {
   height: 0 !important;
   overflow: hidden !important;
 }
+
+
+
+
+
+
+
+/* 🌸 BACKGROUND STATIK UNTUK SELURUH LAMAN */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('B8.png') center center / cover no-repeat fixed !important;
+  background-attachment: fixed !important; /* kekal bila scroll */
+  color: black;
+  overflow-x: hidden;
+}
+
+/* 🌸 FRONT PAGE DI DEPAN SEMUA CONTENT */
+.front-page {
+  position: fixed !important;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85); /* lapisan putih lembut supaya teks jelas */
+  z-index: 1000 !important;
+  text-align: center;
+}
+
+/* 🌸 MAIN CONTENT — muncul selepas klik BUKA */
+#main-content {
+  position: relative;
+  z-index: 10;
+  display: none;
+  background: rgba(255, 255, 255, 0.85); /* lapisan putih lembut supaya teks tak hilang */
+  padding-bottom: 100px;
+}
+
+/* 🌸 FOOTER sentiasa di atas */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 390px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #ccc;
+  z-index: 2000 !important;
+}
+
+/* Pastikan salji tidak halang klik */
+#snow-wrapper, .snow {
+  pointer-events: none !important;
+  z-index: 5 !important;
+}
