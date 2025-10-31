@@ -1007,9 +1007,11 @@ html, body {
 /* ✅ Wrapper utama boleh skroll, tapi background kekal */
 #wrapper {
   position: relative !important;
+  z-index: 1 !important;      
   overflow-y: auto !important;
   max-height: 100vh !important;
-  scrollbar-width: thin;
+  padding-bottom: 120px;                /* ruang untuk footer */
+  -webkit-overflow-scrolling: touch;    /* smooth scroll iOS */
 }
 
 /* ✅ Pastikan .bg-wrapper tak pernah bergerak */
@@ -1025,4 +1027,5 @@ html, body {
   background-attachment: fixed !important;
   z-index: -1 !important;
   pointer-events: none !important;
+  will-change: transform, background-position; /* GPU layer */
 }
