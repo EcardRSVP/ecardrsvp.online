@@ -771,6 +771,34 @@ hr {
   color: white !important;
 }
 
+/* 🌸 Kotak ucapan boleh scroll */
+#ucapanList {
+  max-height: 250px;          /* ✅ tinggi maksimum kotak ucapan */
+  overflow-y: auto;           /* ✅ aktifkan skrol menegak */
+  overflow-x: hidden;         /* elak skrol sisi */
+  padding: 10px 15px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* 🌿 scrollbar style lembut */
+#ucapanList::-webkit-scrollbar {
+  width: 6px;
+}
+#ucapanList::-webkit-scrollbar-thumb {
+  background-color: rgba(150,150,150,0.6);
+  border-radius: 10px;
+}
+#ucapanList::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100,100,100,0.8);
+}
+
+
+
+
 
 #submit-popup {
   position: fixed;
