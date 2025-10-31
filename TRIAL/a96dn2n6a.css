@@ -783,7 +783,7 @@ hr {
   background: transparent !important;
 
   /* ✅ Panjangkan lebar kotak */
-  width: 100%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
+  width: 120%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
   margin-left: auto;
   margin-right: auto;
 
