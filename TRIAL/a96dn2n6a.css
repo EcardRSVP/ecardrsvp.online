@@ -805,8 +805,8 @@ hr {
 #ucapanList::-webkit-scrollbar-thumb {
   background-color: #A7C7E7; /* 💙 biru lembut pastel */
   border-radius: 10px;
-  margin-top: 20px;  /* 🚀 ruang kosong atas */
-  margin-bottom: 20px; /* 🚀 ruang kosong bawah */  
+  margin-top: 30px;  /* 🚀 ruang kosong atas */
+  margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
 }
 #ucapanList::-webkit-scrollbar-thumb:hover {
   background-color: #87CEFA; /* 💧 biru lebih cerah bila hover */
