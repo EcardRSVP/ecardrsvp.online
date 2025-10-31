@@ -858,6 +858,37 @@ hr {
   overflow-wrap: break-word;
 }
 
+/* 🌸 Background wrapper — statik 100% confirm tak bergerak */
+.bg-wrapper {
+  position: fixed !important;           /* ✅ paksa kekal */
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 390px !important;          /* gaya telefon */
+  height: 100vh !important;
+  background: url('B8.png') center center / cover no-repeat !important;
+  background-attachment: fixed !important; /* ✅ bantu extra stabil */
+  z-index: -1 !important;
+}
+
+/* 🌿 Pastikan content ikut bingkai tengah */
+.front-page,
+#main-content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 390px;           /* ✅ semua content ikut bingkai */
+  background: transparent;    /* biar tembus ke background */
+}
+
+@supports (-webkit-touch-callout: none) {
+  .bg-wrapper {
+    background-attachment: scroll !important; /* Safari trick */
+    position: fixed !important;
+  }
+}
+
+
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
   background-color: #003366;
@@ -960,33 +991,3 @@ footer, .footer {
 }
 
 
-
-/* 🌸 Background wrapper — statik 100% confirm tak bergerak */
-.bg-wrapper {
-  position: fixed !important;           /* ✅ paksa kekal */
-  top: 0 !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 100% !important;
-  max-width: 390px !important;          /* gaya telefon */
-  height: 100vh !important;
-  background: url('B8.png') center center / cover no-repeat !important;
-  background-attachment: fixed !important; /* ✅ bantu extra stabil */
-  z-index: -1 !important;
-}
-
-/* 🌿 Pastikan content ikut bingkai tengah */
-.front-page,
-#main-content {
-  position: relative;
-  margin: 0 auto;
-  max-width: 390px;           /* ✅ semua content ikut bingkai */
-  background: transparent;    /* biar tembus ke background */
-}
-
-@supports (-webkit-touch-callout: none) {
-  .bg-wrapper {
-    background-attachment: scroll !important; /* Safari trick */
-    position: fixed !important;
-  }
-}
