@@ -783,7 +783,7 @@ hr {
   background: transparent !important;
 
   /* ✅ Panjangkan lebar kotak */
-  width: 100z%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
+  width: 100%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
   margin-left: auto;
   margin-right: auto;
 
@@ -800,7 +800,7 @@ hr {
 
 /* 🌿 scrollbar halus & simple */
 #ucapanList::-webkit-scrollbar {
-  width: 4px; /* garis skrol nipis */
+  width: 8px; /* garis skrol nipis */
 }
 #ucapanList::-webkit-scrollbar-thumb {
   background-color: #A7C7E7; /* 💙 biru lembut pastel */
