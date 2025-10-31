@@ -1009,8 +1009,8 @@ html, body {
   position: relative !important;
   z-index: 1 !important;      
   overflow-y: auto !important;
-  max-height: 100vh !important;
-  padding-bottom: 120px;                /* ruang untuk footer */
+  min-height: 100vh !important;
+  padding-bottom: 60px;   /* ruang untuk footer sahaja */
   -webkit-overflow-scrolling: touch;    /* smooth scroll iOS */
 }
 
