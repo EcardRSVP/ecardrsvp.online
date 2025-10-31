@@ -1026,3 +1026,38 @@ html, body {
   z-index: -1 !important;
   pointer-events: none !important;
 }
+
+
+
+/* --- Fix: kurangkan repaint & overscroll yang munculkan sambungan gambar --- */
+html, body, #wrapper {
+  overscroll-behavior-y: none;
+  -ms-scroll-chaining: none;
+}
+
+body, #wrapper {
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+/* paksa compositor GPU untuk bg-wrapper */
+.bg-wrapper {
+  will-change: transform, background-position;
+  transform: translateX(-50%) translateZ(0) !important;
+  backface-visibility: hidden;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important; /* tukar ke top center jika nak selalu tunjuk atas gambar */
+  pointer-events: none !important;
+}
+
+/* remove extra bottom spacing on body that boleh reveal background changes */
+html, body {
+  background: transparent !important;
+  padding-bottom: 0 !important;
+}
+
+/* bagi ruang bawah supaya content tak 'push' area bila skroll sampai hujung */
+#wrapper {
+  padding-bottom: 100px; /* adjust ikut tinggi footer */
+}
