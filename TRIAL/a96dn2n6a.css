@@ -170,10 +170,10 @@ h1, h2, p {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   width: 100%;
   max-width: 390px; /* Sama dengan lebar page */
   height: 60px;
