@@ -766,8 +766,10 @@ hr {
   font-size: 14px;
 }
 
-
-
+#rsvp-alert .alert-header,
+#global-alert .alert-header {
+  color: white !important;
+}
 
 
 #submit-popup {
