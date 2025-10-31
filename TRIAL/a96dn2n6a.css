@@ -984,3 +984,10 @@ footer, .footer {
   max-width: 390px;           /* ✅ semua content ikut bingkai */
   background: transparent;    /* biar tembus ke background */
 }
+
+@supports (-webkit-touch-callout: none) {
+  .bg-wrapper {
+    background-attachment: scroll !important; /* Safari trick */
+    position: fixed !important;
+  }
+}
