@@ -782,6 +782,10 @@ hr {
   border-radius: 10px;
   border: 1px solid #ddd;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
+
+  /* 🌿 Tambah ini untuk efek smooth scroll */
+  scroll-behavior: smooth;          /* ✅ Scroll lembut */
+  -webkit-overflow-scrolling: touch; /* ✅ Smooth untuk iPhone/iPad */
 }
 
 /* 🌿 scrollbar style lembut */
