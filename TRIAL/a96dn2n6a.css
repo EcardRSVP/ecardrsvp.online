@@ -177,7 +177,7 @@ h1, h2, p {
   width: 100%;
   max-width: 390px; /* Sama dengan lebar page */
   height: 60px;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -977,8 +977,7 @@ footer, .footer {
 
 /* 🌿 Pastikan content ikut bingkai tengah */
 .front-page,
-#main-content,
-.footer {
+#main-content {
   position: relative;
   margin: 0 auto;
   max-width: 390px;           /* ✅ semua content ikut bingkai */
