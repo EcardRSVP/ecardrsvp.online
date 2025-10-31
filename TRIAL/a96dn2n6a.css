@@ -983,13 +983,13 @@ footer, .footer {
   font-weight: bold;
 
   /* gradient dan warna asas */
-  background: linear-gradient(135deg, #6699CC, #336699);
+  background: linear-gradient(135deg, #99bbee, #6699cc);
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
 
   /* border & shadow */
-  border: 2px solid #336699;
-  box-shadow: 0 4px 12px rgba(51, 102, 153, 0.4);
+  border: 2px solid #6699cc;
+  box-shadow: 0 2px 8px rgba(102, 153, 204, 0.3);
 
   /* smooth hover transition */
   transition: all 0.3s ease;
@@ -997,7 +997,7 @@ footer, .footer {
 
 /* Hover effect */
 .wishlist-btn:hover {
-  background: linear-gradient(135deg, #336699, #6699CC);
+  background: linear-gradient(135deg, #6699cc, #99bbee);
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(51, 102, 153, 0.6);
 }
