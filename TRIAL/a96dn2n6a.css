@@ -1,7 +1,6 @@
 body {
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
-  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
   color: #333;
   margin: 0;
   padding: 0;
@@ -887,6 +886,7 @@ hr {
   .bg-wrapper {
     background-attachment: scroll !important; /* Safari trick */
     position: fixed !important;
+    transform: translateX(-50%) !important;
   }
 }
 
