@@ -490,7 +490,7 @@ form button[type="submit"] {
 
 .font-f {
   font-family: 'Scheherazade New', serif;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -537,7 +537,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-f {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
   } 
 
   .font-g {
