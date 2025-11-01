@@ -629,10 +629,12 @@ section *, .wishlist *, #main-content * {
 
 /* 🎁 Kotak Maklumat Pemberian Hadiah */
 .hadiah-box {
-  background: linear-gradient(180deg, #f9fcff 0%, #eaf4ff 100%);
+  background: linear-gradient(135deg, #d9ecff 0%, #ffffff 45%, #e5f2ff 100%);
   border: none;
   border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(102, 163, 225, 0.15);
+  box-shadow: 
+    0 6px 18px rgba(102, 163, 225, 0.25), 
+    inset 0 1px 6px rgba(255, 255, 255, 0.6); /* ✨ inner glow */
   padding: 10px 10px;
   max-height: 230px;
   overflow-y: auto;
