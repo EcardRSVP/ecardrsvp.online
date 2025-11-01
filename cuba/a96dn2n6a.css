@@ -692,11 +692,12 @@ section *, .wishlist *, #main-content * {
 
 /* 📜 Isi (scrollable list) */
 #hadiahList {
-  max-height: 230px;
-  overflow-y: auto;
+  min-height: 150px;        /* tinggi kotak untuk scroll walaupun kosong */
+  max-height: 150px;        /* tinggi tetap untuk scroll */
+  overflow-y: scroll;       /* paksa scrollbar sentiasa muncul */
   overflow-x: hidden;
   padding: 8px;
-  margin-top: 5px;
+  margin-top: 1px;
   background: transparent !important;
   width: 100%;
   box-shadow: none !important;
