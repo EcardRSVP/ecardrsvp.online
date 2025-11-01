@@ -631,7 +631,8 @@ section *, .wishlist *, #main-content * {
 #hadiahList {
   max-height: 230px;          /* tinggi maksimum kotak hadiah */
   min-height: 230px;          /* paksa kotak tetap tinggi */  
-  overflow-y: scroll; /* paksa scrollbar */
+  overflow-y: scroll !important; /* paksa scrollbar */
+  scrollbar-gutter: stable; /* ✅ kekalkan ruang scrollbar */  
   overflow-x: hidden;         /* elak skrol sisi */
   padding: 8px;
   margin: 5px auto;
@@ -670,15 +671,20 @@ section *, .wishlist *, #main-content * {
 /* 🎀 Gaya teks hadiah */
 #hadiahList p {
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  color: #000;
-  line-height: 1.5;
+  font-size: 14px;
+  color: black;
+  line-height: 1.3;
   margin: 4px 0;
 }
 
 #hadiahList p strong {
   font-weight: 600;
   color: #000;
+}
+
+.hadiah-box-wrapper,
+.hadiah-box {
+  display: block !important;
 }
 
 /* 📱 Responsif */
@@ -689,7 +695,7 @@ section *, .wishlist *, #main-content * {
   }
   #hadiahList p {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 }
 
