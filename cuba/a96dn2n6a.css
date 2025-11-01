@@ -638,7 +638,7 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-  background: linear-gradient(135deg, #e2f1ff 0%, #f9fcff 40%, #d6eaff 100%);
+  background: linear-gradient(135deg, #e06666 0%, #e9967a 40%, #f5c0c0 100%);
   background-size: 400% 400%; /* beri ruang gradient bergerak */
   border-radius: 16px;
   box-shadow:
@@ -1176,7 +1176,7 @@ footer, .footer {
 .wishlist-btn {
   font-weight: bold;
   text-decoration: none;
-  background: linear-gradient(135deg, #99bbee, #6699cc, #99bbee, #6699cc);
+  background: linear-gradient(135deg, #e06666, #e9967a, #f5c0c0);
   background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
