@@ -627,33 +627,62 @@ section *, .wishlist *, #main-content * {
   box-sizing: border-box;
 }
 
+/* 🎁 Kotak Maklumat Pemberian Hadiah */
+.hadiah-box {
+  background: linear-gradient(to bottom right, #ffffff, #eaf4ff);
+  border: 1px solid #a3c4f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(163, 196, 243, 0.3);
+  padding: 15px;
+  max-height: 230px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 15px auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hadiah-box::-webkit-scrollbar {
+  width: 8px;
+}
+.hadiah-box::-webkit-scrollbar-thumb {
+  background-color: #a7c7e7;
+  border-radius: 10px;
+}
+.hadiah-box::-webkit-scrollbar-thumb:hover {
+  background-color: #87cefa;
+}
+
 #hadiah-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #6699CC;
-  color: black;
-  font-size: 14px;
-  margin-top: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-#hadiah-table th, #hadiah-table td {
-  padding: 12px 14px;
-  border-bottom: 1px solid #E2DAF9;
-  text-align: left;
+  background: transparent;
 }
 
 #hadiah-table th {
-  background-color: #6699CC;
-  font-weight: bold;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
   color: black;
+  padding: 10px 12px;
+  border-bottom: 1px solid #a3c4f3;
+  background: linear-gradient(to right, #ffffff, #d8e9f7);
 }
 
-#hadiah-table tr:last-child td {
-  border-bottom: none;
+#hadiah-table td {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+  padding: 10px 12px;
 }
+
+#hadiah-table tr + tr {
+  border-top: 8px solid transparent; /* gap antara baris */
+}
+
 
 #Seksyen\ Wishlist {
   padding-bottom: 80px; /* ruang bawah seksyen */
