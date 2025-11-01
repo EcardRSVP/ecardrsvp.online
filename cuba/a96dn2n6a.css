@@ -1187,26 +1187,30 @@ footer, .footer {
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
 .wishlist-btn {
   font-weight: bold;
-  
-  /* hilangkan underline link */
   text-decoration: none;
-
-  /* gradient dan warna asas */
-  background: linear-gradient(135deg, #99bbee, #6699cc);
+  background: linear-gradient(135deg, #99bbee, #6699cc, #99bbee, #6699cc);
+  background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
-
-  /* smooth hover transition */
   transition: all 0.3s ease;
-}
 
+  /* animasi gradient */
+  animation: gradientMove 4s ease infinite;
+}
+  
 /* Hover effect */
 .wishlist-btn:hover {
-  background: linear-gradient(135deg, #6699cc, #99bbee);
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(51, 102, 153, 0.6);
   text-decoration: none;  /* pastikan hover pun tiada underline */
   color: black !important;
+}
+
+/* Keyframes untuk gradient bergerak */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 
