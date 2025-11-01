@@ -636,8 +636,13 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-  background: linear-gradient(135deg, #e2f1ff 0%, #f9fcff 40%, #d6eaff 100%);
-  background-image: linear-gradient(135deg, rgba(210,230,255,1) 0%, rgba(255,255,255,0.9) 40%, rgba(210,240,255,1) 100%);
+    background: linear-gradient(
+    135deg, 
+    #e0f2ff 0%,       /* biru soft */
+    #c0e0ff 40%,      /* biru lembut sedikit lebih gelap */
+    #a3c8ff 70%,      /* biru tengah */
+    #dbefff 100%      /* hint silver / very light blue */
+  );
   border-radius: 16px;
   box-shadow:
     0 0 20px rgba(173, 216, 230, 0.5),
