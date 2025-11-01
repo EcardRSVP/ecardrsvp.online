@@ -644,11 +644,11 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
 }
 .hadiah-box::-webkit-scrollbar-thumb {
   background-color: #a7c7e7;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .hadiah-box::-webkit-scrollbar-thumb:hover {
   background-color: #87cefa;
