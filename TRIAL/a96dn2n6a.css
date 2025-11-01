@@ -158,6 +158,28 @@ textarea::placeholder {
   font-size: 14px; /* sama saiz dengan teks input */
 }
 
+.small-btn {
+  display: inline-block;   /* ikut teks */
+  padding: 8px 20px;       /* atas/bawah 8px, kiri/kanan 20px */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  background: #003366;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.small-btn:hover {
+  background: #336699;
+  transform: scale(1.05);
+}
+
+
 
 footer {
   font-size: 14px;
