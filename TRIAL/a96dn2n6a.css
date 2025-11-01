@@ -438,6 +438,9 @@ form button[type="submit"] {
   font-size: 1.9rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-b {
@@ -445,6 +448,9 @@ form button[type="submit"] {
   font-size: 1.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-c {
@@ -452,6 +458,9 @@ form button[type="submit"] {
   font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-d {
@@ -472,6 +481,9 @@ form button[type="submit"] {
   font-weight: bold;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-f {
@@ -479,6 +491,9 @@ form button[type="submit"] {
   font-size: 1.1rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-g {
@@ -487,12 +502,51 @@ form button[type="submit"] {
   font-size: 1.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Ancizar Sans', sans-serif;
 }
+
+@media (max-width: 480px) {
+  .font-a {
+    font-size: 2.1rem; /* sedikit besar supaya jelas di skrin kecil */
+  } 
+
+  .font-b {
+    font-size: 1.7rem;
+  } 
+
+  .font-c {
+    font-size: 3.2rem;
+  } 
+
+  .font-d {
+    font-size: 1.6rem;
+    letter-spacing: 0.3px; /* jarak halus, elak huruf nampak rapat */
+  } 
+
+  .font-e {
+    font-size: 1.2rem;
+  } 
+
+  .font-f {
+    font-size: 1.3rem;
+  } 
+
+  .font-g {
+    font-size: 1.2rem;
+  }
+} 
+
+html {
+  -webkit-text-size-adjust: 100%; /* elak auto zoom teks di iPhone */
+}
+
 
 .gallery-slider {
   display: flex;
