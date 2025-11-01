@@ -648,6 +648,7 @@ section *, .wishlist *, #main-content * {
   text-align: center;
   position: relative;
   overflow: hidden;
+  justify-content: flex-start; /* jangan center */
 }
 
 /* ✨ Efek glitter lembut */
@@ -694,10 +695,11 @@ section *, .wishlist *, #main-content * {
 #hadiahList {
   min-height: 150px;        /* tinggi kotak untuk scroll walaupun kosong */
   max-height: 150px;        /* tinggi tetap untuk scroll */
-  overflow-y: scroll;       /* paksa scrollbar sentiasa muncul */
+  overflow-y: scroll !important;
+  scrollbar-gutter: stable;  
   overflow-x: hidden;
-  padding: 8px;
-  margin-top: 1px;
+  padding: 2px 5px;
+  margin-top: 0px;
   background: transparent !important;
   width: 100%;
   box-shadow: none !important;
@@ -730,6 +732,12 @@ section *, .wishlist *, #main-content * {
 }
 #hadiahList strong {
   color: black;
+}
+
+#hadiahList::after {
+  content: "\00a0"; /* non-breaking space */
+  display: block;
+  height: 1px;
 }
 
 
