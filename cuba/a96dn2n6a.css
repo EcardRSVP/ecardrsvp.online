@@ -683,7 +683,7 @@ section *, .wishlist *, #main-content * {
 .hadiah-title {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: black;
   margin-bottom: 5px;
 }
@@ -725,7 +725,7 @@ section *, .wishlist *, #main-content * {
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   color: black;
   text-align: center;
   margin: 4px 0;
