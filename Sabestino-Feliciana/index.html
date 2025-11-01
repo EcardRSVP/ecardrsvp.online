@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Majlis Perkahwinan Sabestino & Feliciana</title>
 
-    <!-- ✅ Favicon kekal -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- ✅ Favicon & Apple Touch Icon -->
+<link rel="icon" href="NNA.png" type="image/png">
+<link rel="apple-touch-icon" href="NNA.png">
 
   <!-- ✅ Open Graph (hanya title, tiada description, tiada gambar) -->
   <meta property="og:title" content="Majlis Perkahwinan Sabestino & Feliciana">
@@ -32,13 +33,12 @@
 </head>
   
   
-<!-- ✅ Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Ephesis&family=Tangerine&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Estonia&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> <!-- ✅ Tambahan ini -->
+<!-- ✅ Google Fonts (dikemas kini) -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="a96dn2n6a.css" />
+  
   
   <style>
       body {
@@ -111,17 +111,9 @@
 </head>
 <body>
 
-<!-- 🌸 Latar belakang gambar versi "kecil 390px macam video" -->
-<div style="
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 390px;
-  height: 100vh;
-  background: url('B15.png') center/cover no-repeat;
-  z-index: -1;">
-</div>
+<!-- 🌸 Background wrapper gaya telefon -->
+<div class="bg-wrapper"></div>
+
 
 <!-- ✅ SALJI DALAM WRAPPER -->
 <div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
@@ -143,7 +135,7 @@
     <h2><span class="font-c">Sabestino</span></h2>
     <h2><span class="font-a">&</span></h2>
     <h2 class="font-c">Feliciana</h2>
-    <button id="start-btn">BUKA</button>
+    <button id="start-btn" class="small-btn">BUKA</button>
   </section>
 
 
@@ -152,6 +144,7 @@
 
  <!-- Gabungan Page 2–4 -->
     <section class="page">
+      <br>
       <p class="nama-ayah"><strong>WALTER NURI ANAK UBAN</strong></p>
       <p class="simbol-dan">&</p>
       <p class="nama-ibu" style="margin-top:0; margin-bottom:0; line-height:1.1;">
@@ -180,7 +173,7 @@
       Missa : 9.30 am<br><br>
       <strong>Imperial Place Hotel Miri</strong><br>
       Hotel : 5.30 pm</p>
-    
+     
       <hr> 
 
 <section id="countdown-page" class="transparent-section">
@@ -253,25 +246,25 @@
   </div>
 </section>
 
-     <hr> 
-
+  <hr> 
+      
     <section class="transparent-section ucapan-section">
     <h1 class="font-e">GUESTBOOK</h1>
     <div id="ucapanList">
   </div>
 </section>
       
-<div class="footer-credit" style="margin-top: 3px; text-align: center;">
+<div class="footer-credit" style="margin-top: 20px; text-align: center;">
   <p></p>
   
   <!-- Spacer -->
   <div style="margin: 5px 0;"></div>
 
     <!-- Teks "Contact Us" berwarna kelabu -->
-  <p style="font-weight: bold; font-size: 15px; margin-bottom: 10px; color: grey;">Contact Us</p>
+    <p style="font-weight: bold; font-size: 15px; margin-bottom: 8px; color: grey;">Contact Us</p>
 
   <!-- Ikon Shopee & WhatsApp -->
-  <div class="purchase-buttons">
+    <div class="purchase-buttons" style="display: flex; justify-content: center; gap: 10px;">
     <a href="https://shopee.com.my/nna_95" class="purchase-btn" target="_blank">
       <img src="shopee-icon.png" alt="Shopee">
     </a>
@@ -305,12 +298,13 @@
 <form id="rsvp-form" 
       action="https://docs.google.com/forms/d/e/1FAIpQLSfHdrHH7b4e4DjTTbjNEcDqb8FNwFgwfs7l3ttb4aT7qDnUwA/formResponse" 
       method="POST" 
-      target="hidden_iframe">
+      target="hidden_iframe"
+      onsubmit="handleSubmit(event)">
 
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1658548225" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
+    <input type="text" id="nama" name="entry.1658548225" placeholder="Nama Anda" required>
 
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
@@ -325,26 +319,27 @@
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.258240620" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+    <input type="number" id="bilangan" name="entry.258240620" min="1" placeholder="Contoh: 2">
 
     <!-- Tambah selepas Bilangan Kehadiran -->
     <br>
     <label for="ucapan"><strong>Ucapan</strong></label>
     <textarea id="ucapan" 
           name="entry.2125167840" 
-          placeholder="Ucapan anda" 
-          style="width: 100%; padding: 10px; margin-bottom: 20px; height: 100px;"></textarea>
+          placeholder="Ucapan anda"></textarea>
 
   
-<button type="submit" class="btn-hantar" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;">
-  Hantar
-</button>
-</form>
+      <button type="submit" class="btn-hantar">Hantar</button>
+    </form>
 
-
-<div id="submit-popup">
-  Terima kasih! Kehadiran anda telah direkodkan.
-</div>
+    <!-- ✅ Popup alert khas -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
 
 <iframe
   name="hidden_iframe"
@@ -362,7 +357,7 @@
   <a href="tel:+60198959187" class="phone-button">📞 Sabestino</a><br>
   <a href="tel:+60198959283" class="phone-button">📞 Feliciana</a><br>
   <a href="tel:+60198371533" class="phone-button">📞 Nuri</a><br>
-  <a href="tel:+6738895773" class="phone-button">📞 Johannes zainal</a><br><br><br><br>    
+  <a href="tel:+6738895773" class="phone-button">📞 Johannes zainal</a><br><br><br><br>  
   </div>
 </div>
       
