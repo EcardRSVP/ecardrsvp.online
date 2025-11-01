@@ -729,8 +729,7 @@ section *, .wishlist *, #main-content * {
   margin: 4px 0;
 }
 #hadiahList strong {
-  font-style: italic;
-  color: #1a4f7a;
+  color: black;
 }
 
 
