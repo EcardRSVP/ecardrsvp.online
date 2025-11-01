@@ -131,6 +131,31 @@ function toggleSection(id) {
   }
 }
 
+// ✅ Fungsi tambah baris hadiah
+function addHadiah(name, item) {
+  const tbody = document.querySelector('#hadiah-table tbody');
+  if (!tbody) return;
+
+  const tr = document.createElement('tr');
+  const tdName = document.createElement('td');
+  tdName.textContent = name;
+  const tdItem = document.createElement('td');
+  tdItem.textContent = item;
+
+  tr.appendChild(tdName);
+  tr.appendChild(tdItem);
+  tbody.insertBefore(tr, tbody.firstChild);
+
+  tbody.scrollTop = 0;
+}
+
+// ✅ Contoh data permulaan (demo) – boleh padam nanti
+const contoh = [
+  ['Nurul Aina', 'Set Tuala & Frame Couple'],
+  ['Hafiz & Liyana', 'Dinner Set 6 Pax'],
+  ['Amirul', 'Blender Philips HR2115']
+];
+contoh.forEach(r => addHadiah(r[0], r[1]));
 
 
 // ✅ Fetch Ucapan (PapaParse)
