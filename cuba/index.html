@@ -1413,19 +1413,29 @@
   </div>  
 
 
- <!-- 📋 Pemberian Hadiah -->
-  <h3>Maklumat Pemberian Hadiah</h3>
-  <table id="hadiah-table">
-    <thead>
-      <tr>
-        <th>Nama Pemberi</th>
-        <th>Barang yang ditempah</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<!-- HADIAH BOX -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<div class="hadiah-box-wrapper">
+  <h3 class="hadiah-title">Maklumat Pemberian Hadiah</h3>
+
+  <div class="hadiah-box">
+    <table id="hadiah-table" aria-label="Senarai pemberi hadiah">
+      <thead>
+        <tr>
+          <th class="col-name">NAMA PEMBERI</th>
+          <th class="col-item">BARANG YANG DITEMPAH</th>
+        </tr>
+      </thead>
+
+      <!-- tbody kekal sebagai block scrollable, kita akan masukkan <tr> dinamik -->
+      <tbody></tbody>
+       </table>
+      </div>
+    </div>
   </div>
 </div>
+
 
 <!-- ✅ Script Tabletop.js -->
 <script>
