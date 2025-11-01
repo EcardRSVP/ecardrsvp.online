@@ -1447,7 +1447,7 @@ async function fetchCSVData() {
       if (namaPemberi) {
         const p = document.createElement("p");
         p.innerHTML = namaBarang
-          ? `<strong>${namaPemberi}</strong> — ${namaBarang}`
+          ? `<strong>${namaPemberi}</strong> : ${namaBarang}`
           : `<strong>${namaPemberi}</strong>`;
         hadiahList.appendChild(p);
       }
