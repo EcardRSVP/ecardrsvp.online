@@ -630,7 +630,8 @@ section *, .wishlist *, #main-content * {
 /* 🎁 Kotak Pemberian Hadiah — gaya sama macam ucapanList */
 #hadiahList {
   max-height: 230px;          /* tinggi maksimum kotak hadiah */
-  overflow-y: auto;           /* aktifkan skrol menegak */
+  min-height: 230px;          /* paksa kotak tetap tinggi */  
+  overflow-y: scroll; /* paksa scrollbar */
   overflow-x: hidden;         /* elak skrol sisi */
   padding: 8px;
   margin: 5px auto;
@@ -640,8 +641,6 @@ section *, .wishlist *, #main-content * {
 
   /* ✅ Panjangkan lebar kotak */
   width: 100%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
-  margin-left: auto;
-  margin-right: auto;
 
   /* ✅ Tiada shadow langsung */
   box-shadow: none !important;
