@@ -464,7 +464,9 @@ form button[type="submit"] {
 }
 
 .font-d {
-  font-family: 'Imperial Script', 'Berkshire Swash', cursive;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;          
+  font-style: normal; 
   font-size: 1.4rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -526,7 +528,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-d {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     letter-spacing: 0.4px; /* jarak halus, elak huruf nampak rapat */
   } 
 
