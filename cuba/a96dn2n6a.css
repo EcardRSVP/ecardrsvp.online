@@ -649,7 +649,7 @@ section *, .wishlist *, #main-content * {
   position: relative;
   overflow: visible;
   justify-content: flex-start; /* jangan center */
-  animation: hadiahGradient 10s ease infinite; /* animasi perlahan */
+  animation: hadiahGradient 7s ease infinite; /* animasi perlahan */
 }
 
 /* Keyframes untuk gradient bergerak */
