@@ -465,6 +465,7 @@ form button[type="submit"] {
   font-family: 'Merriweather', serif;
   font-weight: 400; /* Regular */
   font-size: 0.9rem;
+  font-weight: bold;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
 }
