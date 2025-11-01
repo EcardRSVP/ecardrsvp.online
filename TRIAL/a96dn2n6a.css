@@ -455,10 +455,14 @@ form button[type="submit"] {
 }
 
 .font-d {
-  font-family: 'Imperial Script', cursive;
+  font-family: 'Imperial Script', 'Berkshire Swash', cursive;
   font-size: 1.8rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.3px;
 }
 
 .font-e {
