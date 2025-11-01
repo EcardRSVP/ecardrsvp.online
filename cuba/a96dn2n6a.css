@@ -465,7 +465,7 @@ form button[type="submit"] {
 
 .font-d {
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;          
+  font-weight: 700;          
   font-style: normal; 
   font-size: 1.4rem;
   color: black !important;
@@ -473,7 +473,7 @@ form button[type="submit"] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.1px;
 }
 
 .font-e {
