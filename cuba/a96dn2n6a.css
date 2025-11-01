@@ -759,7 +759,7 @@ section.doa {
 hr {
   display: block;
   border: none;
-  border-top: 3px solid #888;
+  border-top: 2px solid #ccc;
   margin: 24px auto;
   width: 90%;
   max-width: 360px;
