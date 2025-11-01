@@ -449,7 +449,7 @@ form button[type="submit"] {
 
 .font-c {
   font-family: 'Italianno', cursive;
-  font-size: 3.2rem;
+  font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
 }
