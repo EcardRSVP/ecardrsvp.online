@@ -696,7 +696,7 @@ section *, .wishlist *, #main-content * {
   min-height: 150px;        /* tinggi kotak untuk scroll walaupun kosong */
   max-height: 150px;        /* tinggi tetap untuk scroll */
   overflow-y: scroll !important;
-  scrollbar-gutter: stable;  
+  scrollbar-gutter: stable both-edges; 
   overflow-x: hidden;
   padding: 2px 5px;
   margin-top: 0px;
