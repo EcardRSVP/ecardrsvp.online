@@ -122,6 +122,43 @@ button,
   background-color: #336699;
 }
 
+/* ✅ Styling input RSVP supaya sama panjang dengan button, tapi kotak putih */
+#popup-RSVP input[type="text"],
+#popup-RSVP input[type="number"],
+#popup-RSVP textarea {
+  border: 1px solid #ccc;      /* sempadan lembut */
+  border-radius: 8px;          /* sama dengan button */
+  padding: 12px;               /* sama padding dengan button */
+  width: 90%;                  /* ikut button */
+  max-width: 400px;            /* ikut button */
+  margin: 10px auto;           /* tengah horizontal */
+  display: block;              
+  font-size: 16px;             
+  font-family: inherit;        
+  box-sizing: border-box;      /* pastikan padding ikut width */
+  background-color: white;     /* kotak putih */
+  color: black;                /* teks hitam */
+  -webkit-text-fill-color: black !important; /* Safari */
+}
+
+/* Optional: focus effect */
+#popup-RSVP input:focus,
+#popup-RSVP textarea:focus {
+  outline: none;
+  border-color: #6699cc;       /* highlight bila klik */
+  box-shadow: 0 0 5px rgba(102,153,204,0.3);
+}
+
+/* Placeholder semua input & textarea */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;   /* kelabu cair, lembut pada mata */
+  opacity: 1;    /* pastikan penuh visibility */
+  font-family: 'Ancizar Sans', sans-serif; /* ikut font utama */
+  font-size: 14px; /* sama saiz dengan teks input */
+}
+
+
 footer {
   font-size: 14px;
   color: #777;
