@@ -82,6 +82,37 @@ if (kehadiran.value === "Hadir" && !bilangan.value) {
   }
 });
 
+
+/* ✅ Fungsi tambah baris hadiah (baru dimasukkan di sini) */
+  function addHadiah(name, item) {
+    const tbody = document.querySelector('#hadiah-table tbody');
+    if (!tbody) return;
+
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    tdName.textContent = name;
+    const tdItem = document.createElement('td');
+    tdItem.textContent = item;
+
+    tr.appendChild(tdName);
+    tr.appendChild(tdItem);
+    tbody.insertBefore(tr, tbody.firstChild);
+
+    tbody.scrollTop = 0;
+  }
+
+  /* Contoh data permulaan (demo) */
+  const contoh = [
+    ['Nurul Aina', 'Set Tuala & Frame Couple'],
+    ['Hafiz & Liyana', 'Dinner Set 6 Pax'],
+    ['Amirul', 'Blender Philips HR2115']
+  ];
+  contoh.forEach(r => addHadiah(r[0], r[1]));
+
+});
+
+
+
 // ✅ Fungsi dipanggil bila iframe RSVP reload
 function rsvpSuccessHandler() {
   console.log("📢 rsvpSuccessHandler triggered");
@@ -179,3 +210,5 @@ function togglePopup(nama) {
     popupTerbuka = idPopup;
   }
 }
+
+
