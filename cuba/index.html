@@ -1416,11 +1416,7 @@
 </p>
   
 <div class="hadiah-box" id="hadiahList">
-  <p><strong>Aina</strong> — Tuala muka 🩵</p>
-  <p><strong>Hafiz & Syira</strong> — Pinggan set 🍽️</p>
-  <p><strong>Amirul</strong> — Blender ⚡</p>
-  <p><strong>Farah</strong> — Cawan kaca ☕</p>
-  <p><strong>Nazmi & Liyana</strong> — Tuala mandi 🩵</p>
+    <!-- Data akan dimasukkan di sini oleh script -->
   </div>
 </div>
 
@@ -1428,33 +1424,32 @@
 <script>
 window.addEventListener("DOMContentLoaded", fetchCSVData);
 
-  async function fetchCSVData() {
-    const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
+async function fetchCSVData() {
+  const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
 
-    try {
-      const response = await fetch(url);
-      const csvText = await response.text();
-      const lines = csvText.trim().split("\n").slice(1); // buang header
+  try {
+    const response = await fetch(url);
+    const csvText = await response.text();
+    const lines = csvText.trim().split("\n").slice(1); // buang header
 
-      const tbody = document.querySelector("#hadiah-table tbody");
+    const hadiahList = document.getElementById("hadiahList");
 
-      lines.forEach(line => {
-        const cols = line.split(",");
+    // kosongkan dulu hard-coded HTML
+    hadiahList.innerHTML = "";
 
-        // Debugging: check struktur sebenar baris
-        console.log(cols);
+    lines.forEach(line => {
+      const cols = line.split(",");
+      const namaPemberi = cols[1]?.replace(/"/g, "") || "-";
+      const namaBarang = cols[2]?.replace(/"/g, "") || "-";
 
-        const namaPemberi = cols[1]?.replace(/"/g, "") || "-";   // indeks 1 = Nama Pemberi
-        const namaBarang = cols[2]?.replace(/"/g, "") || "-";    // indeks 2 = Nama Barang
-
-        const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${namaPemberi}</td><td>${namaBarang}</td>`;
-        tbody.appendChild(tr);
-      });
-    } catch (error) {
-      console.error("Gagal ambil data:", error);
-    }
+      const p = document.createElement("p");
+      p.innerHTML = `<strong>${namaPemberi}</strong> — ${namaBarang}`;
+      hadiahList.appendChild(p);
+    });
+  } catch (error) {
+    console.error("Gagal ambil data:", error);
   }
+}
 </script>
 
      
