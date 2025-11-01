@@ -647,7 +647,7 @@ section *, .wishlist *, #main-content * {
   padding: 14px 16px;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   justify-content: flex-start; /* jangan center */
 }
 
@@ -684,11 +684,11 @@ section *, .wishlist *, #main-content * {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #27496d;
+  color: black;
   margin-bottom: 5px;
 }
 .hadiah-tagline {
-  color: #4a637d;
+  color: black;
 }
 
 /* 📜 Isi (scrollable list) */
@@ -725,8 +725,8 @@ section *, .wishlist *, #main-content * {
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 0.9rem;
-  color: #102a43;
+  font-size: 1.2rem;
+  color: black;
   text-align: center;
   margin: 4px 0;
 }
