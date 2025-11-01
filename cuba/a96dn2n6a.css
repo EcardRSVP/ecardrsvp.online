@@ -636,13 +636,8 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-    background: linear-gradient(
-    135deg, 
-    #e0f2ff 0%,       /* biru soft */
-    #c0e0ff 40%,      /* biru lembut sedikit lebih gelap */
-    #a3c8ff 70%,      /* biru tengah */
-    #dbefff 100%      /* hint silver / very light blue */
-  );
+  background: linear-gradient(135deg, #e2f1ff 0%, #f9fcff 40%, #d6eaff 100%);
+  background-size: 400% 400%; /* beri ruang gradient bergerak */
   border-radius: 16px;
   box-shadow:
     0 0 20px rgba(173, 216, 230, 0.5),
@@ -654,30 +649,16 @@ section *, .wishlist *, #main-content * {
   position: relative;
   overflow: visible;
   justify-content: flex-start; /* jangan center */
+  animation: hadiahGradient 10s ease infinite; /* animasi perlahan */
 }
 
-/* ✨ Efek glitter lembut */
-.hadiah-box::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.5) 0%, transparent 20%),
-    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.4) 0%, transparent 20%),
-    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.3) 0%, transparent 20%);
-  background-size: 200px 200px;
-  animation: sparkle 6s linear infinite;
-  z-index: 0;
-  pointer-events: none;
+/* Keyframes untuk gradient bergerak */
+@keyframes hadiahGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-@keyframes sparkle {
-  from { transform: translate(0, 0); }
-  to { transform: translate(50px, 50px); }
-}
 
 .hadiah-box * {
   position: relative;
