@@ -526,16 +526,16 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-d {
-    font-size: 1.6rem;
-    letter-spacing: 0.3px; /* jarak halus, elak huruf nampak rapat */
+    font-size: 1.5rem;
+    letter-spacing: 0.4px; /* jarak halus, elak huruf nampak rapat */
   } 
 
   .font-e {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   } 
 
   .font-f {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   } 
 
   .font-g {
