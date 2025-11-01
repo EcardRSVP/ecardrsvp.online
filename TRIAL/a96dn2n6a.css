@@ -1018,10 +1018,6 @@ footer, .footer {
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
 
-  /* border & shadow */
-  border: 2px solid #6699cc;
-  box-shadow: 0 2px 8px rgba(102, 153, 204, 0.3);
-
   /* smooth hover transition */
   transition: all 0.3s ease;
 }
