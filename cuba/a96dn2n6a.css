@@ -627,95 +627,70 @@ section *, .wishlist *, #main-content * {
   box-sizing: border-box;
 }
 
-/* 🎁 Kotak Maklumat Pemberian Hadiah — ikut gaya #ucapanList */
-.hadiah-box {
-  max-height: 230px;          /* tinggi maksimum sama macam #ucapanList */
+/* 🎁 Kotak Pemberian Hadiah — gaya sama macam ucapanList */
+#hadiahList {
+  max-height: 230px;          /* tinggi maksimum kotak hadiah */
   overflow-y: auto;           /* aktifkan skrol menegak */
   overflow-x: hidden;         /* elak skrol sisi */
-  padding: 10px 10px;
+  padding: 8px 8px;
   margin-top: 5px;
 
-  /* 🌤️ Background biru lembut gradient */
-  background: linear-gradient(135deg, #d9ecff 0%, #ffffff 45%, #e5f2ff 100%);
-  border-radius: 14px;
+  /* ✅ Transparent penuh — nampak background B8.png */
+  background: transparent !important;
 
-  /* 🌸 Lebar sama macam ucapanList — sedikit melebihi container */
-  width: 120%;
+  /* ✅ Panjangkan lebar kotak */
+  width: 120%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
   margin-left: auto;
   margin-right: auto;
 
-  /* 🌿 Tiada border keras, shadow lembut & kemas */
-  border: none !important;
-  box-shadow:
-    0 6px 18px rgba(102, 163, 225, 0.25),
-    inset 0 1px 6px rgba(255, 255, 255, 0.6);
+  /* ✅ Tiada shadow langsung */
+  box-shadow: none !important;
 
-  /* 🌿 Smooth scroll */
+  /* ✅ Tiada border */
+  border: none !important;
+
+  /* 🌿 Efek smooth scroll */
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
-/* 🌿 scrollbar halus & simple — sama macam ucapanList */
-.hadiah-box::-webkit-scrollbar {
-  width: 8px; /* nipis dan elegan */
+/* 🌿 scrollbar halus & simple */
+#hadiahList::-webkit-scrollbar {
+  width: 8px; /* garis skrol nipis */
 }
-.hadiah-box::-webkit-scrollbar-thumb {
-  background-color: #A7C7E7; /* 💙 biru pastel */
+#hadiahList::-webkit-scrollbar-thumb {
+  background-color: #A7C7E7; /* 💙 biru lembut pastel */
   border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;  /* 🚀 ruang kosong atas */
+  margin-bottom: 30px; /* 🚀 ruang kosong bawah */
 }
-.hadiah-box::-webkit-scrollbar-thumb:hover {
+#hadiahList::-webkit-scrollbar-thumb:hover {
   background-color: #87CEFA; /* 💧 biru lebih cerah bila hover */
 }
 
-/* 🎀 Table gaya minimal */
-#hadiah-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: transparent;
-}
-
-#hadiah-table th {
-  text-align: left;
+/* 🎀 Gaya teks hadiah */
+#hadiahList p {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 11px;
-  color: black;
-  padding: 8px 8px;
-  border: none;
-  letter-spacing: 0.4px;
-}
-
-#hadiah-table td {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-size: 13px;
   color: #000;
-  font-size: 12px;
-  padding: 8px 8px;
-  border: none;
-  line-height: 0.9;
+  line-height: 1.5;
+  margin: 4px 0;
 }
 
-/* jarak antara baris */
-#hadiah-table tr + tr td {
-  padding-top: 1px;
+#hadiahList p strong {
+  font-weight: 600;
+  color: #000;
 }
 
-/* responsif untuk telefon */
+/* 📱 Responsif */
 @media (max-width: 420px) {
-  .hadiah-box {
+  #hadiahList {
+    width: 100%;
     padding: 10px;
-    width: 115%; /* supaya tak overflow sangat pada mobile */
   }
-  #hadiah-table td {
-    font-size: 13px;
-    padding: 5px 8px;
-  }
-  #hadiah-table th {
-    font-size: 12.5px;
-    padding: 6px 8px;
+  #hadiahList p {
+    font-size: 14px;
+    line-height: 1.6;
   }
 }
 
