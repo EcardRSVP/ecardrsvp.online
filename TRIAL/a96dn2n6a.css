@@ -49,23 +49,23 @@ section.doa {
 .hero h1 {
   font-family: 'Ancizar Sans', sans-serif;
   font-size: 36px;
-  color: #8B0000;
+  color: black !important;
 }
 
 .hero p {
   font-size: 20px;
-  color: #5A5A5A;
+  color: black !important;
 }
 
 h2 {
   font-size: 25px;
-  color: #000000;
+  color: black !important;
   margin-bottom: 10px;
 }
 
 h3 {
   font-size: 16px;
-  color: #000000;
+  color: black !important;
   margin-bottom: 10px;
 }
 
