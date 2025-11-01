@@ -1408,52 +1408,53 @@
   </div>  
 
 
- <!-- 📋 Pemberian Hadiah -->
-  <h3>Maklumat Pemberian Hadiah</h3>
-  <table id="hadiah-table">
-    <thead>
-      <tr>
-        <th>Nama Pemberi</th>
-        <th>Barang yang ditempah</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<!-- 🎁 PEMBERIAN HADIAH -->
+<div class="hadiah-box-wrapper">
+  <div class="hadiah-box">
+    <h3 class="hadiah-title">💝 TITIPAN KASIH DARI ANDA</h3>
+    <p class="hadiah-tagline" style="font-size:0.8rem; font-style:italic; margin-bottom:8px;">
+      Nama anda akan terpahat di laman cinta kami 💕
+    </p>
+
+    <!-- 📋 Senarai Nama Pemberi Hadiah -->
+    <div id="hadiahList"></div>
   </div>
 </div>
 
-<!-- ✅ Script Tabletop.js -->
+<!-- ✅ Script Paparan Nama dari Google Sheet -->
 <script>
 window.addEventListener("DOMContentLoaded", fetchCSVData);
 
-  async function fetchCSVData() {
-    const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
+async function fetchCSVData() {
+  const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
 
-    try {
-      const response = await fetch(url);
-      const csvText = await response.text();
-      const lines = csvText.trim().split("\n").slice(1); // buang header
+  try {
+    const response = await fetch(url);
+    const csvText = await response.text();
+    const lines = csvText.trim().split("\n").slice(1); // buang header
 
-      const tbody = document.querySelector("#hadiah-table tbody");
+    const hadiahList = document.getElementById("hadiahList");
+    hadiahList.innerHTML = "";
 
-      lines.forEach(line => {
-        const cols = line.split(",");
+    lines.forEach(line => {
+      const cols = line.split(",");
+      const namaPemberi = cols[1]?.replace(/"/g, "")?.trim();
+      const namaBarang = cols[2]?.replace(/"/g, "")?.trim();
 
-        // Debugging: check struktur sebenar baris
-        console.log(cols);
-
-        const namaPemberi = cols[1]?.replace(/"/g, "") || "-";   // indeks 1 = Nama Pemberi
-        const namaBarang = cols[2]?.replace(/"/g, "") || "-";    // indeks 2 = Nama Barang
-
-        const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${namaPemberi}</td><td>${namaBarang}</td>`;
-        tbody.appendChild(tr);
-      });
-    } catch (error) {
-      console.error("Gagal ambil data:", error);
-    }
+      if (namaPemberi) {
+        const p = document.createElement("p");
+        p.innerHTML = namaBarang
+          ? `<strong>${namaPemberi}</strong> — ${namaBarang}`
+          : `<strong>${namaPemberi}</strong>`;
+        hadiahList.appendChild(p);
+      }
+    });
+  } catch (error) {
+    console.error("Gagal ambil data:", error);
   }
+}
 </script>
+
 
      
 <!-- ✅ POPUP OVERLAY -->
