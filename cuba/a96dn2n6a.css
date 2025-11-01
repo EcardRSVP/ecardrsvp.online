@@ -630,9 +630,10 @@ section *, .wishlist *, #main-content * {
 /* 🎁 Kotak Maklumat Pemberian Hadiah */
 .hadiah-box {
   background: linear-gradient(180deg, #f9fcff 0%, #eaf4ff 100%);
+  border: none;
   border-radius: 14px;
   box-shadow: 0 4px 10px rgba(102, 163, 225, 0.15);
-  padding: 12px;
+  padding: 10px 10px;
   max-height: 230px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -641,11 +642,11 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 .hadiah-box::-webkit-scrollbar-thumb {
   background-color: #a7c7e7;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .hadiah-box::-webkit-scrollbar-thumb:hover {
   background-color: #87cefa;
@@ -653,8 +654,8 @@ section *, .wishlist *, #main-content * {
 
 #hadiah-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 6px; /* lebih rapat */
+  border-collapse: collapse;
+  background: transparent;
 }
 
 #hadiah-table th {
@@ -662,52 +663,41 @@ section *, .wishlist *, #main-content * {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 11px;
   color: black;
-  padding: 10px 12px;
+  padding: 8px 8px;
   border: none;
-  background: linear-gradient(145deg, #dcefff, #ffffff, #dcefff);
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(102, 163, 225, 0.15);
+  letter-spacing: 0.4px;
 }
 
-/* Isi baris hadiah – kad gradient lembut */
-#hadiah-table tbody tr {
-  background: linear-gradient(145deg, #d8ebff, #ffffff, #e3f2ff);
-  box-shadow: 0 3px 10px rgba(102, 163, 225, 0.15);
-  border-radius: 10px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Hover lembut */
-#hadiah-table tbody tr:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(102, 163, 225, 0.3);
-}
-
-/* Isi dalam sel */
+/* isi data (nama & barang) */
 #hadiah-table td {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #000;
-  font-size: 13.5px;
-  padding: 8px 12px; /* spacing kecil & kemas */
+  font-size: 10px;
+  padding: 8px 8px;      /* gap kecil & kemas */
   border: none;
-  line-height: 1.3;
+  line-height: 0.80;      /* padat */
 }
 
-/* Responsif untuk skrin kecil */
+/* jarak antara baris lebih rapat */
+#hadiah-table tr + tr td {
+  padding-top: 1px;
+}
+
+/* responsif */
 @media (max-width: 420px) {
   .hadiah-box {
     padding: 10px;
   }
   #hadiah-table td {
     font-size: 13px;
-    padding: 6px 8px;
+    padding: 5px 8px;
   }
   #hadiah-table thead th {
     font-size: 12.5px;
-    padding: 8px 10px;
+    padding: 6px 8px;
   }
 }
 
