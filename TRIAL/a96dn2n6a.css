@@ -163,7 +163,6 @@ textarea::placeholder {
   width: auto !important;            /* ikut panjang teks */
   padding: 8px 20px;       /* atas/bawah 8px, kiri/kanan 20px */
   font-size: 16px;
-  font-weight: bold;
   border-radius: 8px;
   background: #003366;
   color: white;
