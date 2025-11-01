@@ -32,13 +32,13 @@
 </head>
   
   
-<!-- ✅ Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Ephesis&family=Tangerine&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Estonia&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
+<!-- ✅ Google Fonts (dikemas kini) -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Great+Vibes&family=Italianno&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Berkshire+Swash&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> <!-- ✅ Tambahan ini -->
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="a96dn2n6a.css" />
+  
   
   <style>
       body {
@@ -111,17 +111,9 @@
 </head>
 <body>
 
-<!-- 🌸 Latar belakang gambar versi "kecil 390px macam video" -->
-<div style="
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 390px;
-  height: 100vh;
-  background: url('B8.png') center/cover no-repeat;
-  z-index: -1;">
-</div>
+<!-- 🌸 Background wrapper gaya telefon -->
+<div class="bg-wrapper"></div>
+
 
 <!-- ✅ SALJI DALAM WRAPPER -->
 <div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
@@ -142,7 +134,7 @@
     <h2><span class="font-c">Haikal</span></h2>
     <h2><span class="font-a">&</span></h2>
     <h2 class="font-c">Liya</h2>
-    <button id="start-btn">BUKA</button>
+    <button id="start-btn" class="small-btn">BUKA</button>
   </section>
 
 
@@ -159,7 +151,7 @@
       kami dengan berbesar hati menjemput<br>
       Dato’/ Datin/ Tuan/ Puan/ Encik/ Cik<br>
       seisi keluarga untuk hadir<br>
-      ke Majlis Perkahwinan putera kami<br>
+      ke Majlis Perkahwinan putera kami<br><br>
       <p class="nama-pengantin"><strong class="font-d">Muhammad Haikal Bin Zulkefli</strong></p>
       <p class="pilihan-hati">dengan pilihan hatinya</p>
       <p class="nama-pasangan"><strong class="font-d">Nurul Ilyana Binti Ilyas</strong></p>
@@ -259,9 +251,8 @@
 
   <hr> 
       
-    <section class="doa transparent-section">
-    <p>
-    <h2 class="font-f">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</h2>
+    <section class="doa transparent-section"> 
+    <h2 class="font-f">بِسْمِ اللهِ ٱلرَّحْمٰنِ الرَّحِيمِ</h2>
       Ya Allah Ya Tuhan kami,<br>
       Kami memohon kepada-Mu berkatilah<br>
       perkahwinan ini.<br>
@@ -283,17 +274,17 @@
   </div>
 </section>
       
-<div class="footer-credit" style="margin-top: 3px; text-align: center;">
+<div class="footer-credit" style="margin-top: 20px; text-align: center;">
   <p>#liyaterciptauntukhaikal</p>
   
   <!-- Spacer -->
   <div style="margin: 5px 0;"></div>
 
     <!-- Teks "Contact Us" berwarna kelabu -->
-  <p style="font-weight: bold; font-size: 15px; margin-bottom: 10px; color: grey;">Contact Us</p>
+    <p style="font-weight: bold; font-size: 15px; margin-bottom: 8px; color: grey;">Contact Us</p>
 
   <!-- Ikon Shopee & WhatsApp -->
-  <div class="purchase-buttons">
+    <div class="purchase-buttons" style="display: flex; justify-content: center; gap: 10px;">
     <a href="https://shopee.com.my/nna_95" class="purchase-btn" target="_blank">
       <img src="shopee-icon.png" alt="Shopee">
     </a>
@@ -329,12 +320,13 @@
 <form id="rsvp-form" 
       action="https://docs.google.com/forms/d/e/1FAIpQLSedlvRozEgmCPlheAte9YGIS-VxcumFs7FBSSeqURJLB9chiA/formResponse" 
       method="POST" 
-      target="hidden_iframe">
+      target="hidden_iframe"
+      onsubmit="handleSubmit(event)">
 
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
+    <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required>
 
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
@@ -349,24 +341,20 @@
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.1537909291" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+    <input type="number" id="bilangan" name="entry.1537909291" min="1" placeholder="Contoh: 2">
 
     <!-- Tambah selepas Bilangan Kehadiran -->
     <br>
     <label for="ucapan"><strong>Ucapan</strong></label>
     <textarea id="ucapan" 
           name="entry.1530998401" 
-          placeholder="Ucapan anda" 
-          style="width: 100%; padding: 10px; margin-bottom: 20px; height: 100px;"></textarea>
+          placeholder="Ucapan anda"></textarea>
 
   
-<button type="submit" class="btn-hantar" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;">
-  Hantar
-</button>
-</form>
+      <button type="submit" class="btn-hantar">Hantar</button>
+    </form>
 
-
-    <!-- ✅ Popup gaya alert browser -->
+    <!-- ✅ Popup alert khas -->
     <div id="rsvp-alert" class="alert-box">
       <div class="alert-header">ecardrsvp.online says:</div>
       <div class="alert-body">
@@ -445,13 +433,20 @@
   <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
 </div>  
 
-<a href="https://docs.google.com/forms/d/1g3AEle381P6SaBGe08M05ALilG9IAZn3khpeVivZ_3Q/viewform?usp=header" 
-   target="_blank" 
-   class="btn btn-form">
-   Google Form Maklumat Pemberian Hadiah
-</a>
-<br><br>
+<div style="text-align:center; margin-bottom:10px;">
+  <p style="font-size:15px; color:black; margin-bottom:12px;">
+    Terima kasih atas pemberian hadiah anda 💖<br>
+    Sila isi maklumat di pautan berikut ✨<br>
+    Maklumat anda akan dipaparkan di<br>
+    bahagian bawah halaman ini
+  </p>
 
+  <a href="https://docs.google.com/forms/d/1g3AEle381P6SaBGe08M05ALilG9IAZn3khpeVivZ_3Q/viewform?usp=header"
+     target="_blank"
+     class="wishlist-btn">
+     Klik Sini Untuk Isi Maklumat Hadiah
+  </a>
+<br><br>
 
   <div class="gift-item">
     <img src="Microwave Oven.jpg" alt="Microwave Oven">
@@ -1413,29 +1408,19 @@
   </div>  
 
 
-<!-- HADIAH BOX -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<div class="hadiah-box-wrapper">
-  <h3 class="hadiah-title">Maklumat Pemberian Hadiah</h3>
-
-  <div class="hadiah-box">
-    <table id="hadiah-table" aria-label="Senarai pemberi hadiah">
-      <thead>
-        <tr>
-          <th class="col-name">NAMA PEMBERI</th>
-          <th class="col-item">BARANG YANG DITEMPAH</th>
-        </tr>
-      </thead>
-
-      <!-- tbody kekal sebagai block scrollable, kita akan masukkan <tr> dinamik -->
-      <tbody></tbody>
-       </table>
-      </div>
-    </div>
+ <!-- 📋 Pemberian Hadiah -->
+  <h3>Maklumat Pemberian Hadiah</h3>
+  <table id="hadiah-table">
+    <thead>
+      <tr>
+        <th>Nama Pemberi</th>
+        <th>Barang yang ditempah</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
   </div>
 </div>
-
 
 <!-- ✅ Script Tabletop.js -->
 <script>
@@ -1624,60 +1609,6 @@ function copyRek() {
     }
   });
 </script>
-
-<script>
-/* Pastikan 'submitted' adalah global (dinamakan sama seperti di form onsubmit) */
-window.submitted = window.submitted || false;
-
-/* Dipanggil apabila iframe tersembunyi selesai reload */
-function rsvpSuccessHandler() {
-  console.log("rsvpSuccessHandler called — submitted:", window.submitted);
-  if (!window.submitted) return;      // hanya jalankan jika form memang baru disubmit
-
-  window.submitted = false;           // reset flag supaya tak trigger berkali-kali
-
-  // Kosongkan form
-  const form = document.getElementById('rsvp-form');
-  if (form) form.reset();
-
-  // Papar popup tengah skrin
-  const alertBox = document.getElementById('rsvp-alert');
-  if (alertBox) alertBox.style.display = 'block';
-  else console.warn('rsvp-alert element not found');
-}
-
-/* Tutup popup bila klik OK */
-function closeRsvpAlert() {
-  const alertBox = document.getElementById('rsvp-alert');
-  if (alertBox) alertBox.style.display = 'none';
-
-  // ❌ Jangan tutup popup RSVP — biar kekal terbuka
-  // const popupRSVP = document.getElementById('popup-RSVP');
-  // if (popupRSVP) popupRSVP.style.display = 'none';
-}
-
-/* Eksport ke global supaya iframe onload inline handler boleh akses */
-window.rsvpSuccessHandler = rsvpSuccessHandler;
-window.closeRsvpAlert = closeRsvpAlert;
-
-/* ✅ Wajib isi bilangan jika pilih 'Hadir' */
-document.addEventListener("DOMContentLoaded", function () {
-  const hadirInputs = document.querySelectorAll("input[name='entry.727555102']");
-  const bilanganInput = document.getElementById("bilangan");
-
-  hadirInputs.forEach(radio => {
-    radio.addEventListener("change", function() {
-      if (this.value === "Hadir") {
-        bilanganInput.setAttribute("required", "required");
-      } else {
-        bilanganInput.removeAttribute("required");
-      }
-    });
-  });
-});  
-</script>
-
-      
 
       <!-- 🔹 External library PapaParse -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>

@@ -1,7 +1,6 @@
 body {
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
-  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
   color: #333;
   margin: 0;
   padding: 0;
@@ -50,23 +49,23 @@ section.doa {
 .hero h1 {
   font-family: 'Ancizar Sans', sans-serif;
   font-size: 36px;
-  color: #8B0000;
+  color: black !important;
 }
 
 .hero p {
   font-size: 20px;
-  color: #5A5A5A;
+  color: black !important;
 }
 
 h2 {
-  font-size: 28px;
-  color: #000000;
+  font-size: 25px;
+  color: black !important;
   margin-bottom: 10px;
 }
 
 h3 {
   font-size: 16px;
-  color: #000000;
+  color: black !important;
   margin-bottom: 10px;
 }
 
@@ -96,7 +95,8 @@ input {
 /* ✅ Styling umum untuk semua butang */
 button, 
 .copy-btn, 
-.btn-form {
+.btn-form,
+.wishlist-btn {  
   border: none;
   border-radius: 8px;
   padding: 12px;
@@ -108,17 +108,78 @@ button,
   font-family: inherit;
   cursor: pointer;
   text-align: center;
+  box-sizing: border-box; /* penting */
 }
 
 /* ✅ Copy button */
 .copy-btn {
   background-color: #003366;
   color: white;
+  -webkit-text-fill-color: white !important; /* Safari */
 }
 
 .copy-btn:hover {
   background-color: #336699;
 }
+
+/* ✅ Styling input RSVP supaya sama panjang dengan button, tapi kotak putih */
+#popup-RSVP input[type="text"],
+#popup-RSVP input[type="number"],
+#popup-RSVP textarea {
+  border: 1px solid #ccc;      /* sempadan lembut */
+  border-radius: 8px;          /* sama dengan button */
+  padding: 12px;               /* sama padding dengan button */
+  width: 90%;                  /* ikut button */
+  max-width: 400px;            /* ikut button */
+  margin: 10px auto;           /* tengah horizontal */
+  display: block;              
+  font-size: 16px;             
+  font-family: inherit;        
+  box-sizing: border-box;      /* pastikan padding ikut width */
+  background-color: white;     /* kotak putih */
+  color: black;                /* teks hitam */
+  -webkit-text-fill-color: black !important; /* Safari */
+}
+
+/* Optional: focus effect */
+#popup-RSVP input:focus,
+#popup-RSVP textarea:focus {
+  outline: none;
+  border-color: #6699cc;       /* highlight bila klik */
+  box-shadow: 0 0 5px rgba(102,153,204,0.3);
+}
+
+/* Placeholder semua input & textarea */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;   /* kelabu cair, lembut pada mata */
+  opacity: 1;    /* pastikan penuh visibility */
+  font-family: 'Ancizar Sans', sans-serif; /* ikut font utama */
+  font-size: 14px; /* sama saiz dengan teks input */
+}
+
+.small-btn {
+  display: inline-block !important;   /* ikut teks */
+  width: auto !important;            /* ikut panjang teks */
+  padding: 8px 20px;       /* atas/bawah 8px, kiri/kanan 20px */
+  font-size: 16px;
+  border-radius: 8px;
+  background: #003366;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.small-btn:hover {
+  background: #336699;
+  transform: scale(1.05);
+}
+
+
 
 footer {
   font-size: 14px;
@@ -170,14 +231,14 @@ h1, h2, p {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   width: 100%;
   max-width: 390px; /* Sama dengan lebar page */
   height: 60px;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -373,49 +434,119 @@ form button[type="submit"] {
 
 /* ✅ Font Custom Styles */
 .font-a {
-  font-family: 'Ephesis', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 1.9rem;
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-c {
-  font-family: 'Tangerine', cursive;
-  font-size: 2.8rem;
-  color: black;
+  font-family: 'Italianno', cursive;
+  font-size: 3.0rem;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-d {
-  font-family: 'Estonia', cursive;
-  font-size: 1.8rem;
+  font-family: 'Imperial Script', 'Berkshire Swash', cursive;
+  font-size: 1.4rem;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.3px;
 }
 
 .font-e {
-  font-family: 'Noto Serif Dives Akuru', serif;
-  font-size: 0.9rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 400; /* Regular */
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-f {
   font-family: 'Scheherazade New', serif;
   font-size: 1.1rem;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-g {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.0rem;
-  color: black; /* warna boleh tukar ikut tema */
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Ancizar Sans', sans-serif;
 }
+
+@media (max-width: 480px) {
+  .font-a {
+    font-size: 1.9rem; /* sedikit besar supaya jelas di skrin kecil */
+  } 
+
+  .font-b {
+    font-size: 1.5rem;
+  } 
+
+  .font-c {
+    font-size: 3.0rem;
+  } 
+
+  .font-d {
+    font-size: 1.5rem;
+    letter-spacing: 0.4px; /* jarak halus, elak huruf nampak rapat */
+  } 
+
+  .font-e {
+    font-size: 1.0rem;
+  } 
+
+  .font-f {
+    font-size: 1.1rem;
+  } 
+
+  .font-g {
+    font-size: 1.2rem;
+  }
+} 
+
+html {
+  -webkit-text-size-adjust: 100%; /* elak auto zoom teks di iPhone */
+}
+
 
 .gallery-slider {
   display: flex;
@@ -454,7 +585,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 .gallery-prev,
 .gallery-next {
   background: none !important;
-  color: black; !important;
+  color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   border: none;
   font-size: 28px;
@@ -496,142 +627,36 @@ section *, .wishlist *, #main-content * {
   box-sizing: border-box;
 }
 
-#Seksyen\ Wishlist {
-  padding-bottom: 80px; /* ruang bawah seksyen */
-}
-
-
-
-/* Container utama (sesuaikan max-width untuk layout mobile 390px) */
-.hadiah-box-wrapper {
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  max-width: 390px; /* ikut design laman kau */
-  margin: 16px auto;
-  padding: 0 12px;
-}
-
-/* Tajuk section */
-.hadiah-title {
-  margin: 0 0 10px 6px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #0b233a;
-  letter-spacing: 0.6px;
-}
-
-/* Kotak luar gradient + 3D lembut */
-.hadiah-box {
-  background: linear-gradient(180deg, rgba(234,244,255,0.95) 0%, rgba(219,236,253,0.95) 100%);
-  border-radius: 16px;
-  padding: 14px;
-  box-shadow: 0 12px 30px rgba(24,78,125,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
-  border: 1px solid rgba(163,196,243,0.6);
-}
-
-/* Table layout */
 #hadiah-table {
   width: 100%;
-  border-collapse: separate; /* supaya kita boleh gunakan gap visual */
-  border-spacing: 0;
-  table-layout: fixed; /* pastikan lajur konsisten */
+  border-collapse: collapse;
+  background-color: #6699CC;
+  color: black;
+  font-size: 14px;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* HEADER - gradient ringan pada kepala jadual + Poppins Bold uppercase */
-#hadiah-table thead th {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 13px;
-  color: #000;
+#hadiah-table th, #hadiah-table td {
   padding: 12px 14px;
+  border-bottom: 1px solid #E2DAF9;
   text-align: left;
-  letter-spacing: 0.8px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.0));
-  border-bottom: 1px solid rgba(163,196,243,0.35); /* garisan halus selepas header */
 }
 
-/* Pastikan header tak ikut floating ketika tbody scroll; buat thead sembunyikan bila scroll RENDER normal */
-#hadiah-table thead {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-/* BODy scrollable: block supaya kita boleh scroll tanpa memanjangkan kotak */
-#hadiah-table tbody {
-  display: block;
-  max-height: 230px;            /* tinggi maksimum kotak hadiah */
-  overflow-y: auto;             /* aktifkan skrol menegak */
-  overflow-x: hidden;
-  width: 100%;
-  padding-top: 8px;
-  padding-bottom: 4px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Setiap TR dibuat sebagai block supaya boleh ada gap & border-radius */
-#hadiah-table tbody tr {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* dua lajur seimbang */
-  gap: 18px;                      /* jarak antara lajur (bukan garisan) */
-  align-items: center;
-  background: rgba(255,255,255,0.9); /* isi putih lembut */
-  margin: 8px 6px;                /* gap antara baris (bukan garisan) */
-  padding: 12px 14px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(40,80,120,0.06);
-  border: 1px solid rgba(163,196,243,0.12);
-  width: calc(100% - 12px);      /* padamkan scroll padding */
-  box-sizing: border-box;
-}
-
-/* Jika ada terlalu banyak baris, padding & margin mengekalkan ruang kemas */
-#hadiah-table tbody tr:first-child {
-  margin-top: 6px;
-}
-
-/* Buang sebarang garisan sel */
-#hadiah-table td,
 #hadiah-table th {
-  border: none;
+  background-color: #6699CC;
+  font-weight: bold;
+  color: black;
 }
 
-/* Text di kolum (nama & item) */
-#hadiah-table td {
-  font-size: 14px;       /* saiz lebih kecil dari header */
-  color: #0a2030;        /* hitam lembut / gelap */
-  font-weight: 500;      /* not bold, sedikit semi */
-  word-wrap: break-word;
+#hadiah-table tr:last-child td {
+  border-bottom: none;
 }
 
-/* Untuk lajur nama (boleh highlight sedikit ketebalan) */
-#hadiah-table td:first-child {
-  font-weight: 600;
-}
-
-/* Scrollbar styling (ikut style ucapanList) */
-#hadiah-table tbody::-webkit-scrollbar {
-  width: 8px;
-}
-#hadiah-table tbody::-webkit-scrollbar-track {
-  background: transparent;
-}
-#hadiah-table tbody::-webkit-scrollbar-thumb {
-  background-color: #A7C7E7;
-  border-radius: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-#hadiah-table tbody::-webkit-scrollbar-thumb:hover {
-  background-color: #87CEFA;
-}
-
-/* Responsif - padding & font adjust */
-@media (max-width: 420px) {
-  .hadiah-box { padding: 10px; border-radius: 12px; }
-  .hadiah-title { font-size: 16px; }
-  #hadiah-table td { font-size: 13px; padding: 8px 6px; }
-  #hadiah-table thead th { font-size: 12px; padding: 10px 8px; }
+#Seksyen\ Wishlist {
+  padding-bottom: 80px; /* ruang bawah seksyen */
 }
 
 
@@ -828,6 +853,101 @@ hr {
   }
 }
 
+
+
+
+.alert-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+.alert-header {
+  background: #003366;
+  color: white !important;
+  -webkit-text-fill-color:white !important; /* elak Safari auto-invert */
+  padding: 8px 12px;
+  font-size: 13px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: left;
+}
+
+.alert-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.alert-body button {
+  background: #003366;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* elak Safari auto-invert */
+  border: none;
+  border-radius: 4px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#rsvp-alert .alert-header,
+#global-alert .alert-header {
+  color: white !important;
+}
+
+/* 🌸 Kotak ucapan boleh scroll — transparent, lebar & minimal */
+#ucapanList {
+  max-height: 230px;          /* tinggi maksimum kotak ucapan */
+  overflow-y: auto;           /* aktifkan skrol menegak */
+  overflow-x: hidden;         /* elak skrol sisi */
+  padding: 8px 8px;
+  margin-top: 5px;
+
+  /* ✅ Transparent penuh — nampak background B8.png */
+  background: transparent !important;
+
+  /* ✅ Panjangkan lebar kotak */
+  width: 120%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* ✅ Tiada shadow langsung */
+  box-shadow: none !important;
+
+  /* ✅ Boleh kekalkan sempadan lembut kalau nak garisan halus */
+  border: none !important;
+
+  /* 🌿 Efek smooth scroll */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 🌿 scrollbar halus & simple */
+#ucapanList::-webkit-scrollbar {
+  width: 8px; /* garis skrol nipis */
+}
+#ucapanList::-webkit-scrollbar-thumb {
+  background-color: #A7C7E7; /* 💙 biru lembut pastel */
+  border-radius: 10px;
+  margin-top: 30px;  /* 🚀 ruang kosong atas */
+  margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
+}
+#ucapanList::-webkit-scrollbar-thumb:hover {
+  background-color: #87CEFA; /* 💧 biru lebih cerah bila hover */
+}
+
+
+
+
+
+
 #submit-popup {
   position: fixed;
   top: -100%;                       /* Sembunyi di atas */
@@ -870,6 +990,38 @@ hr {
   word-wrap: break-word; /* potong word panjang */
   overflow-wrap: break-word;
 }
+
+/* 🌸 Background wrapper — statik 100% confirm tak bergerak */
+.bg-wrapper {
+  position: fixed !important;           /* ✅ paksa kekal */
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 390px !important;          /* gaya telefon */
+  height: 100vh !important;
+  background: url('B8.png') center center / cover no-repeat !important;
+  background-attachment: fixed !important; /* ✅ bantu extra stabil */
+  z-index: -1 !important;
+}
+
+/* 🌿 Pastikan content ikut bingkai tengah */
+.front-page,
+#main-content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 390px;           /* ✅ semua content ikut bingkai */
+  background: transparent;    /* biar tembus ke background */
+}
+
+@supports (-webkit-touch-callout: none) {
+  .bg-wrapper {
+    background-attachment: scroll !important; /* Safari trick */
+    position: fixed !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
@@ -947,27 +1099,62 @@ footer, .footer {
 }
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
-.btn-form {
-  background-color: #6699CC;
+.wishlist-btn {
+  font-weight: bold;
+  
+  /* hilangkan underline link */
+  text-decoration: none;
+
+  /* gradient dan warna asas */
+  background: linear-gradient(135deg, #99bbee, #6699cc);
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
-  font-weight: bold;
-  text-decoration: none; /* untuk <a> */
-  
-  /* 🔽 Tambah supaya selaras dengan .copy-btn */
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 10px auto;
-  width: 90% !important;
-  max-width: 400px !important;
-  display: block !important;
-  font-size: 16px;
-  font-family: inherit;
-  text-align: center;
-  cursor: pointer;
+
+  /* smooth hover transition */
+  transition: all 0.3s ease;
 }
 
-.btn-form:hover {
-  background-color: #4A7EB5;
+/* Hover effect */
+.wishlist-btn:hover {
+  background: linear-gradient(135deg, #6699cc, #99bbee);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(51, 102, 153, 0.6);
+  text-decoration: none;  /* pastikan hover pun tiada underline */
+  color: black !important;
+}
+
+
+/* ✅ KUNCI background supaya langsung tak ikut skroll */
+html, body {
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: transparent !important;
+  position: relative;
+}
+
+/* ✅ Wrapper utama boleh skroll, tapi background kekal */
+#wrapper {
+  position: relative !important;
+  z-index: 1 !important;      
+  overflow-y: auto !important;
+  min-height: 100vh !important;
+  padding-bottom: 60px;   /* ruang untuk footer sahaja */
+  -webkit-overflow-scrolling: touch;    /* smooth scroll iOS */
+}
+
+/* ✅ Pastikan .bg-wrapper tak pernah bergerak */
+.bg-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100vw !important;
+  max-width: 390px !important;
+  height: 100vh !important;
+  background: url('B8.png') center center / cover no-repeat !important;
+  background-attachment: fixed !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  will-change: transform, background-position; /* GPU layer */
 }
