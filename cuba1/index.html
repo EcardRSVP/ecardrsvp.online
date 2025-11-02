@@ -1864,6 +1864,48 @@ function showSection(id) {
     });
   });
 </script>
+
+<script>
+  const kategoriBtn = document.getElementById('kategoriBtn');
+  const kategoriPopup = document.getElementById('kategoriPopup');
+  const tutupKategori = document.getElementById('tutupKategori');
+  const kadItems = document.querySelectorAll('.kad-item');
+
+  // Buka popup
+  kategoriBtn.addEventListener('click', () => {
+    kategoriPopup.classList.remove('hidden');
+  });
+
+  // Tutup popup
+  tutupKategori.addEventListener('click', () => {
+    kategoriPopup.classList.add('hidden');
+  });
+
+  // Klik luar popup
+  kategoriPopup.addEventListener('click', (e) => {
+    if (e.target === kategoriPopup) {
+      kategoriPopup.classList.add('hidden');
+    }
+  });
+
+  // Bila klik kategori
+  document.querySelectorAll('.kategori-box li').forEach(item => {
+    item.addEventListener('click', () => {
+      const selected = item.getAttribute('data-filter');
+      kategoriPopup.classList.add('hidden');
+
+      kadItems.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (selected === 'all' || selected === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+       
        
   <script src="n98hm1a2n.js"></script>
 
