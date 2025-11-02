@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Walimatulurus Haikal & Liya</title>
 
-    <!-- ✅ Favicon kekal -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- ✅ Favicon & Apple Touch Icon -->
+<link rel="icon" href="NNA.png" type="image/png">
+<link rel="apple-touch-icon" href="NNA.png">
 
   <!-- ✅ Open Graph (hanya title, tiada description, tiada gambar) -->
   <meta property="og:title" content="Walimatulurus Haikal & Liya">
@@ -32,13 +33,12 @@
 </head>
   
   
-<!-- ✅ Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Ephesis&family=Tangerine&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Estonia&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> <!-- ✅ Tambahan ini -->
+<!-- ✅ Google Fonts (dikemas kini) -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="a96dn2n6a.css" />
+  
   
   <style>
       body {
@@ -111,17 +111,9 @@
 </head>
 <body>
 
-<!-- 🌸 Latar belakang gambar versi "kecil 390px macam video" -->
-<div style="
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 390px;
-  height: 100vh;
-  background: url('B1.png') center/cover no-repeat;
-  z-index: -1;">
-</div>
+<!-- 🌸 Background wrapper gaya telefon -->
+<div class="bg-wrapper"></div>
+
 
 <!-- ✅ SALJI DALAM WRAPPER -->
 <div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
@@ -142,7 +134,7 @@
     <h2><span class="font-c">Haikal</span></h2>
     <h2><span class="font-a">&</span></h2>
     <h2 class="font-c">Liya</h2>
-    <button id="start-btn">BUKA</button>
+    <button id="start-btn" class="small-btn">BUKA</button>
   </section>
 
 
@@ -159,7 +151,7 @@
       kami dengan berbesar hati menjemput<br>
       Dato’/ Datin/ Tuan/ Puan/ Encik/ Cik<br>
       seisi keluarga untuk hadir<br>
-      ke Majlis Perkahwinan putera kami<br>
+      ke Majlis Perkahwinan putera kami<br><br>
       <p class="nama-pengantin"><strong class="font-d">Muhammad Haikal Bin Zulkefli</strong></p>
       <p class="pilihan-hati">dengan pilihan hatinya</p>
       <p class="nama-pasangan"><strong class="font-d">Nurul Ilyana Binti Ilyas</strong></p>
@@ -259,9 +251,8 @@
 
   <hr> 
       
-    <section class="doa transparent-section">
-    <p>
-    <h2 class="font-f">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</h2>
+    <section class="doa transparent-section"> 
+    <h2 class="font-f">بِسْمِ اللهِ ٱلرَّحْمٰنِ الرَّحِيمِ</h2>
       Ya Allah Ya Tuhan kami,<br>
       Kami memohon kepada-Mu berkatilah<br>
       perkahwinan ini.<br>
@@ -283,17 +274,17 @@
   </div>
 </section>
       
-<div class="footer-credit" style="margin-top: 3px; text-align: center;">
+<div class="footer-credit" style="margin-top: 20px; text-align: center;">
   <p>#liyaterciptauntukhaikal</p>
   
   <!-- Spacer -->
   <div style="margin: 5px 0;"></div>
 
     <!-- Teks "Contact Us" berwarna kelabu -->
-  <p style="font-weight: bold; font-size: 15px; margin-bottom: 10px; color: grey;">Contact Us</p>
+    <p style="font-weight: bold; font-size: 15px; margin-bottom: 8px; color: grey;">Contact Us</p>
 
   <!-- Ikon Shopee & WhatsApp -->
-  <div class="purchase-buttons">
+    <div class="purchase-buttons" style="display: flex; justify-content: center; gap: 10px;">
     <a href="https://shopee.com.my/nna_95" class="purchase-btn" target="_blank">
       <img src="shopee-icon.png" alt="Shopee">
     </a>
@@ -329,12 +320,13 @@
 <form id="rsvp-form" 
       action="https://docs.google.com/forms/d/e/1FAIpQLSedlvRozEgmCPlheAte9YGIS-VxcumFs7FBSSeqURJLB9chiA/formResponse" 
       method="POST" 
-      target="hidden_iframe">
+      target="hidden_iframe"
+      onsubmit="handleSubmit(event)">
 
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
+    <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required>
 
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
@@ -349,26 +341,27 @@
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.1537909291" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+    <input type="number" id="bilangan" name="entry.1537909291" min="1" placeholder="Contoh: 2">
 
     <!-- Tambah selepas Bilangan Kehadiran -->
     <br>
     <label for="ucapan"><strong>Ucapan</strong></label>
     <textarea id="ucapan" 
           name="entry.1530998401" 
-          placeholder="Ucapan anda" 
-          style="width: 100%; padding: 10px; margin-bottom: 20px; height: 100px;"></textarea>
+          placeholder="Ucapan anda"></textarea>
 
   
-<button type="submit" class="btn-hantar" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;">
-  Hantar
-</button>
-</form>
+      <button type="submit" class="btn-hantar">Hantar</button>
+    </form>
 
-
-<div id="submit-popup">
-  Terima kasih! Kehadiran anda telah direkodkan.
-</div>
+    <!-- ✅ Popup alert khas -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
 
 <iframe
   name="hidden_iframe"
@@ -410,7 +403,6 @@
   <div id="popup-MoneyGift" class="popup-overlay">
   <div class="popup-section">
   <h2>MONEY GIFT</h2>
-  <br>
   <p><strong>Nama Bank :</strong> Maybank Berhad</p>
   <p><strong>Nama :</strong> Muhammad Haikal Bin Zulkefli</p>
   <p><strong>Nombor Akaun:</strong> <span id="rek">1234567890</span></p>
@@ -441,13 +433,20 @@
   <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
 </div>  
 
-<a href="https://docs.google.com/forms/d/1g3AEle381P6SaBGe08M05ALilG9IAZn3khpeVivZ_3Q/viewform?usp=header" 
-   target="_blank" 
-   class="btn btn-form">
-   Google Form Maklumat Pemberian Hadiah
-</a>
-<br><br>
+<div style="text-align:center; margin-bottom:10px;">
+  <p style="font-size:15px; color:black; margin-bottom:12px;">
+    Terima kasih atas pemberian hadiah anda 💖<br>
+    Sila isi maklumat di pautan berikut ✨<br>
+    Maklumat anda akan dipaparkan di<br>
+    bahagian bawah halaman ini
+  </p>
 
+  <a href="https://docs.google.com/forms/d/1g3AEle381P6SaBGe08M05ALilG9IAZn3khpeVivZ_3Q/viewform?usp=header"
+     target="_blank"
+     class="wishlist-btn">
+     Klik Sini Untuk Isi Maklumat Hadiah
+  </a>
+<br><br>
 
   <div class="gift-item">
     <img src="Microwave Oven.jpg" alt="Microwave Oven">
@@ -1408,53 +1407,57 @@
     </div>
   </div>  
 
+<br><br>
+<!-- 🎁 PEMBERIAN HADIAH -->
+<div class="hadiah-box-wrapper">
+  <div class="hadiah-box">
+    <h3 class="hadiah-title">TITIPAN KASIH DARI ANDA</h3>
+    <p class="hadiah-tagline" style="font-size:0.8rem; font-style:italic; margin-top:0px; margin-bottom:4px;">
+      Nama anda akan terpahat di laman cinta kami 💕
+    </p>
 
- <!-- 📋 Pemberian Hadiah -->
-  <h3>Maklumat Pemberian Hadiah</h3>
-  <table id="hadiah-table">
-    <thead>
-      <tr>
-        <th>Nama Pemberi</th>
-        <th>Barang yang ditempah</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+    <!-- 📋 Senarai Nama Pemberi Hadiah -->
+    <div id="hadiahList">
+    <p style="height: 150px; margin:0; visibility:hidden;">&nbsp;</p>
+      <!-- Nama-nama akan dimasukkan via JS -->
+    </div>
   </div>
 </div>
 
-<!-- ✅ Script Tabletop.js -->
+<!-- ✅ Script Paparan Nama dari Google Sheet -->
 <script>
 window.addEventListener("DOMContentLoaded", fetchCSVData);
 
-  async function fetchCSVData() {
-    const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
+async function fetchCSVData() {
+  const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
 
-    try {
-      const response = await fetch(url);
-      const csvText = await response.text();
-      const lines = csvText.trim().split("\n").slice(1); // buang header
+  try {
+    const response = await fetch(url);
+    const csvText = await response.text();
+    const lines = csvText.trim().split("\n").slice(1); // buang header
 
-      const tbody = document.querySelector("#hadiah-table tbody");
+    const hadiahList = document.getElementById("hadiahList");
+    hadiahList.innerHTML = "";
 
-      lines.forEach(line => {
-        const cols = line.split(",");
+    lines.forEach(line => {
+      const cols = line.split(",");
+      const namaPemberi = cols[1]?.replace(/"/g, "")?.trim();
+      const namaBarang = cols[2]?.replace(/"/g, "")?.trim();
 
-        // Debugging: check struktur sebenar baris
-        console.log(cols);
-
-        const namaPemberi = cols[1]?.replace(/"/g, "") || "-";   // indeks 1 = Nama Pemberi
-        const namaBarang = cols[2]?.replace(/"/g, "") || "-";    // indeks 2 = Nama Barang
-
-        const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${namaPemberi}</td><td>${namaBarang}</td>`;
-        tbody.appendChild(tr);
-      });
-    } catch (error) {
-      console.error("Gagal ambil data:", error);
-    }
+      if (namaPemberi) {
+        const p = document.createElement("p");
+        p.innerHTML = namaBarang
+          ? `<strong>${namaPemberi}</strong> : ${namaBarang}`
+          : `<strong>${namaPemberi}</strong>`;
+        hadiahList.appendChild(p);
+      }
+    });
+  } catch (error) {
+    console.error("Gagal ambil data:", error);
   }
+}
 </script>
+
 
      
 <!-- ✅ POPUP OVERLAY -->
