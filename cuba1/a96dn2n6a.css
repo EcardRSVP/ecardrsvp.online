@@ -672,11 +672,13 @@ section *, .wishlist *, #main-content * {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.0rem;
-  color: black;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
   margin-bottom: 5px;
 }
 .hadiah-tagline {
-  color: black;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */
 }
 
 /* 📜 Isi (scrollable list) */
@@ -714,12 +716,14 @@ section *, .wishlist *, #main-content * {
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 1.0rem;
-  color: black;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
   text-align: center;
   margin: 4px 0;
 }
 #hadiahList strong {
-  color: black;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
 }
 
 #hadiahList::after {
@@ -1178,8 +1182,8 @@ footer, .footer {
   text-decoration: none;
   background: linear-gradient(135deg, #6b6b6b, #4b4b4b, #a9a9a9);
   background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */
   transition: all 0.3s ease;
 
   /* animasi gradient */
@@ -1193,7 +1197,7 @@ footer, .footer {
     0 6px 20px rgba(160, 160, 160, 0.4),   /* silver-gray lembut di luar */
     inset 0 1px 4px rgba(255, 255, 255, 0.3); /* highlight lembut di dalam */
   text-decoration: none;  /* pastikan hover pun tiada underline */
-  color: black !important;
+  color: white !important;
 }
 
 /* Keyframes untuk gradient bergerak */
