@@ -638,12 +638,12 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-  background: linear-gradient(135deg, #c89f7b, #b7855e, #e2cdb4);
+  background: linear-gradient(135deg, #e7d3b8, #d9bfa0, #f2e4cc);
   background-size: 400% 400%; /* beri ruang gradient bergerak */
   border-radius: 16px;
   box-shadow:
-    0 6px 20px rgba(200, 170, 130, 0.3),   /* bayang warm caramel */
-    inset 0 1px 4px rgba(255, 255, 240, 0.4); /* highlight ivory lembut */
+    0 4px 14px rgba(200, 170, 130, 0.18),   /* bayang caramel lembut sangat */
+    inset 0 1px 3px rgba(255, 255, 250, 0.3); /* highlight ivory halus */
   width: 90%;
   max-width: 360px;
   padding: 14px 16px;
@@ -672,13 +672,13 @@ section *, .wishlist *, #main-content * {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.0rem;
-  color: white !important;
-  -webkit-text-fill-color: white !important; /* Safari */
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   margin-bottom: 5px;
 }
 .hadiah-tagline {
-  color: white !important;
-  -webkit-text-fill-color: white !important; /* Safari */
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
 }
 
 /* 📜 Isi (scrollable list) */
@@ -716,14 +716,14 @@ section *, .wishlist *, #main-content * {
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 1.0rem;
-  color: white !important;
-  -webkit-text-fill-color: white !important; /* Safari */
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
   text-align: center;
   margin: 4px 0;
 }
 #hadiahList strong {
-  color: white !important;
-  -webkit-text-fill-color: white !important; /* Safari */
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
 }
 
 #hadiahList::after {
@@ -1188,7 +1188,7 @@ footer, .footer {
 .wishlist-btn {
   font-weight: bold;
   text-decoration: none;
-  background: linear-gradient(135deg, #c89f7b, #b7855e, #e2cdb4);
+  background: linear-gradient(135deg, #e7d3b8, #d9bfa0, #f2e4cc);
   background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -1202,8 +1202,8 @@ footer, .footer {
 .wishlist-btn:hover {
   transform: scale(1.05);
   box-shadow:
-    0 6px 20px rgba(200, 170, 130, 0.3),   /* bayang warm caramel */
-    inset 0 1px 4px rgba(255, 255, 240, 0.4); /* highlight ivory lembut */
+    0 4px 14px rgba(200, 170, 130, 0.18),   /* bayang caramel lembut sangat */
+    inset 0 1px 3px rgba(255, 255, 250, 0.3); /* highlight ivory halus */
   text-decoration: none;  /* pastikan hover pun tiada underline */
   color: black !important;
 }
