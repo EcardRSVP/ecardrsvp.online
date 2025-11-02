@@ -638,12 +638,12 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-  background: linear-gradient(135deg, #9b86c1, #b9a6e0, #e6e6e6);
+  background: linear-gradient(135deg, #dcd2f5, #e6dbfa, #f2f2f2);
   background-size: 400% 400%; /* beri ruang gradient bergerak */
   border-radius: 16px;
   box-shadow:
-    0 6px 18px rgba(102, 163, 225, 0.25),
-    inset 0 1px 4px rgba(255, 255, 255, 0.5); /* berkilau subtle */
+    0 6px 18px rgba(176, 162, 218, 0.25),
+    inset 0 1px 4px rgba(255, 255, 255, 0.6);
   width: 90%;
   max-width: 360px;
   padding: 14px 16px;
@@ -701,11 +701,11 @@ section *, .wishlist *, #main-content * {
   width: 8px;
 }
 #hadiahList::-webkit-scrollbar-thumb {
-  background-color: #b9a6e0;
+  background-color: #dcd2f5;
   border-radius: 10px;
 }
 #hadiahList::-webkit-scrollbar-thumb:hover {
-  background-color: #a088d4;
+  background-color: #c8b8ef;
 }
 
 /* gaya teks dalam senarai */
@@ -1008,13 +1008,13 @@ hr {
   width: 8px; /* garis skrol nipis */
 }
 #ucapanList::-webkit-scrollbar-thumb {
-  background-color: #b9a6e0; /* 💙 biru lembut pastel */
+  background-color: #dcd2f5; /* 💙 biru lembut pastel */
   border-radius: 10px;
   margin-top: 30px;  /* 🚀 ruang kosong atas */
   margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
 }
 #ucapanList::-webkit-scrollbar-thumb:hover {
-  background-color: #a088d4; /* 💧 biru lebih cerah bila hover */
+  background-color: #c8b8ef; /* 💧 biru lebih cerah bila hover */
 }
 
 
@@ -1176,7 +1176,7 @@ footer, .footer {
 .wishlist-btn {
   font-weight: bold;
   text-decoration: none;
-  background: linear-gradient(135deg, #9b86c1, #b9a6e0, #e6e6e6);
+  background: linear-gradient(135deg, #dcd2f5, #e6dbfa, #f2f2f2);
   background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -1190,8 +1190,8 @@ footer, .footer {
 .wishlist-btn:hover {
   transform: scale(1.05);
   box-shadow:
-  0 6px 18px rgba(102, 163, 225, 0.25),
-  inset 0 1px 4px rgba(255, 255, 255, 0.5); /* berkilau subtle */
+  0 6px 18px rgba(176, 162, 218, 0.25),
+  inset 0 1px 4px rgba(255, 255, 255, 0.6);
   text-decoration: none;  /* pastikan hover pun tiada underline */
   color: black !important;
 }
