@@ -638,12 +638,12 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-  background: linear-gradient(135deg, #6b6b6b, #4b4b4b, #a9a9a9);
+  background: linear-gradient(135deg, #c89f7b, #b7855e, #e2cdb4);
   background-size: 400% 400%; /* beri ruang gradient bergerak */
   border-radius: 16px;
   box-shadow:
-    0 6px 20px rgba(160, 160, 160, 0.4),   /* silver-gray lembut di luar */
-    inset 0 1px 4px rgba(255, 255, 255, 0.3); /* highlight lembut di dalam */
+    0 6px 20px rgba(200, 170, 130, 0.3),   /* bayang warm caramel */
+    inset 0 1px 4px rgba(255, 255, 240, 0.4); /* highlight ivory lembut */
   width: 90%;
   max-width: 360px;
   padding: 14px 16px;
@@ -701,11 +701,11 @@ section *, .wishlist *, #main-content * {
   width: 8px;
 }
 #hadiahList::-webkit-scrollbar-thumb {
-  background-color: #6e6e6e;
+  background-color: #faf3ea;
   border-radius: 10px;
 }
 #hadiahList::-webkit-scrollbar-thumb:hover {
-  background-color: #888888;
+  background-color: #f1e4d4;
 }
 
 /* gaya teks dalam senarai */
@@ -1008,13 +1008,13 @@ hr {
   width: 8px; /* garis skrol nipis */
 }
 #ucapanList::-webkit-scrollbar-thumb {
-  background-color: #6e6e6e; /* 💙 biru lembut pastel */
+  background-color: #faf3ea; /* 💙 biru lembut pastel */
   border-radius: 10px;
   margin-top: 30px;  /* 🚀 ruang kosong atas */
   margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
 }
 #ucapanList::-webkit-scrollbar-thumb:hover {
-  background-color: #888888; /* 💧 biru lebih cerah bila hover */
+  background-color: #f1e4d4; /* 💧 biru lebih cerah bila hover */
 }
 
 
@@ -1176,7 +1176,7 @@ footer, .footer {
 .wishlist-btn {
   font-weight: bold;
   text-decoration: none;
-  background: linear-gradient(135deg, #6b6b6b, #4b4b4b, #a9a9a9);
+  background: linear-gradient(135deg, #c89f7b, #b7855e, #e2cdb4);
   background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -1190,8 +1190,8 @@ footer, .footer {
 .wishlist-btn:hover {
   transform: scale(1.05);
   box-shadow:
-    0 6px 20px rgba(160, 160, 160, 0.4),   /* silver-gray lembut di luar */
-    inset 0 1px 4px rgba(255, 255, 255, 0.3); /* highlight lembut di dalam */
+    0 6px 20px rgba(200, 170, 130, 0.3),   /* bayang warm caramel */
+    inset 0 1px 4px rgba(255, 255, 240, 0.4); /* highlight ivory lembut */
   text-decoration: none;  /* pastikan hover pun tiada underline */
   color: black !important;
 }
