@@ -336,3 +336,26 @@ footer {
   color: #333;
   cursor: pointer;
 }
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.filter-btn {
+  background: #f8b6c9;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: #f497b6;
+  color: white;
+}
+
