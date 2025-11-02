@@ -83,13 +83,13 @@ input {
 }
 
 .btn-hantar {
-  background-color: #003366;
+  background-color: #28a745;
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
 .btn-hantar:hover {
-  background-color: #336699;
+  background-color: #218838;
 }
 
 /* ✅ Styling umum untuk semua butang */
@@ -113,13 +113,13 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: #003366;
+  background-color: #28a745;
   color: white;
   -webkit-text-fill-color: white !important; /* Safari */
 }
 
 .copy-btn:hover {
-  background-color: #336699;
+  background-color: #218838;
 }
 
 /* ✅ Styling input RSVP supaya sama panjang dengan button, tapi kotak putih */
@@ -164,7 +164,7 @@ textarea::placeholder {
   padding: 8px 20px;       /* atas/bawah 8px, kiri/kanan 20px */
   font-size: 16px;
   border-radius: 8px;
-  background: #003366;
+  background: #28a745;
   color: white;
   -webkit-text-fill-color: white !important; /* Safari */  
   text-decoration: none;
@@ -175,7 +175,7 @@ textarea::placeholder {
 }
 
 .small-btn:hover {
-  background: #336699;
+  background: #218838;
   transform: scale(1.05);
 }
 
@@ -304,7 +304,7 @@ form button.copy-btn,
 
 
 form button[type="submit"] {
-  background-color: #003366;
+  background-color: #28a745;
   color: white;
   border: none;
 }
@@ -327,14 +327,14 @@ form button[type="submit"] {
       font-size: 16px;
       color: white !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
-      background-color: #003366;
+      background-color: #28a745;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #336699;
+  background-color: #218838;
 }
 
 .location-button {
@@ -348,7 +348,7 @@ form button[type="submit"] {
   font-size: 16px;
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
-  background-color: #003366;
+  background-color: #28a745;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -357,7 +357,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #336699;
+  background-color: #218838;
 }
     
 .location-button img {
@@ -414,7 +414,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #003366;
+  background-color: #28a745;
   color: white !important;
   -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
@@ -429,7 +429,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #336699;
+  background-color: #218838;
 }
 
 /* ✅ Font Custom Styles */
@@ -937,7 +937,7 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #ffffff;
-  border: 2px solid #003366;
+  border: 2px solid #28a745;
   border-radius: 8px;
   width: 300px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -945,7 +945,7 @@ hr {
 }
 
 .alert-header {
-  background: #003366;
+  background: #28a745;
   color: white !important;
   -webkit-text-fill-color:white !important; /* elak Safari auto-invert */
   padding: 8px 12px;
@@ -961,7 +961,7 @@ hr {
 }
 
 .alert-body button {
-  background: #003366;
+  background: #28a745;
   color: white !important;
   -webkit-text-fill-color: white !important; /* elak Safari auto-invert */
   border: none;
@@ -1099,7 +1099,7 @@ hr {
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
-  background-color: #003366;
+  background-color: #28a745;
   color: white !important;
   -webkit-text-fill-color: white !important; /* Safari */
   border: none;
@@ -1114,7 +1114,7 @@ hr {
 }
 
 #popup-MoneyGift button:hover {
-  background-color: #336699;
+  background-color: #218838;
 }
 
 /* Pastikan butang ikut warna sendiri */
