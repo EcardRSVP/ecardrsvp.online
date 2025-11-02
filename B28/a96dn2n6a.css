@@ -1,7 +1,6 @@
 body {
   font-family: 'Ancizar Sans', sans-serif;
   text-align: center;
-  background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
   color: #333;
   margin: 0;
   padding: 0;
@@ -50,23 +49,23 @@ section.doa {
 .hero h1 {
   font-family: 'Ancizar Sans', sans-serif;
   font-size: 36px;
-  color: #8B0000;
+  color: black !important;
 }
 
 .hero p {
   font-size: 20px;
-  color: #5A5A5A;
+  color: black !important;
 }
 
 h2 {
-  font-size: 28px;
-  color: #000000;
+  font-size: 25px;
+  color: black !important;
   margin-bottom: 10px;
 }
 
 h3 {
   font-size: 16px;
-  color: #000000;
+  color: black !important;
   margin-bottom: 10px;
 }
 
@@ -96,7 +95,8 @@ input {
 /* ✅ Styling umum untuk semua butang */
 button, 
 .copy-btn, 
-.btn-form {
+.btn-form,
+.wishlist-btn {  
   border: none;
   border-radius: 8px;
   padding: 12px;
@@ -108,17 +108,78 @@ button,
   font-family: inherit;
   cursor: pointer;
   text-align: center;
+  box-sizing: border-box; /* penting */
 }
 
 /* ✅ Copy button */
 .copy-btn {
   background-color: #4B4B4B;
   color: white;
+  -webkit-text-fill-color: white !important; /* Safari */
 }
 
 .copy-btn:hover {
   background-color: #A9A9A9;
 }
+
+/* ✅ Styling input RSVP supaya sama panjang dengan button, tapi kotak putih */
+#popup-RSVP input[type="text"],
+#popup-RSVP input[type="number"],
+#popup-RSVP textarea {
+  border: 1px solid #ccc;      /* sempadan lembut */
+  border-radius: 8px;          /* sama dengan button */
+  padding: 12px;               /* sama padding dengan button */
+  width: 90%;                  /* ikut button */
+  max-width: 400px;            /* ikut button */
+  margin: 10px auto;           /* tengah horizontal */
+  display: block;              
+  font-size: 16px;             
+  font-family: inherit;        
+  box-sizing: border-box;      /* pastikan padding ikut width */
+  background-color: white;     /* kotak putih */
+  color: black;                /* teks hitam */
+  -webkit-text-fill-color: black !important; /* Safari */
+}
+
+/* Optional: focus effect */
+#popup-RSVP input:focus,
+#popup-RSVP textarea:focus {
+  outline: none;
+  border-color: #6699cc;       /* highlight bila klik */
+  box-shadow: 0 0 5px rgba(102,153,204,0.3);
+}
+
+/* Placeholder semua input & textarea */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;   /* kelabu cair, lembut pada mata */
+  opacity: 1;    /* pastikan penuh visibility */
+  font-family: 'Ancizar Sans', sans-serif; /* ikut font utama */
+  font-size: 14px; /* sama saiz dengan teks input */
+}
+
+.small-btn {
+  display: inline-block !important;   /* ikut teks */
+  width: auto !important;            /* ikut panjang teks */
+  padding: 8px 20px;       /* atas/bawah 8px, kiri/kanan 20px */
+  font-size: 16px;
+  border-radius: 8px;
+  background: #4B4B4B;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.small-btn:hover {
+  background: #A9A9A9;
+  transform: scale(1.05);
+}
+
+
 
 footer {
   font-size: 14px;
@@ -170,14 +231,14 @@ h1, h2, p {
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   width: 100%;
   max-width: 390px; /* Sama dengan lebar page */
   height: 60px;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -373,49 +434,121 @@ form button[type="submit"] {
 
 /* ✅ Font Custom Styles */
 .font-a {
-  font-family: 'Ephesis', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 1.9rem;
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-c {
-  font-family: 'Tangerine', cursive;
-  font-size: 2.8rem;
-  color: black;
+  font-family: 'Italianno', cursive;
+  font-size: 3.0rem;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-d {
-  font-family: 'Estonia', cursive;
-  font-size: 1.8rem;
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.1px;
 }
 
 .font-e {
-  font-family: 'Noto Serif Dives Akuru', serif;
+  font-family: 'Merriweather', serif;
+  font-weight: 400; /* Regular */
   font-size: 0.9rem;
+  font-weight: bold;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-f {
   font-family: 'Scheherazade New', serif;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .font-g {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.0rem;
-  color: black; /* warna boleh tukar ikut tema */
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Ancizar Sans', sans-serif;
 }
+
+@media (max-width: 480px) {
+  .font-a {
+    font-size: 1.9rem; /* sedikit besar supaya jelas di skrin kecil */
+  } 
+
+  .font-b {
+    font-size: 1.5rem;
+  } 
+
+  .font-c {
+    font-size: 3.0rem;
+  } 
+
+  .font-d {
+    font-size: 1.0rem;
+    letter-spacing: 0.2px; /* jarak halus, elak huruf nampak rapat */
+  } 
+
+  .font-e {
+    font-size: 0.9rem;
+  } 
+
+  .font-f {
+    font-size: 1.0rem;
+  } 
+
+  .font-g {
+    font-size: 1.2rem;
+  }
+} 
+
+html {
+  -webkit-text-size-adjust: 100%; /* elak auto zoom teks di iPhone */
+}
+
 
 .gallery-slider {
   display: flex;
@@ -454,7 +587,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 .gallery-prev,
 .gallery-next {
   background: none !important;
-  color: black; !important;
+  color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   border: none;
   font-size: 28px;
@@ -496,33 +629,109 @@ section *, .wishlist *, #main-content * {
   box-sizing: border-box;
 }
 
-#hadiah-table {
+/* 🎁 Kotak utama Pemberian Hadiah */
+.hadiah-box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.hadiah-box {
+  background: linear-gradient(135deg, #6b6b6b, #4b4b4b, #a9a9a9);
+  background-size: 400% 400%; /* beri ruang gradient bergerak */
+  border-radius: 16px;
+  box-shadow:
+    0 6px 20px rgba(160, 160, 160, 0.4),   /* silver-gray lembut di luar */
+    inset 0 1px 4px rgba(255, 255, 255, 0.3); /* highlight lembut di dalam */
+  width: 90%;
+  max-width: 360px;
+  padding: 14px 16px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  justify-content: flex-start; /* jangan center */
+  animation: hadiahGradient 7s ease infinite; /* animasi perlahan */
+}
+
+/* Keyframes untuk gradient bergerak */
+@keyframes hadiahGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.hadiah-box * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tajuk & tagline */
+.hadiah-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.0rem;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
+  margin-bottom: 5px;
+}
+.hadiah-tagline {
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */
+}
+
+/* 📜 Isi (scrollable list) */
+#hadiahList {
+  min-height: 150px;        /* tinggi kotak untuk scroll walaupun kosong */
+  max-height: 150px;        /* tinggi tetap untuk scroll */
+  overflow-y: scroll !important;
+  scrollbar-gutter: stable both-edges; 
+  overflow-x: hidden;
+  padding: 2px 5px;
+  margin-top: 0px;
+  background: transparent !important;
   width: 100%;
-  border-collapse: collapse;
-  background-color: #CCCCCC;
-  color: black;
-  font-size: 14px;
-  margin-top: 20px;
+  box-shadow: none !important;
+  border: none !important;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* scrollbar sama gaya dengan ucapanList */
+#hadiahList::-webkit-scrollbar {
+  width: 8px;
+}
+#hadiahList::-webkit-scrollbar-thumb {
+  background-color: #6e6e6e;
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+#hadiahList::-webkit-scrollbar-thumb:hover {
+  background-color: #888888;
 }
 
-#hadiah-table th, #hadiah-table td {
-  padding: 12px 14px;
-  border-bottom: 1px solid #E2DAF9;
-  text-align: left;
+/* gaya teks dalam senarai */
+#hadiahList p {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 1.0rem;
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
+  text-align: center;
+  margin: 4px 0;
+}
+#hadiahList strong {
+  color: white;
+  -webkit-text-fill-color: white !important; /* Safari */  
 }
 
-#hadiah-table th {
-  background-color: #CCCCCC;
-  font-weight: bold;
-  color: black;
+#hadiahList::after {
+  content: "\00a0"; /* non-breaking space */
+  display: block;
+  height: 1px;
 }
 
-#hadiah-table tr:last-child td {
-  border-bottom: none;
-}
 
 #Seksyen\ Wishlist {
   padding-bottom: 80px; /* ruang bawah seksyen */
@@ -554,7 +763,7 @@ section.doa {
 hr {
   display: block;
   border: none;
-  border-top: 3px solid #888;
+  border-top: 2px solid #ccc;
   margin: 24px auto;
   width: 90%;
   max-width: 360px;
@@ -722,6 +931,101 @@ hr {
   }
 }
 
+
+
+
+.alert-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 2px solid #4B4B4B;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+.alert-header {
+  background: #4B4B4B;
+  color: white !important;
+  -webkit-text-fill-color:white !important; /* elak Safari auto-invert */
+  padding: 8px 12px;
+  font-size: 13px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: left;
+}
+
+.alert-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.alert-body button {
+  background: #4B4B4B;
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* elak Safari auto-invert */
+  border: none;
+  border-radius: 4px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#rsvp-alert .alert-header,
+#global-alert .alert-header {
+  color: white !important;
+}
+
+/* 🌸 Kotak ucapan boleh scroll — transparent, lebar & minimal */
+#ucapanList {
+  max-height: 230px;          /* tinggi maksimum kotak ucapan */
+  overflow-y: auto;           /* aktifkan skrol menegak */
+  overflow-x: hidden;         /* elak skrol sisi */
+  padding: 8px 8px;
+  margin-top: 5px;
+
+  /* ✅ Transparent penuh — nampak background B8.png */
+  background: transparent !important;
+
+  /* ✅ Panjangkan lebar kotak */
+  width: 120%;                 /* boleh ubah ke 100% kalau nak betul-betul penuh */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* ✅ Tiada shadow langsung */
+  box-shadow: none !important;
+
+  /* ✅ Boleh kekalkan sempadan lembut kalau nak garisan halus */
+  border: none !important;
+
+  /* 🌿 Efek smooth scroll */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 🌿 scrollbar halus & simple */
+#ucapanList::-webkit-scrollbar {
+  width: 8px; /* garis skrol nipis */
+}
+#ucapanList::-webkit-scrollbar-thumb {
+  background-color: #6e6e6e; /* 💙 biru lembut pastel */
+  border-radius: 10px;
+  margin-top: 30px;  /* 🚀 ruang kosong atas */
+  margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
+}
+#ucapanList::-webkit-scrollbar-thumb:hover {
+  background-color: #888888; /* 💧 biru lebih cerah bila hover */
+}
+
+
+
+
+
+
 #submit-popup {
   position: fixed;
   top: -100%;                       /* Sembunyi di atas */
@@ -764,6 +1068,38 @@ hr {
   word-wrap: break-word; /* potong word panjang */
   overflow-wrap: break-word;
 }
+
+/* 🌸 Background wrapper — statik 100% confirm tak bergerak */
+.bg-wrapper {
+  position: fixed !important;           /* ✅ paksa kekal */
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  max-width: 390px !important;          /* gaya telefon */
+  height: 100vh !important;
+  background: url('B28.png') center center / cover no-repeat !important;
+  background-attachment: fixed !important; /* ✅ bantu extra stabil */
+  z-index: -1 !important;
+}
+
+/* 🌿 Pastikan content ikut bingkai tengah */
+.front-page,
+#main-content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 390px;           /* ✅ semua content ikut bingkai */
+  background: transparent;    /* biar tembus ke background */
+}
+
+@supports (-webkit-touch-callout: none) {
+  .bg-wrapper {
+    background-attachment: scroll !important; /* Safari trick */
+    position: fixed !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
@@ -841,27 +1177,68 @@ footer, .footer {
 }
 
 /* ✅ Form button (contoh untuk link ke Google Form Maklumat Pemberian Hadiah) */
-.btn-form {
-  background-color: #CCCCCC;
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+.wishlist-btn {
   font-weight: bold;
-  text-decoration: none; /* untuk <a> */
+  text-decoration: none;
+  background: linear-gradient(135deg, #6b6b6b, #4b4b4b, #a9a9a9);
+  background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
+  color: white !important;
+  -webkit-text-fill-color: white !important; /* Safari */
+  transition: all 0.3s ease;
+
+  /* animasi gradient */
+  animation: gradientMove 4s ease infinite;
+}
   
-  /* 🔽 Tambah supaya selaras dengan .copy-btn */
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 10px auto;
-  width: 90% !important;
-  max-width: 400px !important;
-  display: block !important;
-  font-size: 16px;
-  font-family: inherit;
-  text-align: center;
-  cursor: pointer;
+/* Hover effect */
+.wishlist-btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 6px 20px rgba(160, 160, 160, 0.4),   /* silver-gray lembut di luar */
+    inset 0 1px 4px rgba(255, 255, 255, 0.3); /* highlight lembut di dalam */
+  text-decoration: none;  /* pastikan hover pun tiada underline */
+  color: white !important;
 }
 
-.btn-form:hover {
-  background-color: #4B4B4B;
+/* Keyframes untuk gradient bergerak */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ✅ KUNCI background supaya langsung tak ikut skroll */
+html, body {
+  height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: transparent !important;
+  position: relative;
+}
+
+/* ✅ Wrapper utama boleh skroll, tapi background kekal */
+#wrapper {
+  position: relative !important;
+  z-index: 1 !important;      
+  overflow-y: auto !important;
+  min-height: 100vh !important;
+  padding-bottom: 60px;   /* ruang untuk footer sahaja */
+  -webkit-overflow-scrolling: touch;    /* smooth scroll iOS */
+}
+
+/* ✅ Pastikan .bg-wrapper tak pernah bergerak */
+.bg-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100vw !important;
+  max-width: 390px !important;
+  height: 100vh !important;
+  background: url('B28.png') center center / cover no-repeat !important;
+  background-attachment: fixed !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  will-change: transform, background-position; /* GPU layer */
 }
