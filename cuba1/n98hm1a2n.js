@@ -1,177 +1,124 @@
-// ✅ Tanda tempahan "Bakul Baju" jika sudah dipilih di Google Sheet
-fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTPi4cVVJVAYtYrDQRfhBMX0qCMllBMgjYqesb64WKf-5M4BvxIrabnse_Fq_Iu6EHsrnI8Rv1AEv7T/pub?output=csv')
-  .then(response => response.text())
-  .then(data => {
-    const rows = data.split("\n").map(row => row.split(","));
-    rows.forEach(row => {
-      const barang = row[2].trim();
-      if (barang === "Bakul Baju") {
-        const btn = document.getElementById("btn-bakul");
-        if (btn) {
-          btn.innerText = "Telah Ditempah";
-          btn.disabled = true;
-        }
-      }
-    });
-  });
-
-// ✅ Fungsi Salji Jatuh
-function mulakanSalji() {
-  const wrapper = document.getElementById("snow-wrapper");
-  if (!wrapper) return;
-
-  const warnaSalji = [
-    {
-      color: "rgba(250, 218, 221, 0.8)", // warna pink lembut sedikit transparent
-      glow: "0 0 10px rgba(250, 218, 221, 0.3)" // glow pink lembut
-    }
-  ];
-
-  for (let i = 0; i < 50; i++) {
-    ciptaSalji();
-  }
-
-  setInterval(() => {
-    ciptaSalji();
-  }, 300);
-
-  function ciptaSalji() {
-    let snow = document.createElement("div");
-    snow.classList.add("snow");
-
-    const pilihan = warnaSalji[Math.floor(Math.random() * warnaSalji.length)];
-    snow.style.backgroundColor = pilihan.color;
-    snow.style.boxShadow = pilihan.glow;
-
-    let size = 0.4 + Math.random() * 0.6;
-    snow.style.width = size + "rem";
-    snow.style.height = size + "rem";
-    snow.style.left = Math.random() * 100 + "vw";
-    snow.style.animationDuration = 8 + Math.random() * 6 + "s";
-    snow.style.animationDelay = "0s";
-
-    wrapper.appendChild(snow);
-
-    setTimeout(() => {
-      snow.remove();
-    }, 15000);
-  }
+// Popup fullscreen
+function openPopup(imgSrc) {
+  const popup = document.getElementById('popupOverlay');
+  const popupImg = document.getElementById('popupImage');
+  popupImg.src = imgSrc;
+  popup.style.display = 'flex';
 }
 
-// ✅ RSVP Popup & Validasi
-let submitted = false;
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("rsvp-form");
-  const popup = document.getElementById("submit-popup");
-  const nama = document.getElementById("nama");
-  const bilangan = document.getElementById("bilangan");
-  const startBtn = document.getElementById("start-btn");
-
-  // 📨 Validasi RSVP sebelum hantar
-  if (form && popup) {
-    form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1207294851"]:checked');
-
-if (!nama.value.trim() || !kehadiran) {
-  e.preventDefault();
-  alert("Sila lengkapkan semua maklumat.");
-  return;
+// Tutup popup
+function closePopup() {
+  const popup = document.getElementById('popupOverlay');
+  popup.style.display = 'none';
 }
 
-if (kehadiran.value === "Hadir" && !bilangan.value) {
-  e.preventDefault();
-  alert("Sila isi bilangan kehadiran jika anda akan hadir.");
-  return;
-}
+// Klik luar gambar pun boleh tutup
+document.getElementById('popupOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+});
 
-      submitted = true;
-    });
-  } else {
-    console.error("❌ Elemen penting (form/popup) tidak dijumpai.");
-  }
-  // 🎬 Butang BUKA - Tunjuk kandungan utama
-  if (startBtn) {
-    startBtn.addEventListener("click", function () {
-      document.querySelector(".front-page").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
+ // Tunggu DOM siap dulu supaya popupOverlay dah wujud
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById('popupOverlay');
+  if (overlay) {
+    overlay.addEventListener('click', function (e) {
+      if (e.target === this) closePopup();
     });
   }
 });
 
-// ✅ Fungsi dipanggil bila iframe RSVP reload
-function rsvpSuccessHandler() {
-  console.log("📢 rsvpSuccessHandler triggered");
 
-  if (submitted) {
-    submitted = false;
 
-    const popup = document.getElementById("submit-popup");
-    const form = document.getElementById("rsvp-form");
+// Slider Gambar (Warna Pilihan)
+const images = ["CodeA.png", "CodeB.png", "CodeC.png", "CodeD.png"];
+const labels = ["Code A", "Code B", "Code C", "Code D"];
+let currentIndex = 0;
 
-    if (form) form.reset();
+function showSlide(index) {
+  const slider = document.getElementById("slider-image");
+  const label = document.getElementById("slider-label");
+  if (!slider || !label) return;
 
-    if (popup) {
-      popup.classList.add("show");
-      console.log("✅ Popup muncul");
+  if (index < 0) currentIndex = images.length - 1;
+  else if (index >= images.length) currentIndex = 0;
+  else currentIndex = index;
 
-      setTimeout(() => {
-        popup.classList.remove("show");
-      }, 5000);
-    } else {
-      console.warn("⚠️ Elemen #submit-popup tidak dijumpai.");
-    }
-  } else {
-    console.log("ℹ️ iframe reload tanpa submitted");
-  }
-}
-window.rsvpSuccessHandler = rsvpSuccessHandler;
-
-// ✅ Fungsi untuk tukar seksyen berdasarkan ID
-function toggleSection(id) {
-  const allSections = document.querySelectorAll('.hidden-section');
-  allSections.forEach(section => section.style.display = 'none');
-
-  const target = document.getElementById(id);
-  if (target) {
-    target.style.display = 'block';
-    target.scrollIntoView({ behavior: "smooth" });
-  }
+  slider.src = images[currentIndex];
+  label.innerText = labels[currentIndex]
 }
 
-// SENARAI ID popup & ikon yang berkaitan
-const popupMap = {
-  RSVP: "popup-RSVP",
-  MoneyGift: "popup-MoneyGift",
-  Wishlist: "popup-Wishlist",
-  Contact: "popup-Contact",
-  Location: "popup-Location"
-};
+function prevSlide() {
+  showSlide(currentIndex - 1);
+}
 
-let popupTerbuka = null;
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
 
-function togglePopup(nama) {
-  const idPopup = popupMap[nama];
-  const popup = document.getElementById(idPopup);
-  const mainContent = document.getElementById("main-content");
+// Papar slide pertama bila halaman load
+document.addEventListener("DOMContentLoaded", () => {
+  showSlide(currentIndex);
+});
 
-  if (!popup || !mainContent) return;
+// Slider Gambar (Step Penggunaan RSVP)
+const stepImages = [
+  "1.png", "2.png", "3.png", "4.png", "5.png", 
+  "6.png", "7.png", "8.png", "9.png", "10.png", "11.png"
+];
+let currentStepIndex = 0;
 
-  // Kalau popup sekarang terbuka dan ditekan semula → tutup
-  if (popupTerbuka === idPopup) {
-    popup.style.display = "none";
-    mainContent.style.display = "block";
-    popupTerbuka = null;
-  } else {
-    // Tutup semua popup lain dulu
-    Object.values(popupMap).forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.style.display = "none";
-    });
+function showStepSlide(index) {
+  const img = document.getElementById("step-slider-image");
+  if (!img) return;
 
-    // Buka popup yang diminta
-    popup.style.display = "block";
-    mainContent.style.display = "none";
-    popupTerbuka = idPopup;
-  }
+  if (index < 0) currentStepIndex = stepImages.length - 1;
+  else if (index >= stepImages.length) currentStepIndex = 0;
+  else currentStepIndex = index;
+
+  img.src = stepImages[currentStepIndex];
+}
+
+function prevStepSlider() {
+  showStepSlide(currentStepIndex - 1);
+}
+
+function nextStepSlider() {
+  showStepSlide(currentStepIndex + 1);
+}
+
+// Papar slide pertama bila halaman siap
+document.addEventListener("DOMContentLoaded", () => {
+  showStepSlide(currentStepIndex);
+});
+
+
+// Menu & Section
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+function showSection(id) {
+  document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+  const selected = document.getElementById(id);
+  if (selected) selected.style.display = "block";
+  document.getElementById("dropdownMenu").classList.remove("show");
+}
+
+
+// Gambar Toggle
+function toggleGambar(imgId) {
+  const img = document.getElementById(imgId);
+  if (!img) return;
+  img.style.display = img.style.display === "none" ? "block" : "none";
+}
+
+
+// Untuk teks ucapan / semua kotak
+function copyTeks(button, msgId) {
+  const teks = button.closest('.teks-kotak').querySelector('.teks-isi').innerText.trim();
+  navigator.clipboard.writeText(teks).then(() => {
+    const msg = document.getElementById(msgId);
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 2500);
+  });
 }
