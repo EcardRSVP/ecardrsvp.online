@@ -22,8 +22,6 @@ function mulakanSalji() {
     let snow = document.createElement("div");
     snow.classList.add("snow");
 
-    snow.style.pointerEvents = "none"; // ✅ Tambah baris ni!
-
     const pilihan = warnaSalji[Math.floor(Math.random() * warnaSalji.length)];
     snow.style.backgroundColor = pilihan.color;
     snow.style.boxShadow = pilihan.glow;
@@ -43,38 +41,42 @@ function mulakanSalji() {
   }
 }
 
+
 // ✅ RSVP Popup & Validasi
 let submitted = false;
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("rsvp-form");
-  const popup = document.getElementById("submit-popup");
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
   const startBtn = document.getElementById("start-btn");
 
-  // 📨 Validasi RSVP sebelum hantar
-  if (form && popup) {
+ // 📨 Validasi sebelum submit
+  if (form) {
     form.addEventListener("submit", function (e) {
       const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
-if (!nama.value.trim() || !kehadiran) {
-  e.preventDefault();
-  alert("Sila lengkapkan semua maklumat.");
-  return;
-}
+      if (!nama.value.trim() || !kehadiran) {
+        e.preventDefault();
+        alert("Sila lengkapkan semua maklumat.");
+        return;
+      }
 
-if (kehadiran.value === "Hadir" && !bilangan.value) {
-  e.preventDefault();
-  alert("Sila isi bilangan kehadiran jika anda akan hadir.");
-  return;
-}
+      if (kehadiran.value === "Hadir" && !bilangan.value) {
+        e.preventDefault();
+        alert("Sila isi bilangan kehadiran jika anda akan hadir.");
+        return;
+      }
 
       submitted = true;
     });
   } else {
-    console.error("❌ Elemen penting (form/popup) tidak dijumpai.");
+    console.error("❌ Elemen borang RSVP tidak dijumpai.");
   }
+
+  
+
+
   // 🎬 Butang BUKA - Tunjuk kandungan utama
   if (startBtn) {
     startBtn.addEventListener("click", function () {
@@ -84,7 +86,7 @@ if (kehadiran.value === "Hadir" && !bilangan.value) {
   }
 });
 
-// ✅ Fungsi dipanggil bila iframe RSVP reload
+/// ✅ Bila iframe RSVP reload lepas submit
 function rsvpSuccessHandler() {
   console.log("📢 rsvpSuccessHandler triggered");
 
@@ -94,7 +96,7 @@ function rsvpSuccessHandler() {
     const form = document.getElementById("rsvp-form");
     if (form) form.reset();
 
-    // ✅ Guna popup tengah skrin (bukan #submit-popup)
+    // ✅ Tunjuk popup alert tengah skrin
     const alertBox = document.getElementById("rsvp-alert");
     if (alertBox) {
       alertBox.style.display = "block";
@@ -108,27 +110,14 @@ function rsvpSuccessHandler() {
 }
 window.rsvpSuccessHandler = rsvpSuccessHandler;
 
+// ✅ Tutup popup bila tekan OK
 function closeRsvpAlert() {
-  const alertBox = document.getElementById('rsvp-alert');
-  if (alertBox) alertBox.style.display = 'none';
+  const alertBox = document.getElementById("rsvp-alert");
+  if (alertBox) alertBox.style.display = "none";
 
-  // Tutup popup RSVP
-  const popupRSVP = document.getElementById('popup-RSVP');
-  if (popupRSVP) popupRSVP.style.display = 'none';
-
-  // ❌ Jangan tutup popup RSVP
-  // const popupRSVP = document.getElementById('popup-RSVP');
-  // if (popupRSVP) popupRSVP.style.display = 'none';
-
-  // ❌ Jangan papar main content balik
-  // const mainContent = document.getElementById('main-content');
-  // if (mainContent) mainContent.style.display = 'block';
-
-  // ✅ Scroll balik ke bahagian RSVP supaya user nampak semula form (optional)
-  const popupRSVP = document.getElementById('popup-RSVP');
+  const popupRSVP = document.getElementById("popup-RSVP");
   if (popupRSVP) popupRSVP.scrollIntoView({ behavior: "smooth" });
 }
-
 
 // ✅ Fungsi untuk tukar seksyen berdasarkan ID
 function toggleSection(id) {
@@ -141,6 +130,8 @@ function toggleSection(id) {
     target.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+
 
 // ✅ Fetch Ucapan (PapaParse)
 fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRyk8BLqcP2bSKwSTjMl76FCVnwr05Eow0r8K5Cn1J1N1cI-KFVPpQGq4/pub?gid=241095374&single=true&output=csv")
@@ -163,6 +154,9 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRy
     }
   });
 
+
+
+
 // SENARAI ID popup & ikon yang berkaitan
 const popupMap = {
   RSVP: "popup-RSVP",
@@ -173,19 +167,6 @@ const popupMap = {
 };
 
 let popupTerbuka = null;
-
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = document.getElementById("rsvp-form");
-  if (!form) return;
-  submitted = true;
-  form.submit();
-  setTimeout(() => {
-    const alertBox = document.getElementById("rsvp-alert");
-    if (alertBox) alertBox.style.display = "block";
-  }, 1000);
-  setTimeout(() => form.reset(), 1500);
-}
 
 function togglePopup(nama) {
   const idPopup = popupMap[nama];

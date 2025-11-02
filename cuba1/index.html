@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Walimatulurus Haikal & Liya</title>
 
-    <!-- ✅ Favicon kekal -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- ✅ Favicon & Apple Touch Icon -->
+<link rel="icon" href="NNA.png" type="image/png">
+<link rel="apple-touch-icon" href="NNA.png">
 
   <!-- ✅ Open Graph (hanya title, tiada description, tiada gambar) -->
   <meta property="og:title" content="Walimatulurus Haikal & Liya">
@@ -33,9 +34,8 @@
   
   
 <!-- ✅ Google Fonts (dikemas kini) -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Great+Vibes&family=Italianno&family=Merriweather:wght@400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Berkshire+Swash&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> <!-- ✅ Tambahan ini -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="a96dn2n6a.css" />
   
@@ -69,7 +69,7 @@
     .front-page button {
       margin-top: 20px;
       padding: 10px 25px;
-      background-color: #003366;
+      background-color: maroon;
       color: white;
       font-size: 18px;
       border: none;
@@ -1408,19 +1408,23 @@
   </div>  
 
 <br><br>
- <!-- 📋 Pemberian Hadiah -->
+<!-- 🎁 PEMBERIAN HADIAH -->
 <div class="hadiah-box-wrapper">
-  <h3 class="hadiah-title">TITIPAN KASIH DARI ANDA</h3>
-<p class="hadiah-tagline" style="font-size:0.8rem; font-style:italic; margin-top:0;">
-  Nama anda akan terpahat di laman cinta kami 💕
-</p>
-  
-  <div class="hadiah-box" id="hadiahList">
-    <!-- hadiah akan muncul sini -->
+  <div class="hadiah-box">
+    <h3 class="hadiah-title">TITIPAN KASIH DARI ANDA</h3>
+    <p class="hadiah-tagline" style="font-size:0.8rem; font-style:italic; margin-top:0px; margin-bottom:4px;">
+      Nama anda akan terpahat di laman cinta kami 💕
+    </p>
+
+    <!-- 📋 Senarai Nama Pemberi Hadiah -->
+    <div id="hadiahList">
+    <p style="height: 150px; margin:0; visibility:hidden;">&nbsp;</p>
+      <!-- Nama-nama akan dimasukkan via JS -->
+    </div>
   </div>
 </div>
 
-<!-- ✅ Script Tabletop.js -->
+<!-- ✅ Script Paparan Nama dari Google Sheet -->
 <script>
 window.addEventListener("DOMContentLoaded", fetchCSVData);
 
@@ -1433,24 +1437,27 @@ async function fetchCSVData() {
     const lines = csvText.trim().split("\n").slice(1); // buang header
 
     const hadiahList = document.getElementById("hadiahList");
-
-    // kosongkan dulu hard-coded HTML
     hadiahList.innerHTML = "";
 
     lines.forEach(line => {
       const cols = line.split(",");
-      const namaPemberi = cols[1]?.replace(/"/g, "") || "-";
-      const namaBarang = cols[2]?.replace(/"/g, "") || "-";
+      const namaPemberi = cols[1]?.replace(/"/g, "")?.trim();
+      const namaBarang = cols[2]?.replace(/"/g, "")?.trim();
 
-      const p = document.createElement("p");
-      p.innerHTML = `<strong>${namaPemberi}</strong> — ${namaBarang}`;
-      hadiahList.appendChild(p);
+      if (namaPemberi) {
+        const p = document.createElement("p");
+        p.innerHTML = namaBarang
+          ? `<strong>${namaPemberi}</strong> : ${namaBarang}`
+          : `<strong>${namaPemberi}</strong>`;
+        hadiahList.appendChild(p);
+      }
     });
   } catch (error) {
     console.error("Gagal ambil data:", error);
   }
 }
 </script>
+
 
      
 <!-- ✅ POPUP OVERLAY -->
