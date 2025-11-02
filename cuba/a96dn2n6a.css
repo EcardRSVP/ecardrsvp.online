@@ -1011,22 +1011,34 @@ hr {
 #ucapanList::-webkit-scrollbar {
   width: 8px; /* garis skrol nipis */
 }
+
+/* 🌸 Gradient lembut + animasi perlahan */
 #ucapanList::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #c89f7b, #b7855e, #e2cdb4);
+  background-size: 300% 300%; /* beri ruang gradient bergerak */
   border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow:
-    0 3px 10px rgba(200, 170, 130, 0.25),  /* bayang caramel lembut */
-    inset 0 1px 2px rgba(255, 255, 240, 0.4); /* highlight ivory halus */
+    0 3px 10px rgba(200, 170, 130, 0.25),
+    inset 0 1px 2px rgba(255, 255, 240, 0.4);
+  animation: scrollGradient 6s ease infinite; /* animasi lembut & slow */
 }
 
-/* 💫 Hover effect — efek kilauan hangat */
+/* 💫 Hover effect — kilauan hangat */
 #ucapanList::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #b7855e, #c89f7b, #efdcc4);
   box-shadow:
-    0 6px 18px rgba(200, 170, 130, 0.3),   /* bayang warm caramel */
-    inset 0 1px 4px rgba(255, 255, 240, 0.4); /* highlight ivory lembut */
+    0 6px 18px rgba(200, 170, 130, 0.3),
+    inset 0 1px 4px rgba(255, 255, 240, 0.4);
+  animation: scrollGradient 3s ease infinite; /* laju sedikit bila hover */
+}
+
+/* ✨ Keyframes untuk animasi gradient bergerak */
+@keyframes scrollGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 
