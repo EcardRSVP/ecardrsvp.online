@@ -448,29 +448,19 @@
 <section id="designkad">
   <h2>DESIGN KAD</h2><br><br>
 
-    <!-- Butang Kategori -->
-  <div class="kategori-container">
-    <button id="kategoriBtn">Kategori</button>
+    <!-- 🌸 Butang Penapis -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">Semua</button>
+    <button class="filter-btn" data-filter="kad-kahwin">Kad Kahwin/Tunang</button>
+    <button class="filter-btn" data-filter="kad-raya">Kad Raya</button>
+    <button class="filter-btn" data-filter="kad-birthday">Kad Birthday/Aqiqah</button>
+    <button class="filter-btn" data-filter="majlis-umum">Majlis Umum</button>
+    <button class="filter-btn" data-filter="kad-contoh">Contoh</button>    
   </div>
-
-  <!-- ✅ Popup Pilihan Kategori -->
-  <div id="kategoriPopup" class="kategori-popup hidden">
-    <div class="kategori-box">
-      <h3>Pilih Kategori</h3>
-      <ul>
-        <li data-filter="all">Semua</li>
-        <li data-filter="kad-kahwin">Kad Kahwin/Tunang</li>
-        <li data-filter="kad-raya">Kad Raya</li>
-        <li data-filter="kad-birthday">Kad Birthday/Aqiqah</li>
-        <li data-filter="majlis-umum">Majlis Umum</li>
-        <li data-filter="kad-contoh">Contoh</li>
-      </ul>
-      <button id="tutupKategori">Tutup</button>
-    </div>
-  </div
-
-        
+  
   <div class="preview-grid">
+
+    
     <div class="kad-item" data-category="kad-kahwin">
       <img src="B1.png" alt="Kad 1">
       <p><strong>B1</strong></p><br>
@@ -1864,48 +1854,6 @@ function showSection(id) {
     });
   });
 </script>
-
-<script>
-  const kategoriBtn = document.getElementById('kategoriBtn');
-  const kategoriPopup = document.getElementById('kategoriPopup');
-  const tutupKategori = document.getElementById('tutupKategori');
-  const kadItems = document.querySelectorAll('.kad-item');
-
-  // Buka popup
-  kategoriBtn.addEventListener('click', () => {
-    kategoriPopup.classList.remove('hidden');
-  });
-
-  // Tutup popup
-  tutupKategori.addEventListener('click', () => {
-    kategoriPopup.classList.add('hidden');
-  });
-
-  // Klik luar popup
-  kategoriPopup.addEventListener('click', (e) => {
-    if (e.target === kategoriPopup) {
-      kategoriPopup.classList.add('hidden');
-    }
-  });
-
-  // Bila klik kategori
-  document.querySelectorAll('.kategori-box li').forEach(item => {
-    item.addEventListener('click', () => {
-      const selected = item.getAttribute('data-filter');
-      kategoriPopup.classList.add('hidden');
-
-      kadItems.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (selected === 'all' || selected === category) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
-       
        
   <script src="n98hm1a2n.js"></script>
 
