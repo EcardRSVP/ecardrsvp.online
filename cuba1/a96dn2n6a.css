@@ -345,7 +345,7 @@ footer {
   margin-bottom: 20px;
 }
 .filter-btn {
-  background: #f8b6c9;
+  background: #800000;
   border: none;
   padding: 6px 12px;
   border-radius: 8px;
@@ -355,7 +355,7 @@ footer {
 }
 .filter-btn:hover,
 .filter-btn.active {
-  background: #f497b6;
+  background: #F08080;
   color: white;
 }
 
@@ -367,7 +367,7 @@ footer {
 }
 
 .filter-toggle-btn {
-  background: #f497b6;
+  background: #800000;
   color: white;
   padding: 8px 16px;
   border: none;
@@ -378,7 +378,7 @@ footer {
   transition: background 0.3s;
 }
 .filter-toggle-btn:hover {
-  background: #f8b6c9;
+  background: #F08080;
 }
 
 /* Menu dropdown tersembunyi dulu */
@@ -403,7 +403,7 @@ footer {
 }
 
 .filter-menu .filter-btn {
-  background: #f8b6c9;
+  background: #800000;
   border: none;
   padding: 6px;
   border-radius: 6px;
@@ -413,7 +413,7 @@ footer {
 }
 .filter-menu .filter-btn:hover,
 .filter-menu .filter-btn.active {
-  background: #f497b6;
+  background: #F08080;
   color: white;
 }
 
