@@ -416,3 +416,14 @@ footer {
   background: #f497b6;
   color: white;
 }
+
+.dropdown-btn {
+  background-color: black;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
