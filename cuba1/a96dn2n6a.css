@@ -381,19 +381,35 @@ footer {
   background: #f8b6c9;
 }
 
-/* Menu dropdown tersembunyi dulu */
+/* Dropdown menu styling */
 .filter-menu {
-  display: none;
+  display: none; /* sembunyi secara default */
   position: absolute;
-  top: 45px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  padding: 10px;
-  z-index: 500;
+  background-color: #800000; /* sama warna button */
+  border-radius: 5px;
+  margin-top: 4px;
+  min-width: 180px;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
+
+.filter-menu .filter-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.filter-menu .filter-btn:hover {
+  background-color: #F08080; /* sama hover button */
+}
+
 
 .filter-menu.show {
   display: flex;
@@ -418,12 +434,16 @@ footer {
 }
 
 .dropdown-btn {
-  background-color: black;
+  background-color: #800000; /* merah gelap */
   color: white;
   padding: 8px 12px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background 0.3s;
 }
 
+.dropdown-btn:hover {
+  background-color: #F08080; /* merah soft ketika hover */
+}
