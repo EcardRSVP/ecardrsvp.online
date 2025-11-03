@@ -359,3 +359,60 @@ footer {
   color: white;
 }
 
+/* 🌸 Dropdown kategori */
+.filter-dropdown {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-toggle-btn {
+  background: #f497b6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.filter-toggle-btn:hover {
+  background: #f8b6c9;
+}
+
+/* Menu dropdown tersembunyi dulu */
+.filter-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 10px;
+  z-index: 500;
+}
+
+.filter-menu.show {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.filter-menu .filter-btn {
+  background: #f8b6c9;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 13px;
+}
+.filter-menu .filter-btn:hover,
+.filter-menu .filter-btn.active {
+  background: #f497b6;
+  color: white;
+}
