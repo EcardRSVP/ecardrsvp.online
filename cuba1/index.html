@@ -448,15 +448,18 @@
 <section id="designkad">
   <h2>DESIGN KAD</h2><br><br>
 
-    <!-- 🌸 Butang Penapis -->
-  <div class="filter-buttons">
+<!-- 🌸 Dropdown Filter -->
+<div class="filter-dropdown">
+  <button id="filterToggle" class="filter-toggle-btn">🎨 Pilih Kategori</button>
+  <div id="filterMenu" class="filter-menu">
     <button class="filter-btn active" data-filter="all">Semua</button>
     <button class="filter-btn" data-filter="kad-kahwin">Kad Kahwin/Tunang</button>
     <button class="filter-btn" data-filter="kad-raya">Kad Raya</button>
     <button class="filter-btn" data-filter="kad-birthday">Kad Birthday/Aqiqah</button>
     <button class="filter-btn" data-filter="majlis-umum">Majlis Umum</button>
-    <button class="filter-btn" data-filter="kad-contoh">Contoh</button>    
-  </div>
+    <button class="filter-btn" data-filter="kad-contoh">Contoh</button>
+    </div>
+  </div> <!-- ✅ tutup filter-dropdown -->
   
   <div class="preview-grid">
 
@@ -1777,62 +1780,35 @@ faqBtns.forEach(btn => {
 });
 </script>
 
-<!-- JavaScript untuk toggle -->
+<!-- ✅ Toggle Gambar Contoh -->
 <script>
 function toggleGambar(id) {
   var img = document.getElementById(id);
-  img.style.display = (img.style.display === "none") ? "block" : "none";
+  img.style.display = (img.style.display === "none" || img.style.display === "") ? "block" : "none";
 }
 </script>
-  
+
+<!-- ✅ Toggle Menu Utama -->
 <script>
 function toggleMenu() {
   const menu = document.getElementById("dropdownMenu");
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-}
-
-function showSection(id) {
-  // hide semua section
-  document.querySelectorAll('.section').forEach(sec => sec.style.display = "none");
-
-  // tunjuk section yang dipilih
-  document.getElementById(id).style.display = "block";
-
-  // auto tutup dropdown lepas klik (supaya kemas)
-  document.getElementById("dropdownMenu").style.display = "none";
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
 </script>
 
+<!-- ✅ Tukar Section (PAKEJ, DESIGN KAD, dsb.) -->
 <script>
 function showSection(id) {
-  // Senarai semua section
-  const sections = ["pakej", "designkad", "borang", "pembayaran", "faq", "video"];
-
-  // Sembunyikan semua section
+  const sections = ["pakej", "designkad", "borang", "pembayaran", "faq", "video", "teks-edar", "step-rsvp"];
   sections.forEach(sec => {
     document.getElementById(sec).style.display = "none";
   });
-
-  // Tunjukkan hanya section yang dipilih
   document.getElementById(id).style.display = "block";
-
-  // Tutup menu dropdown lepas klik
   document.getElementById("dropdownMenu").style.display = "none";
 }
 </script>
 
-
-<!-- Butang WhatsApp -->
-<a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
-   class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-  
-
+<!-- ✅ Fungsi Penapis Kategori -->
 <script>
   const filterButtons = document.querySelectorAll(".filter-btn");
   const kadItems = document.querySelectorAll(".kad-item");
@@ -1854,6 +1830,22 @@ function showSection(id) {
     });
   });
 </script>
+
+<!-- ✅ Skrip Dropdown Kategori -->
+<script>
+  document.getElementById("filterToggle").addEventListener("click", function() {
+    document.getElementById("filterMenu").classList.toggle("show");
+  });
+
+  document.addEventListener("click", function(e) {
+    const menu = document.getElementById("filterMenu");
+    const toggle = document.getElementById("filterToggle");
+    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove("show");
+    }
+  });
+</script>
+ 
        
   <script src="n98hm1a2n.js"></script>
 
