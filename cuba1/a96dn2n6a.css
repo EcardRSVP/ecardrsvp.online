@@ -77,12 +77,14 @@ body {
 
 .card-title {
   font-size: 20px;
-  color: #000;
+  color: black !important;  
+  -webkit-text-fill-color: black !important; /* untuk Safari */
 }
 
 .card-price {
   font-size: 18px;
-  color: #c14400;
+  color: #c14400 !important;  
+  -webkit-text-fill-color: #c14400 !important; /* untuk Safari */
   margin-top: 0;
 }
 
@@ -100,7 +102,8 @@ body {
 
 .card ul li i {
   margin-right: 8px;
-  color: black;
+  color: black !important;  
+  -webkit-text-fill-color: black !important; /* untuk Safari */
 }
 
 .gold,
@@ -127,7 +130,8 @@ body {
   bottom: 20px;
   right: 20px;
   background-color: #25D366;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   border-radius: 50%;
   padding: 15px;
   font-size: 24px;
@@ -160,7 +164,8 @@ form input, form textarea {
 form button {
   padding: 10px;
   background-color: #800000;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -173,7 +178,8 @@ form button:hover {
 footer {
   text-align: center;
   margin-top: 30px;
-  color: #555;
+  color: black !important;  
+  -webkit-text-fill-color: black !important; /* untuk Safari */
   font-size: 14px;
 }
 
@@ -193,19 +199,22 @@ footer {
 .font-a {
   font-family: 'Noto Serif Dives Akuru', serif;
   font-size: 1.5rem;
-  color: Maroon;
+  color: maroon !important;  
+  -webkit-text-fill-color: maroon !important; /* untuk Safari */
 }
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
-  color: black;
+  color: black !important;  
+  -webkit-text-fill-color: black !important; /* untuk Safari */
 }
 
 .pilih-pakej-btn {
   padding: 10px;
   background-color: #800000;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -218,7 +227,8 @@ footer {
 
 .btn-download {
   background-color: #800000;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -234,7 +244,8 @@ footer {
 }
 
 .card a {
-  color: #800000; /* Merah gelap */
+  color: #800000 !important;  
+  -webkit-text-fill-color: #800000 !important; /* untuk Safari */
   text-decoration: underline; /* Kalau nak garis bawah */
   font-weight: bold;
 }
@@ -272,7 +283,8 @@ footer {
 
 .preview-btn {
   background-color: #800000;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   padding: 8px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -286,7 +298,8 @@ footer {
 
 .pilih-pakej-btn {
   background-color: #800000;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   padding: 10px 25px;
   font-size: 16px;
   border: none;
@@ -333,7 +346,8 @@ footer {
   top: 8px;
   right: 12px;
   font-size: 24px;
-  color: #333;
+  color: black !important;  
+  -webkit-text-fill-color: black !important; /* untuk Safari */
   cursor: pointer;
 }
 
@@ -356,7 +370,8 @@ footer {
 .filter-btn:hover,
 .filter-btn.active {
   background: #F08080;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
 /* 🌸 Dropdown kategori */
@@ -368,7 +383,8 @@ footer {
 
 .filter-toggle-btn {
   background: #800000;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
@@ -414,12 +430,14 @@ footer {
 .filter-menu .filter-btn:hover,
 .filter-menu .filter-btn.active {
   background: #F08080;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
 .dropdown-btn {
   background-color: black;
-  color: white;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */
   padding: 8px 12px;
   border-radius: 5px;
   border: none;
