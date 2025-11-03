@@ -420,6 +420,8 @@ footer {
 
 .filter-menu .filter-btn {
   background: #800000;
+  color: white !important;  
+  -webkit-text-fill-color: white !important; /* untuk Safari */ 
   border: none;
   padding: 6px;
   border-radius: 6px;
