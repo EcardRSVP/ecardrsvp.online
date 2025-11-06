@@ -1,195 +1,124 @@
-// ✅ Fungsi Salji Jatuh
-function mulakanSalji() {
-  const wrapper = document.getElementById("snow-wrapper");
-  if (!wrapper) return;
-
-  const warnaSalji = [
-    {
-      color: "#ffffff",
-      glow: "0 0 10px rgba(255, 255, 255, 0.7)"
-    }
-  ];
-
-  for (let i = 0; i < 50; i++) {
-    ciptaSalji();
-  }
-
-  setInterval(() => {
-    ciptaSalji();
-  }, 300);
-
-  function ciptaSalji() {
-    let snow = document.createElement("div");
-    snow.classList.add("snow");
-
-    const pilihan = warnaSalji[Math.floor(Math.random() * warnaSalji.length)];
-    snow.style.backgroundColor = pilihan.color;
-    snow.style.boxShadow = pilihan.glow;
-
-    let size = 0.4 + Math.random() * 0.6;
-    snow.style.width = size + "rem";
-    snow.style.height = size + "rem";
-    snow.style.left = Math.random() * 100 + "vw";
-    snow.style.animationDuration = 8 + Math.random() * 6 + "s";
-    snow.style.animationDelay = "0s";
-
-    wrapper.appendChild(snow);
-
-    setTimeout(() => {
-      snow.remove();
-    }, 15000);
-  }
+// Popup fullscreen
+function openPopup(imgSrc) {
+  const popup = document.getElementById('popupOverlay');
+  const popupImg = document.getElementById('popupImage');
+  popupImg.src = imgSrc;
+  popup.style.display = 'flex';
 }
 
+// Tutup popup
+function closePopup() {
+  const popup = document.getElementById('popupOverlay');
+  popup.style.display = 'none';
+}
 
-// ✅ RSVP Popup & Validasi
-let submitted = false;
+// Klik luar gambar pun boleh tutup
+document.getElementById('popupOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("rsvp-form");
-  const nama = document.getElementById("nama");
-  const bilangan = document.getElementById("bilangan");
-  const startBtn = document.getElementById("start-btn");
-
- // 📨 Validasi sebelum submit
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
-
-      if (!nama.value.trim() || !kehadiran) {
-        e.preventDefault();
-        alert("Sila lengkapkan semua maklumat.");
-        return;
-      }
-
-      if (kehadiran.value === "Hadir" && !bilangan.value) {
-        e.preventDefault();
-        alert("Sila isi bilangan kehadiran jika anda akan hadir.");
-        return;
-      }
-
-      submitted = true;
-    });
-  } else {
-    console.error("❌ Elemen borang RSVP tidak dijumpai.");
-  }
-
-  
-
-
-  // 🎬 Butang BUKA - Tunjuk kandungan utama
-  if (startBtn) {
-    startBtn.addEventListener("click", function () {
-      document.querySelector(".front-page").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
+ // Tunggu DOM siap dulu supaya popupOverlay dah wujud
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById('popupOverlay');
+  if (overlay) {
+    overlay.addEventListener('click', function (e) {
+      if (e.target === this) closePopup();
     });
   }
 });
 
-/// ✅ Bila iframe RSVP reload lepas submit
-function rsvpSuccessHandler() {
-  console.log("📢 rsvpSuccessHandler triggered");
 
-  if (submitted) {
-    submitted = false;
 
-    const form = document.getElementById("rsvp-form");
-    if (form) form.reset();
+// Slider Gambar (Warna Pilihan)
+const images = ["CodeA.png", "CodeB.png", "CodeC.png", "CodeD.png"];
+const labels = ["Code A", "Code B", "Code C", "Code D"];
+let currentIndex = 0;
 
-    // ✅ Tunjuk popup alert tengah skrin
-    const alertBox = document.getElementById("rsvp-alert");
-    if (alertBox) {
-      alertBox.style.display = "block";
-      console.log("✅ Popup alert tengah skrin muncul");
-    } else {
-      console.warn("⚠️ Elemen #rsvp-alert tidak dijumpai.");
-    }
-  } else {
-    console.log("ℹ️ iframe reload tanpa submitted");
-  }
-}
-window.rsvpSuccessHandler = rsvpSuccessHandler;
+function showSlide(index) {
+  const slider = document.getElementById("slider-image");
+  const label = document.getElementById("slider-label");
+  if (!slider || !label) return;
 
-// ✅ Tutup popup bila tekan OK
-function closeRsvpAlert() {
-  const alertBox = document.getElementById("rsvp-alert");
-  if (alertBox) alertBox.style.display = "none";
+  if (index < 0) currentIndex = images.length - 1;
+  else if (index >= images.length) currentIndex = 0;
+  else currentIndex = index;
 
-  const popupRSVP = document.getElementById("popup-RSVP");
-  if (popupRSVP) popupRSVP.scrollIntoView({ behavior: "smooth" });
+  slider.src = images[currentIndex];
+  label.innerText = labels[currentIndex]
 }
 
-// ✅ Fungsi untuk tukar seksyen berdasarkan ID
-function toggleSection(id) {
-  const allSections = document.querySelectorAll('.hidden-section');
-  allSections.forEach(section => section.style.display = 'none');
+function prevSlide() {
+  showSlide(currentIndex - 1);
+}
 
-  const target = document.getElementById(id);
-  if (target) {
-    target.style.display = 'block';
-    target.scrollIntoView({ behavior: "smooth" });
-  }
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+// Papar slide pertama bila halaman load
+document.addEventListener("DOMContentLoaded", () => {
+  showSlide(currentIndex);
+});
+
+// Slider Gambar (Step Penggunaan RSVP)
+const stepImages = [
+  "1.png", "2.png", "3.png", "4.png", "5.png", 
+  "6.png", "7.png", "8.png", "9.png", "10.png", "11.png"
+];
+let currentStepIndex = 0;
+
+function showStepSlide(index) {
+  const img = document.getElementById("step-slider-image");
+  if (!img) return;
+
+  if (index < 0) currentStepIndex = stepImages.length - 1;
+  else if (index >= stepImages.length) currentStepIndex = 0;
+  else currentStepIndex = index;
+
+  img.src = stepImages[currentStepIndex];
+}
+
+function prevStepSlider() {
+  showStepSlide(currentStepIndex - 1);
+}
+
+function nextStepSlider() {
+  showStepSlide(currentStepIndex + 1);
+}
+
+// Papar slide pertama bila halaman siap
+document.addEventListener("DOMContentLoaded", () => {
+  showStepSlide(currentStepIndex);
+});
+
+
+// Menu & Section
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+function showSection(id) {
+  document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+  const selected = document.getElementById(id);
+  if (selected) selected.style.display = "block";
+  document.getElementById("dropdownMenu").classList.remove("show");
 }
 
 
+// Gambar Toggle
+function toggleGambar(imgId) {
+  const img = document.getElementById(imgId);
+  if (!img) return;
+  img.style.display = img.style.display === "none" ? "block" : "none";
+}
 
-// ✅ Fetch Ucapan (PapaParse)
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRyk8BLqcP2bSKwSTjMl76FCVnwr05Eow0r8K5Cn1J1N1cI-KFVPpQGq4/pub?gid=241095374&single=true&output=csv")
-  .then(response => response.text())
-  .then(data => {
-    const parsed = Papa.parse(data, { header: true });
-    const ucapanList = document.getElementById("ucapanList");
 
-    if (ucapanList) {
-      ucapanList.innerHTML = "";
-      parsed.data.forEach(row => {
-        const nama = row["Nama"]?.trim();
-        const ucapan = row["Ucapan"]?.trim();
-        if (nama && ucapan) {
-          const item = document.createElement("p");
-          item.innerHTML = `<strong>${nama}</strong>: ${ucapan}`;
-          ucapanList.appendChild(item);
-        }
-      });
-    }
+// Untuk teks ucapan / semua kotak
+function copyTeks(button, msgId) {
+  const teks = button.closest('.teks-kotak').querySelector('.teks-isi').innerText.trim();
+  navigator.clipboard.writeText(teks).then(() => {
+    const msg = document.getElementById(msgId);
+    msg.style.display = 'block';
+    setTimeout(() => { msg.style.display = 'none'; }, 2500);
   });
-
-
-
-
-// SENARAI ID popup & ikon yang berkaitan
-const popupMap = {
-  RSVP: "popup-RSVP",
-  MoneyGift: "popup-MoneyGift",
-  Wishlist: "popup-Wishlist",
-  Contact: "popup-Contact",
-  Location: "popup-Location"
-};
-
-let popupTerbuka = null;
-
-function togglePopup(nama) {
-  const idPopup = popupMap[nama];
-  const popup = document.getElementById(idPopup);
-  const mainContent = document.getElementById("main-content");
-
-  if (!popup || !mainContent) return;
-
-  // Kalau popup sekarang terbuka dan ditekan semula → tutup
-  if (popupTerbuka === idPopup) {
-    popup.style.display = "none";
-    mainContent.style.display = "block";
-    popupTerbuka = null;
-  } else {
-    // Tutup semua popup lain dulu
-    Object.values(popupMap).forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.style.display = "none";
-    });
-
-    // Buka popup yang diminta
-    popup.style.display = "block";
-    mainContent.style.display = "none";
-    popupTerbuka = idPopup;
-  }
 }
