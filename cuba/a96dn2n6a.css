@@ -1232,7 +1232,7 @@ html, body {
   width: 100vw !important;
   max-width: 390px !important;
   height: 100vh !important;
-  background: url('A15.png') center center / cover no-repeat !important;
+  background: url('.png') center center / cover no-repeat !important;
   background-attachment: fixed !important;
   z-index: -1 !important;
   pointer-events: none !important;
