@@ -1288,8 +1288,19 @@ function copyTNG() {
   
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
     
+  <!-- 🌸 Dropdown Filter (Majlis) -->
+  <div class="filter-dropdown">
+    <button id="filterToggleMajlis" class="filter-toggle-btn">Majlis 🔻</button>
+    <div id="filterMenuMajlis" class="filter-menu">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="kahwin">Majlis Perkahwinan</button>
+      <button class="filter-btn" data-filter="aqiqah">Majlis Birthday/Aqiqah</button>
+      <button class="filter-btn" data-filter="umum">Lain-Lain</button>
+    </div>
+  </div>
+    
     <!-- Kotak Teks 1 -->
-    <div class="teks-kotak" style="
+    <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
       border-radius: 12px;
       padding: 20px;
@@ -1361,7 +1372,7 @@ TERIMA KASIH 🌹<br><br>
 
     
     <!-- Kotak Teks 2 -->
-    <div class="teks-kotak" style="
+    <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
       border-radius: 12px;
       padding: 20px;
@@ -1429,7 +1440,7 @@ TERIMA KASIH 🥰<br><br>
 
 
     <!-- Kotak Teks 3 -->
-    <div class="teks-kotak" style="
+    <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
       border-radius: 12px;
       padding: 20px;
@@ -1492,7 +1503,7 @@ Amin..<br><br>
 
 
     <!-- Kotak Teks 4 -->
-    <div class="teks-kotak" style="
+    <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
       border-radius: 12px;
       padding: 20px;
@@ -1555,7 +1566,7 @@ Mendoakan mempelai diberkati Illahi 🤲🏻<br><br>
     </div>
 
     <!-- Kotak Teks 5 -->
-    <div class="teks-kotak" style="
+    <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
       border-radius: 12px;
       padding: 20px;
@@ -1609,7 +1620,7 @@ menambah keberkatan dan redha Allah.<br><br>
     </div>
 
     <!-- Kotak Teks 6 -->
-    <div class="teks-kotak" style="
+    <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
       border-radius: 12px;
       padding: 20px;
@@ -1668,7 +1679,7 @@ TERIMA KASIH 🌹<br><br>
 
   
     <!-- Kotak Teks 7 -->
-    <div class="teks-kotak" style="
+    <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
       border-radius: 12px;
       padding: 20px;
