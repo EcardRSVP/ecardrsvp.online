@@ -1975,30 +1975,43 @@ function showSection(id) {
 
 <!-- ✅ Fungsi Penapis + Dropdown Kategori -->
 <script>
-  document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
-    const toggleBtn = dropdown.querySelector(".filter-toggle-btn");
-    const menu = dropdown.querySelector(".filter-menu");
-    const buttons = menu.querySelectorAll(".filter-btn");
+document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
+  const toggleBtn = dropdown.querySelector(".filter-toggle-btn");
+  const menu = dropdown.querySelector(".filter-menu");
+  const buttons = menu.querySelectorAll(".filter-btn");
 
-    // Toggle buka/tutup
-    toggleBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      menu.classList.toggle("show");
-    });
+  // Toggle buka/tutup
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("show");
+  });
 
-    // Klik luar → tutup
-    document.addEventListener("click", (e) => {
-      if (!dropdown.contains(e.target)) menu.classList.remove("show");
-    });
+  // Klik luar → tutup
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) menu.classList.remove("show");
+  });
 
-    // Tukar teks butang bila pilih
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        toggleBtn.innerHTML = btn.textContent + " 🔻";
-        menu.classList.remove("show");
+  // Bila klik salah satu filter dalam menu
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const selectedFilter = btn.getAttribute("data-filter");
+      toggleBtn.innerHTML = btn.textContent + " 🔻";
+      menu.classList.remove("show");
+
+      // Cari kad-item dalam section yang sama
+      const section = dropdown.closest("section"); 
+      const kadItems = section.querySelectorAll(".kad-item");
+
+      kadItems.forEach((item) => {
+        if (selectedFilter === "all" || item.dataset.category === selectedFilter) {
+          item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+        }
       });
     });
   });
+});
 </script>
 
 
