@@ -1290,7 +1290,7 @@ function copyTNG() {
     
   <!-- 🌸 Dropdown Filter (Majlis) -->
   <div class="filter-dropdown">
-    <button id="filterToggleMajlis" class="filter-toggle-btn">Majlis 🔻</button>
+      <button id="filterToggle" class="filter-toggle-btn">Kategori 🔻</button>
     <div id="filterMenuMajlis" class="filter-menu">
       <button class="filter-btn active" data-filter="all">Semua</button>
       <button class="filter-btn" data-filter="kahwin">Majlis Perkahwinan</button>
@@ -1973,45 +1973,36 @@ function showSection(id) {
 }
 </script>
 
-<!-- ✅ Fungsi Penapis Kategori -->
+<!-- ✅ Fungsi Penapis + Dropdown Kategori -->
 <script>
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const kadItems = document.querySelectorAll(".kad-item");
+  document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
+    const toggleBtn = dropdown.querySelector(".filter-toggle-btn");
+    const menu = dropdown.querySelector(".filter-menu");
+    const buttons = menu.querySelectorAll(".filter-btn");
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterButtons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
+    // Toggle buka/tutup
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
 
-      const filter = btn.getAttribute("data-filter");
+    // Klik luar → tutup
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) menu.classList.remove("show");
+    });
 
-      kadItems.forEach(item => {
-        if (filter === "all" || item.dataset.category === filter) {
-          item.style.display = "flex";
-        } else {
-          item.style.display = "none";
-        }
+    // Tukar teks butang bila pilih
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        toggleBtn.innerHTML = btn.textContent + " 🔻";
+        menu.classList.remove("show");
       });
     });
   });
 </script>
 
-<!-- ✅ Skrip Dropdown Kategori -->
-<script>
-  document.getElementById("filterToggle").addEventListener("click", function() {
-    document.getElementById("filterMenu").classList.toggle("show");
-  });
 
-  document.addEventListener("click", function(e) {
-    const menu = document.getElementById("filterMenu");
-    const toggle = document.getElementById("filterToggle");
-    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.remove("show");
-    }
-  });
-</script>
- 
-       
+  
   <script src="n98hm1a2n.js"></script>
 
   <script>
