@@ -1296,7 +1296,10 @@ function copyTNG() {
       <button class="filter-btn" data-filter="umum">Lain-Lain</button>
     </div>
   </div>
-    
+
+  <!-- 🌸 Kumpulan kotak teks -->
+  <div class="teks-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+ 
     <!-- Kotak Teks 1 -->
     <div class="teks-kotak" data-category="kahwin" style="
       background-color: white;
@@ -1978,13 +1981,13 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
   const menu = dropdown.querySelector(".filter-menu");
   const buttons = menu.querySelectorAll(".filter-btn");
 
-  // Toggle buka/tutup
+  // Toggle buka/tutup dropdown
   toggleBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     menu.classList.toggle("show");
   });
 
-  // Klik luar → tutup
+  // Klik luar → tutup menu
   document.addEventListener("click", (e) => {
     if (!dropdown.contains(e.target)) menu.classList.remove("show");
   });
@@ -1996,13 +1999,18 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
       toggleBtn.innerHTML = btn.textContent + " 🔻";
       menu.classList.remove("show");
 
-      // Cari kad-item dalam section yang sama
+      // Cari semua item dalam section sama (.kad-item & .teks-kotak)
       const section = dropdown.closest("section"); 
-      const kadItems = section.querySelectorAll(".kad-item");
+      const kadItems = section.querySelectorAll(".kad-item, .teks-kotak");
 
       kadItems.forEach((item) => {
         if (selectedFilter === "all" || item.dataset.category === selectedFilter) {
-          item.style.display = "flex";
+          // ✅ ikut jenis item
+          if (item.classList.contains("teks-kotak")) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "flex";
+          }
         } else {
           item.style.display = "none";
         }
@@ -2011,6 +2019,7 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
   });
 });
 </script>
+
 
 
   
