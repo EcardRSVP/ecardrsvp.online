@@ -379,6 +379,13 @@ footer {
   position: relative;
   text-align: center;
   margin-bottom: 60px;
+  display: flex;
+  justify-content: center;  /* ✅ Tengah secara mendatar */  
+}
+
+/* Kalau masih tak center sebab ada parent flex lain */
+.filter-dropdown button {
+  margin: 0 auto; /* ✅ Paksa tengah dalam container */
 }
 
 .filter-toggle-btn {
