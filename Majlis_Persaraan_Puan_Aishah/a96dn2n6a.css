@@ -434,10 +434,10 @@ form button[type="submit"] {
 
 /* ✅ Font Custom Styles */
 .font-a {
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.9rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
   color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -445,7 +445,7 @@ form button[type="submit"] {
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -516,11 +516,11 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 
 @media (max-width: 480px) {
   .font-a {
-    font-size: 1.9rem; /* sedikit besar supaya jelas di skrin kecil */
+    font-size: 1.5rem; /* sedikit besar supaya jelas di skrin kecil */
   } 
 
   .font-b {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   } 
 
   .font-c {
