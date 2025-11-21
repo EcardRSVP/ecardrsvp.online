@@ -2228,7 +2228,69 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
 });
 </script>
 
+<!-- 🌸 Floating Contact Buttons -->
+<div class="contact-buttons">
+<a href="https://wa.me/601157265723?text=Hai%2C%20Saya%20berminat%20dengan%20pakej%20RSVP" 
+   target="_blank" 
+   class="contact-btn whatsapp">
+  <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://shopee.com.my/nna_95" target="_blank" class="contact-btn shopee">
+    <i class="fa-solid fa-bag-shopping"></i>
+  </a>
+</div>
 
+<style>
+/* 🌸 Butang Terapung Umum */
+.contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 3000;
+}
+
+/* Untuk telefon → di tengah bawah */
+@media (max-width: 768px) {
+  .contact-buttons {
+    flex-direction: row;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    bottom: 15px;
+  }
+}
+
+.contact-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Warna khusus */
+.contact-btn.whatsapp {
+  background-color: #25D366;
+}
+
+.contact-btn.shopee {
+  background-color: #EE4D2D;
+}
+</style>
 
   
   <script src="n98hm1a2n.js"></script>
