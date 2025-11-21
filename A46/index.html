@@ -5,13 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Majlis Aqiqah Ainul & Majlis Hari Jadi Aiman</title>
 
-<!-- ✅ Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Ephesis&family=Tangerine&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Estonia&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> <!-- ✅ Tambahan ini -->
+  <!-- ✅ Favicon & Apple Touch Icon -->
+<link rel="icon" href="NNA.png" type="image/png">
+<link rel="apple-touch-icon" href="NNA.png">
+
+  <!-- ✅ Open Graph (hanya title, tiada description, tiada gambar) -->
+  <meta property="og:title" content="Majlis Aqiqah Ainul & Majlis Hari Jadi Aiman">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ecardrsvp.online/Ainul_Aiman/">
+  <meta property="og:description" content=" ">
+
+  <!-- 🚫 Paksa image kosong -->
+  <meta property="og:image" content="https://ecardrsvp.online/blank.png">
+  <meta property="og:image:secure_url" content="https://ecardrsvp.online/blank.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- ✅ Twitter Card minimum -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Majlis Aqiqah Ainul & Majlis Hari Jadi Aiman">
+  <meta name="twitter:description" content=" ">
+  <meta name="twitter:image" content="https://ecardrsvp.online/blank.png">
+
+  <!-- 🚫 Block crawler ambil text/image dari body -->
+  <meta name="robots" content="nosnippet, noimageindex">
+  <meta name="googlebot" content="nosnippet, noimageindex">
+</head>
+  
+  
+<!-- ✅ Google Fonts (dikemas kini) -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="a96dn2n6a.css" />
+  
   
   <style>
       body {
@@ -73,14 +100,20 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+.purchase-buttons img {
+  width: 33px;    /* saiz ikon boleh ubah ikut keperluan */
+  height: 33px;
+  object-fit: contain;  /* pastikan imej tak tertarik/terdistorsi */
+  margin: 0 0px;  /* ruang antara ikon */
+}    
   </style>
 </head>
 <body>
 
-      <!-- 🎥 Video Latar Global -->
-  <video autoplay muted playsinline loop id="bg-video">
-  <source src="A46.mp4" type="video/mp4">
-</video>
+<!-- 🌸 Background wrapper gaya telefon -->
+<div class="bg-wrapper"></div>
+
 
 <!-- ✅ SALJI DALAM WRAPPER -->
 <div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
@@ -95,15 +128,16 @@
    <div id="wrapper">
      <!-- SEMUA KANDUNGAN TERMASUK section.front-page DAN #main-content -->
      
-  <!-- ✅ HALAMAN DEPAN --> 
-  <section class="page front-page">
+  <!-- ✅ HALAMAN DEPAN -->
+<section class="page front-page" style="position: relative; top: -8vh;">
     <h1 class="font-b" style="margin-bottom: 0;">MAJLIS AQIQAH</h1>
     <h2><span class="font-c">Ainul Mardiyah</span></h2>
     <h2><span class="font-a">&</span></h2>
     <h1 class="font-b" style="margin-bottom: 0;">MAJLIS HARI JADI</h1>
     <h2><span class="font-c">Aiman Danish</span></h2>
-    <button id="start-btn">BUKA</button>
+    <button id="start-btn" class="small-btn">BUKA</button>
   </section>
+
 
   <!-- ✅ KANDUNGAN UTAMA (DISOROK PADA MULA) -->
   <div id="main-content" style="display: none;">
@@ -118,10 +152,11 @@
       kami dengan berbesar hati menjemput<br>
       Dato’/ Datin/ Tuan/ Puan/ Encik/ Cik<br>
       seisi keluarga untuk hadir<br>
-      ke Majlis Aqiqah<br>
+      ke Majlis Aqiqah<br><br>
       <p class="nama-pengantin"><strong class="font-d">Nur Ainul Mardiyah Binti Zulkefli</strong></p><br>
       Serta Majlis Hari Jadi<br><br>
       <p class="nama-pengantin"><strong class="font-d">Muhamad Aiman Danish (6 tahun)</strong></p>
+
       <hr>   
     
       <p>
@@ -146,7 +181,7 @@
       <strong>Sesi Nyanyian & Potong Kek : </strong><br>
         2.00 pm<br>
       </p>
-      
+
       <hr> 
 
 <section id="countdown-page" class="transparent-section">
@@ -202,8 +237,7 @@
       
      <hr> 
 
-
-   <section class="galeri transparent-section">
+  <section class="galeri transparent-section">
   <h1 class="font-e">GALERI</h1>
   <div class="gallery-slider">
     <button class="gallery-prev">&#10094;</button>
@@ -221,39 +255,53 @@
   </div>
 </section>
 
-   <hr> 
+  <hr> 
       
-    <section class="doa transparent-section">
-    <p>
-    <h2 class="font-f">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</h2>
+    <section class="doa transparent-section"> 
+    <h2 class="font-f">بِسْمِ اللهِ ٱلرَّحْمٰنِ الرَّحِيمِ</h2>
       Ya Allah,<br>
-      dari setinggi dan selaut kasih sayang Mu,<br>
-      kau panjangkanlah umur dan berkatilah hidup anak ini,<br>
+      dari setinggi dan selaut kasih<br>
+      sayang Mu,<br>
+      kau panjangkanlah umur dan<br>
+      berkatilah hidup anak ini,<br>
       tanamkanlah iman di hatinya<br>
-      dan jadikanlah anak kami anak yang soleh dan solehah
+      dan jadikanlah anak kami anak<br>
+      yang soleh dan solehah<br>
       serta bertakwa kepadaMu.<br>
-      Kurniakanlah akal yang cerdas, sihat tubuh badan<br>
-      serta berjaya di dunia dan akhirat.<br><br>
+      Kurniakanlah akal yang cerdas,<br>
+      sihat tubuh badan serta<br>
+      berjaya di dunia dan akhirat.<br><br>
       Amin Ya Rabbal Alamin
       </p>
-  
-<div class="footer-credit" style="margin-top: 15px; text-align: center;">
+
+     <hr> 
+
+    <section class="transparent-section ucapan-section">
+    <h1 class="font-e">GUESTBOOK</h1>
+    <div id="ucapanList">
+  </div>
+</section>
+      
+<div class="footer-credit" style="margin-top: 20px; text-align: center;">
   <p></p>
   
   <!-- Spacer -->
   <div style="margin: 5px 0;"></div>
 
     <!-- Teks "Contact Us" berwarna kelabu -->
-  <p style="font-weight: bold; font-size: 15px; margin-bottom: 10px; color: grey;">Contact Us</p>
+    <p style="font-weight: bold; font-size: 15px; margin-bottom: 8px; color: grey;">Contact Us</p>
 
   <!-- Ikon Shopee & WhatsApp -->
-  <div class="purchase-buttons">
+    <div class="purchase-buttons" style="display: flex; justify-content: center; gap: 10px;">
     <a href="https://shopee.com.my/nna_95" class="purchase-btn" target="_blank">
       <img src="shopee-icon.png" alt="Shopee">
     </a>
     <a href="https://wa.me/601157265723?text=Hai%2C%20saya%20berminat%20dengan%20RSVP" class="purchase-btn" target="_blank">
       <img src="whatsapp-icon.png" alt="WhatsApp">
     </a>
+      <a href="https://ecardrsvp.online/main-site/" class="purchase-btn" target="_blank">
+      <img src="logo contact us.png" alt="Shopee">
+    </a>  
   </div>
 </div>
 </section>
@@ -266,6 +314,8 @@
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
   <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
+  <div class="footer-icon money" onclick="togglePopup('MoneyGift')">💵<span>Money Gift</span></div>
+  <div class="footer-icon wishlist" onclick="togglePopup('Wishlist')">🎁<span>Wishlist</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
 </div>
@@ -278,13 +328,14 @@
 <form id="rsvp-form" 
       action="https://docs.google.com/forms/d/e/1FAIpQLSc3dsHT4H8DA2tGcHDSQn6LDdSfdn3q4JEvUt87aaddxTgpxg/formResponse" 
       method="POST" 
-      target="hidden_iframe">
- 
+      target="hidden_iframe"
+      onsubmit="handleSubmit(event)">
+
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1339685107" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
-  
+    <input type="text" id="nama" name="entry.1339685107" placeholder="Nama Anda" required>
+
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
       <label>
@@ -298,17 +349,26 @@
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.170550073" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+    <input type="number" id="bilangan" name="entry.170550073" min="1" placeholder="Contoh: 2">
 
-    <!-- Butang Hantar -->
-    <button type="submit" style="width: 100%; padding: 10px; background-color: #003366; color: white; border: none; border-radius: 5px; font-size: 16px;">
-      Hantar
-    </button>
-  </form>
+    <!-- Tambah selepas Bilangan Kehadiran -->
+    <br>
+    <label for="ucapan"><strong>Ucapan</strong></label>
+    <textarea id="ucapan" 
+          name="entry.1093855959" 
+          placeholder="Ucapan anda"></textarea>
 
-<div id="submit-popup">
-  Terima kasih! Kehadiran anda telah direkodkan.
-</div>
+      <button type="submit" class="btn-hantar">Hantar</button>
+    </form>
+
+    <!-- ✅ Popup alert khas -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
 
 <iframe
   name="hidden_iframe"
@@ -332,9 +392,7 @@
   <div id="popup-Location" class="popup-overlay">
   <div class="popup-section">
   <h2>LOCATION</h2>
-      Dewan Serbaguna Bandar Sultan Suleiman<br>
-      Bandar Sultan Suleiman<br>
-      42000 Port Klang, Selangor<br>
+  <p>Dewan Serbaguna Bandar Sultan Suleiman<br>Bandar Sultan Suleiman<br>42000 Port Klang, Selangor</p>
   <a href="https://maps.app.goo.gl/CRv4sLeVjw9E1oYu6" target="_blank" class="location-button">
     <img src="https://img.icons8.com/color/48/000000/google-maps.png" alt="Google Maps" width="24" height="24">
     Buka Google Maps
@@ -346,6 +404,603 @@
   </a>
   </div>
 </div>
+
+
+<!-- ✅ Seksyen Money Gift -->
+  <div id="popup-MoneyGift" class="popup-overlay">
+  <div class="popup-section">
+  <h2>MONEY GIFT</h2>
+  <p><strong>Nama Bank :</strong> Maybank Berhad</p>
+  <p><strong>Nama :</strong> Zulkefli Bin Abdullah</p>
+  <p><strong>Nombor Akaun:</strong> <span id="rek">1234567890</span></p>
+  <button onclick="copyRek()">Copy</button>
+  <br>
+  <img src="Contoh QR.jpg" alt="Kod QR" class="qr-image" /><br><br><br><br>
+  </div>
+</div>
+
+<!-- ✅ Seksyen Wishlist (Ringkasan) -->
+  <div id="popup-Wishlist" class="popup-overlay">
+  <div class="popup-section">
+  <h2>WISHLIST</h2>
+
+  <div style="text-align: center; margin-bottom: 20px;">
+  <h3><strong>Alamat Penghantaran</strong></h3>
+  <div id="alamat-text">
+      xx, Jalan Sultan Abdul Samad 2x<br>
+      Bandar Sultan Suleiman<br>
+      42000 Klang, Selangor
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('alamat-text')">Copy</button>
+
+  <h3 style="margin-top: 20px;"><strong>Nombor Telefon</strong></h3>
+  <div id="telefon-text">
+    0123456789
+  </div>
+  <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
+</div>  
+
+<div style="text-align:center; margin-bottom:10px;">
+  <p style="font-size:15px; color:black; margin-bottom:12px;">
+    Terima kasih atas pemberian hadiah anda 💖<br>
+    Sila isi maklumat di pautan berikut ✨<br>
+    Maklumat anda akan dipaparkan di<br>
+    bahagian bawah halaman ini
+  </p>
+
+  <a href="https://docs.google.com/forms/d/105FGuH0CsTifRg1vMFv_DoF09nkQEqNjN3K408KUMHw/viewform?usp=header"
+     target="_blank"
+     class="wishlist-btn">
+     Klik Sini Untuk Isi Maklumat Hadiah
+  </a>
+<br><br>
+
+  <div class="gift-item">
+    <img src="Mini Tablet Learning.jpg" alt="Mini Tablet Learning">
+    <div class="gift-info">
+      <div class="gift-title">Mini Tablet Learning</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/2qMaCCWl8K" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctKDW1rXfR-nkJ9J/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="LED Screen Learning Laptop.jpg" alt="LED Screen Learning Laptop">
+    <div class="gift-info">
+      <div class="gift-title">LED Screen Learning Laptop</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/7AVZMGsC01" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcT11bmRjox-dKGoh/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+
+  <div class="gift-item">
+    <img src="Inflatable Swimming Pool.jpg" alt="Inflatable Swimming Pool">
+    <div class="gift-info">
+      <div class="gift-title">Inflatable Swimming Pool</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/8zxDXkYlFz" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcT13KLLk2S-HyCUg/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Koleksi Cerita Para Nabi.jpg" alt="Koleksi Cerita Para Nabi">
+    <div class="gift-info">
+      <div class="gift-title">Koleksi Cerita Para Nabi</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/AA9Aw3UxGy" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcT1aF3yA6H-OuFas/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Buku Cerita Mengenai Haiwan.jpg" alt="Buku Cerita Mengenai Haiwan">
+    <div class="gift-info">
+      <div class="gift-title">Buku Cerita Mengenai Haiwan</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/4LBNzSJ8H7" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTJD2Noayt-wTLYn/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Buku Audio English Words.jpg" alt="Buku Audio English Words">
+    <div class="gift-info">
+      <div class="gift-title">Buku Audio English Words</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/5VNLNjT7wQ" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcT1QrSKbxb-FyTMJ/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Tracing Workbook.jpg" alt="Tracing Workbook">
+    <div class="gift-info">
+      <div class="gift-title">Tracing Workbook</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/8V0wy6E28Y" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcttB13dgD3-I8v3y/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Magnetik Book.jpg" alt="Magnetic Book">
+    <div class="gift-info">
+      <div class="gift-title">Magnetic Book</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/5AkV06ncDl" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTJaQpy5Gf-qE3Ia/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Baju Unisex 3m - 6y.jpg" alt="Baju Unisex 3m - 6y">
+    <div class="gift-info">
+      <div class="gift-title">Baju Unisex 3m - 6y</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/7fRpyn2L3q" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctKoYJcWUL-VpdkE/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Pyjamas 2y - 15y.jpg" alt="Pyjamas 2y - 15y">
+    <div class="gift-info">
+      <div class="gift-title">Pyjamas 2y - 15y</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/20nTETYcNS" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcT1SfXYejT-kPbKz/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Drawing Art Set.jpg" alt="Set Mewarna">
+    <div class="gift-info">
+      <div class="gift-title">Set Mewarna</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/4LBO0ssSgs" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTeRWK9S4m-Mfp5d/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Truck Toy.jpg" alt="Truck Toy">
+    <div class="gift-info">
+      <div class="gift-title">Truck Toy</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/1LXmRUnJYB" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctKu2tUcQR-eCtrn/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Bubble Machine Gun.jpg" alt="Bubble Machine Gun">
+    <div class="gift-info">
+      <div class="gift-title">Bubble Machine Gun</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/60Jc0CAEks" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctwbP84DSY-Eutok/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Bunny Plush Toy.jpg" alt="Bunny Plush Toy">
+    <div class="gift-info">
+      <div class="gift-title">Bunny Plush Toy</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/4LBO1EE9s1" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcT1Yqwd1gp-VJg7g/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Jumping Horse Toy.jpg" alt="Jumping Horse Toy">
+    <div class="gift-info">
+      <div class="gift-title">Jumping Horse Toy</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/9UtUAsZXQi" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTeTV5vMWw-iUFUM/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+    
+  <div class="gift-item">
+    <img src="Doctor Toy Set.jpg" alt="Doctor Toy Set">
+    <div class="gift-info">
+      <div class="gift-title">Doctor Toy Set</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/9zpklwy2bg" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctKscJLCbE-c7SH8/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Cashier Playset.jpg" alt="Cashier Playset">
+    <div class="gift-info">
+      <div class="gift-title">Cashier Playset</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/9fCuNUMD6H" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTefoWwmXm-upS6H/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Meja Blok Mainan.jpg" alt="Meja Blok Mainan">
+    <div class="gift-info">
+      <div class="gift-title">Meja Blok Mainan</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/2B6tRoLOme" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctKVhGcuXm-458wb/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+    
+  <div class="gift-item">
+    <img src="Kids Drum Set.jpg" alt="Kids Drum Set">
+    <div class="gift-info">
+      <div class="gift-title">Kids Drum Set</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/AA9AydJSoZ" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHc3oV1GorUf-J4IvJ/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Cutting Fruit Play Set.jpg" alt="Cutting Fruit Play Set">
+    <div class="gift-info">
+      <div class="gift-title">Cutting Fruit Play Set</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/9AGdoAofWD" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctwH2MgKSP-uYG2P/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+
+  <div class="gift-item">
+    <img src="Soft Plastic Building Blocks.jpg" alt="Soft Plastic Building Blocks">
+    <div class="gift-info">
+      <div class="gift-title">Soft Plastic Building Blocks</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/6KwSR5ePzn" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcT1t5TM2At-fIk8l/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+    
+   <div class="gift-item">
+    <img src="Kitchen Color Dough Set.jpg" alt="Kitchen Color Dough Set">
+    <div class="gift-info">
+      <div class="gift-title">Kitchen Color Dough Set</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/2qMaGmSAVy" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHc3oc9hvF9F-VotpU/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>   
+    
+   <div class="gift-item">
+    <img src="9 in 1 Kids Playground.jpg" alt="Kids Playground">
+    <div class="gift-info">
+      <div class="gift-title">Kids Playground</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/40YXf3uJQI" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTJj1u6Leh-wvZr3/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>   
+
+   <div class="gift-item">
+    <img src="Basikal.jpg" alt="Basikal">
+    <div class="gift-info">
+      <div class="gift-title">Basikal</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/1qU35AV40p" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTJC9hCXYc-QDIO0/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>   
+     
+   <div class="gift-item">
+    <img src="Scooter 3 Wheel.jpg" alt="Scooter 3 Wheel">
+    <div class="gift-info">
+      <div class="gift-title">Scooter 3 Wheel</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/5L3vFfoygC" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTJRqftapH-QP6EC/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>   
+
+   <div class="gift-item">
+    <img src="Set Barbie Doll.jpg" alt="Set Barbie Doll">
+    <div class="gift-info">
+      <div class="gift-title">Set Barbie Doll</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/8AO6d1NQRO" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctKN4vTjp1-GvxPr/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>   
+
+   <div class="gift-item">
+    <img src="Set Kosmetik Mainan.jpg" alt="Set Kosmetik Mainan">
+    <div class="gift-info">
+      <div class="gift-title">Set Kosmetik Mainan</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/AUm1HR124z" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTeqX6A4Us-1JU04/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>   
+
+   <div class="gift-item">
+    <img src="Dress 1y-13y.jpg" alt="Dress 1y-13y">
+    <div class="gift-info">
+      <div class="gift-title">Dress 1y-13y</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/5fgleatAEr" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHctwTYgoHNN-CPPsU/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>  
+
+   <div class="gift-item">
+    <img src="Dress 0m-2y.jpg" alt="Dress 0m-2y">
+    <div class="gift-info">
+      <div class="gift-title">Dress 0m-2y</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/7V8Pq5Ndrs" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTdRBpCDCg-jOYXM/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>  
+
+   <div class="gift-item">
+    <img src="Cooking Set Toys.jpg" alt="Cooking Set Toys">
+    <div class="gift-info">
+      <div class="gift-title">Cooking Set Toys</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/AUm1Pse0CI" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTJ3wQGYp8-KTPtX/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>  
+
+   <div class="gift-item">
+    <img src="Sejadah Kanak-Kanak.jpg" alt="Sejadah Kanak-Kanak">
+    <div class="gift-info">
+      <div class="gift-title">Sejadah Kanak-Kanak</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/AUm1II1ccS" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTJbETNMFH-yLHxd/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>  
+
+   <div class="gift-item">
+    <img src="Thermos.jpg" alt="Thermos">
+    <div class="gift-info">
+      <div class="gift-title">Thermos</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/6fZIjXLw9Z" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTeQN7xpTU-wOVHQ/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>  
+
+   <div class="gift-item">
+    <img src="Beg.jpg" alt="Beg">
+    <div class="gift-info">
+      <div class="gift-title">Beg</div>
+      <div class="gift-links">
+      <!-- Link Shopee -->
+      <a href="https://s.shopee.com.my/50R7AIblx6" target="_blank">Shopee</a>
+
+      <!-- Link TikTok -->
+      <a href="https://vt.tiktok.com/ZSHcTenMvo76Y-N5afl/" target="_blank">TikTok</a>
+    </div>
+  </div>
+  
+<br><br>
+<!-- 🎁 PEMBERIAN HADIAH -->
+<div class="hadiah-box-wrapper">
+  <div class="hadiah-box">
+    <h3 class="hadiah-title">TITIPAN KASIH DARI ANDA</h3>
+    <p class="hadiah-tagline" style="font-size:0.8rem; font-style:italic; margin-top:0px; margin-bottom:4px;">
+      Nama anda terpahat dalam kenangan kami ✨
+    </p>
+
+    <!-- 📋 Senarai Nama Pemberi Hadiah -->
+    <div id="hadiahList">
+    <p style="height: 150px; margin:0; visibility:hidden;">&nbsp;</p>
+      <!-- Nama-nama akan dimasukkan via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Script Paparan Nama dari Google Sheet -->
+<script>
+window.addEventListener("DOMContentLoaded", fetchCSVData);
+
+async function fetchCSVData() {
+  const url = "https://docs.google.com/spreadsheets/d/1CbWQlnAruw53QHabtJ88UUjtBw6_RzW5pRsJY5aKqSg/gviz/tq?tqx=out:csv";
+
+  try {
+    const response = await fetch(url);
+    const csvText = await response.text();
+    const lines = csvText.trim().split("\n").slice(1); // buang header
+
+    const hadiahList = document.getElementById("hadiahList");
+    hadiahList.innerHTML = "";
+
+    lines.forEach(line => {
+      const cols = line.split(",");
+      const namaPemberi = cols[1]?.replace(/"/g, "")?.trim();
+      const namaBarang = cols[2]?.replace(/"/g, "")?.trim();
+
+      if (namaPemberi) {
+        const p = document.createElement("p");
+        p.innerHTML = namaBarang
+          ? `<strong>${namaPemberi}</strong> : ${namaBarang}`
+          : `<strong>${namaPemberi}</strong>`;
+        hadiahList.appendChild(p);
+      }
+    });
+  } catch (error) {
+    console.error("Gagal ambil data:", error);
+  }
+}
+</script>
+
+
      
 <!-- ✅ POPUP OVERLAY -->
 <div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
@@ -501,8 +1156,9 @@ function copyRek() {
   });
 </script>
 
-
-          
+      <!-- 🔹 External library PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+     
    <!-- ✅ SCRIPT UNTUK PAPAR STATUS TEMPAHAN -->
 <script src="n98hm1a2n.js"></script>
 
