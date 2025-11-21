@@ -266,14 +266,6 @@
       Amin Ya Rabbal Alamin
       </p>
 
-     <hr> 
-
-    <section class="transparent-section ucapan-section">
-    <h1 class="font-e">GUESTBOOK</h1>
-    <div id="ucapanList">
-  </div>
-</section>
-      
 <div class="footer-credit" style="margin-top: 20px; text-align: center;">
   <p>#liyaterciptauntukhaikal</p>
   
@@ -306,8 +298,6 @@
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
   <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
-  <div class="footer-icon money" onclick="togglePopup('MoneyGift')">💵<span>Money Gift</span></div>
-  <div class="footer-icon wishlist" onclick="togglePopup('Wishlist')">🎁<span>Wishlist</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
 </div>
@@ -318,7 +308,7 @@
   <div class="popup-section">
   <h2>RSVP</h2>
 <form id="rsvp-form" 
-      action="https://docs.google.com/forms/d/e/1FAIpQLSedlvRozEgmCPlheAte9YGIS-VxcumFs7FBSSeqURJLB9chiA/formResponse" 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSeXqyWntmtM0Q7AqcVN8vyHEAWezSltwbUWkSDjzgqSVOxB0w/formResponse" 
       method="POST" 
       target="hidden_iframe"
       onsubmit="handleSubmit(event)">
@@ -326,30 +316,22 @@
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required>
+    <input type="text" id="nama" name="entry.115080721" placeholder="Nama Anda" required>
 
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
       <label>
-        <input type="radio" name="entry.727555102" value="Hadir" required> Hadir
+        <input type="radio" name="entry.963316143" value="Hadir" required> Hadir
       </label>
       <label>
-        <input type="radio" name="entry.727555102" value="Tidak Hadir"> Tidak Hadir
+        <input type="radio" name="entry.963316143" value="Tidak Hadir"> Tidak Hadir
       </label>
     </div>
 
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.1537909291" min="1" placeholder="Contoh: 2">
-
-    <!-- Tambah selepas Bilangan Kehadiran -->
-    <br>
-    <label for="ucapan"><strong>Ucapan</strong></label>
-    <textarea id="ucapan" 
-          name="entry.1530998401" 
-          placeholder="Ucapan anda"></textarea>
-
+    <input type="number" id="bilangan" name="entry.678301825" min="1" placeholder="Contoh: 2">
   
       <button type="submit" class="btn-hantar">Hantar</button>
     </form>
