@@ -1,1578 +1,875 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Walimatulurus Haikal & Liya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NNA Design</title>
 
-  <!-- ✅ Favicon & Apple Touch Icon -->
-<link rel="icon" href="NNA.png" type="image/png">
-<link rel="apple-touch-icon" href="NNA.png">
+  <!-- Favicon / Logo -->
+  <link rel="icon" type="image/png" href="NNA.png">
 
-  <!-- ✅ Open Graph (hanya title, tiada description, tiada gambar) -->
-  <meta property="og:title" content="Walimatulurus Haikal & Liya">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ecardrsvp.online/Haikal-Liya/">
-  <meta property="og:description" content=" ">
-
-  <!-- 🚫 Paksa image kosong -->
-  <meta property="og:image" content="https://ecardrsvp.online/blank.png">
-  <meta property="og:image:secure_url" content="https://ecardrsvp.online/blank.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- ✅ Twitter Card minimum -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Walimatulurus Haikal & Liya">
-  <meta name="twitter:description" content=" ">
-  <meta name="twitter:image" content="https://ecardrsvp.online/blank.png">
-
-  <!-- 🚫 Block crawler ambil text/image dari body -->
-  <meta name="robots" content="nosnippet, noimageindex">
-  <meta name="googlebot" content="nosnippet, noimageindex">
+  <!-- CSS -->
+  <link rel="stylesheet" href="a96dn2n6a.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-  
-  
-<!-- ✅ Google Fonts (dikemas kini) -->
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Merriweather:wght@400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="a96dn2n6a.css" />
-  
-  
-  <style>
-      body {
-      color: black;
-      background-color: white;
-      font-family: Dancing Script, sans-serif;
-      margin: 0;
-      padding: 0;
-    }  
-    .page {
-      padding: 30px 20px;
-      margin-bottom: 30px;
-      border-radius: 0px;
-      box-shadow: none;
-      background-color: transparent;
-      color: black;
-    }
-    .front-page {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #fffafc;
-      text-align: center;
-      color: black;
-    }
-    .front-page button {
-      margin-top: 20px;
-      padding: 10px 25px;
-      background-color: #6A4FAE;
-      color: white;
-      font-size: 18px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-    }
-    .popup-section {
-      width: 100%;
-      max-width: 420px;
-    }
-.hidden-section {
-  background-color: white;
-  padding: 30px 20px;
-  margin: 0 auto 70px auto;
-  width: fit-content;
-  max-width: 90vw;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: none;
-  position: relative;
-  transform: translateY(30px);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
+<body style="background-color: #FADADD; font-family: sans-serif;">
 
-.hidden-section.show {
-  display: block;  
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.purchase-buttons img {
-  width: 33px;    /* saiz ikon boleh ubah ikut keperluan */
-  height: 33px;
-  object-fit: contain;  /* pastikan imej tak tertarik/terdistorsi */
-  margin: 0 0px;  /* ruang antara ikon */
-}    
-  </style>
-</head>
-<body>
-
-<!-- 🌸 Background wrapper gaya telefon -->
-<div class="bg-wrapper"></div>
+<!-- Header -->
+<header class="header">
+  <div class="logo">
+    <img src="NNA.png" alt="Logo NNA Design">
+    <h1>RSVP (LINK)</h1><br>
 
 
-<!-- ✅ SALJI DALAM WRAPPER -->
-<div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
-
-
-
-  <!-- Muzik Latar -->
-  <audio id="bg-music" loop>
-    <source src="ARVIAN DWI - SATU SHAF DI BELAKANGKU OFFICIAL LYRIC VIDEO.mp3" type="audio/mpeg"/>
-  </audio>
-
-   <div id="wrapper">
-     <!-- SEMUA KANDUNGAN TERMASUK section.front-page DAN #main-content -->
-     
-  <!-- ✅ HALAMAN DEPAN -->
-<section class="page front-page" style="position: relative; top: -8vh;">
-    <h1 class="font-b">WALIMATULURUS</h1>
-    <h2><span class="font-c">Haikal</span></h2>
-    <h2><span class="font-a">&</span></h2>
-    <h2 class="font-c">Liya</h2>
-    <button id="start-btn" class="small-btn">BUKA</button>
-  </section>
-
-
-  <!-- ✅ KANDUNGAN UTAMA (DISOROK PADA MULA) -->
-  <div id="main-content" style="display: none;">
-
- <!-- Gabungan Page 2–4 -->
-    <section class="page">
-      <h2 class="font-f">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
-      <p class="nama-ayah"><strong>ZULKEFLI BIN ABDULLAH</strong></p>
-      <p class="simbol-dan">&</p>
-      <p class="nama-ibu"><strong>FAZILAH BINTI AHMAD MANAF</strong><br><br>
-      Dengan penuh kesyukuran kehadrat Illahi,<br>
-      kami dengan berbesar hati menjemput<br>
-      Dato’/ Datin/ Tuan/ Puan/ Encik/ Cik<br>
-      seisi keluarga untuk hadir<br>
-      ke Majlis Perkahwinan putera kami<br><br>
-      <p class="nama-pengantin"><strong class="font-d">Muhammad Haikal Bin Zulkefli</strong></p>
-      <p class="pilihan-hati">dengan pilihan hatinya</p>
-      <p class="nama-pasangan"><strong class="font-d">Nurul Ilyana Binti Ilyas</strong></p>
-
-      <hr>   
-    
-      <p>
-      <strong class="font-e">PADA</strong><br>
-      Rabu, 31 Disember 2025<br>
-      Bersamaan 10 Rejab 1447H
-      </p>
-
-      <p>
-      <strong class="font-e">BERTEMPAT DI</strong><br>
-      Dewan Serbaguna Bandar Sultan Suleiman<br>
-      Bandar Sultan Suleiman<br>
-      42000 Port Klang, Selangor
-      </p>
-     
-      <p>
-      <strong class="font-e">ATURCARA MAJLIS</strong><br>
-      <strong>Jamuan Makan : </strong>11.00 am - 5.00 pm<br>
-      <strong>Ketibaan Pengantin :</strong>
-       1.00 pm</p>
-
-      <hr> 
-
-<section id="countdown-page" class="transparent-section">
-    <h1 class="font-e">COUNTDOWN</h1>
-
-    <div class="countdown">
-      <div class="countdown-box">
-        <div class="countdown-number" id="days">0</div>
-        <div class="countdown-label">Hari</div>
-      </div>
-      <div class="countdown-box">
-        <div class="countdown-number" id="hours">0</div>
-        <div class="countdown-label">Jam</div>
-      </div>
-      <div class="countdown-box">
-        <div class="countdown-number" id="minutes">0</div>
-        <div class="countdown-label">Minit</div>
-      </div>
-      <div class="countdown-box">
-        <div class="countdown-number" id="seconds">0</div>
-        <div class="countdown-label">Saat</div>
-      </div>
+    <!-- Button bawah RSVP -->
+    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: nowrap;">
+          <a href="#borang" 
+         style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
+                text-decoration: none; border-radius: 8px; display: inline-block; 
+                text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
+         onmouseover="this.style.backgroundColor='#f497b6';" 
+         onmouseout="this.style.backgroundColor='#f8b6c9';">
+        BORANG
+      </a>
+      <a href="#pembayaran" 
+         style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
+                text-decoration: none; border-radius: 8px; display: inline-block; 
+                text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
+         onmouseover="this.style.backgroundColor='#f497b6';" 
+         onmouseout="this.style.backgroundColor='#f8b6c9';">
+        PEMBAYARAN
+      </a>
+      <a href="#FAQ" 
+         style="background-color: #f8b6c9; color: black; padding: 10px 12px; 
+                text-decoration: none; border-radius: 8px; display: inline-block; 
+                text-align: center; font-size: 10px; flex: 0 1 auto; white-space: nowrap;"
+         onmouseover="this.style.backgroundColor='#f497b6';" 
+         onmouseout="this.style.backgroundColor='#f8b6c9';">
+        FAQ
+      </a>
     </div>
+  </div>
+</header>
+  
 
-    <script>
-      const weddingDate = new Date("2025-12-31T10:00:00").getTime();
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = weddingDate - now;
+  <!-- Seksyen Pakej -->
+<section class="pakej-section">
+  <h2>SENARAI PAKEJ</h2><br><br>
+  <div class="pakej">
+    
+    <div class="card gold">
+      <h3 class="font-a" style="margin: 0;">GOLD PACKAGE</h3>
+      <h3 class="font-b" style="margin: 0;">
+      <span style="text-decoration: line-through; color: grey;">RM 40.99</span>
+      <span style="color: red; font-weight: bold; margin-left: 8px;">RM 25.01</span>
+  </h3><br>
 
-        if (distance < 0) {
-          ["days", "hours", "minutes", "seconds"].forEach(id => {
-            document.getElementById(id).textContent = "0";
-          });
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
-      }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    </script>
-</section>
       
-     <hr> 
+        <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
+        <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
+        <p><i class="fas fa-gift"></i> Wishlist (Hadiah Mengikut Link pilihan anda sendiri)<br>
+         <a href="javascript:void(0);" onclick="toggleGambar('wishlist-img')">Lihat Contoh</a>
+         </p>
 
-  <section class="galeri transparent-section">
-  <h1 class="font-e">GALERI</h1>
-  <div class="gallery-slider">
-    <button class="gallery-prev">&#10094;</button>
-    
-    <div class="gallery-viewport"> 
-    <div class="gallery-track">
-      <div class="gallery-slide"><img src="GambarGaleri1.jpg" alt="Gambar 1"></div>
-      <div class="gallery-slide"><img src="GambarGaleri2.jpg" alt="Gambar 2"></div>
-      <div class="gallery-slide"><img src="GambarGaleri3.jpeg" alt="Gambar 3"></div>
+<img id="wishlist-img" src="ContohHadiah2.PNG" alt="Contoh Wishlist" 
+     style="display: none; width: 100%; max-width: 300px; margin-top: 5px;">
+
+        <p><i class="fas fa-phone"></i> Contact</p>
+        <p><i class="fas fa-location-dot"></i> Location</p>
+        <p><i class="fas fa-clock"></i> Countdown</p>
+        <p><i class="fas fa-pen"></i> Ucapan</p>
+        <p><i class="fas fa-music"></i> Musik</p>
+        <p><i class="fas fa-image"></i> Galeri</p>
+        <p><i class="fas fa-file-pdf"></i> PDF (2 Page/Saiz A6)<br>
+         <a href="javascript:void(0);" onclick="toggleGambar('PDF-img')">Lihat Contoh</a>
+         </p>
+
+<img id="PDF-img" src="ContohKad1.png" alt="Contoh PDF" 
+     style="display: none; width: 100%; max-width: 300px; margin-top: 5px;">
+
+      <div style="text-align: center;">
+<a href="https://ecardrsvp.online/WalimatulurusHaikal_-Liya/" target="_blank">
+  <button class="pilih-pakej-btn">PREVIEW</button>
+</a><br>
+<a href="https://s.shopee.com.my/AA7GqBGiCu" target="_blank">
+<button class="pilih-pakej-btn" 
+        style="background-color: #f8b6c9; color: black; margin-top:8px;" 
+        onmouseover="this.style.backgroundColor='#f497b6'; this.style.color='black';" 
+        onmouseout="this.style.backgroundColor='#f06b9c'; this.style.color='black';">
+  Shopee
+</button>
+  </a> 
+      </div>
+    </div>
+
+    <div class="card silver">
+      <h3 class="font-a" style="margin: 0;">SILVER PACKAGE</h3>
+      <h3 class="font-b" style="margin: 0;">
+      <span style="text-decoration: line-through; color: grey;">RM 30.99</span>
+      <span style="color: red; font-weight: bold; margin-left: 8px;">RM 18.91</span>
+  </h3><br>
+
+      
+        <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
+        <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
+        <p><i class="fas fa-gift"></i> Wishlist (Boleh Pilih Hadiah Existing)<br>
+         <a href="javascript:void(0);" onclick="toggleGambar('WISHLIST EXISTING-img')">Lihat Contoh</a>
+         </p>
+
+<img id="WISHLIST EXISTING-img" src="ContohHadiah1.png" alt="Contoh WISHLIST" 
+     style="display: none; width: 100%; max-width: 300px; margin-top: 5px;">
+
+        <p><i class="fas fa-phone"></i> Contact</p>
+        <p><i class="fas fa-location-dot"></i> Location</p>
+        <p><i class="fas fa-clock"></i> Countdown</p>
+        <p><i class="fas fa-pen"></i> Ucapan</p>
+        <p><i class="fas fa-music"></i> Musik</p>
+        <p><i class="fas fa-image"></i> Galeri</p><br>
+
+      <div style="text-align: center;">
+<a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya/" target="_blank">
+  <button class="pilih-pakej-btn">PREVIEW</button>
+</a><br>
+<a href="https://s.shopee.com.my/8fIT3NZwKR" target="_blank">
+<button class="pilih-pakej-btn" 
+        style="background-color: #f8b6c9; color: black; margin-top:8px;" 
+        onmouseover="this.style.backgroundColor='#f497b6'; this.style.color='black';" 
+        onmouseout="this.style.backgroundColor='#f06b9c'; this.style.color='black';">
+  Shopee
+</button>
+  </a> 
+      </div>
+    </div>
+      
+    <div class="card bronze">
+      <h3 class="font-a" style="margin: 0;">BRONZE PACKAGE</h3>
+      <h3 class="font-b" style="margin: 0;">
+      <span style="text-decoration: line-through; color: grey;">RM 20.99</span>
+      <span style="color: red; font-weight: bold; margin-left: 8px;">RM 12.81</span>
+  </h3><br>
+
+      
+        <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
+        <p><i class="fas fa-phone"></i> Contact</p>
+        <p><i class="fas fa-location-dot"></i> Location</p>
+        <p><i class="fas fa-clock"></i> Countdown</p>
+        <p><i class="fas fa-music"></i> Musik</p>
+        <p><i class="fas fa-image"></i> Galeri</p><br>
+
+      <div style="text-align: center;">
+<a href="https://ecardrsvp.online/WalimatulurusHaikal_Liya/" target="_blank">
+  <button class="pilih-pakej-btn">PREVIEW</button>
+</a><br>
+<a href="https://s.shopee.com.my/7pjM3l2qBA" target="_blank">
+<button class="pilih-pakej-btn" 
+        style="background-color: #f8b6c9; color: black; margin-top:8px;" 
+        onmouseover="this.style.backgroundColor='#f497b6'; this.style.color='black';" 
+        onmouseout="this.style.backgroundColor='#f06b9c'; this.style.color='black';">
+  Shopee
+</button>
+  </a>      
       </div>
     </div>
     
-    <button class="gallery-next">&#10095;</button>
+  </div> <!-- ✅ TUTUP .pakej -->
+</section> <!-- ✅ TUTUP .pakej-section -->
+
+<!-- Preview Kad Kahwin -->
+<section class="preview-kad">
+  <h2>DESIGN KAD</h2>
+  <div class="preview-grid">
+    
+    <div class="kad-item">
+      <img src="B1.png" alt="Kad 1">
+      <p><strong>B1</strong></p><br>
+      <a href="https://ecardrsvp.online/WalimatulurusHaikal_Liya/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B2.png" alt="Kad 2">
+      <p><strong>B2</strong></p><br>
+      <a href="https://ecardrsvp.online/B2/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B3 (PREVIEW).png" alt="Kad 2">
+      <p><strong>B3</strong></p><br>
+      <a href="https://ecardrsvp.online/B3/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>    
+
+    <div class="kad-item">
+      <img src="B4.png" alt="Kad 3">
+      <p><strong>B4</strong></p><br>
+      <a href="https://ecardrsvp.online/B4/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B5 (PREVIEW).png" alt="Kad 3">
+      <p><strong>B5</strong></p><br>
+      <a href="https://ecardrsvp.online/B5/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="B6.png" alt="Kad 5">
+      <p><strong>B6</strong></p><br>
+      <a href="https://ecardrsvp.online/B6/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B7.png" alt="Kad 6">
+      <p><strong>B7</strong></p><br>
+      <a href="https://ecardrsvp.online/B7/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B8.png" alt="Kad 7">
+      <p><strong>B8</strong></p><br>
+      <a href="https://ecardrsvp.online/B68/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B9.png" alt="Kad 8">
+      <p><strong>B9</strong></p><br>
+      <a href="https://ecardrsvp.online/KadKahwinContoh3/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B12.png" alt="Kad 9">
+      <p><strong>B12</strong></p><br>
+      <a href="https://ecardrsvp.online/B12/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B14.png" alt="Kad 10">
+      <p><strong>B14</strong></p><br>
+      <a href="https://ecardrsvp.online/B14/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B15.png" alt="Kad 11">
+      <p><strong>B15</strong></p><br>
+      <a href="https://ecardrsvp.online/B15/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B16.png" alt="Kad 12">
+      <p><strong>B16</strong></p><br>
+      <a href="https://ecardrsvp.online/B16/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B17.png" alt="Kad 13">
+      <p><strong>B17</strong></p><br>
+      <a href="https://ecardrsvp.online/B17/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B18.png" alt="Kad 14">
+      <p><strong>B18</strong></p><br>
+      <a href="https://ecardrsvp.online/B18/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B20 (PREVIEW).png" alt="Kad 14">
+      <p><strong>B20</strong></p><br>
+      <a href="https://ecardrsvp.online/B20/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B21 (PREVIEW).png" alt="Kad 14">
+      <p><strong>B21</strong></p><br>
+      <a href="https://ecardrsvp.online/B21/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="B22.png" alt="Kad 15">
+      <p><strong>B22</strong></p><br>
+      <a href="https://ecardrsvp.online/B22/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B23.png" alt="Kad 16">
+      <p><strong>B23</strong></p><br>
+      <a href="https://ecardrsvp.online/B23/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B24.png" alt="Kad 17">
+      <p><strong>B24</strong></p><br>
+      <a href="https://ecardrsvp.online/B24/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B25 (PREVIEW).png" alt="Kad 14">
+      <p><strong>B25</strong></p><br>
+      <a href="https://ecardrsvp.online/B25/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B26 (PREVIEW).png" alt="Kad 14">
+      <p><strong>B26</strong></p><br>
+      <a href="https://ecardrsvp.online/B26/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B27 (PREVIEW).png" alt="Kad 14">
+      <p><strong>B27</strong></p><br>
+      <a href="https://ecardrsvp.online/B27/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="B28.png" alt="Kad 19">
+      <p><strong>B28</strong></p><br>
+      <a href="https://ecardrsvp.online/B28/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B30.png" alt="Kad 20">
+      <p><strong>B30</strong></p><br>
+      <a href="https://ecardrsvp.online/B30/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B31.png" alt="Kad 21">
+      <p><strong>B31</strong></p><br>
+      <a href="https://ecardrsvp.online/B31/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B32.png" alt="Kad 22">
+      <p><strong>B32</strong></p><br>
+      <a href="https://ecardrsvp.online/B32/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B33.png" alt="Kad 23">
+      <p><strong>B33</strong></p><br>
+      <a href="https://ecardrsvp.online/B33/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B35.png" alt="Kad 24">
+      <p><strong>B35</strong></p><br>
+      <a href="https://ecardrsvp.online/B35/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B36 (PREVIEW).png" alt="Kad 24">
+      <p><strong>B36</strong></p><br>
+      <a href="https://ecardrsvp.online/B36/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B37 (PREVIEW).png" alt="Kad 24">
+      <p><strong>B37</strong></p><br>
+      <a href="https://ecardrsvp.online/B37/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="B39.png" alt="Kad 25">
+      <p><strong>B39</strong></p><br>
+      <a href="https://ecardrsvp.online/B39/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B41.png" alt="Kad 26">
+      <p><strong>B41</strong></p><br>
+      <a href="https://ecardrsvp.online/B41/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B42.png" alt="Kad 27">
+      <p><strong>B42</strong></p><br>
+      <a href="https://ecardrsvp.online/B42/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B43.png" alt="Kad 28">
+      <p><strong>B43</strong></p><br>
+      <a href="https://ecardrsvp.online/B43/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B45.png" alt="Kad 30">
+      <p><strong>B45</strong></p><br>
+      <a href="https://ecardrsvp.online/B45/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B46.png" alt="Kad 31">
+      <p><strong>B46</strong></p><br>
+      <a href="https://ecardrsvp.online/B46/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B47.png" alt="Kad 32">
+      <p><strong>B47</strong></p><br>
+      <a href="https://ecardrsvp.online/B47/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B48.png" alt="Kad 33">
+      <p><strong>B48</strong></p><br>
+      <a href="https://ecardrsvp.online/B48/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B49.png" alt="Kad 34">
+      <p><strong>B49</strong></p><br>
+      <a href="https://ecardrsvp.online/B49/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B53.png" alt="Kad 35">
+      <p><strong>B53</strong></p><br>
+      <a href="https://ecardrsvp.online/B53/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B54.png" alt="Kad 36">
+      <p><strong>B54</strong></p><br>
+      <a href="https://ecardrsvp.online/B54/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B56.png" alt="Kad 37">
+      <p><strong>B56</strong></p><br>
+      <a href="https://ecardrsvp.online/B56/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B61 (PREVIEW).png" alt="Kad 39">
+      <p><strong>B61</strong></p><br>
+      <a href="https://ecardrsvp.online/B61/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="B62.png" alt="Kad 39">
+      <p><strong>B62</strong></p><br>
+      <a href="https://ecardrsvp.online/B62/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B63.png" alt="Kad 40">
+      <p><strong>B63</strong></p><br>
+      <a href="https://ecardrsvp.online/B63/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="B64.png" alt="Kad 41">
+      <p><strong>B64</strong></p><br>
+      <a href="https://ecardrsvp.online/B64/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A1.png" alt="Kad 42">
+      <p><strong>A1</strong></p><br>
+      <a href="https://ecardrsvp.online/A1/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A2.png" alt="Kad 43">
+      <p><strong>A2</strong></p><br>
+      <a href="https://ecardrsvp.online/A2/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A3.png" alt="Kad 45">
+      <p><strong>A3</strong></p><br>
+      <a href="https://ecardrsvp.online/A3/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A4.png" alt="Kad 46">
+      <p><strong>A4</strong></p><br>
+      <a href="https://ecardrsvp.online/A4/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A5.png" alt="Kad 47">
+      <p><strong>A5</strong></p><br>
+      <a href="https://ecardrsvp.online/A5/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+     <div class="kad-item">
+      <img src="A6 (preview).png" alt="Kad 47">
+      <p><strong>A6</strong></p><br>
+      <a href="https://ecardrsvp.online/A6/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="A9.png" alt="Kad 48">
+      <p><strong>A9</strong></p><br>
+      <a href="https://ecardrsvp.online/A9/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A11.png" alt="Kad 49">
+      <p><strong>A11</strong></p><br>
+      <a href="https://ecardrsvp.online/A11/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A13.png" alt="Kad 50">
+      <p><strong>A13</strong></p><br>
+      <a href="https://ecardrsvp.online/A13/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A15.png" alt="Kad 51">
+      <p><strong>A15</strong></p><br>
+      <a href="https://ecardrsvp.online/A15/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A17.png" alt="Kad 53">
+      <p><strong>A17</strong></p><br>
+      <a href="https://ecardrsvp.online/A17/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A20.png" alt="Kad 54">
+      <p><strong>A20</strong></p><br>
+      <a href="https://ecardrsvp.online/A20/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A24.png" alt="Kad 55">
+      <p><strong>A24</strong></p><br>
+      <a href="https://ecardrsvp.online/A24/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A25.png" alt="Kad 56">
+      <p><strong>A25</strong></p><br>
+      <a href="https://ecardrsvp.online/A25/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A26.png" alt="Kad 57">
+      <p><strong>A26</strong></p><br>
+      <a href="https://ecardrsvp.online/A26/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A27.png" alt="Kad 58">
+      <p><strong>A27</strong></p><br>
+      <a href="https://ecardrsvp.online/A27/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A29.png" alt="Kad 59">
+      <p><strong>A29</strong></p><br>
+      <a href="https://ecardrsvp.online/A29/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A30.png" alt="Kad 60">
+      <p><strong>A30</strong></p><br>
+      <a href="https://ecardrsvp.online/A30/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
+    <div class="kad-item">
+      <img src="A33.png" alt="Kad 61">
+      <p><strong>A33</strong></p><br>
+      <a href="https://ecardrsvp.online/A33/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A34.png" alt="Kad 62">
+      <p><strong>A34</strong></p><br>
+      <a href="https://ecardrsvp.online/A34/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A35.png" alt="Kad 63">
+      <p><strong>A35</strong></p><br>
+      <a href="https://ecardrsvp.online/A35/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A36.png" alt="Kad 64">
+      <p><strong>A36</strong></p><br>
+      <a href="https://ecardrsvp.online/A36/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A40.png" alt="Kad 65">
+      <p><strong>A40</strong></p><br>
+      <a href="https://ecardrsvp.online/A40/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A46.png" alt="Kad 66">
+      <p><strong>A46</strong></p><br>
+      <a href="https://ecardrsvp.online/A46/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A47.png" alt="Kad 67">
+      <p><strong>A47</strong></p><br>
+      <a href="https://ecardrsvp.online/A47/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A49.png" alt="Kad 68">
+      <p><strong>A49</strong></p><br>
+      <a href="https://ecardrsvp.online/A49/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A53.png" alt="Kad 69">
+      <p><strong>A53</strong></p><br>
+      <a href="https://ecardrsvp.online/A53/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A56.png" alt="Kad 70">
+      <p><strong>A56</strong></p><br>
+      <a href="https://ecardrsvp.online/A56/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A61.png" alt="Kad 71">
+      <p><strong>A61</strong></p><br>
+      <a href="https://ecardrsvp.online/A61/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A63.png" alt="Kad 72">
+      <p><strong>A63</strong></p><br>
+      <a href="https://ecardrsvp.online/A63/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A65.png" alt="Kad 73">
+      <p><strong>A65</strong></p><br>
+      <a href="https://ecardrsvp.online/A65/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A69.png" alt="Kad 74">
+      <p><strong>A69</strong></p><br>
+      <a href="https://ecardrsvp.online/A69/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A70.png" alt="Kad 75">
+      <p><strong>A70</strong></p><br>
+      <a href="https://ecardrsvp.online/A70/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+
+    <div class="kad-item">
+      <img src="A71.png" alt="Kad 76">
+      <p><strong>A71</strong></p><br>
+      <a href="https://ecardrsvp.online/A71/" target="_blank" class="preview-btn">PREVIEW</a>
+    </div>
+    
   </div>
 </section>
 
-  <hr> 
-      
-    <section class="doa transparent-section"> 
-    <h2 class="font-f">بِسْمِ اللهِ ٱلرَّحْمٰنِ الرَّحِيمِ</h2>
-      Ya Allah Ya Tuhan kami,<br>
-      Kami memohon kepada-Mu berkatilah<br>
-      perkahwinan ini.<br>
-      Limpahkanlah rahmat dan baraqah<br>
-      kepada kedua pasangan ini,<br>
-      Kurniakanlah mereka zuriat yang<br>
-      soleh dan solehah,<br>
-      Sempurnakan agama mereka dengan berkat ikatan ini<br>
-      dan semoga jodoh pernikahan ini akan<br>
-      berkekalan hingga ke jannah.<br><br>
-      Amin Ya Rabbal Alamin
-      </p>
 
-<div class="footer-credit" style="margin-top: 20px; text-align: center;">
-  <p>#liyaterciptauntukhaikal</p>
-  
-  <!-- Spacer -->
-  <div style="margin: 5px 0;"></div>
+<!-- Butang WhatsApp -->
+<a href="https://wa.me/601157265723?text=Hai,%20saya%20berminat%20dengan%20pakej%20RSVP" 
+   class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-    <!-- Teks "Contact Us" berwarna kelabu -->
-    <p style="font-weight: bold; font-size: 15px; margin-bottom: 8px; color: grey;">Contact Us</p>
 
-  <!-- Ikon Shopee & WhatsApp -->
-    <div class="purchase-buttons" style="display: flex; justify-content: center; gap: 10px;">
-    <a href="https://shopee.com.my/nna_95" class="purchase-btn" target="_blank">
-      <img src="shopee-icon.png" alt="Shopee">
+<!-- Borang Maklumat -->
+<section id="borang" class="borang-maklumat">
+  <h2>BORANG PENGISIAN MAKLUMAT</h2><br><br>
+  <div style="text-align: center;">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpZGSwL6C_UVm72VK_56pV8cSr8yOAqgPr_EQw4uFJfljY7w/viewform" target="_blank">
+      <button class="pilih-pakej-btn">
+        <i class="fas fa-edit"></i> Isi Borang
+      </button>
     </a>
-    <a href="https://wa.me/601157265723?text=Hai%2C%20saya%20berminat%20dengan%20RSVP" class="purchase-btn" target="_blank">
-      <img src="whatsapp-icon.png" alt="WhatsApp">
-    </a>
-      <a href="https://ecardrsvp.online/main-site/" class="purchase-btn" target="_blank">
-      <img src="logo contact us.png" alt="Shopee">
-    </a>  
   </div>
-</div>
-</section>
-</section>
-
-    <!-- removed misplaced footer-credit -->
-      
-  </div>
-
-<!-- ✅ Sticky Footer Menu -->
-<div class="footer">
-  <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
-  <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
-  <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
-</div>
-     
-    <!-- Page 5 -->
-<!-- ✅ Seksyen RSVP -->
-<div id="popup-RSVP" class="popup-overlay">
-  <div class="popup-section">
-  <h2>RSVP</h2>
-<form id="rsvp-form" 
-      action="https://docs.google.com/forms/d/e/1FAIpQLSeXqyWntmtM0Q7AqcVN8vyHEAWezSltwbUWkSDjzgqSVOxB0w/formResponse" 
-      method="POST" 
-      target="hidden_iframe"
-      onsubmit="handleSubmit(event)">
-
-    <!-- Nama -->
-    <br>
-    <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.115080721" placeholder="Nama Anda" required>
-
-    <!-- Kehadiran -->
-    <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
-      <label>
-        <input type="radio" name="entry.963316143" value="Hadir" required> Hadir
-      </label>
-      <label>
-        <input type="radio" name="entry.963316143" value="Tidak Hadir"> Tidak Hadir
-      </label>
-    </div>
-
-    <!-- Bilangan Kehadiran -->
-    <br>
-    <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.678301825" min="1" placeholder="Contoh: 2">
   
-      <button type="submit" class="btn-hantar">Hantar</button>
-    </form>
+  <p style="font-size:13px; color:#b22222; text-align:center; margin-top:15px; line-height:1.4;">
+    ⚠️ Reminder: Sekiranya selepas anda mendapat link RSVP, anda tidak membuat pembayaran dalam tempoh <strong>12 jam</strong>,  
+    seller berhak untuk memadam semula link tanpa persetujuan anda.
+  </p>
+</section>
 
-    <!-- ✅ Popup alert khas -->
-    <div id="rsvp-alert" class="alert-box">
-      <div class="alert-header">ecardrsvp.online says:</div>
-      <div class="alert-body">
-        <p>Kehadiran anda telah direkodkan.</p>
-        <button onclick="closeRsvpAlert()">OK</button>
-      </div>
-    </div>
+<br>
+  
+<!-- Cara Pembayaran -->
+<section id="pembayaran" class="bayaran">
+  <h2>PEMBAYARAN</h2><br>
+  <p>Pembayaran boleh dilakukan selepas dapat link RSVP</p><br>
 
-<iframe
-  name="hidden_iframe"
-  id="hidden_iframe"
-  style="display:none;"
-  onload="if (window.rsvpSuccessHandler) rsvpSuccessHandler();">
-   </iframe>
+  <div style="text-align: center;">
+    <strong>No. Akaun TNG:</strong><br>
+    <span id="tngAcc" style="font-weight:bold; font-size:16px;">111023701317</span><br><br>
+    <button onclick="copyTNG()" 
+            style="background-color:#f8b6c9; color:black; border:none; padding:6px 12px; 
+                   border-radius:6px; cursor:pointer; font-size:12px;"
+            onmouseover="this.style.backgroundColor='#f497b6';" 
+            onmouseout="this.style.backgroundColor='#f8b6c9';">
+      Copy
+    </button>
   </div>
-</div>
 
-<!-- ✅ Seksyen Contact -->
-  <div id="popup-Contact" class="popup-overlay">
-  <div class="popup-section">
-  <h2>CONTACT</h2>
-  <a href="tel:+601157265723" class="phone-button">📞 Fazilah (Ibu)</a><br>
-  <a href="tel:+601157265723" class="phone-button">📞 Zulkefli (Ayah)</a><br><br><br><br>
-  </div>
-</div>
-      
-<!-- ✅ Seksyen Location -->
-  <div id="popup-Location" class="popup-overlay">
-  <div class="popup-section">
-  <h2>LOCATION</h2>
-  <p>Dewan Serbaguna Bandar Sultan Suleiman<br>Bandar Sultan Suleiman<br>42000 Port Klang, Selangor</p>
-  <a href="https://maps.app.goo.gl/CRv4sLeVjw9E1oYu6" target="_blank" class="location-button">
-    <img src="https://img.icons8.com/color/48/000000/google-maps.png" alt="Google Maps" width="24" height="24">
-    Buka Google Maps
-  </a>
-
-  <a href="https://waze.com/ul/hw2814ygzm" target="_blank" class="location-button">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/waze.png" alt="Waze" width="24" height="24">
-    Buka Waze
-  </a>
-  </div>
-</div>
-
-
-<!-- ✅ Seksyen Money Gift -->
-  <div id="popup-MoneyGift" class="popup-overlay">
-  <div class="popup-section">
-  <h2>MONEY GIFT</h2>
-  <p><strong>Nama Bank :</strong> Maybank Berhad</p>
-  <p><strong>Nama :</strong> Muhammad Haikal Bin Zulkefli</p>
-  <p><strong>Nombor Akaun:</strong> <span id="rek">1234567890</span></p>
-  <button onclick="copyRek()">Copy</button>
-  <br>
-  <img src="Contoh QR.jpg" alt="Kod QR" class="qr-image" /><br><br><br><br>
-  </div>
-</div>
-
-<!-- ✅ Seksyen Wishlist (Ringkasan) -->
-  <div id="popup-Wishlist" class="popup-overlay">
-  <div class="popup-section">
-  <h2>WISHLIST</h2>
-
-  <div style="text-align: center; margin-bottom: 20px;">
-  <h3><strong>Alamat Penghantaran</strong></h3>
-  <div id="alamat-text">
-      xx, Jalan Sultan Abdul Samad 2x<br>
-      Bandar Sultan Suleiman<br>
-      42000 Klang, Selangor
-  </div>
-  <button class="copy-btn" onclick="copyToClipboard('alamat-text')">Copy</button>
-
-  <h3 style="margin-top: 20px;"><strong>Nombor Telefon</strong></h3>
-  <div id="telefon-text">
-    0123456789
-  </div>
-  <button class="copy-btn" onclick="copyToClipboard('telefon-text')">Copy</button>
-</div>  
-
-<div style="text-align:center; margin-bottom:10px;">
-  <p style="font-size:15px; color:black; margin-bottom:12px;">
-    Terima kasih atas pemberian hadiah anda 💖<br>
-    Sila isi maklumat di pautan berikut ✨<br>
-    Maklumat anda akan dipaparkan di<br>
-    bahagian bawah halaman ini
+  <p id="copyMsg" style="color:black; font-size:12px; display:none; margin-top:8px; text-align:center;">
+    Nombor akaun berjaya disalin
   </p>
 
-  <a href="https://docs.google.com/forms/d/1g3AEle381P6SaBGe08M05ALilG9IAZn3khpeVivZ_3Q/viewform?usp=header"
-     target="_blank"
-     class="wishlist-btn">
-     Klik Sini Untuk Isi Maklumat Hadiah
-  </a>
-<br><br>
-
-  <div class="gift-item">
-    <img src="Morgan Peti Sejuk.png" alt="Morgan Peti Sejuk">
-    <div class="gift-info">
-      <div class="gift-title">Morgan Peti Sejuk</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/3qFOvJOS7I" target="_blank">Shopee</a>
-
-      <!-- Link TikTok -->
-      <a href="https://vt.tiktok.com/ZSH3bvbN76F7y-qiEWd/" target="_blank">TikTok</a>
-    </div>
+  <br><br>
+  <p style="text-align:center;">Atau imbas QR TNG di bawah</p><br>
+  <div style="text-align: center;">
+    <img src="QR TNG.png" alt="QR TNG" style="max-width: 200px; border: 2px solid #ccc; border-radius: 8px;">
   </div>
-  
-<br><br>
+</section>
 
-  <div class="gift-item">
-    <img src="Smart Tv.png" alt="Smart Tv">
-    <div class="gift-info">
-      <div class="gift-title">Smart Tv</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/40Yp72pUTS" target="_blank">Shopee</a>
-
-      <!-- Link TikTok -->
-      <a href="https://vt.tiktok.com/ZSH3bvTgknUxV-ETx6Y/" target="_blank">TikTok</a>
-    </div>
-  </div>
-  
-<br><br>
-    
-  <div class="gift-item">
-    <img src="Morgan Peti Sejuk.png" alt="Morgan Peti Sejuk">
-    <div class="gift-info">
-      <div class="gift-title">Morgan Peti Sejuk</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/3qFOvJOS7I" target="_blank">Shopee</a>
-
-      <!-- Link TikTok -->
-      <a href="https://vt.tiktok.com/ZSH3bvbN76F7y-qiEWd/" target="_blank">TikTok</a>
-    </div>
-  </div>
-  
-<br><br>
-
-  <div class="gift-item">
-    <img src="Midea Mesin Basuh Auto.png" alt="Midea Mesin Basuh Auto">
-    <div class="gift-info">
-      <div class="gift-title">Midea Mesin Basuh Auto</div>
-      <div class="gift-links"> 
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/5fcC7ZBqwi" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YnY6AdLss-V1q2Q/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-  <div class="gift-item">
-    <img src="Midea Microwave Oven.png" alt="Midea Microwave Oven">
-    <div class="gift-info">
-      <div class="gift-title">Midea Microwave Oven</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/AA55o2n0We" target="_blank">Shopee</a>
-
-      <!-- Link TikTok -->
-      <a href="https://vt.tiktok.com/ZSH3Ynk667PW7-RYxBn/" target="_blank">TikTok</a>
-    </div>
-  </div>
-  
-<br><br>
-
-  <div class="gift-item">
-    <img src="Midea Kipas Kaki.png" alt="Midea Kipas Kaki">
-    <div class="gift-info">
-      <div class="gift-title">Midea Kipas Kaki</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/5fcC7l7DCM" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3sna7X5JEr-Iakz2/"  target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>    
-
-  <div class="gift-item">
-    <img src="iPRO Water Dispenser (Hot,Cold, Normal).png" alt="iPRO Water Dispenser (Hot,Cold, Normal)">
-    <div class="gift-info">
-      <div class="gift-title">iPRO Water Dispenser (Hot,Cold, Normal)</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/804x0Rnx90" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b3qRXr8hQ-DjeAb/"  target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>   
-
-  <div class="gift-item">
-    <img src="Dessini Pressure Cooker.png" alt="Dessini Pressure Cooker">
-    <div class="gift-info">
-      <div class="gift-title">Dessini Pressure Cooker</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9pWc0Y3fBg " target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bWtxKysoG-rJUtm/" target="_blank">TikTok</a>
-
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Swiss Thomas Rice Cooker Multifunction.png" alt="Swiss Thomas Rice Cooker Multifunction">
-    <div class="gift-info">
-      <div class="gift-title">Swiss Thomas Rice Cooker Multifunction</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/20itxj2FNI" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3Ypq8K8DNm-L427m/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Panasonic_Pensonic Electric Kettle.png" alt="Panasonic/Pensonic Electric Kettle">
-    <div class="gift-info">
-      <div class="gift-title">Panasonic/Pensonic Electric Kettle</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/3LJ8GiD04v" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b3aLvedkA-JA2El/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Russell Taylors Vacuum Cleaner.png" alt="Russell Taylors Vacuum Cleaner">
-    <div class="gift-info">
-      <div class="gift-title">Russell Taylors Vacuum Cleaner</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/2LQb5zfFZb" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bc4HB7PxV-Dfz9U/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-  
-<div class="gift-item">
-    <img src="Swiss Thomas Air Fryer.png" alt="Swiss Thomas Air Fryer">
-    <div class="gift-info">
-      <div class="gift-title">Swiss Thomas Air Fryer</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/4foVvNTXI0" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bve7HtjFK-jhoD2/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-  
- <div class="gift-item">
-    <img src="TEFAL Blender.png" alt="TEFAL Blender">
-    <div class="gift-info">
-      <div class="gift-title">TEFAL Blender</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/4VV5j8socN" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7cTMvp5B-i4TxO/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-  
-  <div class="gift-item">
-    <img src="Dessini Chopper,Mini Blender.png" alt="Dessinni Chopper/Mini Blender">
-    <div class="gift-info">
-      <div class="gift-title">Dessinni Chopper/Mini Blender</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/2B2JyCAkls" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YnjXCgBB1-pfER0/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
-  <div class="gift-item">
-    <img src="Sharp Stand Mixer.png" alt="Sharp Stand Mixer">
-    <div class="gift-info">
-      <div class="gift-title">Sharp Stand Mixer</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/qbnMdWXHe" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7s4uJ3Ux-SFnA8/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
-  <div class="gift-item">
-    <img src="Russell Taylors Steam Generator Iron.png" alt="Russell Taylors Steam Generator Iron">
-    <div class="gift-info">
-      <div class="gift-title">Russell Taylors Steam Generator Iron</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9pWc6uymWp" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7P3hfFpY-eGQd8/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
-  <div class="gift-item">
-    <img src="Russel Taylors Iron.png" alt="Russel Taylors Iron">
-    <div class="gift-info">
-      <div class="gift-title">Russel Taylors Iron</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9pRlbx7vbJ" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YppEKvrFq-I8Ou1/" target="_blank">TikTok</a>     
-    </div>
-  </div>
-
-<br><br>    
-
-  <div class="gift-item">
-    <img src="Dessini Toaster.png" alt="Dessini Toaster">
-    <div class="gift-info">
-      <div class="gift-title">Dessini Toaster</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/5L4DL0y9cY" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bKvA6CL6C-iPS2v/" target="_blank">TikTok</a>     
-    </div>
-  </div>
-
-<br><br>    
-
-  <div class="gift-item">
-    <img src="Elba Electric Thermo Pot.png" alt="Elba Electric Thermo Pot">
-    <div class="gift-info">
-      <div class="gift-title">Elba Electric Thermo Pot</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/1VrUmIqJDE" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bKdvYmMJP-2bpJm/" target="_blank">TikTok</a>     
-    </div>
-  </div>
-
-<br><br> 
-
-  <div class="gift-item">
-    <img src="Swiss Thomas Hair Dryer.png" alt="Swiss Thomas Hair Dryer">
-    <div class="gift-info">
-      <div class="gift-title">Swiss Thomas Hair Dryer</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/7KpHjHFb0z" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bK9wFkXaj-8DJxS/" target="_blank">TikTok</a>     
-    </div>
-  </div>
-
-<br><br>  
-    
-        <div class="gift-item">
-    <img src="Speaker.png" alt="Speaker">
-    <div class="gift-info">
-      <div class="gift-title">Speaker</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/1g6L4d6PAm" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3snsgHsTud-t6orO/" target="_blank">TikTok</a>
-    </div>
-  </div>   
-
-<br><br>
-          
- <div class="gift-item">
-    <img src="Lampu Tidur.png" alt="Lampu Tidur">
-    <div class="gift-info">
-      <div class="gift-title">Lampu Tidur</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/6KrtSt4n4s" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3sWjK79j3v-6Sx5l/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-  
-<div class="gift-item">
-    <img src="Air Purifier.png" alt="Air Purifier">
-    <div class="gift-info">
-      <div class="gift-title">Air Purifier</div>
-      <div class="gift-links">      
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/AKO2Dh39xQ" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3sWkWwUj3H-lr02C/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-  
-      <div class="gift-item">
-    <img src="Dessini Infrared Cooker.png" alt="Dessini Infrared Cooker">
-    <div class="gift-info">
-      <div class="gift-title">Dessini Infrared Cooker</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/AKSuKvYZKD" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3sW5H5SPxQ-cSdlR/" target="_blank">TikTok</a>
-    </div>
-  </div>   
-
-<br><br>
-  
-      <div class="gift-item">
-    <img src="Dapur Gas.png" alt="Dapur Gas">
-    <div class="gift-info">
-      <div class="gift-title">Dapur Gas</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9Uq0eGPpfE" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3sWKfQQho2-5czSW/" target="_blank">TikTok</a>
-    </div>
-  </div>   
-
-<br><br>
-
-       <div class="gift-item">
-    <img src="Set Sofa.png" alt="Set Sofa">
-    <div class="gift-info">
-      <div class="gift-title">Set Sofa</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/gIMGPL8mG" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b3nafoGK9-JnxPT/" target="_blank">TikTok</a>
-    </div>
-  </div>   
-
-<br><br>      
-
-      <div class="gift-item">
-    <img src="Kabinet Tv.png" alt="Kabinet Tv">
-    <div class="gift-info">
-      <div class="gift-title">Kabinet Tv</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/50Mn2E6lql" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s7Jdaypfe-dehnw/" target="_blank">TikTok</a>
-    </div>
-  </div> 
-
-<br><br>
-
-      <div class="gift-item">
-    <img src="Kitchen Stove Cabinet.png" alt="Kitchen Stove Cabinet">
-    <div class="gift-info">
-      <div class="gift-title">Kitchen Stove Cabinet</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/1gAuIyGx0Q" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bcCekjo2b-kbB7d/" target="_blank">TikTok</a>
-    </div>
-  </div> 
-
-<br><br>
-
-       <div class="gift-item">
-    <img src="Set Bilik Tidur.png" alt="Set Bilik Tidur">
-    <div class="gift-info">
-      <div class="gift-title">Set Bilik Tidur</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/8pe4vd6JdZ" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7jTggDuv-Ai3Zu/" target="_blank">TikTok</a>
-    </div>
-  </div> 
-
-<br><br>       
-
-       <div class="gift-item">
-    <img src="Rak Kasut.png" alt="Rak Kasut">
-    <div class="gift-info">
-      <div class="gift-title">Rak Kasut</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/2g3SAoyzJf" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bERA6Yjq4-Cciwn/" target="_blank">TikTok</a>
-    </div>
-  </div> 
-
-<br><br>       
-
-<div class="gift-item">
-    <img src="Jug Air.png" alt="Jug Air">
-    <div class="gift-info">
-      <div class="gift-title">Jug Air</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/4VQKeby71y" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YpMWj7oQD-MBkE0/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>     
-
-<div class="gift-item">
-    <img src="Rak Cawan.png" alt="Rak Cawan">
-    <div class="gift-info">
-      <div class="gift-title">Rak Cawan</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/4L6okYJHvB" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s7YWEH3B8-0IKQi/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Dinnerware Set.png" alt="Dinnerware Set">
-    <div class="gift-info">
-      <div class="gift-title">Dinnerware Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9UtknMZs8W" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b3CPj8jnH-lVqMO/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Set Pinggan Mangkuk.png" alt="Set Pinggan Mangkuk">
-    <div class="gift-info">
-      <div class="gift-title">Set Pinggan Mangkuk</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/8fKecpp5Pd" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bcvJm7EPL-PPApH/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Coffee Set.png" alt="Coffee Set">
-    <div class="gift-info">
-      <div class="gift-title">Coffee Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/gIN6eFCzA" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bCEW5SC7W-QPfj0/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Coffee Set.png" alt="Coffee Set">
-    <div class="gift-info">
-      <div class="gift-title">Coffee Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/gIN6eFCzA" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bCEW5SC7W-QPfj0/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
-<div class="gift-item">
-    <img src="Coffee Set (European Style).png" alt="Coffee Set (European Style)">
-    <div class="gift-info">
-      <div class="gift-title">Coffee Set (European Style)</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/2B7AtaMrMh" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bcpjPbGhR-savic/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
-<div class="gift-item">
-    <img src="Plate_Bowl_Teapot Set.png" alt="Plate/Bowl/Teapot Set">
-    <div class="gift-info">
-      <div class="gift-title">Plate/Bowl/Teapot Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/5L4CfnDtds" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bcmRFyAGn-6qWeC/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
-<div class="gift-item">
-    <img src="Container Set.png" alt="Container Set">
-    <div class="gift-info">
-      <div class="gift-title">Container Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9AGvFWV9AJ" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bckRU2g3Y-YhIiW/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
- <div class="gift-item">
-    <img src="17pcs Container Food.png" alt="17pcs Container Food">
-    <div class="gift-info">
-      <div class="gift-title">17pcs Container Food</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/7V8hKMidsU" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7CnHuDwC-iYyCB/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
- <div class="gift-item">
-    <img src="Stainless Steel Food Storage.png" alt="Stainless Steel Food Storage">
-    <div class="gift-info">
-      <div class="gift-title">Stainless Steel Food Storage</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/5fh396Zaw7" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7xYT9rgt-GsPh7/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
- <div class="gift-item">
-    <img src="Crystal Water Dispenser.png" alt="Crystal Water Dispenser">
-    <div class="gift-info">
-      <div class="gift-title">Crystal Water Dispenser</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/AKSsdR1QR1" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bcjYKRwJo-R3v02/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-
- <div class="gift-item">
-    <img src="6pcs Dessini Cookware Set.png" alt="6pcs Dessini Cookware Set">
-    <div class="gift-info">
-      <div class="gift-title">6pcs Dessini Cookware Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/6fZaHENdiv" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bcRqDNsW9-bOc8t/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-
- <div class="gift-item">
-    <img src="Dessini Cookware.png" alt="11pcs Dessini Cookware Set">
-    <div class="gift-info">
-      <div class="gift-title">11pcs Dessini Cookware Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/8pe40GHmnD" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bW49EUB9v-47yhH/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-
- <div class="gift-item">
-    <img src="Kuali.png" alt="Kuali">
-    <div class="gift-info">
-      <div class="gift-title">Kuali</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/1VrUmohiKK" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bEMHHo19S-5dbnu/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-   
-  <div class="gift-item">
-    <img src="Iron Board.png" alt="Iron Board">
-    <div class="gift-info">
-      <div class="gift-title">Iron Board</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/1VrUBnh3F3" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7DoeEJCH-4uYoe/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-
-  <div class="gift-item">
-    <img src="Silicone Cooking Utensils Set.png" alt="Silicone Cooking Utensils Set">
-    <div class="gift-info">
-      <div class="gift-title">Silicone Cooking Utensils Set</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/6pt0U0fsmM" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bc1o8qhwQ-uMGl7/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-    
-  <div class="gift-item">
-    <img src="Set Sudu Garfu.png" alt="Set Sudu Garfu">
-    <div class="gift-info">
-      <div class="gift-title">Set Sudu Garfu</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/8V1EQRR4Dq" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3bcKe9cqYe-l0mAf/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-
-    <div class="gift-item">
-    <img src="Cadar.png" alt="Cadar">
-    <div class="gift-info">
-      <div class="gift-title">Cadar</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/20jBSYQySu" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YguDadmG9-NxioS/" target="_blank">TikTok</a>
-    </div>
-  </div>  
-
-<br><br>
-    
-    <div class="gift-item">
-    <img src="Bekas Rempah Ratus.png" alt="Bekas Rempah Ratus">
-    <div class="gift-info">
-      <div class="gift-title">Bekas Rempah Ratus</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/6fUjHQ5Prk" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YnegsXYBW-fC0NQ/" target="_blank">TikTok</a>
-    </div>
-  </div>   
-
-<br><br>
-  
-    <div class="gift-item">
-    <img src="Lesung Batu.png" alt="Lesung Batu">
-    <div class="gift-info">
-      <div class="gift-title">Lesung Batu</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/xpMOYwwa" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s7BtknUkX-dF67h/" target="_blank">TikTok</a>
-    </div>
-  </div>   
-
-<br><br>  
-
-<div class="gift-item">
-    <img src="Ampaian Baju.png" alt="Ampaian Baju">
-    <div class="gift-info">
-      <div class="gift-title">Ampaian Baju</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/4L6p3lV1VY" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s7a51NMQ9-bOpSm/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-  <div class="gift-item">
-    <img src="Rice Storage Box.png" alt="Rice Storage Box">
-    <div class="gift-info">
-      <div class="gift-title">Rice Storage Box</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/3AurLTXgSi" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YgWqRcahw-LKz9V/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-<div class="gift-item">
-    <img src="Rak Pinggan.png" alt="Rak Pinggan">
-    <div class="gift-info">
-      <div class="gift-title">Rak Pinggan</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9zlHCZG8Wu" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s7x3Gq6GR-tzHT0/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-  <div class="gift-item">
-    <img src="Tudung Saji.png" alt="Tudung Saji">
-    <div class="gift-info">
-      <div class="gift-title">Tudung Saji</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/7pggq5wVOq" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s7qPV2LGT-GVPvs/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-  
-  <div class="gift-item">
-    <img src="Toto.png" alt="Toto">
-    <div class="gift-info">
-      <div class="gift-title">Toto</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/5fdI5KO7jV" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s7GMwGtLb-PKP1r/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-  
-<div class="gift-item">
-    <img src="Sejadah.png" alt="Sejadah">
-    <div class="gift-info">
-      <div class="gift-title">Sejadah</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/10qN6wxK0Q" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3s73AUEKpj-UELvd/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-
-<div class="gift-item">
-    <img src="Tuala Mandi.png" alt="6pcs Tuala Mandi">
-    <div class="gift-info">
-      <div class="gift-title">6pcs Tuala Mandi</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/AUmIuzIcJI" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7dah2NJ1-YM01n/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br> 
-      
- <div class="gift-item">
-    <img src="Karpet.png" alt="Karpet">
-    <div class="gift-info">
-      <div class="gift-title">Karpet</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/7fS7Xcy7Fu" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3b7FdttKQ4-0HEUi/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>  
-      
-<div class="gift-item">
-    <img src="Mop.png" alt="Mop">
-    <div class="gift-info">
-      <div class="gift-title">Mop</div>
-      <div class="gift-links">
-      <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/10qN6MK2HQ" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3sveWJFQqC-3rvXg/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-  
-<div class="gift-item">
-    <img src="Set Penyapu & Penyodok.png" alt="Set Penyapu & Penyodok">
-    <div class="gift-info">
-      <div class="gift-title">Set Penyapu & Penyodok</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/gDWhbvJru" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YpybbtmMS-QaeQf/" target="_blank">TikTok</a>
-    </div>
-  </div>
-
-<br><br>
-
-  <div class="gift-item">
-    <img src="Bakul Baju.png" alt="Bakul Baju">
-    <div class="gift-info">
-      <div class="gift-title">Bakul Baju</div>
-      <div class="gift-links">
-     <!-- Link Shopee -->
-      <a href="https://s.shopee.com.my/9ACIjNuXnH" target="_blank">Shopee</a>
-
-     <!-- Link TikTok -->
-    <a href="https://vt.tiktok.com/ZSH3YgSxR1rN6-QF3py/" target="_blank">TikTok</a>
-    </div>
-  </div>   
-
-<br><br>
-<!-- 🎁 PEMBERIAN HADIAH -->
-<div class="hadiah-box-wrapper">
-  <div class="hadiah-box">
-    <h3 class="hadiah-title">TITIPAN KASIH DARI ANDA</h3>
-    <p class="hadiah-tagline" style="font-size:0.8rem; font-style:italic; margin-top:0px; margin-bottom:4px;">
-      Nama anda akan terpahat di laman cinta kami 💕
-    </p>
-
-    <!-- 📋 Senarai Nama Pemberi Hadiah -->
-    <div id="hadiahList">
-    <p style="height: 150px; margin:0; visibility:hidden;">&nbsp;</p>
-      <!-- Nama-nama akan dimasukkan via JS -->
-    </div>
-  </div>
-</div>
-
-<!-- ✅ Script Paparan Nama dari Google Sheet -->
 <script>
-window.addEventListener("DOMContentLoaded", fetchCSVData);
-
-async function fetchCSVData() {
-  const url = "https://docs.google.com/spreadsheets/d/1WOhaj8rhvwNR2CW9e5Rw624-wiA_drhFdM-c3j-KgJ4/gviz/tq?tqx=out:csv";
-
-  try {
-    const response = await fetch(url);
-    const csvText = await response.text();
-    const lines = csvText.trim().split("\n").slice(1); // buang header
-
-    const hadiahList = document.getElementById("hadiahList");
-    hadiahList.innerHTML = "";
-
-    lines.forEach(line => {
-      const cols = line.split(",");
-      const namaPemberi = cols[1]?.replace(/"/g, "")?.trim();
-      const namaBarang = cols[2]?.replace(/"/g, "")?.trim();
-
-      if (namaPemberi) {
-        const p = document.createElement("p");
-        p.innerHTML = namaBarang
-          ? `<strong>${namaPemberi}</strong> : ${namaBarang}`
-          : `<strong>${namaPemberi}</strong>`;
-        hadiahList.appendChild(p);
-      }
-    });
-  } catch (error) {
-    console.error("Gagal ambil data:", error);
-  }
-}
-</script>
-
-
-     
-<!-- ✅ POPUP OVERLAY -->
-<div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
-  <div id="popupContent" class="popup-section" onclick="event.stopPropagation()">
-    <!-- Kandungan popup akan dimasukkan sini -->
-  </div>
-</div>
-
-<style>
-  .popup-section {
-    max-width: 390px;
-    width: 100%;
-    padding: 20px;
-    color: black;
-  }
-
-  .popup-section h2 {
-    text-align: center;
-    font-weight: bold;
-  }
-</style>          
-
-
-<!-- ✅ JavaScript -->
-<script>
-let currentVisibleSection = null;
-
-function toggleSection(id) {
-  const section = document.getElementById(id);
-  const main = document.getElementById("main-content");
-  const all = document.querySelectorAll('.hidden-section');
-
-  if (!section || !main) return;
-
-  const sudah = (currentVisibleSection === id);
-
-  // ✅ Sembunyi semua
-  all.forEach(sec => {
-    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
+function copyTNG() {
+  var tngNo = document.getElementById("tngAcc").innerText;
+  navigator.clipboard.writeText(tngNo).then(function() {
+    document.getElementById("copyMsg").style.display = "block";
     setTimeout(() => {
-      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
-    }, 300); // ikut masa transition CSS
+      document.getElementById("copyMsg").style.display = "none";
+    }, 2000);
   });
+}
+</script>
 
-  if (sudah) {
-    // kalau ikon sama ditekan → tutup popup & tunjuk main
-    main.style.display = 'block';
-    currentVisibleSection = null;
+<br>
+  
+<!-- Q&A Section -->
+<section id="faq" class="faq-section">
+  <h2>Frequently Asked Questions (FAQ)</h2><br>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">Q: Berapa lama tempoh RSVP akan siap?</button>
+      <div class="faq-answer">A: Dalam tempoh 3 hari selepas maklumat lengkap diisi</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke saya nak tukar font?</button>
+      <div class="faq-answer">A: Boleh, namun akan dikenakan caj tambahan RM 3.00 untuk setiap kali perubahan</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke nak lagu starting dari chorus?</button>
+      <div class="faq-answer">A: Boleh, tapi perlu mention terus dalam google form starting lagu dari mana ya (Jika tidak, seller berhak untuk mengenakan caj tambahan RM 2.00 untuk setiap kali perubahan lagu)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke nak tukar lagu?</button>
+      <div class="faq-answer">A: Perubahan lagu hanya sekali seperti yg diisi didalam google form (Sekiranya nak tukar juga, seller akan mengenakan caj tambahan RM 2.00 untuk setiap kali perubahan lagu)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Berapa lama tempoh untuk saya check maklumat di RSVP Link?</button>
+      <div class="faq-answer">A: Dalam tempoh 24 jam</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke saya nak version Bahasa Inggris?</button>
+      <div class="faq-answer">A: Maaf, hanya ada version Bahasa Melayu sahaja</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Berapa kali saya boleh tukar maklumat selepas seller share RSVP Link?</button>
+      <div class="faq-answer">A: Perubahan maklumat hanya dibenarkan sebanyak 2 kali sahaja (Tidak termasuk perubahan gambar)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Kalau saya ubah fikiran untuk tukar gambar selepas isi maklumat, boleh ke?</button>
+      <div class="faq-answer">A: Perubahan gambar akan dikenakan caj tambahan RM 1.00 untuk setiap kali perubahan gambar</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Boleh ke kalau saya urgent/nak siap cepat?</button>
+      <div class="faq-answer">A: Boleh, tapi perlu membuat double pembayaran mengikut harga pakej (Akan siap dalam tempoh 24 jam)</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Akan dapat ayat untuk hebahan/jemput tetamu ke?</button>
+      <div class="faq-answer">A: Ya, anda hanya perlu scan di PDF "STEP PENGGUNAAN RSVP & TEKS JEMPUTAN TETAMU" untuk ke google form Koleksi teks/ayat jemputan selepas tiada perubahan maklumat</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Saya beli Bronze Package (RM 12.81) tapi saya nak buang bahagian gambar dan ditukarkan dengan Money Gift, dll?</button>
+      <div class="faq-answer">A: Tidak dibenarkan</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Q: Saya buat majlis kecil-kecilan, boleh hadkan tetamu ke?</button>
+      <div class="faq-answer">A: RSVP tiada limit ts. etamu, namun jika mahu limitkan tetamu, boleh nyatakan terus dalam ayat jemputan, contoh boleh dilihat di Koleksi Ucapan/Teks Edaran Kad Digital</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ CSS -->
+<style>
+.faq-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-question {
+  width: 100%;
+  background-color: #f8b6c9;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #f497b6;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  font-size: 13px;
+  background: #fff0f5;
+  border-left: 3px solid #f497b6;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+</style>
+
+<!-- FAQ Script -->
+<script>
+const faqBtns = document.querySelectorAll(".faq-question");
+
+faqBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const answer = btn.nextElementSibling;
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+  
+  <!-- Footer -->
+  <footer>
+    <p>NNA Design</p>
+  </footer>
+
+  <script src="n98hm1a2n.js"></script>
+
+  <script>
+function toggleGambar(id) {
+  var img = document.getElementById(id);
+  if (img.style.display === "none") {
+    img.style.display = "block";
   } else {
-    // buka section, sembunyi main-content
-    section.style.display = 'block';
-    main.style.display = 'none';
-    // kuatkan class show untuk anim animate
-    setTimeout(() => section.classList.add('show'), 10);
-    currentVisibleSection = id;
+    img.style.display = "none";
   }
 }
-  
-function copyRek() {
-    const text = document.getElementById("rek").innerText;
-    navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
-  }
-  
-  function copyToClipboard(elementId) {
-    const text = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      alert("Disalin ke papan klip!");
-    }).catch(err => {
-      alert("Gagal menyalin: " + err);
-    });
-  }
-  
-  window.addEventListener("DOMContentLoaded", function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const ref = urlParams.get("ref");
-
-    if (ref === "hadiahRSVP") {
-      document.getElementById("form-hadiah").style.display = "block";
-      document.getElementById("hadiah-message").style.display = "none";
-    } else {
-      document.getElementById("form-hadiah").style.display = "none";
-      document.getElementById("hadiah-message").style.display = "block";
-    }
-  });
 </script>
-
-      
-<!-- ✅ SCRIPT UNTUK KAWAL PAPARAN + SALJI -->
-<script>
-  const startBtn = document.getElementById('start-btn');
-  const music = document.getElementById('bg-music');
-
-  function mulakanSalji() {
-    for (let i = 0; i < 30; i++) {
-      let snow = document.createElement("div");
-      snow.classList.add("snow");
-
-      snow.style.left = Math.random() * 100 + "vw";
-      snow.style.animationDuration = 8 + Math.random() * 5 + "s";
-
-      let size = 5 + Math.random() * 5;
-      snow.style.width = size + "px";
-      snow.style.height = size + "px";
-
-      snow.style.animationDelay = Math.random() * 5 + "s";
-
-      const wrapper = document.getElementById("snow-wrapper");
-      if (wrapper) wrapper.appendChild(snow);
-    }
-  }
-
-  function startInvitation() {
-    music.play().catch(e => console.log("Music autoplay blocked"));
-    document.getElementById('main-content').style.display = 'block';
-
-    // ✅ JANGAN buang front page, cuma sembunyikan
-    const frontPage = document.querySelector('.front-page');
-    if (frontPage) frontPage.style.display = 'none';
-
-    // ✅ Aktifkan salji selepas tekan BUKA
-    mulakanSalji();
-  }
-
-  if (startBtn) {
-    startBtn.addEventListener('click', startInvitation);
-  }
-
-  // ✅ Untuk slider galeri
-  window.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector('.gallery-track');
-    const slides = document.querySelectorAll('.gallery-slide');
-    const prevBtn = document.querySelector('.gallery-prev');
-    const nextBtn = document.querySelector('.gallery-next');
-    let currentIndex = 0;
-
-    function updateSlidePosition() {
-      track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
-    }
-
-    if (prevBtn && nextBtn && track && slides.length > 0) {
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-        updateSlidePosition();
-      });
-
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-        updateSlidePosition();
-      });
-
-      updateSlidePosition(); // Set awal
-    }
-  });
-</script>
-
-      <!-- 🔹 External library PapaParse -->
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-     
-   <!-- ✅ SCRIPT UNTUK PAPAR STATUS TEMPAHAN -->
-<script src="n98hm1a2n.js"></script>
-
-
 
 </body>
 </html>
