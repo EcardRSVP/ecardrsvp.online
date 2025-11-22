@@ -511,7 +511,7 @@ form button[type="submit"] {
 
 .font-h {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
+  font-style: normal;
   font-size: 1.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
