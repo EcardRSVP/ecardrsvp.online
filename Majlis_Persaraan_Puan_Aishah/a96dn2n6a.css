@@ -454,8 +454,8 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Italianno', cursive;
-  font-size: 3.0rem;
+  font-family: 'Young Serif', serif;
+  font-size: 2.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -524,7 +524,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-c {
-    font-size: 3.0rem;
+    font-size: 2.0rem;
   } 
 
   .font-d {
