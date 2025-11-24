@@ -435,7 +435,7 @@ form button[type="submit"] {
 /* ✅ Font Custom Styles */
 .font-a {
   font-family: 'Great Vibes', cursive;
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -455,7 +455,7 @@ form button[type="submit"] {
 
 .font-c {
   font-family: 'Italianno', cursive;
-  font-size: 3.0rem;
+  font-size: 3.1rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -516,7 +516,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 
 @media (max-width: 480px) {
   .font-a {
-    font-size: 1.9rem; /* sedikit besar supaya jelas di skrin kecil */
+    font-size: 2.1rem; /* sedikit besar supaya jelas di skrin kecil */
   } 
 
   .font-b {
@@ -524,7 +524,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-c {
-    font-size: 3.0rem;
+    font-size: 3.1rem;
   } 
 
   .font-d {
