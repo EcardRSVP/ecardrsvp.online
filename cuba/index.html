@@ -111,17 +111,9 @@
 </head>
 <body>
 
-<!-- 🌸 Latar belakang gambar versi "kecil 390px macam video" -->
-<div style="
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 390px;
-  height: 100vh;
-  background: url('B8.png') center/cover no-repeat;
-  z-index: -1;">
-</div>
+<!-- 🌸 Background wrapper gaya telefon -->
+<div class="bg-wrapper"></div>
+
 
 <!-- ✅ SALJI DALAM WRAPPER -->
 <div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
@@ -135,6 +127,7 @@
 
    <div id="wrapper">
      <!-- SEMUA KANDUNGAN TERMASUK section.front-page DAN #main-content -->
+    
      
   <!-- ✅ HALAMAN DEPAN -->
 <section class="page front-page" style="position: relative; top: -8vh;">
@@ -318,12 +311,13 @@
 <form id="rsvp-form" 
       action="https://docs.google.com/forms/d/e/1FAIpQLSedlvRozEgmCPlheAte9YGIS-VxcumFs7FBSSeqURJLB9chiA/formResponse" 
       method="POST" 
-      target="hidden_iframe">
+      target="hidden_iframe"
+      onsubmit="handleSubmit(event)">
 
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
+    <input type="text" id="nama" name="entry.1043756814" placeholder="Nama Anda" required>
 
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
@@ -338,25 +332,27 @@
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.1537909291" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+    <input type="number" id="bilangan" name="entry.1537909291" min="1" placeholder="Contoh: 2">
 
-      <!-- Tambah selepas Bilangan Kehadiran -->
+    <!-- Tambah selepas Bilangan Kehadiran -->
     <br>
     <label for="ucapan"><strong>Ucapan</strong></label>
     <textarea id="ucapan" 
           name="entry.1530998401" 
-          placeholder="Ucapan anda" 
-          style="width: 100%; padding: 10px; margin-bottom: 20px; height: 100px;"></textarea>
+          placeholder="Ucapan anda"></textarea>
 
-<button type="submit" class="btn-hantar" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;">
-  Hantar
-</button>
-</form>
+  
+      <button type="submit" class="btn-hantar">Hantar</button>
+    </form>
 
-
-<div id="submit-popup">
-  Terima kasih! Kehadiran anda telah direkodkan.
-</div>
+    <!-- ✅ Popup alert khas -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
 
 <iframe
   name="hidden_iframe"
@@ -366,6 +362,14 @@
    </iframe>
   </div>
 </div>
+
+<!-- ✅ Seksyen Contact -->
+  <div id="popup-Contact" class="popup-overlay">
+  <div class="popup-section">
+  <h2>CONTACT</h2>
+  <a href="tel:+601157265723" class="phone-button">📞 Fazilah (Ibu)</a><br>
+  <a href="tel:+601157265723" class="phone-button">📞 Zulkefli (Ayah)</a><br><br><br><br>
+  </div>
 
 <!-- ✅ Seksyen Contact -->
   <div id="popup-Contact" class="popup-overlay">
