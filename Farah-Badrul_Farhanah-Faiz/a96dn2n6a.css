@@ -771,6 +771,18 @@ hr {
   }
 }
 
+.parking-title {
+  display: inline-block;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+  .parking-title {
+    border-bottom: 3px solid #999;
+  }
+}
+
 /* Balut semua content supaya max 390px macam telefon */
 #wrapper {
   max-width: 390px;
