@@ -775,6 +775,8 @@ hr {
   display: inline-block;
   border-bottom: 2px solid #ccc;
   padding-bottom: 2px;
+  margin-top: 6px;
+  margin-bottom: 4px;
 }
 
 @media (max-width: 768px) {
@@ -782,6 +784,7 @@ hr {
     border-bottom: 3px solid #999;
   }
 }
+
 
 /* Balut semua content supaya max 390px macam telefon */
 #wrapper {
