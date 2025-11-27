@@ -500,8 +500,7 @@ form button[type="submit"] {
 
 .font-g {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -541,7 +540,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-g {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 } 
 
@@ -775,8 +774,8 @@ hr {
   display: inline-block;
   border-bottom: 1px solid #e4a6b7;
   padding-bottom: 2px;
-  margin-top: 6px;
-  margin-bottom: 4px;
+  margin-top: 0px;
+  margin-bottom: 2px;
 }
 
 @media (max-width: 768px) {
