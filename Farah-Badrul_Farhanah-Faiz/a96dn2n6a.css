@@ -767,13 +767,13 @@ hr {
 
 @media (max-width: 768px) {
   hr {
-    border-top: 3px solid #999;
+    border-top: 2px solid #999;
   }
 }
 
 .parking-title {
   display: inline-block;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #e4a6b7;
   padding-bottom: 2px;
   margin-top: 6px;
   margin-bottom: 4px;
@@ -781,7 +781,7 @@ hr {
 
 @media (max-width: 768px) {
   .parking-title {
-    border-bottom: 3px solid #999;
+    border-bottom: 1px solid #e4a6b7;
   }
 }
 
