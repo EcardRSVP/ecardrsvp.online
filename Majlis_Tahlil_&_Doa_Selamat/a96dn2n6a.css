@@ -445,7 +445,7 @@ form button[type="submit"] {
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -520,7 +520,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-b {
-    font-size: 1.5rem;
+    font-size: 3.0rem;
   } 
 
   .font-c {
