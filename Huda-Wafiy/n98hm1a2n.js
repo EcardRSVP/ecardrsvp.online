@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
  // 📨 Validasi sebelum submit
   if (form) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1634786673"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.1634786673"]:checked');    
 
       if (!nama.value.trim() || !kehadiran) {
         e.preventDefault();
