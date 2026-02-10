@@ -763,7 +763,7 @@ section.doa {
 hr {
   display: block;
   border: none;
-  border-top: 2px solid #6b4e2e;
+  border-top: 2px solid #9b7a55;
   margin: 24px auto;
   width: 90%;
   max-width: 360px;
@@ -771,7 +771,7 @@ hr {
 
 @media (max-width: 768px) {
   hr {
-    border-top: 3px solid #6b4e2e;
+    border-top: 3px solid #9b7a55;
   }
 }
 
