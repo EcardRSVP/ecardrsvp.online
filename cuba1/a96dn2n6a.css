@@ -282,6 +282,7 @@ form textarea,
 form button[type="submit"],
 form button.copy-btn,
 #alamat-text,
+#nama-text,
 #telefon-text {   /* ⬅️ tambah div alamat & telefon */
   width: 90%;
   max-width: 400px;
@@ -297,6 +298,7 @@ form button.copy-btn,
 
 /* ✅ Bagi background khas untuk kotak alamat & telefon */
 #alamat-text,
+#nama-text,
 #telefon-text {
   background-color: #f2f2f2;
   text-align: center;
