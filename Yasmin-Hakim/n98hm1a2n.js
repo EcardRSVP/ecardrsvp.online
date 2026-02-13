@@ -5,7 +5,7 @@ function mulakanSalji() {
 
   const warnaSalji = [
     {
-      color: "#ffffff",
+      color: "rgba(255, 255, 255, 0.5)",
       glow: "0 0 10px rgba(255, 255, 255, 0.4)"
     }
   ];
