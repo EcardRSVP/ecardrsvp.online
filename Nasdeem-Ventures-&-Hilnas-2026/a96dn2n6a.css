@@ -509,6 +509,16 @@ form button[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
+.font-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */ 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Ancizar Sans', sans-serif;
@@ -543,6 +553,10 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   .font-g {
     font-size: 1.2rem;
   }
+
+   .font-h {
+    font-size: 1.9rem;
+  }  
 } 
 
 html {
