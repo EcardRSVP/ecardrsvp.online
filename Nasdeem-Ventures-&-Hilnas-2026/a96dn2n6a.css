@@ -596,7 +596,8 @@ html {
 
 .gallery-slide img {
   width: 100%;
-  height: 40vh;   /* 40% tinggi screen */
+  aspect-ratio: 16 / 9;
+  height: 320px;        /* BESARKAN sini */
   object-fit: cover;
   display: block;
 }
