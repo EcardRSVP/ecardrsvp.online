@@ -596,8 +596,7 @@ html {
 
 .gallery-slide img {
   width: 100%;
-  aspect-ratio: 16 / 9;   /* Paksa bentuk landscape */
-  max-height: 250px;
+  height: 40vh;   /* 40% tinggi screen */
   object-fit: cover;
   display: block;
 }
@@ -781,7 +780,7 @@ section.doa {
 hr {
   display: block;
   border: none;
-  border-top: 2px solid #6D4C41;
+  border-top: 2px solid #A1887F;
   margin: 24px auto;
   width: 90%;
   max-width: 360px;
@@ -789,7 +788,7 @@ hr {
 
 @media (max-width: 768px) {
   hr {
-    border-top: 3px solid #6D4C41;
+    border-top: 3px solid #A1887F;
   }
 }
 
