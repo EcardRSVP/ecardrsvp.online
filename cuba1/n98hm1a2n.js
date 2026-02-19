@@ -5,7 +5,7 @@ function mulakanSalji() {
 
   const warnaSalji = [
     {
-      color: "rgba(255, 255, 255, 0.4)",
+      color: "rgba(255, 255, 255, 0.5)",
       glow: "0 0 10px rgba(255, 255, 255, 0.4)"
     }
   ];
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
  // 📨 Validasi sebelum submit
   if (form) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.64050432"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.963339228"]:checked');
 
       if (!nama.value.trim() || !kehadiran) {
         e.preventDefault();
@@ -134,7 +134,7 @@ function toggleSection(id) {
 
 
 // ✅ Fetch Ucapan (PapaParse)
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQD3hw8-CiSruCM4aJKpSHgJVJWZ0LL7S1wiK3A16EgXIfr6wfhx5tGH4TIpMOMjpyh6oM1HbKC-uP2/pub?gid=1427289961&single=true&output=csv")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTm77n8z9j_U4hSP5NGzA8HoEabkc1jEu84CJ53NZW5pvn28Oi2z_Bk0MALys1ZTuNY75ZYFU4NSPqe/pub?gid=316023928&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
     const parsed = Papa.parse(data, { header: true });

@@ -282,7 +282,6 @@ form textarea,
 form button[type="submit"],
 form button.copy-btn,
 #alamat-text,
-#nama-text,
 #telefon-text {   /* ⬅️ tambah div alamat & telefon */
   width: 90%;
   max-width: 400px;
@@ -298,7 +297,6 @@ form button.copy-btn,
 
 /* ✅ Bagi background khas untuk kotak alamat & telefon */
 #alamat-text,
-#nama-text,
 #telefon-text {
   background-color: #f2f2f2;
   text-align: center;
@@ -447,7 +445,7 @@ form button[type="submit"] {
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -511,6 +509,19 @@ form button[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
+.font-h {
+  font-family: 'Lora', serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.1px;
+}
+
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Ancizar Sans', sans-serif;
@@ -522,7 +533,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-b {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   } 
 
   .font-c {
@@ -545,6 +556,10 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   .font-g {
     font-size: 1.2rem;
   }
+
+   .font-h {
+    font-size: 1.7rem;
+  }  
 } 
 
 html {
@@ -765,7 +780,7 @@ section.doa {
 hr {
   display: block;
   border: none;
-  border-top: 2px solid #e8d6bf;
+  border-top: 2px solid #3E2723;
   margin: 24px auto;
   width: 90%;
   max-width: 360px;
@@ -773,7 +788,7 @@ hr {
 
 @media (max-width: 768px) {
   hr {
-    border-top: 3px solid #e8d6bf;
+    border-top: 3px solid #3E2723;
   }
 }
 
@@ -1100,7 +1115,7 @@ hr {
   width: 100% !important;
   max-width: 390px !important;          /* gaya telefon */
   height: 100vh !important;
-  background: url('B23.png') center center / cover no-repeat !important;
+  background: url('B71.png') center center / cover no-repeat !important;
   background-attachment: fixed !important; /* ✅ bantu extra stabil */
   z-index: -1 !important;
 }
@@ -1258,7 +1273,7 @@ html, body {
   width: 100vw !important;
   max-width: 390px !important;
   height: 100vh !important;
-  background: url('B23.png') center center / cover no-repeat !important;
+  background: url('B71.png') center center / cover no-repeat !important;
   background-attachment: fixed !important;
   z-index: -1 !important;
   pointer-events: none !important;
