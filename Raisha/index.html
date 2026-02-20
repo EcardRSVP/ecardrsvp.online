@@ -542,31 +542,32 @@ function copyRek() {
   }
 
   // ✅ Untuk slider galeri
-  window.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector('.gallery-track');
-    const slides = document.querySelectorAll('.gallery-slide');
-    const prevBtn = document.querySelector('.gallery-prev');
-    const nextBtn = document.querySelector('.gallery-next');
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".gallery-slider").forEach(slider => {
+    const track = slider.querySelector(".gallery-track");
+    const slides = slider.querySelectorAll(".gallery-slide");
+    const prevBtn = slider.querySelector(".gallery-prev");
+    const nextBtn = slider.querySelector(".gallery-next");
+
     let currentIndex = 0;
 
-    function updateSlidePosition() {
-      track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+    function updateSlide() {
+      track.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
     }
 
-    if (prevBtn && nextBtn && track && slides.length > 0) {
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-        updateSlidePosition();
-      });
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlide();
+    });
 
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-        updateSlidePosition();
-      });
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlide();
+    });
 
-      updateSlidePosition(); // Set awal
-    }
+    updateSlide(); // set awal
   });
+});
 </script>
 
       <!-- 🔹 External library PapaParse -->
