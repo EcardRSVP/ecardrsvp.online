@@ -1425,19 +1425,23 @@ function goHome() {
   const main = document.getElementById("main-content");
   const all = document.querySelectorAll('.hidden-section');
 
-  // ✅ Sembunyi semua
-  all.forEach(sec => {
-    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
+  // 🔹 Tutup semua popup section
+  allPopups.forEach(popup => {
+    popup.classList.remove('show');
     setTimeout(() => {
-      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
-    }, 300); // ikut masa transition CSS
+      popup.style.display = 'none';
+    }, 300); // ikut masa animasi CSS
   });
 
-  // ✅ Tunjuk semula main-content
-  if (main) main.style.display = 'block';
+  // 🔹 Tunjuk semula main-content
+  if (main) {
+    main.style.display = 'block';
+  }
 
-  // ✅ Reset supaya tiada popup aktif
+  // 🔹 Reset status popup aktif
   currentVisibleSection = null;
+
+  console.log("🏠 Home ditekan → balik ke main-content");
 }
   
 function copyRek() {
