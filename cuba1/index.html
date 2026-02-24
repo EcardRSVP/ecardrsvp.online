@@ -1421,22 +1421,27 @@ async function fetchCSVData() {
 
 
 <!-- ✅ JavaScript -->
+<script>
+let currentVisibleSection = null;
+
 function goHome() {
   const main = document.getElementById("main-content");
-  const popups = document.querySelectorAll('.popup-overlay'); // ✅ guna class sebenar popup
 
-  // 🔹 Tutup semua popup overlay
-  popups.forEach(popup => {
+  // Tutup semua popup overlay
+  document.querySelectorAll('.popup-overlay').forEach(popup => {
     popup.style.display = 'none';
   });
 
-  // 🔹 Tunjuk semula main-content
+  // Buang semua class "show" pada hidden-section
+  document.querySelectorAll('.hidden-section.show').forEach(el => el.classList.remove('show'));
+
+  // Tunjukkan main-content
   if (main) main.style.display = 'block';
 
-  // 🔹 Reset status popup aktif (kalau ada)
+  // Reset status popup aktif
   currentVisibleSection = null;
 
-  console.log("🏠 Home ditekan → balik ke main-content");
+  console.log("🏠 Home ditekan → main-content muncul semula");
 }
 
   
