@@ -295,6 +295,7 @@ Amin Ya Rabbal Alamin
 
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
+  <div class="footer-icon home" onclick="goHome()">🏠<span>Home</span></div>  
   <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
@@ -419,36 +420,26 @@ Amin Ya Rabbal Alamin
 <script>
 let currentVisibleSection = null;
 
-function toggleSection(id) {
-  const section = document.getElementById(id);
+function goHome() {
   const main = document.getElementById("main-content");
-  const all = document.querySelectorAll('.hidden-section');
 
-  if (!section || !main) return;
-
-  const sudah = (currentVisibleSection === id);
-
-  // ✅ Sembunyi semua
-  all.forEach(sec => {
-    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
-    setTimeout(() => {
-      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
-    }, 300); // ikut masa transition CSS
+  // Tutup semua popup overlay
+  document.querySelectorAll('.popup-overlay').forEach(popup => {
+    popup.style.display = 'none';
   });
 
-  if (sudah) {
-    // kalau ikon sama ditekan → tutup popup & tunjuk main
-    main.style.display = 'block';
-    currentVisibleSection = null;
-  } else {
-    // buka section, sembunyi main-content
-    section.style.display = 'block';
-    main.style.display = 'none';
-    // kuatkan class show untuk anim animate
-    setTimeout(() => section.classList.add('show'), 10);
-    currentVisibleSection = id;
-  }
+  // Buang semua class "show" pada hidden-section
+  document.querySelectorAll('.hidden-section.show').forEach(el => el.classList.remove('show'));
+
+  // Tunjukkan main-content
+  if (main) main.style.display = 'block';
+
+  // Reset status popup aktif
+  currentVisibleSection = null;
+
+  console.log("🏠 Home ditekan → main-content muncul semula");
 }
+
   
 function copyRek() {
     const text = document.getElementById("rek").innerText;
