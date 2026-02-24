@@ -549,6 +549,116 @@ html {
   -webkit-text-size-adjust: 100%; /* elak auto zoom teks di iPhone */
 }
 
+/* ==========================
+   📱 CONTACT SECTION - mobile friendly
+   ========================== */
+#contact {
+  text-align: center;
+  padding: 20px;
+  color: #000;
+}
+
+#contact h2 {
+  font-family: 'Ancizar Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: black !important;
+}
+
+/* Kad setiap contact */
+.contact-card {
+  background: linear-gradient(135deg, #dcd2f5, #e6dbfa, #f2f2f2); /* gradient lembut */
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 12px auto;
+  max-width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.02);
+}
+
+.contact-name {
+  font-weight: 600;
+  font-size: 15.5px;
+  color: #5a3381;
+  text-align: left;
+  flex: 1;
+  word-break: keep-all;
+}
+
+/* Ikon */
+.contact-icons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.icon-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-box img {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Warna ikon */
+.icon-box.whatsapp img {
+  background-color: #25D366;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.icon-box.call img {
+  background-color: #007bff;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+/* 📱 Responsif untuk skrin kecil */
+@media (max-width: 480px) {
+  .contact-card {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    max-width: 92%;
+  }
+
+  .contact-name {
+    font-size: 15px;
+  }
+
+  .icon-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  #contact h2 {
+    font-size: 20px;
+  }
+}
 
 .gallery-slider {
   display: flex;
