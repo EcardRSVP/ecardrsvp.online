@@ -1423,22 +1423,17 @@ async function fetchCSVData() {
 <!-- ✅ JavaScript -->
 function goHome() {
   const main = document.getElementById("main-content");
-  const all = document.querySelectorAll('.hidden-section');
+  const popups = document.querySelectorAll('.popup-overlay'); // ✅ guna class sebenar popup
 
-  // 🔹 Tutup semua popup section
-  all.forEach(popup => {
-    popup.classList.remove('show');
-    setTimeout(() => {
-      popup.style.display = 'none';
-    }, 300); // ikut masa animasi CSS
+  // 🔹 Tutup semua popup overlay
+  popups.forEach(popup => {
+    popup.style.display = 'none';
   });
 
   // 🔹 Tunjuk semula main-content
-  if (main) {
-    main.style.display = 'block';
-  }
+  if (main) main.style.display = 'block';
 
-  // 🔹 Reset status popup aktif
+  // 🔹 Reset status popup aktif (kalau ada)
   currentVisibleSection = null;
 
   console.log("🏠 Home ditekan → balik ke main-content");
