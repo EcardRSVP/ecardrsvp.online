@@ -765,15 +765,36 @@ hr {
 hr::before {
   content: "✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦";
   font-size: 13px;
-  color: black;
+  font-weight: bold;
   letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
+
+    /* Gradient hitam + silver */
+  background: linear-gradient(
+    90deg,
+    #000000,
+    #c0c0c0,
+    #000000,
+    #e6e6e6,
+    #000000
+  );
+
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: silverMove 5s ease infinite;
+}
+
+@keyframes silverMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @media (max-width: 768px) {
   hr::before {
-    font-size: 13px;   /* saiz untuk mobile */
-    color: black;      
-    letter-spacing: 6px;
+    font-size: 13px;     /* saiz mobile */
+    letter-spacing: 5px; /* rapat sikit supaya tak nampak terlalu jarak */
   }
 }
 
