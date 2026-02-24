@@ -573,8 +573,9 @@ html {
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
-  width: 60%;
-  max-width: 360px;  
+  width: 65%;
+  min-width: 220px;       /* paksa kotak tak terlalu sempit di iPhone kecil */
+  max-width: 360px;       /* had maksimum untuk skrin besar */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -641,8 +642,7 @@ html {
 /* 📱 Responsif untuk skrin kecil */
 @media (max-width: 480px) {
   .contact-card {
-  .contact-card {
-    width: 60%;              /* ✅ bagi lebih sempit bila skrin kecil */
+    width: 65%;              /* ✅ bagi lebih sempit bila skrin kecil */
     padding: 10px 12px;
   }
 
