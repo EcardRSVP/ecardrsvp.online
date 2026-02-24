@@ -571,9 +571,10 @@ html {
 .contact-card {
   background: linear-gradient(135deg, #dcd2f5, #e6dbfa, #f2f2f2); /* gradient lembut */
   border-radius: 14px;
-  padding: 14px 16px;
-  margin: 12px auto;
-  max-width: 340px;
+  padding: 12px 14px;
+  margin: 10px auto;
+  width: 60%;
+  max-width: 360px;  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -640,19 +641,18 @@ html {
 /* 📱 Responsif untuk skrin kecil */
 @media (max-width: 480px) {
   .contact-card {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12px;
-    max-width: 92%;
+  .contact-card {
+    width: 60%;              /* ✅ bagi lebih sempit bila skrin kecil */
+    padding: 10px 12px;
   }
 
   .contact-name {
-    font-size: 15px;
+    font-size: 14.5px;
   }
 
   .icon-box {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
 
   #contact h2 {
