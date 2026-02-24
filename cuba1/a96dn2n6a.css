@@ -763,15 +763,15 @@ hr {
 }
 
 hr::before {
-  content: "✦ ✦ ✦";
-  font-size: 16px;
+  content: "✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦";
+  font-size: 13px;
   color: black;
   letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
 }
 
 @media (max-width: 768px) {
   hr::before {
-    font-size: 16px;   /* saiz untuk mobile */
+    font-size: 13px;   /* saiz untuk mobile */
     color: black;      
     letter-spacing: 6px;
   }
