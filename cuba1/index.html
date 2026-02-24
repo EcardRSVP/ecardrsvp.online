@@ -1426,7 +1426,7 @@ function goHome() {
   const all = document.querySelectorAll('.hidden-section');
 
   // 🔹 Tutup semua popup section
-  allPopups.forEach(popup => {
+  all.forEach(popup => {
     popup.classList.remove('show');
     setTimeout(() => {
       popup.style.display = 'none';
@@ -1443,6 +1443,7 @@ function goHome() {
 
   console.log("🏠 Home ditekan → balik ke main-content");
 }
+
   
 function copyRek() {
     const text = document.getElementById("rek").innerText;
