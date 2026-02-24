@@ -302,6 +302,7 @@
 
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
+  <div class="footer-icon home" onclick="goHome()">🏠<span>Home</span></div>
   <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
   <div class="footer-icon money" onclick="togglePopup('MoneyGift')">💵<span>Money Gift</span></div>
   <div class="footer-icon wishlist" onclick="togglePopup('Wishlist')">🎁<span>Wishlist</span></div>
@@ -1420,17 +1421,9 @@ async function fetchCSVData() {
 
 
 <!-- ✅ JavaScript -->
-<script>
-let currentVisibleSection = null;
-
-function toggleSection(id) {
-  const section = document.getElementById(id);
+function goHome() {
   const main = document.getElementById("main-content");
   const all = document.querySelectorAll('.hidden-section');
-
-  if (!section || !main) return;
-
-  const sudah = (currentVisibleSection === id);
 
   // ✅ Sembunyi semua
   all.forEach(sec => {
@@ -1440,18 +1433,11 @@ function toggleSection(id) {
     }, 300); // ikut masa transition CSS
   });
 
-  if (sudah) {
-    // kalau ikon sama ditekan → tutup popup & tunjuk main
-    main.style.display = 'block';
-    currentVisibleSection = null;
-  } else {
-    // buka section, sembunyi main-content
-    section.style.display = 'block';
-    main.style.display = 'none';
-    // kuatkan class show untuk anim animate
-    setTimeout(() => section.classList.add('show'), 10);
-    currentVisibleSection = id;
-  }
+  // ✅ Tunjuk semula main-content
+  if (main) main.style.display = 'block';
+
+  // ✅ Reset supaya tiada popup aktif
+  currentVisibleSection = null;
 }
   
 function copyRek() {
