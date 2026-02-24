@@ -757,17 +757,23 @@ section.doa {
 }
 
 hr {
-  display: block;
   border: none;
-  border-top: 2px solid #ccc;
-  margin: 24px auto;
-  width: 90%;
-  max-width: 360px;
+  text-align: center;
+  margin: 25px auto;
+}
+
+hr::before {
+  content: "✦ ✦ ✦";
+  font-size: 16px;
+  color: black;
+  letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
 }
 
 @media (max-width: 768px) {
-  hr {
-    border-top: 3px solid #999;
+  hr::before {
+    font-size: 16px;   /* saiz untuk mobile */
+    color: black;      
+    letter-spacing: 6px;
   }
 }
 
