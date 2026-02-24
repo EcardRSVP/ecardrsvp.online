@@ -83,13 +83,13 @@ input {
 }
 
 .btn-hantar {
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
 }
 
 .btn-hantar:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 /* ✅ Styling umum untuk semua butang */
@@ -113,19 +113,18 @@ button,
 
 /* ✅ Copy button */
 .copy-btn {
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   color: white;
   -webkit-text-fill-color: white !important; /* Safari */
 }
 
 .copy-btn:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 /* ✅ Styling input RSVP supaya sama panjang dengan button, tapi kotak putih */
 #popup-RSVP input[type="text"],
 #popup-RSVP input[type="number"],
-#popup-RSVP input[type="tel"],
 #popup-RSVP textarea {
   border: 1px solid #ccc;      /* sempadan lembut */
   border-radius: 8px;          /* sama dengan button */
@@ -143,9 +142,7 @@ button,
 }
 
 /* Optional: focus effect */
-#popup-RSVP input[type="text"],
-#popup-RSVP input[type="number"],
-#popup-RSVP input[type="tel"],       /* ✅ tambah sini */
+#popup-RSVP input:focus,
 #popup-RSVP textarea:focus {
   outline: none;
   border-color: #6699cc;       /* highlight bila klik */
@@ -153,10 +150,8 @@ button,
 }
 
 /* Placeholder semua input & textarea */
-#popup-RSVP input[type="text"],
-#popup-RSVP input[type="number"],
-#popup-RSVP input[type="tel"],       /* ✅ tambah sini */
-#popup-RSVP textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #aaa;   /* kelabu cair, lembut pada mata */
   opacity: 1;    /* pastikan penuh visibility */
   font-family: 'Ancizar Sans', sans-serif; /* ikut font utama */
@@ -169,7 +164,7 @@ button,
   padding: 8px 20px;       /* atas/bawah 8px, kiri/kanan 20px */
   font-size: 16px;
   border-radius: 8px;
-  background: #8B4513;
+  background: #6A4FAE;
   color: white;
   -webkit-text-fill-color: white !important; /* Safari */  
   text-decoration: none;
@@ -180,7 +175,7 @@ button,
 }
 
 .small-btn:hover {
-  background: #A0522D;
+  background: #8463C4;
   transform: scale(1.05);
 }
 
@@ -309,7 +304,7 @@ form button.copy-btn,
 
 
 form button[type="submit"] {
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   color: white;
   border: none;
 }
@@ -332,14 +327,14 @@ form button[type="submit"] {
       font-size: 16px;
       color: white !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
-      background-color: #8B4513;
+      background-color: #6A4FAE;
       border: none;
       border-radius: 12px;
       text-decoration: none;
     }
 
 .phone-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 .location-button {
@@ -353,7 +348,7 @@ form button[type="submit"] {
   font-size: 16px;
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   border: none;
   border-radius: 12px;
   text-decoration: none;
@@ -362,7 +357,7 @@ form button[type="submit"] {
 }
 
 .location-button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
     
 .location-button img {
@@ -419,7 +414,7 @@ form button[type="submit"] {
 }
 
 .gift-links a {
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   color: white !important;
   -webkit-text-fill-color: white !important; /* Safari */
   padding: 10px 16px;
@@ -434,7 +429,7 @@ form button[type="submit"] {
 }
 
 .gift-links a:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 /* ✅ Font Custom Styles */
@@ -450,7 +445,7 @@ form button[type="submit"] {
 
 .font-b {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -514,19 +509,6 @@ form button[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
-.font-h {
-  font-family: 'Lora', serif;
-  font-weight: 800;
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  letter-spacing: 0.1px;
-}
-
 /* Paksa font Ancizar Sans untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Ancizar Sans', sans-serif;
@@ -538,7 +520,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-b {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   } 
 
   .font-c {
@@ -561,10 +543,6 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   .font-g {
     font-size: 1.2rem;
   }
-
-   .font-h {
-    font-size: 1.7rem;
-  }  
 } 
 
 html {
@@ -601,8 +579,7 @@ html {
 
 .gallery-slide img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  height: 220px;        /* BESARKAN sini */
+  height: 200px;
   object-fit: cover;
   display: block;
 }
@@ -661,12 +638,12 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-  background: linear-gradient(135deg, #e7d3b8, #d9bfa0, #f2e4cc);
+  background: linear-gradient(135deg, #dcd2f5, #e6dbfa, #f2f2f2);
   background-size: 400% 400%; /* beri ruang gradient bergerak */
   border-radius: 16px;
   box-shadow:
-    0 4px 14px rgba(200, 170, 130, 0.18),   /* bayang caramel lembut sangat */
-    inset 0 1px 3px rgba(255, 255, 250, 0.3); /* highlight ivory halus */
+    0 6px 18px rgba(176, 162, 218, 0.25),
+    inset 0 1px 4px rgba(255, 255, 255, 0.6);
   width: 90%;
   max-width: 360px;
   padding: 14px 16px;
@@ -695,13 +672,11 @@ section *, .wishlist *, #main-content * {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 1.0rem;
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+  color: black;
   margin-bottom: 5px;
 }
 .hadiah-tagline {
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+  color: black;
 }
 
 /* 📜 Isi (scrollable list) */
@@ -726,11 +701,11 @@ section *, .wishlist *, #main-content * {
   width: 8px;
 }
 #hadiahList::-webkit-scrollbar-thumb {
-  background-color: #8B4513;
+  background-color: #dcd2f5;
   border-radius: 10px;
 }
 #hadiahList::-webkit-scrollbar-thumb:hover {
-  background-color: #A0522D;
+  background-color: #c8b8ef;
 }
 
 /* gaya teks dalam senarai */
@@ -739,14 +714,12 @@ section *, .wishlist *, #main-content * {
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 1.0rem;
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+  color: black;
   text-align: center;
   margin: 4px 0;
 }
 #hadiahList strong {
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+  color: black;
 }
 
 #hadiahList::after {
@@ -786,7 +759,7 @@ section.doa {
 hr {
   display: block;
   border: none;
-  border-top: 2px solid #A1887F;
+  border-top: 2px solid #ccc;
   margin: 24px auto;
   width: 90%;
   max-width: 360px;
@@ -794,7 +767,7 @@ hr {
 
 @media (max-width: 768px) {
   hr {
-    border-top: 3px solid #A1887F;
+    border-top: 3px solid #999;
   }
 }
 
@@ -964,7 +937,7 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #ffffff;
-  border: 2px solid #8B4513;
+  border: 2px solid #6A4FAE;
   border-radius: 8px;
   width: 300px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
@@ -972,7 +945,7 @@ hr {
 }
 
 .alert-header {
-  background: #8B4513;
+  background: #6A4FAE;
   color: white !important;
   -webkit-text-fill-color:white !important; /* elak Safari auto-invert */
   padding: 8px 12px;
@@ -988,7 +961,7 @@ hr {
 }
 
 .alert-body button {
-  background: #8B4513;
+  background: #6A4FAE;
   color: white !important;
   -webkit-text-fill-color: white !important; /* elak Safari auto-invert */
   border: none;
@@ -1034,34 +1007,14 @@ hr {
 #ucapanList::-webkit-scrollbar {
   width: 8px; /* garis skrol nipis */
 }
-
-/* 🌸 Gradient lembut + animasi perlahan */
 #ucapanList::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #c89f7b, #b7855e, #e2cdb4);
-  background-size: 300% 300%; /* beri ruang gradient bergerak */
+  background-color: #dcd2f5; /* 💙 biru lembut pastel */
   border-radius: 10px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  box-shadow:
-    0 3px 10px rgba(200, 170, 130, 0.25),
-    inset 0 1px 2px rgba(255, 255, 240, 0.4);
-  animation: scrollGradient 6s ease infinite; /* animasi lembut & slow */
+  margin-top: 30px;  /* 🚀 ruang kosong atas */
+  margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
 }
-
-/* 💫 Hover effect — kilauan hangat */
 #ucapanList::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #b7855e, #c89f7b, #efdcc4);
-  box-shadow:
-    0 6px 18px rgba(200, 170, 130, 0.3),
-    inset 0 1px 4px rgba(255, 255, 240, 0.4);
-  animation: scrollGradient 3s ease infinite; /* laju sedikit bila hover */
-}
-
-/* ✨ Keyframes untuk animasi gradient bergerak */
-@keyframes scrollGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  background-color: #c8b8ef; /* 💧 biru lebih cerah bila hover */
 }
 
 
@@ -1121,7 +1074,7 @@ hr {
   width: 100% !important;
   max-width: 390px !important;          /* gaya telefon */
   height: 100vh !important;
-  background: url('B71.png') center center / cover no-repeat !important;
+  background: url('B8.png') center center / cover no-repeat !important;
   background-attachment: fixed !important; /* ✅ bantu extra stabil */
   z-index: -1 !important;
 }
@@ -1146,7 +1099,7 @@ hr {
 
 /* ✅ Styling khas untuk butang Copy dalam Money Gift */
 #popup-MoneyGift button {
-  background-color: #8B4513;
+  background-color: #6A4FAE;
   color: white !important;
   -webkit-text-fill-color: white !important; /* Safari */
   border: none;
@@ -1161,7 +1114,7 @@ hr {
 }
 
 #popup-MoneyGift button:hover {
-  background-color: #A0522D;
+  background-color: #8463C4;
 }
 
 /* Pastikan butang ikut warna sendiri */
@@ -1223,7 +1176,7 @@ footer, .footer {
 .wishlist-btn {
   font-weight: bold;
   text-decoration: none;
-  background: linear-gradient(135deg, #e7d3b8, #d9bfa0, #f2e4cc);
+  background: linear-gradient(135deg, #dcd2f5, #e6dbfa, #f2f2f2);
   background-size: 300% 300%; /* supaya gradient ada ruang bergerak */
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -1237,8 +1190,8 @@ footer, .footer {
 .wishlist-btn:hover {
   transform: scale(1.05);
   box-shadow:
-    0 4px 14px rgba(200, 170, 130, 0.18),   /* bayang caramel lembut sangat */
-    inset 0 1px 3px rgba(255, 255, 250, 0.3); /* highlight ivory halus */
+  0 6px 18px rgba(176, 162, 218, 0.25),
+  inset 0 1px 4px rgba(255, 255, 255, 0.6);
   text-decoration: none;  /* pastikan hover pun tiada underline */
   color: black !important;
 }
@@ -1279,7 +1232,7 @@ html, body {
   width: 100vw !important;
   max-width: 390px !important;
   height: 100vh !important;
-  background: url('B71.png') center center / cover no-repeat !important;
+  background: url('B1.png') center center / cover no-repeat !important;
   background-attachment: fixed !important;
   z-index: -1 !important;
   pointer-events: none !important;
