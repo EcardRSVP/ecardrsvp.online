@@ -1,5 +1,5 @@
 body {
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   text-align: center;
   color: #333;
   margin: 0;
@@ -47,7 +47,7 @@ section.doa {
 }
 
 .hero h1 {
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 36px;
   color: black !important;
 }
@@ -154,7 +154,7 @@ input::placeholder,
 textarea::placeholder {
   color: #aaa;   /* kelabu cair, lembut pada mata */
   opacity: 1;    /* pastikan penuh visibility */
-  font-family: 'Ancizar Sans', sans-serif; /* ikut font utama */
+  font-family: 'Lexend', sans-serif; /* ikut font utama */
   font-size: 14px; /* sama saiz dengan teks input */
 }
 
@@ -318,7 +318,7 @@ form button[type="submit"] {
     }
 
     .phone-button {
-      font-family: 'Ancizar Sans', sans-serif;
+      font-family: 'Lexend', sans-serif;
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -338,7 +338,7 @@ form button[type="submit"] {
 }
 
 .location-button {
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -423,7 +423,7 @@ form button[type="submit"] {
   font-size: 14px;
   margin: 4px;
   display: inline-block;
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease;
 }
@@ -477,10 +477,10 @@ form button[type="submit"] {
 }
 
 .font-e {
-  font-family: 'Merriweather', serif;
-  font-weight: 400; /* Regular */
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-family: 'Gabriela', serif;
+  font-style: italic;
+  font-size: 1.0rem;
+  font-weight: bold; 
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -509,9 +509,10 @@ form button[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
-/* Paksa font Ancizar Sans untuk semua teks biasa */
+
+/* Paksa font Lexend untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
 }
 
 @media (max-width: 480px) {
@@ -559,7 +560,7 @@ html {
 }
 
 #contact h2 {
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 22px;
