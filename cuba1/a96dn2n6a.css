@@ -401,7 +401,7 @@ form button[type="submit"] {
 }
 
 .font-b {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Eagle Lake', cursive;
   font-size: 1.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
@@ -411,7 +411,7 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Passions Conflict', cursive;
+  font-family: 'Mea Culpa', cursive;
   font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
