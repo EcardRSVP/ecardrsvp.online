@@ -485,6 +485,7 @@ form button[type="submit"] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  letter-spacing: 0.8px; /* ← jarak antara setiap huruf */
 }
 
 .font-f {
