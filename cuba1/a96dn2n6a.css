@@ -58,7 +58,7 @@ section.doa {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 25px;
   color: black !important;
   margin-bottom: 10px;
 }
@@ -513,6 +513,7 @@ form button[type="submit"] {
 /* Paksa font Lexend untuk semua teks biasa */
 body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Lexend', sans-serif;
+  font-size: 16px; /* tukar ikut keperluan, contoh 16px */  
 }
 
 @media (max-width: 480px) {
