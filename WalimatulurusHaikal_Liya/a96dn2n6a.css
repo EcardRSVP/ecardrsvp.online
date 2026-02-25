@@ -1,5 +1,5 @@
 body {
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   text-align: center;
   color: #333;
   margin: 0;
@@ -34,39 +34,6 @@ section {
   border-radius: 0;
   box-shadow: none !important;
   scroll-margin-bottom: 100px;
-}
-
-.transparent-section,
-section#countdown-page,
-section.galeri,
-section.doa {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-  min-height: auto;
-}
-
-.hero h1 {
-  font-family: 'Ancizar Sans', sans-serif;
-  font-size: 36px;
-  color: black !important;
-}
-
-.hero p {
-  font-size: 20px;
-  color: black !important;
-}
-
-h2 {
-  font-size: 25px;
-  color: black !important;
-  margin-bottom: 10px;
-}
-
-h3 {
-  font-size: 16px;
-  color: black !important;
-  margin-bottom: 10px;
 }
 
 input, button {
@@ -104,7 +71,7 @@ button,
   width: 90%;
   max-width: 400px;
   display: block;
-  font-size: 16px;
+  font-size: inherit;
   font-family: inherit;
   cursor: pointer;
   text-align: center;
@@ -133,7 +100,7 @@ button,
   max-width: 400px;            /* ikut button */
   margin: 10px auto;           /* tengah horizontal */
   display: block;              
-  font-size: 16px;             
+  font-size: 14px;             
   font-family: inherit;        
   box-sizing: border-box;      /* pastikan padding ikut width */
   background-color: white;     /* kotak putih */
@@ -154,7 +121,7 @@ input::placeholder,
 textarea::placeholder {
   color: #aaa;   /* kelabu cair, lembut pada mata */
   opacity: 1;    /* pastikan penuh visibility */
-  font-family: 'Ancizar Sans', sans-serif; /* ikut font utama */
+  font-family: 'Lexend', sans-serif; /* ikut font utama */
   font-size: 14px; /* sama saiz dengan teks input */
 }
 
@@ -178,7 +145,6 @@ textarea::placeholder {
   background: #8463C4;
   transform: scale(1.05);
 }
-
 
 
 footer {
@@ -218,7 +184,7 @@ h1, h2, p {
 
 @media (max-width: 768px) {
   h1, h2 {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   }
 
   p {
@@ -258,16 +224,6 @@ h1, h2, p {
   font-size: 11px;
 }
 
-.transparent-section,
-section#countdown-page,
-section.galeri,
-section.doa {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-  min-height: auto;
-}
-
 .hidden-section.show {
   display: block;
   transform: translateY(0);
@@ -290,8 +246,8 @@ form button.copy-btn,
   display: block;
   box-sizing: border-box;
   border-radius: 8px;
-  font-size: 16px;
-  font-family: inherit;  
+  font-size: 14px;
+  font-family: 'Lexend', sans-serif; 
   border: 1px solid #ccc;
 }
 
@@ -318,13 +274,13 @@ form button[type="submit"] {
     }
 
     .phone-button {
-      font-family: 'Ancizar Sans', sans-serif;
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin: 10px;
       padding: 12px 24px;
-      font-size: 16px;
+      font-family: inherit;         /* ikut font body */
+      font-size: inherit;           /* ikut saiz body (14px) */
       color: white !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
       background-color: #6A4FAE;
@@ -338,14 +294,14 @@ form button[type="submit"] {
 }
 
 .location-button {
-  font-family: 'Ancizar Sans', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin: 20px auto;
   padding: 12px 24px;
-  font-size: 16px;
+  font-family: inherit;         /* ikut font body */
+  font-size: inherit;           /* ikut saiz body (14px) */
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
   background-color: #6A4FAE;
@@ -423,7 +379,7 @@ form button[type="submit"] {
   font-size: 14px;
   margin: 4px;
   display: inline-block;
-  font-family: 'Ancizar Sans', sans-serif;
+  font-family: 'Lexend', sans-serif;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease;
 }
@@ -434,7 +390,7 @@ form button[type="submit"] {
 
 /* ✅ Font Custom Styles */
 .font-a {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Rochester', cursive;
   font-size: 1.9rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -444,8 +400,8 @@ form button[type="submit"] {
 }
 
 .font-b {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-family: 'Eagle Lake', cursive;
+  font-size: 1.4rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -454,7 +410,7 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Italianno', cursive;
+  font-family: 'Mea Culpa', cursive;
   font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -477,15 +433,15 @@ form button[type="submit"] {
 }
 
 .font-e {
-  font-family: 'Merriweather', serif;
-  font-weight: 400; /* Regular */
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-family: 'Gabriela', serif;
+  font-size: 1.1rem;
+  font-weight: bold; 
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  letter-spacing: 0.8px; /* ← jarak antara setiap huruf */
 }
 
 .font-f {
@@ -509,9 +465,45 @@ form button[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
-/* Paksa font Ancizar Sans untuk semua teks biasa */
-body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
-  font-family: 'Ancizar Sans', sans-serif;
+
+/* ✅ Heading semua ikut Lexend, saiz 16px */
+h1, h2, h3 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h4 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 23px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ✅ Teks biasa & elemen form ikut Lexend, saiz 14px */
+body, p, span, div, strong, em, label, input, button, td, th {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;  
+}
+
+/* pastikan form RSVP ikut sama */
+#rsvp-form label,
+#rsvp-form input,
+#rsvp-form textarea {
+  font-family: inherit;  /* inherit dari body, jadi Lexend */
+  font-size: inherit;    /* ikut 14px dari body */
 }
 
 @media (max-width: 480px) {
@@ -520,7 +512,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-b {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   } 
 
   .font-c {
@@ -533,7 +525,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
   } 
 
   .font-e {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   } 
 
   .font-f {
@@ -549,6 +541,116 @@ html {
   -webkit-text-size-adjust: 100%; /* elak auto zoom teks di iPhone */
 }
 
+/* ==========================
+   📱 CONTACT SECTION - mobile friendly
+   ========================== */
+#contact {
+  text-align: center;
+  padding: 20px;
+  color: #000;
+}
+
+#contact h2 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: black !important;
+}
+
+/* Kad setiap contact */
+.contact-card {
+  background: linear-gradient(135deg, #dcd2f5, #e6dbfa, #f2f2f2); /* gradient lembut */
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 10px auto;
+  width: 65%;
+  min-width: 220px;       /* paksa kotak tak terlalu sempit di iPhone kecil */
+  max-width: 360px;       /* had maksimum untuk skrin besar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: scale(1.02);
+}
+
+.contact-name {
+  font-weight: 600;
+  font-size: 15.5px;
+  color: #5a3381;
+  text-align: left;
+  flex: 1;
+  word-break: keep-all;
+}
+
+/* Ikon */
+.contact-icons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.icon-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-box img {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Warna ikon */
+.icon-box.whatsapp img {
+  background-color: #25D366;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.icon-box.call img {
+  background-color: #007bff;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+/* 📱 Responsif untuk skrin kecil */
+@media (max-width: 480px) {
+  .contact-card {
+    width: 65%;              /* ✅ bagi lebih sempit bila skrin kecil */
+    padding: 10px 12px;
+  }
+
+  .contact-name {
+    font-size: 14.5px;
+  }
+
+  .icon-box {
+    width: 34px;
+    height: 34px;
+  }
+
+  #contact h2 {
+    font-size: 20px;
+  }
+}
 
 .gallery-slider {
   display: flex;
@@ -613,16 +715,33 @@ html {
   background-color: transparent;
 }
 
+/* Nama Ayah & Nama Ibu */
 .nama-ayah,
-.simbol-dan,
-.nama-ibu,
-.nama-pengantin,
-.pilihan-hati,
-.nama-pasangan {
-  margin: 4px 0; /* Atur ikut kesesuaian */
+.nama-ibu {
+  margin: 4px 0;
   line-height: 1.2;
+  font-family: 'Lexend', sans-serif;
+  font-size: 15px;
+  color: black !important;
+  -webkit-text-fill-color: black !important;
 }
 
+/* Nama pengantin & pasangan kekal ikut font-d */
+.nama-pengantin strong.font-d,
+.nama-pasangan strong.font-d {
+  /* Tiada perubahan, ikut style font-d asal */
+}
+
+/* Pilihan hati ikut default (Lexend 14px) */
+.simbol-dan,
+.pilihan-hati {
+  margin: 4px 0;
+  line-height: 1.2;
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: black !important;
+  -webkit-text-fill-color: black !important;
+}
 
 section *, .wishlist *, #main-content * {
   max-width: 100%;
@@ -713,7 +832,7 @@ section *, .wishlist *, #main-content * {
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 1.0rem;
+  font-size: inherit; /* ikut font body (14px) */
   color: black;
   text-align: center;
   margin: 4px 0;
@@ -747,27 +866,45 @@ section.doa {
   min-height: auto;
 }
 
-section#countdown-page,
-section.galeri,
-section.doa {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  margin-bottom: 0px !important;
-  min-height: auto;
+hr {
+  border: none;
+  text-align: center;
+  margin: 25px auto;
 }
 
-hr {
-  display: block;
-  border: none;
-  border-top: 2px solid #ccc;
-  margin: 24px auto;
-  width: 90%;
-  max-width: 360px;
+hr::before {
+  content: "✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦";
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
+
+    /* Gradient hitam + silver */
+  background: linear-gradient(
+    90deg,
+    #000000,
+    #c0c0c0,
+    #000000,
+    #e6e6e6,
+    #000000
+  );
+
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: silverMove 3s ease infinite;
+}
+
+@keyframes silverMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @media (max-width: 768px) {
-  hr {
-    border-top: 3px solid #999;
+  hr::before {
+    font-size: 13px;     /* saiz mobile */
+    letter-spacing: 5px; /* rapat sikit supaya tak nampak terlalu jarak */
   }
 }
 
@@ -1074,7 +1211,7 @@ hr {
   width: 100% !important;
   max-width: 390px !important;          /* gaya telefon */
   height: 100vh !important;
-  background: url('B8.png') center center / cover no-repeat !important;
+  background: url('B1.png') center center / cover no-repeat !important;
   background-attachment: fixed !important; /* ✅ bantu extra stabil */
   z-index: -1 !important;
 }
@@ -1109,7 +1246,7 @@ hr {
   width: 90%;
   max-width: 400px;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 }
 
