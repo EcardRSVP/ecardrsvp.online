@@ -832,7 +832,7 @@ section *, .wishlist *, #main-content * {
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 1.0rem;
+  font-size: inherit; /* ikut font body (14px) */
   color: black;
   text-align: center;
   margin: 4px 0;
