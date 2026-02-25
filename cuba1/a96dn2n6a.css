@@ -275,13 +275,13 @@ form button[type="submit"] {
     }
 
     .phone-button {
-      font-family: 'Lexend', sans-serif;
       display: inline-flex;
       align-items: center;
       gap: 10px;
       margin: 10px;
       padding: 12px 24px;
-      font-size: 16px;
+      font-family: inherit;         /* ikut font body */
+      font-size: inherit;           /* ikut saiz body (14px) */
       color: white !important;  
       -webkit-text-fill-color: white !important; /* untuk Safari */
       background-color: #6A4FAE;
@@ -295,14 +295,14 @@ form button[type="submit"] {
 }
 
 .location-button {
-  font-family: 'Lexend', sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin: 20px auto;
   padding: 12px 24px;
-  font-size: 16px;
+  font-family: inherit;         /* ikut font body */
+  font-size: inherit;           /* ikut saiz body (14px) */
   color: white !important;  
   -webkit-text-fill-color: white !important; /* untuk Safari */
   background-color: #6A4FAE;
