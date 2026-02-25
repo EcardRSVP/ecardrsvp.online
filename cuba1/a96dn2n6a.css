@@ -391,7 +391,7 @@ form button[type="submit"] {
 
 /* ✅ Font Custom Styles */
 .font-a {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Rochester', cursive;
   font-size: 1.9rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -411,7 +411,7 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Italianno', cursive;
+  font-family: 'Passions Conflict', cursive;
   font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
