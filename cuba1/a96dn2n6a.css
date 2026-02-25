@@ -478,6 +478,16 @@ h1, h2, h3 {
   text-rendering: optimizeLegibility;
 }
 
+h4 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 25px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 /* ✅ Teks biasa & elemen form ikut Lexend, saiz 14px */
 body, p, span, div, strong, em, label, input, button, td, th {
   font-family: 'Lexend', sans-serif;
