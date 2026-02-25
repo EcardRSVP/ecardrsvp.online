@@ -58,7 +58,7 @@ section.doa {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 18px;
   color: black !important;
   margin-bottom: 10px;
 }
@@ -563,7 +563,7 @@ html {
   font-family: 'Lexend', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 20px;
   color: black !important;
 }
