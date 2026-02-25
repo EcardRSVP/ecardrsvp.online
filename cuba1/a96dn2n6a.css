@@ -698,16 +698,33 @@ html {
   background-color: transparent;
 }
 
+/* Nama Ayah & Nama Ibu */
 .nama-ayah,
-.simbol-dan,
-.nama-ibu,
-.nama-pengantin,
-.pilihan-hati,
-.nama-pasangan {
-  margin: 4px 0; /* Atur ikut kesesuaian */
+.nama-ibu {
+  margin: 4px 0;
   line-height: 1.2;
+  font-family: 'Lexend', sans-serif;
+  font-size: 15px;
+  color: black !important;
+  -webkit-text-fill-color: black !important;
 }
 
+/* Nama pengantin & pasangan kekal ikut font-d */
+.nama-pengantin strong.font-d,
+.nama-pasangan strong.font-d {
+  /* Tiada perubahan, ikut style font-d asal */
+}
+
+/* Pilihan hati ikut default (Lexend 14px) */
+.simbol-dan,
+.pilihan-hati {
+  margin: 4px 0;
+  line-height: 1.2;
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: black !important;
+  -webkit-text-fill-color: black !important;
+}
 
 section *, .wishlist *, #main-content * {
   max-width: 100%;
