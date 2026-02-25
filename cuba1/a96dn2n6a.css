@@ -36,39 +36,6 @@ section {
   scroll-margin-bottom: 100px;
 }
 
-.transparent-section,
-section#countdown-page,
-section.galeri,
-section.doa {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-  min-height: auto;
-}
-
-.hero h1 {
-  font-family: 'Lexend', sans-serif;
-  font-size: 36px;
-  color: black !important;
-}
-
-.hero p {
-  font-size: 20px;
-  color: black !important;
-}
-
-h2 {
-  font-size: 35px;
-  color: black !important;
-  margin-bottom: 10px;
-}
-
-h3 {
-  font-size: 16px;
-  color: black !important;
-  margin-bottom: 10px;
-}
-
 input, button {
   padding: 10px;
   margin: 10px;
@@ -256,16 +223,6 @@ h1, h2, p {
 .footer-icon span {
   display: block;
   font-size: 11px;
-}
-
-.transparent-section,
-section#countdown-page,
-section.galeri,
-section.doa {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-  min-height: auto;
 }
 
 .hidden-section.show {
@@ -872,15 +829,6 @@ section.doa {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
-  min-height: auto;
-}
-
-section#countdown-page,
-section.galeri,
-section.doa {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  margin-bottom: 0px !important;
   min-height: auto;
 }
 
