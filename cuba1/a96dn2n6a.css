@@ -100,7 +100,7 @@ button,
   max-width: 400px;            /* ikut button */
   margin: 10px auto;           /* tengah horizontal */
   display: block;              
-  font-size: 16px;             
+  font-size: 14px;             
   font-family: inherit;        
   box-sizing: border-box;      /* pastikan padding ikut width */
   background-color: white;     /* kotak putih */
@@ -145,7 +145,6 @@ textarea::placeholder {
   background: #8463C4;
   transform: scale(1.05);
 }
-
 
 
 footer {
