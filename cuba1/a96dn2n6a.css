@@ -510,10 +510,26 @@ form button[type="submit"] {
 }
 
 
-/* Paksa font Lexend untuk semua teks biasa */
-body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td, th {
+/* ✅ Heading semua ikut Lexend, saiz 16px */
+h1, h2, h3 {
   font-family: 'Lexend', sans-serif;
-  font-size: 12px; /* tukar ikut keperluan, contoh 16px */  
+  font-size: 16px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ✅ Teks biasa & elemen form ikut Lexend, saiz 14px */
+body, p, span, div, strong, em, label, input, button, td, th {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;  
 }
 
 @media (max-width: 480px) {
