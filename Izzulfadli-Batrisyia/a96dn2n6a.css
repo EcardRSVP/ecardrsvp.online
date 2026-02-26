@@ -407,7 +407,6 @@ form button[type="submit"] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  margin: 0;
   line-height: 0.9;       /* rapatkan atas bawah */
 }
 
