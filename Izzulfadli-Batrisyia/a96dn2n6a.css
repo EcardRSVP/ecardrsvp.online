@@ -400,7 +400,7 @@ form button[type="submit"] {
 }
 
 .font-b {
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 1.4rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
@@ -410,7 +410,7 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Mea Culpa', cursive;
+  font-family: 'Lavishly Yours', cursive !important;
   font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -721,7 +721,7 @@ html {
   margin: 4px 0;
   line-height: 1.2;
   font-family: 'Lexend', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: black !important;
   -webkit-text-fill-color: black !important;
 }
