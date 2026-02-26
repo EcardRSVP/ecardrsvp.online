@@ -498,6 +498,18 @@ body, p, span, div, strong, em, label, input, button, td, th {
   text-rendering: optimizeLegibility;  
 }
 
+/* Paksa semua teks dalam section jemputan ikut parent font & saiz */
+section p,
+section span,
+section .pilihan-hati {
+  font-family: inherit !important;   /* ikut parent */
+  font-size: inherit !important;     /* ikut parent */
+  line-height: inherit !important;   /* konsisten jarak baris */
+  font-weight: inherit !important;   /* ikut parent */
+  color: inherit !important;         /* ikut parent */
+  margin: 0.2rem 0 !important;       /* optional: konsisten jarak */
+}
+
 /* pastikan form RSVP ikut sama */
 #rsvp-form label,
 #rsvp-form input,
