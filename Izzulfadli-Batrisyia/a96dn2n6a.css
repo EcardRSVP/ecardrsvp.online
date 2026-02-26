@@ -408,7 +408,7 @@ form button[type="submit"] {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   margin: 0;
-  line-height: 0.8;       /* rapatkan atas bawah */
+  line-height: 0.9;       /* rapatkan atas bawah */
 }
 
 .font-c {
