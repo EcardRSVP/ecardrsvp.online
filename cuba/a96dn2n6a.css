@@ -498,6 +498,11 @@ body, p, span, div, strong, em, label, input, button, td, th {
   text-rendering: optimizeLegibility;  
 }
 
+.section-jemputan {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+}
+
 .section-jemputan p,
 .section-jemputan span,
 .section-jemputan .pilihan-hati {
