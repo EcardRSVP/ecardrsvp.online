@@ -465,6 +465,15 @@ form button[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
+.font-h {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;  
+}
 
 /* ✅ Heading semua ikut Lexend, saiz 16px */
 h1, h2, h3 {
