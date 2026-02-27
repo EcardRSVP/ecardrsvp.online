@@ -400,7 +400,7 @@ form button[type="submit"] {
 }
 
 .font-b {
-  font-family: 'Eagle Lake', cursive;
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 1.4rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
@@ -410,7 +410,7 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Mea Culpa', cursive;
+  font-family: 'Lavishly Yours', cursive;
   font-size: 3.0rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -465,6 +465,15 @@ form button[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
+.font-h {
+  font-family: 'Lexend', sans-serif;
+  font-size: 14px;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;  
+}
 
 /* ✅ Heading semua ikut Lexend, saiz 16px */
 h1, h2, h3 {
