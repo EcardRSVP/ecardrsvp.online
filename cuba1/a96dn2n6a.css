@@ -851,7 +851,8 @@ section *, .wishlist *, #main-content * {
   margin: 4px 0;
 }
 #hadiahList strong {
-  color: black;
+  color: black !important;
+  -webkit-text-fill-color: black !important; /* Safari */
 }
 
 #hadiahList::after {
