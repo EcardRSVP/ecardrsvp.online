@@ -495,6 +495,7 @@ h4 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  margin-bottom: 2px; /* jarak kecil */
 }
 
 /* ✅ Teks biasa & elemen form ikut Lexend, saiz 14px */
