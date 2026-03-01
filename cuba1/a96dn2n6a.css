@@ -410,8 +410,9 @@ form button[type="submit"] {
 }
 
 .font-c {
-  font-family: 'Lavishly Yours', cursive;
-  font-size: 3.0rem;
+  font-family: 'Corinthia', cursive;
+  font-weight: 700;   /* ini yang jadikan bold */
+  font-size: 3.15rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -494,6 +495,7 @@ h4 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  margin-bottom: 2px; /* jarak kecil */
 }
 
 /* ✅ Teks biasa & elemen form ikut Lexend, saiz 14px */
@@ -525,7 +527,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-c {
-    font-size: 3.0rem;
+    font-size: 3.15rem;
   } 
 
   .font-d {
@@ -574,7 +576,7 @@ html {
 
 /* Kad setiap contact */
 .contact-card {
-  background: linear-gradient(135deg, #f3e0b5, #ededed, #fafafa); /* gradient coklat */
+  background: linear-gradient(135deg, #e7d3b8, #d9bfa0, #f2e4cc); /* gradient lembut */
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
@@ -683,8 +685,11 @@ html {
 
 .gallery-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+  transition: transform 1.2s ease-in-out; /* lebih slow & smooth */
+}
+
+.gallery-slider:hover .gallery-track {
+  /* pause bila hover, JS handle juga */
 }
 
 .gallery-slide {
@@ -851,8 +856,7 @@ section *, .wishlist *, #main-content * {
   margin: 4px 0;
 }
 #hadiahList strong {
-  color: black !important;
-  -webkit-text-fill-color: black !important; /* Safari */
+  color: black;
 }
 
 #hadiahList::after {
@@ -1158,7 +1162,7 @@ hr::before {
 #ucapanList::-webkit-scrollbar {
   width: 8px; /* garis skrol nipis */
 }
-#ucapanList::-webkit-scrollbar-thumb {
+
 #ucapanList::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #c89f7b, #b7855e, #e2cdb4);
   background-size: 300% 300%; /* beri ruang gradient bergerak */
@@ -1170,7 +1174,7 @@ hr::before {
     inset 0 1px 2px rgba(255, 255, 240, 0.4);
   animation: scrollGradient 6s ease infinite; /* animasi lembut & slow */
 }
-  
+
 /* 💫 Hover effect — kilauan hangat */
 #ucapanList::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #b7855e, #c89f7b, #efdcc4);
@@ -1186,6 +1190,11 @@ hr::before {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+
+
+
+
 
 
 #submit-popup {
