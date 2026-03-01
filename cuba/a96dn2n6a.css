@@ -685,8 +685,11 @@ html {
 
 .gallery-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+  transition: transform 1.2s ease-in-out; /* lebih slow & smooth */
+}
+
+.gallery-slider:hover .gallery-track {
+  /* pause bila hover, JS handle juga */
 }
 
 .gallery-slide {
