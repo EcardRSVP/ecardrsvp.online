@@ -250,6 +250,22 @@
 </section>
 
   <hr> 
+
+
+<section class="galeri transparent-section">
+  <h1 class="font-e">GALERI</h1>
+
+  <div class="gallery-slider">
+    <div class="gallery-viewport">
+      <div class="gallery-track">
+        <div class="gallery-slide"><img src="GambarGaleri1.jpg"></div>
+        <div class="gallery-slide"><img src="GambarGaleri2.jpg"></div>
+        <div class="gallery-slide"><img src="GambarGaleri3.jpeg"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
       
     <section class="doa transparent-section"> 
     <h2 class="font-f">بِسْمِ اللهِ ٱلرَّحْمٰنِ الرَّحِيمِ</h2>
@@ -1543,31 +1559,70 @@ function copyRek() {
   }
 
   // ✅ Untuk slider galeri
-  window.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector('.gallery-track');
-    const slides = document.querySelectorAll('.gallery-slide');
-    const prevBtn = document.querySelector('.gallery-prev');
-    const nextBtn = document.querySelector('.gallery-next');
-    let currentIndex = 0;
+window.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector('.gallery-track');
+  const slides = document.querySelectorAll('.gallery-slide');
+  const prevBtn = document.querySelector('.gallery-prev');
+  const nextBtn = document.querySelector('.gallery-next');
+  const slider = document.querySelector('.gallery-slider');
 
-    function updateSlidePosition() {
+  if (!track || slides.length === 0 || !prevBtn || !nextBtn) return;
+
+  // Clone first & last slide
+  const firstClone = slides[0].cloneNode(true);
+  const lastClone = slides[slides.length - 1].cloneNode(true);
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, slides[0]);
+
+  const allSlides = document.querySelectorAll('.gallery-slide');
+  let currentIndex = 1; // start selepas lastClone
+
+  track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+  track.style.transition = 'transform 1.2s ease-in-out';
+
+  function updateSlide() {
+    track.style.transition = 'transform 1.2s ease-in-out';
+    track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    updateSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    updateSlide();
+  });
+
+  track.addEventListener('transitionend', () => {
+    if (allSlides[currentIndex].isEqualNode(firstClone)) {
+      track.style.transition = 'none';
+      currentIndex = 1;
       track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
     }
-
-    if (prevBtn && nextBtn && track && slides.length > 0) {
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-        updateSlidePosition();
-      });
-
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-        updateSlidePosition();
-      });
-
-      updateSlidePosition(); // Set awal
+    if (allSlides[currentIndex].isEqualNode(lastClone)) {
+      track.style.transition = 'none';
+      currentIndex = allSlides.length - 2;
+      track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
     }
   });
+
+  // ✅ Auto slide setiap 5s
+  let autoSlide = setInterval(() => {
+    currentIndex++;
+    updateSlide();
+  }, 5000);
+
+  // Pause bila hover
+  slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  slider.addEventListener('mouseleave', () => {
+    autoSlide = setInterval(() => {
+      currentIndex++;
+      updateSlide();
+    }, 5000);
+  });
+});
 </script>
 
       <!-- 🔹 External library PapaParse -->
