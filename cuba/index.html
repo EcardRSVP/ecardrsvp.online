@@ -1552,21 +1552,23 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (!track || slides.length === 0 || !prevBtn || !nextBtn) return;
 
-  // Clone first & last slide
+  // 🔁 Clone first & last slide (infinite smooth)
   const firstClone = slides[0].cloneNode(true);
   const lastClone = slides[slides.length - 1].cloneNode(true);
   track.appendChild(firstClone);
   track.insertBefore(lastClone, slides[0]);
 
   const allSlides = document.querySelectorAll('.gallery-slide');
-  let currentIndex = 1; // start selepas lastClone
+  let currentIndex = 1;
+  let autoSlide;
 
-  track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
-  track.style.transition = 'transform 1.2s ease-in-out';
+  // Set posisi awal
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  track.style.transition = "transform 1.2s ease-in-out";
 
   function updateSlide() {
-    track.style.transition = 'transform 1.2s ease-in-out';
-    track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+    track.style.transition = "transform 1.2s ease-in-out";
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
   nextBtn.addEventListener('click', () => {
@@ -1579,32 +1581,49 @@ window.addEventListener("DOMContentLoaded", () => {
     updateSlide();
   });
 
+  // 🎯 Fix lompat hujung
   track.addEventListener('transitionend', () => {
     if (allSlides[currentIndex].isEqualNode(firstClone)) {
-      track.style.transition = 'none';
+      track.style.transition = "none";
       currentIndex = 1;
-      track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
+
     if (allSlides[currentIndex].isEqualNode(lastClone)) {
-      track.style.transition = 'none';
+      track.style.transition = "none";
       currentIndex = allSlides.length - 2;
-      track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
   });
 
-  // ✅ Auto slide setiap 5s
-  let autoSlide = setInterval(() => {
-    currentIndex++;
-    updateSlide();
-  }, 5000);
-
-  // Pause bila hover
-  slider.addEventListener('mouseenter', () => clearInterval(autoSlide));
-  slider.addEventListener('mouseleave', () => {
+  // ▶️ Start Auto (anti double interval)
+  function startAuto() {
+    clearInterval(autoSlide);
     autoSlide = setInterval(() => {
       currentIndex++;
       updateSlide();
     }, 5000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoSlide);
+  }
+
+  slider.addEventListener('mouseenter', stopAuto);
+  slider.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+
+  // 🛠️ SUPER IMPORTANT FIX untuk tukar section / tab
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+      track.style.transition = "none";
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      setTimeout(() => {
+        track.style.transition = "transform 1.2s ease-in-out";
+      }, 50);
+    }
   });
 });
 </script>
