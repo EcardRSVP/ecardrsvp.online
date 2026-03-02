@@ -576,7 +576,7 @@ html {
 
 /* Kad setiap contact */
 .contact-card {
-  background: linear-gradient(135deg, #fffdf8, #f8ead6, #fffdf8); /* Gradient cream */
+  background: ecfaf1; /* Gradient cream */
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
