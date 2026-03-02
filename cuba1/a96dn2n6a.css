@@ -893,21 +893,21 @@ hr::before {
   font-weight: bold;
   letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
 
-    /* Gradient hitam + silver */
+    /* Gradient coklat + silver */
   background: linear-gradient(
     90deg,
-    #000000,
+    #A0522D,
     #c0c0c0,
-    #000000,
+    #A0522D,
     #e6e6e6,
-    #000000
+    #A0522D
   );
 
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: silverMove 8s ease infinite;
+  animation: silverMove 12s ease infinite;
 }
 
 @keyframes silverMove {
