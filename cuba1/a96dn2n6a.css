@@ -907,7 +907,7 @@ hr::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: silverMove 8s ease infinite;
+  animation: silverMove 12s ease infinite;
 }
 
 @keyframes silverMove {
