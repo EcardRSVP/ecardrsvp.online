@@ -1614,9 +1614,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
   startAuto();
 
-  // 🛠️ SUPER IMPORTANT FIX untuk tukar section / tab
-  document.addEventListener("visibilitychange", () => {
-    if (!document.hidden) {
+// ✅ Tambah observer untuk detect bila gallery muncul dari hidden section
+if (slider) {
+  const observer = new MutationObserver(() => {
+    if (slider.offsetParent !== null) { // bermaksud visible
       track.style.transition = "none";
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
@@ -1625,6 +1626,21 @@ window.addEventListener("DOMContentLoaded", () => {
       }, 50);
     }
   });
+  
+  // Observe changes pada class atau style
+  observer.observe(slider, { attributes: true, attributeFilter: ['style', 'class'] });
+}
+
+// 🛠️ SUPER IMPORTANT FIX untuk tukar section / tab
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    track.style.transition = "none";
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    setTimeout(() => {
+      track.style.transition = "transform 1.2s ease-in-out";
+    }, 50);
+  }
 });
 </script>
 
