@@ -893,7 +893,7 @@ hr::before {
   font-weight: bold;
   letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
 
-    /* Gradient hitam + silver */
+    /* Gradient purple + silver */
   background: linear-gradient(
     90deg,
     #000000,
