@@ -893,14 +893,14 @@ hr::before {
   font-weight: bold;
   letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
 
-    /* Gradient purple + silver */
+    /* Gradient maroon + silver */
   background: linear-gradient(
     90deg,
-    #D8BFD8,  /* purple cair */
+    #800000,  /* maroon */
     #c0c0c0,  /* silver */
     #ffffff,  /* putih */
     #c0c0c0,  /* silver */
-    #D8BFD8   /* purple cair */
+    #800000   /* maroon */
   );
 
   background-size: 300% 300%;
