@@ -459,8 +459,7 @@ form button[type="submit"] {
 
 .font-g {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -521,7 +520,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
 
 @media (max-width: 480px) {
   .font-a {
-    font-size: 1.9rem; /* sedikit besar supaya jelas di skrin kecil */
+    font-size: 1.7rem; /* sedikit besar supaya jelas di skrin kecil */
   } 
 
   .font-b {
@@ -529,7 +528,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-c {
-    font-size: 3.15rem;
+    font-size: 3.00rem;
   } 
 
   .font-d {
@@ -546,7 +545,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-g {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .font-h {
