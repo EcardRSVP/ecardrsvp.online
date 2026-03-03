@@ -401,7 +401,7 @@ form button[type="submit"] {
 
 .font-b {
   font-family: 'Lexend Deca', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -423,7 +423,7 @@ form button[type="submit"] {
 .font-d {
   font-family: 'Lora', serif;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: bold;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
@@ -523,7 +523,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-b {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   } 
 
   .font-c {
@@ -531,7 +531,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-d {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     letter-spacing: 0.2px; /* jarak halus, elak huruf nampak rapat */
   } 
 
@@ -1241,7 +1241,7 @@ hr::before {
   width: 100% !important;
   max-width: 390px !important;          /* gaya telefon */
   height: 100vh !important;
-  background: url('B6.png') center center / cover no-repeat !important;
+  background: url('A53.png') center center / cover no-repeat !important;
   background-attachment: fixed !important; /* ✅ bantu extra stabil */
   z-index: -1 !important;
 }
@@ -1399,7 +1399,7 @@ html, body {
   width: 100vw !important;
   max-width: 390px !important;
   height: 100vh !important;
-  background: url('B6.png') center center / cover no-repeat !important;
+  background: url('A53.png') center center / cover no-repeat !important;
   background-attachment: fixed !important;
   z-index: -1 !important;
   pointer-events: none !important;
