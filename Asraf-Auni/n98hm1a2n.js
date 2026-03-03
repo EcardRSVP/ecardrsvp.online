@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
  // 📨 Validasi sebelum submit
   if (form) {
     form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1251822779"]:checked');
+      const kehadiran = document.querySelector('input[name="entry.1070885144"]:checked');
 
       if (!nama.value.trim() || !kehadiran) {
         e.preventDefault();
@@ -134,7 +134,7 @@ function toggleSection(id) {
 
 
 // ✅ Fetch Ucapan (PapaParse)
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRdRarxuhjhNvVhhdkenvzpRvYR6O4m41h5c8gZxzCVk9o83a9OTTwVjJL2tDZZFiNgj52zBYFJvxq1/pub?gid=1966877982&single=true&output=csv")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vQvs10ev4bAYXugjo1b3cI8u9BUSCeubvPe-ubZP1qoJDRdXb097irWmu88uSKPtmPsePbRRL41jMVr/pub?gid=1216798804&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
     const parsed = Papa.parse(data, { header: true });
