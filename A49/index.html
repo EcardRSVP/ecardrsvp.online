@@ -3,15 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Majlis Aqiqah Ainul & Majlis Hari Jadi Aiman</title>
+  <title>Majlis Rumah Terbuka</title>
 
-<!-- ✅ Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Ephesis&family=Tangerine&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Estonia&family=Dancing+Script&family=Parisienne&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Dives+Akuru&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet"> <!-- ✅ Tambahan ini -->
-<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap" rel="stylesheet">
+  <!-- ✅ Favicon & Apple Touch Icon -->
+<link rel="icon" href="NNA.png" type="image/png">
+<link rel="apple-touch-icon" href="NNA.png">
+
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+
+<!-- 🌐 Open Graph (WhatsApp, IG, Telegram, TikTok, Facebook) -->
+<meta property="og:title" content="Majlis Rumah Terbuka">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://ecardrsvp.online/A53/preview.jpg">
+<meta property="og:url" content="https://ecardrsvp.online/A53/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RSVP Majlis Rumah Terbuka">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- 🐦 Twitter Card / Fallback -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Majlis Rumah Terbuka">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://ecardrsvp.online/A53/preview.jpg">
+  
+  
+<!-- ✅ Google Fonts (dikemas kini dengan Mea Culpa, Eagle Lake, Rochester, Ephesis & Lexend Deca) -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Gabriela&family=Lexend:wght@300;400;600&family=Mea+Culpa&family=Rochester&family=Eagle+Lake&family=Ephesis&family=Lexend+Deca&family=Lavishly+Yours&family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap">
 <link rel="stylesheet" href="a96dn2n6a.css" />
+
+  
   
   <style>
       body {
@@ -42,7 +67,7 @@
     .front-page button {
       margin-top: 20px;
       padding: 10px 25px;
-      background-color: maroon;
+      background-color: #8B4513;
       color: white;
       font-size: 18px;
       border: none;
@@ -73,14 +98,20 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+.purchase-buttons img {
+  width: 33px;    /* saiz ikon boleh ubah ikut keperluan */
+  height: 33px;
+  object-fit: contain;  /* pastikan imej tak tertarik/terdistorsi */
+  margin: 0 0px;  /* ruang antara ikon */
+}    
   </style>
 </head>
 <body>
 
-      <!-- 🎥 Video Latar Global -->
-  <video autoplay muted playsinline loop id="bg-video">
-  <source src="A49.mp4" type="video/mp4">
-</video>
+<!-- 🌸 Background wrapper gaya telefon -->
+<div class="bg-wrapper"></div>
+
 
 <!-- ✅ SALJI DALAM WRAPPER -->
 <div id="snow-wrapper" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 390px; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden;"></div>
@@ -89,64 +120,58 @@
 
   <!-- Muzik Latar -->
   <audio id="bg-music" loop>
-    <source src="Dato Sri Siti Nurhaliza - Anakanda Official Music Video.mp3" type="audio/mpeg"/>
+    <source src="MIMIFLY - SERUMPUN (Official Music Video).mp3" type="audio/mpeg"/>
   </audio>
 
    <div id="wrapper">
      <!-- SEMUA KANDUNGAN TERMASUK section.front-page DAN #main-content -->
      
-  <!-- ✅ HALAMAN DEPAN --> 
-  <section class="page front-page">
-    <h1 class="font-b" style="margin-bottom: 0;">MAJLIS AQIQAH</h1>
-    <h2><span class="font-c">Ainul Mardiyah</span></h2>
-    <h2><span class="font-a">&</span></h2>
-    <h1 class="font-b" style="margin-bottom: 0;">MAJLIS HARI JADI</h1>
-    <h2><span class="font-c">Aiman Danish</span></h2>
-    <button id="start-btn">BUKA</button>
+  <!-- ✅ HALAMAN DEPAN -->
+<section class="page front-page" style="position: relative; top: -8vh;">
+    <h1 class="font-b" style="margin: 0;">MAJLIS</h1>
+    <h1 class="font-b" style="margin: 0;">RUMAH TERBUKA</h1>
+    <h1 class="font-b" style="margin: 0;">AIDILFITRI</h1>  
+    <h1 class="font-b" style="margin: 0;">2026</h1>
+    <button id="start-btn" class="small-btn">BUKA</button>
   </section>
+
 
   <!-- ✅ KANDUNGAN UTAMA (DISOROK PADA MULA) -->
   <div id="main-content" style="display: none;">
 
  <!-- Gabungan Page 2–4 -->
     <section class="page">
-      <h2 class="font-f">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
+      <br><br><br><br>
+      <h2 class="font-f" style="margin-bottom:1px;">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
+      <span class="font-h" style="display:inline-block; margin-top:0px;">Salam Sejahtera</span><br>
       <p class="nama-ayah"><strong>ZULKEFLI BIN ABDULLAH</strong></p>
       <p class="simbol-dan">&</p>
       <p class="nama-ibu"><strong>FAZILAH BINTI AHMAD MANAF</strong><br><br>
-      Dengan penuh kesyukuran kehadrat Illahi,<br>
-      kami dengan berbesar hati menjemput<br>
-      Dato’/ Datin/ Tuan/ Puan/ Encik/ Cik<br>
-      seisi keluarga untuk hadir<br>
-      ke Majlis Aqiqah<br>
-      <p class="nama-pengantin"><strong class="font-d">Nur Ainul Mardiyah Binti Zulkefli</strong></p><br>
-      Serta Majlis Hari Jadi<br><br>
-      <p class="nama-pengantin"><strong class="font-d">Muhamad Aiman Danish (6 tahun)</strong></p>
+      <span class="font-h">Dengan izin-Nya, kami menjemput</span><br>
+      <span class="font-h">Dato’ | Datin | Tuan | Puan | Encik | Cik</span><br>
+      <span class="font-h">seisi keluarga untuk hadir ke</span><br><br>
+      <p class="nama-pengantin" style="margin: 0.1rem 0;"><strong class="font-d">MAJLIS RUMAH TERBUKA</strong></p>
+      <p class="nama-pengantin" style="margin: 0.1rem 0;"><strong class="font-d">AIDILFITRI 2026</strong></p>
+      
       <hr>   
     
       <p>
       <strong class="font-e">PADA</strong><br>
-      Rabu, 31 Disember 2025<br>
-      Bersamaan 10 Rejab 1447H
+      Ahad, 22 Mac 2026
       </p>
 
       <p>
-      <strong class="font-e">BERTEMPAT DI</strong><br>
-      Dewan Serbaguna Bandar Sultan Suleiman<br>
+      <strong class="font-e">LOKASI MAJLIS</strong><br>
+      <strong>Teratak Kami</strong><br>
+      No xx, Jalan xx,<br>  
       Bandar Sultan Suleiman<br>
       42000 Port Klang, Selangor
       </p>
      
       <p>
       <strong class="font-e">ATURCARA MAJLIS</strong><br>
-      <strong>Marhaban & Cukur Jambul : </strong><br>
-        10.00 am - 12.00 pm<br><br>
-      <strong>Jamuan Makan : </strong><br>
-        12.00 pm - 6.00 pm<br><br>
-      <strong>Sesi Nyanyian & Potong Kek : </strong><br>
-        2.00 pm<br>
-      </p>
-      
+      Jamuan Makan:<br>11.00 am - 6.00 pm</p>
+
       <hr> 
 
 <section id="countdown-page" class="transparent-section">
@@ -172,7 +197,7 @@
     </div>
 
     <script>
-      const weddingDate = new Date("2025-12-31T10:00:00").getTime();
+      const weddingDate = new Date("2026-03-22T11:00:00").getTime();
       function updateCountdown() {
         const now = new Date().getTime();
         const distance = weddingDate - now;
@@ -202,18 +227,16 @@
       
      <hr> 
 
-
-   <section class="galeri transparent-section">
+  <section class="galeri transparent-section">
   <h1 class="font-e">GALERI</h1>
   <div class="gallery-slider">
     <button class="gallery-prev">&#10094;</button>
     
     <div class="gallery-viewport"> 
     <div class="gallery-track">
-      <div class="gallery-slide"><img src="Birthday1.jpg" alt="Gambar 1"></div>
-      <div class="gallery-slide"><img src="Birthday2.jpg" alt="Gambar 2"></div>
-      <div class="gallery-slide"><img src="Aqiqah1.jpg" alt="Gambar 3"></div>
-      <div class="gallery-slide"><img src="Aqiqah4.jpeg" alt="Gambar 4"></div>
+      <div class="gallery-slide"><img src="2.jpg" alt="Gambar 1"></div>
+      <div class="gallery-slide"><img src="1.jpeg" alt="Gambar 2"></div>
+      <div class="gallery-slide"><img src="3.jpg" alt="Gambar 3"></div>
       </div>
     </div>
     
@@ -221,39 +244,41 @@
   </div>
 </section>
 
-   <hr> 
-      
-    <section class="doa transparent-section">
-    <p>
-    <h2 class="font-f">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِ</h2>
-      Ya Allah,<br>
-      dari setinggi dan selaut kasih sayang Mu,<br>
-      kau panjangkanlah umur dan berkatilah hidup anak ini,<br>
-      tanamkanlah iman di hatinya<br>
-      dan jadikanlah anak kami anak yang soleh dan solehah
-      serta bertakwa kepadaMu.<br>
-      Kurniakanlah akal yang cerdas, sihat tubuh badan<br>
-      serta berjaya di dunia dan akhirat.<br><br>
-      Amin Ya Rabbal Alamin
+  <hr> 
+
+    <section class="doa transparent-section"> 
+    <h2 class="font-f">بِسْمِ اللهِ ٱلرَّحْمٰنِ الرَّحِيمِ</h2>
+Ya Allah Ya tuhan kami,<br>
+kami memohon kepada-Mu<br>
+berkatilah majlis ini agar<br>
+berjalan lancar dan sempurna<br>
+seperti mana Engkau kehendaki dan<br>
+semoga dengan kehadiran kalian<br>
+akan merapatkan hubungan silaturrahim<br>
+serta ukhwah kita bersama.<br><br>
+Amin Ya Rabbal Alamin
       </p>
   
-<div class="footer-credit" style="margin-top: 15px; text-align: center;">
-  <p></p>
+<div class="footer-credit" style="margin-top: 20px; text-align: center;">
+  <p>#RiangRiaAidilfitri</p>
   
   <!-- Spacer -->
   <div style="margin: 5px 0;"></div>
 
     <!-- Teks "Contact Us" berwarna kelabu -->
-  <p style="font-weight: bold; font-size: 15px; margin-bottom: 10px; color: grey;">Contact Us</p>
+    <p style="font-weight: bold; font-size: 15px; margin-bottom: 8px; color: grey;">Untuk Tempahan</p>
 
   <!-- Ikon Shopee & WhatsApp -->
-  <div class="purchase-buttons">
+    <div class="purchase-buttons" style="display: flex; justify-content: center; gap: 10px;">
     <a href="https://shopee.com.my/nna_95" class="purchase-btn" target="_blank">
       <img src="shopee-icon.png" alt="Shopee">
     </a>
     <a href="https://wa.me/601157265723?text=Hai%2C%20saya%20berminat%20dengan%20RSVP" class="purchase-btn" target="_blank">
       <img src="whatsapp-icon.png" alt="WhatsApp">
     </a>
+      <a href="https://ecardrsvp.online/main-site/" class="purchase-btn" target="_blank">
+      <img src="logo contact us.png" alt="Shopee">
+    </a>  
   </div>
 </div>
 </section>
@@ -265,6 +290,7 @@
 
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
+  <div class="footer-icon home" onclick="goHome()">🏠<span>Home</span></div>
   <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
@@ -274,41 +300,44 @@
 <!-- ✅ Seksyen RSVP -->
 <div id="popup-RSVP" class="popup-overlay">
   <div class="popup-section">
-  <h2>RSVP</h2>
+  <h4>RSVP</h4>
 <form id="rsvp-form" 
-      action="https://docs.google.com/forms/d/e/1FAIpQLSc3dsHT4H8DA2tGcHDSQn6LDdSfdn3q4JEvUt87aaddxTgpxg/formResponse" 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSfIQ3JWiijfJxXrE5h4mxoXAGOhbH7F974urtDue1g6h8MQPw/formResponse" 
       method="POST" 
-      target="hidden_iframe">
- 
+      target="hidden_iframe"
+      onsubmit="handleSubmit(event)">
+
     <!-- Nama -->
     <br>
     <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1339685107" placeholder="Nama Anda" required style="width: 100%; padding: 10px; margin-bottom: 15px;">
-  
+    <input type="text" id="nama" name="entry.854939297" placeholder="Nama Anda" required>
+
     <!-- Kehadiran -->
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
       <label>
-        <input type="radio" name="entry.425937791" value="Hadir" required> Hadir
+        <input type="radio" name="entry.1682986698" value="Hadir" required> Hadir
       </label>
       <label>
-        <input type="radio" name="entry.425937791" value="Tidak Hadir"> Tidak Hadir
+        <input type="radio" name="entry.1682986698" value="Tidak Hadir"> Tidak Hadir
       </label>
     </div>
 
     <!-- Bilangan Kehadiran -->
     <br>
     <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.170550073" min="1" placeholder="Contoh: 2" style="width: 100%; padding: 10px; margin-bottom: 20px;">
+    <input type="number" id="bilangan" name="entry.1250388426" min="1" placeholder="Contoh: 2">
 
-    <!-- Butang Hantar -->
-    <button type="submit" style="width: 100%; padding: 10px; background-color: maroon; color: white; border: none; border-radius: 5px; font-size: 16px;">
-      Hantar
-    </button>
-  </form>
+      <button type="submit" class="btn-hantar">Hantar</button>
+    </form>
 
-<div id="submit-popup">
-  Terima kasih! Kehadiran anda telah direkodkan.
-</div>
+    <!-- ✅ Popup alert khas -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
 
 <iframe
   name="hidden_iframe"
@@ -322,30 +351,56 @@
 <!-- ✅ Seksyen Contact -->
   <div id="popup-Contact" class="popup-overlay">
   <div class="popup-section">
-  <h2>CONTACT</h2>
-  <a href="tel:+601157265723" class="phone-button">📞 Fazilah</a><br>
-  <a href="tel:+601157265723" class="phone-button">📞 Zulkefli</a><br><br><br><br>
+  <h4>CONTACT</h4>
+  <br>
+    <div class="contact-card">
+      <span class="contact-name">Fazilah</span>
+      <div class="contact-icons">
+        <a href="https://wa.me/601157265723" target="_blank" class="icon-box whatsapp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+        <a href="tel:+601157265723" class="icon-box call">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <span class="contact-name">Zulkefli</span>
+      <div class="contact-icons">
+        <a href="https://wa.me/601157265723" target="_blank" class="icon-box whatsapp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+        <a href="tel:+601157265723" class="icon-box call">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call">
+        </a>
+      </div>
+    </div>
   </div>
 </div>
-      
+
+        
 <!-- ✅ Seksyen Location -->
   <div id="popup-Location" class="popup-overlay">
   <div class="popup-section">
-  <h2>LOCATION</h2>
-      Dewan Serbaguna Bandar Sultan Suleiman<br>
+  <h4>LOCATION</h4>
+      <br>
+      <strong>Teratak Kami</strong><br>
+      No xx, Jalan xx,<br>
       Bandar Sultan Suleiman<br>
       42000 Port Klang, Selangor<br>
   <a href="https://maps.app.goo.gl/CRv4sLeVjw9E1oYu6" target="_blank" class="location-button">
     <img src="https://img.icons8.com/color/48/000000/google-maps.png" alt="Google Maps" width="24" height="24">
-    Buka Google Maps
+    Google Maps
   </a>
-
+  <br>
   <a href="https://waze.com/ul/hw2814ygzm" target="_blank" class="location-button">
     <img src="https://img.icons8.com/ios-filled/50/ffffff/waze.png" alt="Waze" width="24" height="24">
-    Buka Waze
+    Waze
   </a>
   </div>
 </div>
+
      
 <!-- ✅ POPUP OVERLAY -->
 <div id="popupOverlay" class="popup-overlay" onclick="closePopup()">
@@ -373,36 +428,26 @@
 <script>
 let currentVisibleSection = null;
 
-function toggleSection(id) {
-  const section = document.getElementById(id);
+function goHome() {
   const main = document.getElementById("main-content");
-  const all = document.querySelectorAll('.hidden-section');
 
-  if (!section || !main) return;
-
-  const sudah = (currentVisibleSection === id);
-
-  // ✅ Sembunyi semua
-  all.forEach(sec => {
-    sec.classList.remove('show'); // <-- Tambah ini supaya hilang animasi
-    setTimeout(() => {
-      sec.style.display = 'none'; // <-- tunggu animasi hilang baru display:none
-    }, 300); // ikut masa transition CSS
+  // Tutup semua popup overlay
+  document.querySelectorAll('.popup-overlay').forEach(popup => {
+    popup.style.display = 'none';
   });
 
-  if (sudah) {
-    // kalau ikon sama ditekan → tutup popup & tunjuk main
-    main.style.display = 'block';
-    currentVisibleSection = null;
-  } else {
-    // buka section, sembunyi main-content
-    section.style.display = 'block';
-    main.style.display = 'none';
-    // kuatkan class show untuk anim animate
-    setTimeout(() => section.classList.add('show'), 10);
-    currentVisibleSection = id;
-  }
+  // Buang semua class "show" pada hidden-section
+  document.querySelectorAll('.hidden-section.show').forEach(el => el.classList.remove('show'));
+
+  // Tunjukkan main-content
+  if (main) main.style.display = 'block';
+
+  // Reset status popup aktif
+  currentVisibleSection = null;
+
+  console.log("🏠 Home ditekan → main-content muncul semula");
 }
+
   
 function copyRek() {
     const text = document.getElementById("rek").innerText;
@@ -500,9 +545,10 @@ function copyRek() {
     }
   });
 </script>
-
-
-          
+    
+      <!-- 🔹 External library PapaParse -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+     
    <!-- ✅ SCRIPT UNTUK PAPAR STATUS TEMPAHAN -->
 <script src="n98hm1a2n.js"></script>
 
