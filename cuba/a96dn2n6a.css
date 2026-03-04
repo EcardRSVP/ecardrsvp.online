@@ -523,6 +523,13 @@ footer {
   color: #f497b6;         /* warna berubah bila hover */
 }
 
+.gallery-slider-track {
+  display: flex;            /* letak semua slide dalam satu baris */
+  transition: transform 0.5s ease; /* animasi geseran */
+  width: 100%;
+  overflow: hidden;         /* sembunyi slide yang lain */
+}
+
 /* Kotak untuk setiap gambar - desktop */
 .gallery-slide-card {
   background: #fff;
@@ -540,3 +547,4 @@ footer {
     width: 90%;       /* telefon */
   }
 }
+
