@@ -458,11 +458,11 @@ footer {
 .gallery-slider-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;   /* ✅ center keseluruhan slider */
   gap: 10px;
-  flex-wrap: wrap;
   margin: 20px auto;
   max-width: 900px;
+  width: 100%;
   position: relative;
 }
 
@@ -524,10 +524,10 @@ footer {
 }
 
 .gallery-slider-track {
-  display: flex;            /* letak semua slide dalam satu baris */
-  transition: transform 0.5s ease; /* animasi geseran */
-  width: 100%;
-  overflow: hidden;         /* sembunyi slide yang lain */
+  display: flex;
+  transition: transform 0.5s ease;
+  width: auto;          /* 🔥 tukar dari 100% ke auto */
+  overflow: hidden;
 }
 
 /* Kotak untuk setiap gambar - desktop */
