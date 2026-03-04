@@ -835,7 +835,7 @@ section *, .wishlist *, #main-content * {
   width: 8px;
 }
 #hadiahList::-webkit-scrollbar-thumb {
-  background-color: maroon;
+  background-color: #800000;
   border-radius: 10px;
 }
 #hadiahList::-webkit-scrollbar-thumb:hover {
