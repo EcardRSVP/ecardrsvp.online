@@ -2571,6 +2571,32 @@ function nextStepSlider() {
 // Initialize
 updateStepImage();
 </script>
+
+// Slider simple untuk semua gallery-slider-wrapper
+document.querySelectorAll('.gallery-slider-wrapper').forEach(wrapper => {
+  const track = wrapper.querySelector('.gallery-slider-track');
+  const slides = Array.from(track.children);
+  const prevBtn = wrapper.querySelector('.gallery-prev-main');
+  const nextBtn = wrapper.querySelector('.gallery-next-main');
+  let index = 0;
+
+  function updateSlide() {
+    slides.forEach((slide, i) => 
+      slide.style.display = (i === index ? (slide.classList.contains('teks-kotak') ? 'block' : 'flex') : 'none')
+    );
+  }
+  updateSlide();
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateSlide();
+  });
+});
+
        
   <script src="n98hm1a2n.js"></script>
 
