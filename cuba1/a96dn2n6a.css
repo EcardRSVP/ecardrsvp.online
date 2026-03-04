@@ -237,9 +237,12 @@ form input[type="number"],
 form textarea,
 form button[type="submit"],
 form button.copy-btn,
-#alamat-text,
-#nama-text,
-#telefon-text {   /* ⬅️ tambah div alamat & telefon */
+#alamat1-text,
+#nama1-text,
+#telefon1-text,   /* ⬅️ tambah div alamat & telefon */
+#alamat2-text,
+#nama2-text,
+#telefon2-text {   /* ⬅️ tambah div alamat & telefon */  
   width: 90%;
   max-width: 400px;
   padding: 12px;
@@ -253,9 +256,12 @@ form button.copy-btn,
 }
 
 /* ✅ Bagi background khas untuk kotak alamat & telefon */
-#alamat-text,
-#nama-text,
-#telefon-text {
+#alamat1-text,
+#nama1-text,
+#telefon1-text,
+#alamat2-text,
+#nama2-text,
+#telefon2-text {  
   background-color: #f2f2f2;
   text-align: center;
 }
