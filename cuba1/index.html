@@ -2517,7 +2517,54 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
 }
 </style>
 
-  
+
+<script>
+// Galeri array: gambar, caption, link preview
+const gallery = [
+  {
+    img: "GambarGaleri1.png",
+    caption: "2 Pengantin *(Penambahan Bayaran RM 5.00, Sekiranya Berminat untuk letak 2 QR & 2 Nama Penerima Wishlist)*",
+    preview: "https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul"
+  },
+  {
+    img: "GambarGaleri3.png",
+    caption: "Majlis Persaraan Puan Aishah",
+    preview: "https://ecardrsvp.online/Majlis_Persaraan_Puan_Aishah"
+  },
+  {
+    img: "GambarGaleri3.png",
+    caption: "Majlis Perkahwinan Non Muslim",
+    preview: " https://ecardrsvp.online/Hajrin-Tila"
+  }
+];
+
+let currentIndex = 0;
+
+// Update card utama
+function updateGallery() {
+  const imgEl = document.getElementById("rsvp-gallery-img");
+  const captionEl = document.getElementById("rsvp-gallery-caption");
+  const previewEl = document.getElementById("rsvp-gallery-preview");
+
+  imgEl.src = gallery[currentIndex].img;
+  captionEl.innerText = gallery[currentIndex].caption;
+  previewEl.href = gallery[currentIndex].preview;
+}
+
+// Next / Prev
+function nextGallery() {
+  currentIndex = (currentIndex + 1) % gallery.length;
+  updateGallery();
+}
+
+function prevGallery() {
+  currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+  updateGallery();
+}
+</script>
+       
+
+       
   <script src="n98hm1a2n.js"></script>
 
   <script>
