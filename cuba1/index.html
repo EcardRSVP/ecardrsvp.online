@@ -1538,10 +1538,12 @@ function goHome() {
 }
 
   
-function copyRek() {
-    const text = document.getElementById("rek").innerText;
-    navigator.clipboard.writeText(text).then(() => alert("Nombor akaun disalin"));
-  }
+function copyRek(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text)
+    .then(() => alert("Nombor akaun disalin"))
+    .catch(err => alert("Gagal menyalin: " + err));
+}
   
   function copyToClipboard(elementId) {
     const text = document.getElementById(elementId).innerText;
