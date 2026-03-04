@@ -1161,13 +1161,13 @@ hr::before {
 }
 
 #ucapanList::-webkit-scrollbar-thumb {
-  background-color: #fcd5c5; /* 💙 peach pastel lembut */
+  background-color: maroon; /* 💙 peach pastel lembut */
   border-radius: 10px;
   margin-top: 30px;  /* 🚀 ruang kosong atas */
   margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
 }
 #ucapanList::-webkit-scrollbar-thumb:hover {
-  background-color: #fbb8a0;/* 💧 biru lebih cerah bila hover */
+  background-color: #B22222;/* 💧 biru lebih cerah bila hover */
 }
 
 
