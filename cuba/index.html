@@ -444,6 +444,49 @@
   </div> <!-- ✅ TUTUP .pakej -->
 </section> <!-- ✅ TUTUP .pakej-section -->
 
+
+<!-- ====== GALERI PREVIEW WEBSITE ====== -->
+<section class="galeri-preview">
+  <h2 style="text-align:center; margin-top:40px;">GALERI WEBSITE</h2>
+
+  <div class="gallery-slider-main">
+    
+    <button class="gallery-prev-main">&#10094;</button>
+    
+    <div class="gallery-viewport-main">
+      <div class="gallery-track-main">
+
+        <!-- SLIDE 1 -->
+<div class="gallery-slide-main">
+  <img src="GambarGaleri1.jpg" alt="Design 1">
+  <p style="font-size:11px; margin-top:5px;">
+    2 Pengantin - Pakej Silver & Gold *(Penambahan Bayaran RM 5.00 : 2 QR & 2 Nama Penerima Wishlist)
+  </p>
+  <a href="https://ecardrsvp.online/WalimatulurusHaikal_-Liya/" target="_blank">
+    <button class="preview-btn-main">PREVIEW</button>
+  </a>
+</div>
+
+        <!-- SLIDE 3 -->
+<div class="gallery-slide-main">
+  <img src="GambarGaleri3.jpg" alt="Design 2">
+  <p style="font-size:14px; margin-top:5px;">
+    Majlis Persaraan
+  </p>
+  <a href="https://ecardrsvp.online/Majlis_Persaraan_Puan_Aishah/" target="_blank">
+    <button class="preview-btn-main">PREVIEW</button>
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <button class="gallery-next-main">&#10095;</button>
+    
+  </div>
+</section>
+  
+
 <!-- Preview Kad Kahwin -->
 <section id="designkad">
   <h2>DESIGN RSVP</h2><br><br>
@@ -462,7 +505,6 @@
     <button class="filter-btn" data-filter="dinner">Dinner</button>   
     <button class="filter-btn" data-filter="keusahawanan">Hari Keusahawanan</button>  
     <button class="filter-btn" data-filter="Acara">Acara</button>  
-    <button class="filter-btn" data-filter="kad-contoh">Contoh</button>
     </div>
   </div> <!-- ✅ tutup filter-dropdown -->
   
@@ -1176,19 +1218,6 @@
       <p><strong>A55</strong></p><br>
       <a href="https://ecardrsvp.online/A55/" target="_blank" class="preview-btn">PREVIEW</a>
     </div>    
-
-    <div class="kad-item" data-category="kad-contoh">
-      <img src="M1.png" alt="Kad 120">
-      <p><strong>Majlis Persaraan</strong></p><br>
-      <a href="https://ecardrsvp.online/Majlis_Persaraan_Puan_Aishah/" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>       
-
-    <div class="kad-item" data-category="kad-contoh">
-      <img src="ContohMajlis2Pengantin.png" alt="Kad 121">
-      <p style="margin: 0; line-height: 0.7;"><strong>Majlis Gabung</strong></p>
-      <p style="margin: 0; line-height: 0.7;"><strong>2 Pengantin</strong></p>
-      <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul/" target="_blank" class="preview-btn">PREVIEW</a>
-    </div> 
   </div>
 </section>
 
@@ -2367,6 +2396,27 @@ function toggleMenu() {
   const menu = document.getElementById("dropdownMenu");
   menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
+  
+function showSection(id) {
+  const sections = ['pakej','designkad','borang','pembayaran','video','teks-edar','step-rsvp','faq'];
+  sections.forEach(sec => document.getElementById(sec).style.display = (sec===id ? 'block' : 'none'));
+}
+
+
+// Slider simple
+const track = document.querySelector('.gallery-track-main');
+const slides = Array.from(track.children);
+const prevBtn = document.querySelector('.gallery-prev-main');
+const nextBtn = document.querySelector('.gallery-next-main');
+let index = 0;
+
+function updateSlide() {
+  slides.forEach((slide, i) => slide.style.display = (i===index ? 'block' : 'none'));
+}
+updateSlide();
+
+prevBtn.addEventListener('click', () => { index = (index-1+slides.length)%slides.length; updateSlide(); });
+nextBtn.addEventListener('click', () => { index = (index+1)%slides.length; updateSlide(); });
 </script>
 
 <!-- ✅ Tukar Section (PAKEJ, DESIGN KAD, dsb.) -->
