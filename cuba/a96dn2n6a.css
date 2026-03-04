@@ -458,44 +458,22 @@ footer {
 .gallery-slider-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;   /* ✅ center keseluruhan slider */
-  gap: 10px;
+  justify-content: center;
+  max-width: 90%;
   margin: 20px auto;
-  max-width: 900px;
-  width: 100%;
   position: relative;
-}
-
-/* Kotak untuk setiap gambar */
-.gallery-slide-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  padding: 15px;
-  text-align: center;
-  width: 250px;
-  flex-shrink: 0;
-}
-
-.gallery-slide-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
+  overflow: hidden;   /* supaya card lain tak nampak */
 }
 
 /* Butang preview */
 .preview-btn-main {
   margin-top: 8px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   background: #f8b6c9;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 13px;
-  color: black;
-  transition: 0.3s;
 }
 
 .preview-btn-main:hover {
@@ -526,25 +504,27 @@ footer {
 .gallery-slider-track {
   display: flex;
   transition: transform 0.5s ease;
-  width: auto;          /* 🔥 tukar dari 100% ke auto */
-  overflow: hidden;
+  gap: 20px;  /* jarak antara card semasa sliding */
 }
 
 /* Kotak untuk setiap gambar - desktop */
 .gallery-slide-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  padding: 15px;
-  text-align: center;
-  width: 250px;       /* desktop */
+  min-width: 100%;   /* satu card sahaja keluar */
   flex-shrink: 0;
+  text-align: center;
+}
+
+/* Responsive - tablet */
+@media (max-width: 768px) {
+  .gallery-slide-card {
+    min-width: 100%;  /* pastikan satu card sahaja keluar */
+  }
 }
 
 /* Responsive - telefon */
 @media (max-width: 480px) {
   .gallery-slide-card {
-    width: 90%;       /* telefon */
+    flex: 0 0 85%;
   }
 }
-
