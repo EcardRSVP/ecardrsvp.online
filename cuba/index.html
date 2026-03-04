@@ -2410,14 +2410,14 @@ function showSection(id) {
 
 
 // Slider simple
-const track = document.querySelector('.gallery-track-main');
+const track = document.querySelector('.gallery-slider-track'); // sama dengan HTML
 const slides = Array.from(track.children);
 const prevBtn = document.querySelector('.gallery-prev-main');
 const nextBtn = document.querySelector('.gallery-next-main');
 let index = 0;
 
 function updateSlide() {
-  slides.forEach((slide, i) => slide.style.display = (i===index ? 'block' : 'none'));
+  slides.forEach((slide, i) => slide.style.display = (i===index ? (slide.classList.contains('teks-kotak') ? 'block' : 'flex') : 'none'));
 }
 updateSlide();
 
@@ -2547,7 +2547,31 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
 }
 </style>
 
-  
+<script>
+const stepImages = ["1.png","2.png","3.png"]; // letak semua gambar step di sini
+let currentStepIndex = 0;
+
+function updateStepImage() {
+  const img = document.getElementById("step-slider-image");
+  img.src = stepImages[currentStepIndex];
+}
+
+// Tombol kiri
+function prevStepSlider() {
+  currentStepIndex = (currentStepIndex - 1 + stepImages.length) % stepImages.length;
+  updateStepImage();
+}
+
+// Tombol kanan
+function nextStepSlider() {
+  currentStepIndex = (currentStepIndex + 1) % stepImages.length;
+  updateStepImage();
+}
+
+// Initialize
+updateStepImage();
+</script>
+       
   <script src="n98hm1a2n.js"></script>
 
 
