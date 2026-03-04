@@ -454,3 +454,72 @@ footer {
   font-size: 0.9rem;
 }
 
+
+
+
+.rsvp-container {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.rsvp-card img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rsvp-card p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #555;
+}
+
+.pilih-pakej-btn {
+  padding: 8px 16px;
+  background-color: #6bbd82;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.pilih-pakej-btn:hover {
+  background-color: #4e9b63;
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.gallery-btn:hover {
+  opacity: 1;
+}
+
+.prev-btn {
+  left: -15px;
+}
+
+.next-btn {
+  right: -15px;
+}
