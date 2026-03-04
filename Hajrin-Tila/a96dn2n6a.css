@@ -835,11 +835,11 @@ section *, .wishlist *, #main-content * {
   width: 8px;
 }
 #hadiahList::-webkit-scrollbar-thumb {
-  background-color: #fcd5c5;
+  background-color: maroon;
   border-radius: 10px;
 }
 #hadiahList::-webkit-scrollbar-thumb:hover {
-  background-color: #fbb8a0;
+  background-color: #B22222;
 }
 
 /* gaya teks dalam senarai */
