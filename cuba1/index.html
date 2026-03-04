@@ -443,36 +443,32 @@
     
   </div> <!-- ✅ TUTUP .pakej -->
 </section> <!-- ✅ TUTUP .pakej-section -->
-  
 
+  
 <h2 style="text-align:center; margin-bottom:30px;">KATALOG RSVP</h2>
 
-<div class="pakej"> <!-- guna flex pakej sedia ada -->
+<div class="rsvp-container">
 
-   <!-- Unit 1 -->
-  <div class="card">
-    <img src="GambarGaleri1.png" alt="Gambar 1" style="width:100%; max-height:200px; object-fit:cover; margin:0 auto; display:block; border-radius:10px;">
-    <p style="margin:15px 0; font-size:15px; color:#555;">
+  <!-- Button Prev -->
+  <button class="gallery-btn prev-btn" onclick="prevGallery()">&#10094;</button>
+
+  <!-- Card utama -->
+  <div class="rsvp-card">
+    <img id="rsvp-gallery-img" src="GambarGaleri1.png" alt="Gambar 1">
+    <p id="rsvp-gallery-caption">
       2 Pengantin - Pakej Silver & Gold *(Penambahan Bayaran RM 5.00 : 2 QR & 2 Nama Penerima Wishlist)*
     </p>
-    <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul" target="_blank">
+    <a id="rsvp-gallery-preview" href="https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul" target="_blank">
       <button class="pilih-pakej-btn">Preview</button>
     </a>
   </div>
 
-  <!-- Unit 2 -->
-  <div class="card">
-    <img src="GambarGaleri3.png" alt="Gambar 2" style="width:100%; max-height:200px; object-fit:cover; margin:0 auto; display:block; border-radius:10px;">
-    <p style="margin:15px 0; font-size:15px; color:#555;">
-      Majlis Persaraan
-    </p>
-    <a href="https://ecardrsvp.online/Majlis_Persaraan_Puan_Aishah" target="_blank">
-      <button class="pilih-pakej-btn">Preview</button>
-    </a>
-  </div>
-  
+  <!-- Button Next -->
+  <button class="gallery-btn next-btn" onclick="nextGallery()">&#10095;</button>
+
 </div>
 
+  
   
 <!-- Preview Kad Kahwin -->
 <section id="designkad">
