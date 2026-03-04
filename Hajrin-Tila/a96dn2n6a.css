@@ -576,7 +576,7 @@ html {
 
 /* Kad setiap contact */
 .contact-card {
-  background: linear-gradient(135deg, #fcd5c5, #ffffff, #fff8f0); /* Gradient peach pastel + putih + ivory */
+  background: #E8BDBA; /* Soft maroon cair */
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
@@ -893,14 +893,14 @@ hr::before {
   font-weight: bold;
   letter-spacing: 7px; /* boleh kecilkan kalau nak rapat sikit */
 
-    /* Gradient maroon + silver */ */
+    /* Gradient hitam + silver */
   background: linear-gradient(
     90deg,
-    #800000,  /* maroon */
-    #c0c0c0,  /* silver */
-    #ffffff,  /* putih */
-    #c0c0c0,  /* silver */
-    #800000   /* maroon */
+    #000000,
+    #c0c0c0,
+    #000000,
+    #e6e6e6,
+    #000000
   );
 
   background-size: 300% 300%;
