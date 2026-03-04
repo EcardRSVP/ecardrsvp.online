@@ -454,3 +454,89 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Wrapper untuk slider keseluruhan */
+.gallery-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  max-width: 900px;
+  position: relative;
+}
+
+/* Kotak untuk setiap gambar */
+.gallery-slide-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.gallery-slide-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Butang preview */
+.preview-btn-main {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #f8b6c9;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: black;
+  transition: 0.3s;
+}
+
+.preview-btn-main:hover {
+  background: #f497b6;
+  color: white;
+}
+
+/* Butang navigasi prev/next */
+.gallery-prev-main,
+.gallery-next-main {
+  font-size: 30px;
+  background: none;       /* tiada background */
+  border: none;
+  border-radius: 0;       /* tiada bulatan */
+  cursor: pointer;
+  padding: 0 8px;         /* sedikit padding */
+  color: black;           /* warna hitam */
+  transition: 0.2s;
+  position: relative;
+  z-index: 10;
+}
+
+.gallery-prev-main:hover,
+.gallery-next-main:hover {
+  color: #f497b6;         /* warna berubah bila hover */
+}
+
+/* Kotak untuk setiap gambar - desktop */
+.gallery-slide-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  padding: 15px;
+  text-align: center;
+  width: 250px;       /* desktop */
+  flex-shrink: 0;
+}
+
+/* Responsive - telefon */
+@media (max-width: 480px) {
+  .gallery-slide-card {
+    width: 90%;       /* telefon */
+  }
+}
