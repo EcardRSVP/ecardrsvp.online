@@ -2369,7 +2369,21 @@ Sekian, terima kasih
         style="position:absolute; top:20px; right:30px; color:white; font-size:40px; 
                font-weight:bold; cursor:pointer;">&times;</span>
 </div>
-  
+
+<script>
+function openPopup(src) {
+  const popup = document.getElementById("popupOverlay");
+  const popupImg = document.getElementById("popupImage");
+  popup.style.display = "flex";
+  popupImg.src = src;
+}
+
+function closePopup() {
+  const popup = document.getElementById("popupOverlay");
+  popup.style.display = "none";
+}
+</script>
+       
 <!-- FAQ Script -->
 <script>
 const faqBtns = document.querySelectorAll(".faq-question");
@@ -2544,18 +2558,6 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
   
   <script src="n98hm1a2n.js"></script>
 
-  <script>
-function toggleGambar(id) {
-  var img = document.getElementById(id);
-  if (img.style.display === "none") {
-    img.style.display = "block";
-  } else {
-    img.style.display = "none";
-  }
-}
-</script>
-
-       
 
 </body>
 </html>
