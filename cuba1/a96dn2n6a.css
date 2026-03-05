@@ -458,28 +458,55 @@ footer {
 
 
 .rsvp-container {
-  width: 250px;           /* ikut saiz card pakej */
-  min-height: 400px;      /* sama tinggi dengan card */
-  margin: 40px auto 50px; /* center & jarak atas/bawah */
+  position: relative; /* ✅ jadikan parent reference untuk prev/next */
+  width: 250px;
+  min-height: 400px;
+  margin: 40px auto 50px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: block;         /* pastikan dia block element */
+  display: block;
+}
+
+.rsvp-card {
+  text-align: center;        /* centrekan semua teks & button */
+  display: flex;              /* kalau nak vertical stack */
+  flex-direction: column;     /* susun menegak */
+  align-items: center;        /* centrekan anak secara horizontal */
+  gap: 10px;                  /* jarak antara gambar, teks & button */
 }
 
 .rsvp-card img {
-  max-width: 100%;         /* ikut parent */
-  height: auto;
+  width: 100%;              /* ikut width parent (250px) */
+  max-height: 180px;        /* limit tinggi gambar */
+  object-fit: contain;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 .rsvp-card p {
-  margin-top: 10px;
+  margin: 0;
   font-size: 14px;
   color: black;
 }
+
+.rsvp-card h3.katalog-title {
+  margin: 0;
+  text-align: center;
+}
+
+.rsvp-card p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.rsvp-card a button {
+  margin-top: 10px;
+  text-align: center;
+}
+  
 
 .pilih-pakej-btn {
   padding: 8px 16px;
@@ -516,11 +543,11 @@ footer {
 }
 
 .prev-btn {
-  left: -10px;
+  left: -15px;
 }
 
 .next-btn {
-  right: -10px;
+  right: -15px;
 }
 
 /* RESPONSIVE */
