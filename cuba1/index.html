@@ -87,6 +87,7 @@
 #faq h2,
 #teks-edar h2,
 #step-rsvp,
+#spin, 
 #video h2 {  
   text-align: center;
 }
@@ -232,7 +233,7 @@
   min-height: 200px;
 }  
 
-#designkad, #borang, #pembayaran, #faq, #video, #teks-edar, #step-rsvp {
+#designkad, #borang, #pembayaran, #faq, #video, #teks-edar, #spin, #step-rsvp {
   display: none;
 }
 #pakej {
@@ -328,6 +329,7 @@
       <a href="javascript:void(0)" onclick="showSection('designkad')">KATALOG RSVP</a>
       <a href="javascript:void(0)" onclick="showSection('borang')">BORANG MAKLUMAT RSVP</a>
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
+       <a href="javascript:void(0)" onclick="showSection('spin')">SPIN & WIN</a>     
       <a href="javascript:void(0)" onclick="showSection('video')">VIDEO DIGITAL</a>
       <a href="javascript:void(0)" onclick="showSection('teks-edar')">TEKS EDARAN</a> 
       <a href="javascript:void(0)" onclick="showSection('step-rsvp')">TUTORIAL</a>       
@@ -2415,7 +2417,7 @@ function toggleMenu() {
 <!-- ✅ Tukar Section (PAKEJ, DESIGN KAD, dsb.) -->
 <script>
 function showSection(id) {
-  const sections = ["pakej", "designkad", "borang", "pembayaran", "faq", "video", "teks-edar", "step-rsvp"];
+  const sections = ["pakej", "designkad", "borang", "pembayaran", "faq", "video", "teks-edar", "spin, "step-rsvp"];
   sections.forEach(sec => {
     document.getElementById(sec).style.display = "none";
   });
