@@ -113,7 +113,8 @@
 }
 
 .faq-answer {
-  display: block !important;
+  /* display: block !important;  ← buang ni */
+  display: none; /* hide by default */
   padding: 10px;
   font-size: 13px;
   font-weight: bold;
@@ -2366,12 +2367,31 @@ Sekian, terima kasih
   
 <!-- FAQ Script -->
 <script>
-const faqBtns = document.querySelectorAll(".faq-question");
+// Toggle jawapan bila klik soalan
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const answer = button.nextElementSibling;
 
-faqBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const answer = btn.nextElementSibling;
-    answer.style.display = answer.style.display === "block" ? "none" : "block";
+    if(answer.style.display === 'block') {
+      answer.style.display = 'none';
+      button.classList.remove('active');
+    } else {
+      answer.style.display = 'block';
+      button.classList.add('active');
+    }
+  });
+});
+
+// Filter soalan sahaja
+document.getElementById('faqSearch').addEventListener('input', function() {
+  const filter = this.value.toLowerCase();
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const questionText = item.querySelector('.faq-question').textContent.toLowerCase();
+    if(questionText.includes(filter)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
   });
 });
 </script>
