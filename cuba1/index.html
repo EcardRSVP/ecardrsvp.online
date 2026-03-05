@@ -14,6 +14,10 @@
 </head>
 <body style="background-color: #FADADD; font-family: sans-serif;">
 
+<!-- Winwheel.js & GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/winwheel@2.7.0/Winwheel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>  
+
 <style>
   .menu-container {
   position: fixed;   /* sentiasa nampak walau scroll */
@@ -1279,6 +1283,53 @@ function copyTNG() {
 </script>
 
 
+<!-- Seksyen Spin & Win -->
+<section id="spin">
+  <h2>SPIN & WIN</h2><br><br>
+
+<!-- ====== Seksyen Spin & Win ====== -->
+<section id="spin" style="padding:40px 20px; text-align:center; background:linear-gradient(135deg, #fce4ec, #fff8f0); border-radius:12px; margin:20px auto; max-width:600px;">
+
+  <!-- Tajuk -->
+  <h2 style="font-size:2em; color:#800000;">🎁 SPIN & WIN</h2>
+  <p style="margin-top:10px; color:#333; font-size:1em;">
+    Pembelian RM 15.00 ke atas layak untuk rebut peluang menangi hadiah (RSVP,Video,Kad PDF).<br>
+    Sila isi maklumat anda sebelum main spin.
+  </p>
+  
+  <!-- Form untuk isi maklumat -->
+<form id="spinForm" action="https://docs.google.com/forms/d/e/1FAIpQLSckbqQrsWFOBqPhwaBLh6AVSCTahgElyhvpLr8imULQbZrC6Q/formResponse" method="POST" target="hidden_iframe" style="margin-top:20px;">
+  <input type="text" name="entry.852432316" placeholder="Nama" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
+  <input type="text" name="entry.1466033400" placeholder="Order ID (Pembelian melalui Shopee) @ No WS" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
+  <input type="tel" name="entry.423056438" placeholder="No Telefon" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
+  <br>
+  <button type="submit" style="margin-top:10px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
+    HANTAR & MAIN SPIN
+  </button>
+</form>
+
+  <!-- Hidden iframe untuk submit form background -->
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <!-- Spinner Wheel (tersorok awalnya) -->
+  <div id="spinSection" style="display:none; margin-top:30px;">
+    <h3 style="font-size:1.5em; color:#800000;">🎡 Spin & Menang!</h3>
+    <canvas id="wheelCanvas" width="400" height="400" style="margin-top:20px;"></canvas>
+    <br>
+    <button id="spinButton" style="margin-top:15px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
+      SPIN SEKARANG
+    </button>
+  </div>
+
+</section>
+  
+
+
+
+
+
+  
+  
  <!-- Preview Video Kad Kahwin -->
 <section id="video">
   <h2>VIDEO DIGITAL</h2><br>
@@ -2596,7 +2647,59 @@ function prevGallery() {
   updateGallery();
 }
 </script>
-       
+
+
+  <script>
+// ====== Wheel Setup ======
+var wheel = new Winwheel({
+    'numSegments': 30,
+    'segments': [
+        {'text':'Free RSVP Pakej Silver'},
+        {'text':'Free RSVP Pakej Silver'},
+        {'text':'Free RSVP Pakej Bronze'},
+        {'text':'Free RSVP Pakej Bronze'},
+        {'text':'Free RSVP Pakej Bronze'},
+        {'text':'Free Kad PDF A6 + QR'},
+        {'text':'Free Kad PDF A6 + QR'},
+        {'text':'Free Kad PDF A6 + QR'},
+        {'text':'Free Video Design'},
+        {'text':'Free Video Design'},
+        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},
+        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},
+        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},
+        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'}
+    ],
+    'animation': {
+        'type':'spinToStop',
+        'duration':5,
+        'spins':8,
+        'callbackFinished':alertPrize
+    },
+    'pins':{
+        'number':30,
+        'fillStyle':'#800000',
+        'outerRadius':4,
+    }
+});
+
+// ====== Show spinner selepas submit form ======
+document.getElementById("spinForm").addEventListener("submit", function(e){
+    setTimeout(function(){
+        document.getElementById("spinSection").style.display = "block";
+    }, 1000);
+});
+
+// ====== Spin button ======
+document.getElementById("spinButton").addEventListener("click", function(){
+    wheel.startAnimation();
+});
+
+// ====== Alert result ======
+function alertPrize(indicatedSegment) {
+    alert("Tahniah! Anda mendapat: " + indicatedSegment.text);
+}
+</script>
+  
 
        
   <script src="n98hm1a2n.js"></script>
