@@ -622,3 +622,105 @@ footer {
 .faq-question.active::after {
   transform: rotate(-180deg);
 }
+
+
+
+/* ====== Spin & Win Section ====== */
+#spin {
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fce4ec, #fff8f0);
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Tajuk */
+#spin h2 {
+    font-size: 2em;
+    color: #800000;
+    margin-bottom: 10px;
+}
+
+/* Penerangan */
+#spin p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input form */
+#spinForm input {
+    padding: 10px;
+    width: 80%;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+/* Button submit */
+#spinForm button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    background: #800000;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#spinForm button:hover {
+    background: #a00000;
+}
+
+/* Spinner section */
+#spinSection {
+    display: none;
+    margin-top: 30px;
+}
+
+/* Spinner title */
+#spinSection h3 {
+    font-size: 1.5em;
+    color: #800000;
+    margin-bottom: 15px;
+}
+
+/* Spin button */
+#spinButton {
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    background: #800000;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#spinButton:hover {
+    background: #a00000;
+}
+
+/* Canvas (wheel) */
+#wheelCanvas {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 500px) {
+    #spinForm input {
+        width: 100%;
+    }
+    #wheelCanvas {
+        width: 300px;
+        height: 300px;
+    }
+}
