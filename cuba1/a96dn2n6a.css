@@ -581,3 +581,44 @@ footer {
     font-size: 14px;
   }
 }
+
+/* Kotak FAQ */
+.faq-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+  background: #f8f8f8;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.faq-question:hover {
+  background: #ececec;
+}
+
+.faq-answer {
+  display: none; /* hide by default */
+  padding: 10px 12px;
+  background: #fff;
+  font-size: 15px;
+}
+
+/* Optional: caret arrow untuk soalan */
+.faq-question::after {
+  content: "▼";
+  float: right;
+  transition: transform 0.2s;
+}
+
+.faq-question.active::after {
+  transform: rotate(-180deg);
+}
