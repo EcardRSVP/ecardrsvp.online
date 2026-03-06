@@ -477,6 +477,31 @@
 
 </div>
 </section>
+
+<section id="spin" style="padding:40px 20px; text-align:center; background:linear-gradient(135deg, #fce4ec, #fff8f0); border-radius:12px; margin:20px auto; max-width:600px;">
+  <h2 style="font-size:2em; color:#800000;">SPIN & WIN</h2>
+  <p style="margin-top:10px; color:#333; font-size:1em;">
+    Tekan "Hantar & Main Spin" untuk lihat wheel berfungsi.
+  </p>
+
+  <form id="spinForm" style="margin-top:20px;">
+    <input type="text" placeholder="Nama" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
+    <br>
+    <button type="submit" style="margin-top:10px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
+      HANTAR & MAIN SPIN
+    </button>
+  </form>
+
+  <div id="spinSection" style="display:none; margin-top:30px;">
+    <h3 style="font-size:1.5em; color:#800000;">🎡 Spin & Menang!</h3>
+    <canvas id="wheelCanvas" width="400" height="400" style="margin-top:20px;"></canvas>
+    <br>
+    <button id="spinButton" style="margin-top:15px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
+      SPIN SEKARANG
+    </button>
+  </div>
+</section>
+  
   
   
 <!-- Preview Kad Kahwin -->
@@ -1290,6 +1315,7 @@ function copyTNG() {
     Pembelian RM 15.00 ke atas layak untuk menyertai cabutan hadiah (RSVP,Video,Kad PDF).<br>
     Sila lengkapkan maklumat anda sebelum bermain Spin & Win."
   </p>
+
   
   <!-- Form untuk isi maklumat -->
 <form id="spinForm" action="https://docs.google.com/forms/e/1FAIpQLSckbqQrsWFOBqPhwaBLh6AVSCTahgElyhvpLr8imULQbZrC6Q/formResponse" method="POST" target="hidden_iframe" style="margin-top:20px;">
@@ -2666,8 +2692,8 @@ function prevGallery() {
 
 var wheel = new Winwheel({
     'canvasId':'wheelCanvas',
-    'numSegments':30,
-    'outerRadius':180,
+    'numSegments':6,
+    'outerRadius':150,
     'textFontSize':12,  
     'segments':[
 {'text':'Free RSVP Pakej Silver'},
@@ -2703,7 +2729,7 @@ var wheel = new Winwheel({
 ],
     'animation':{
         'type':'spinToStop',
-        'duration':5,
+        'duration':6,
         'spins':8,
         'callbackFinished':alertPrize
     }
@@ -2718,19 +2744,9 @@ if (spinForm) {
       e.preventDefault();               // cegah reload page
       spinSection.style.display = "block"; // terus tunjuk wheel
 
-      // hantar data ke Google Form melalui iframe selepas 50ms supaya wheel sempat render
-      setTimeout(() => {
-          spinForm.submit();
-      }, 50);
+spinButton.addEventListener("click", function(){
+  wheel.startAnimation();           // start wheel
   });
-}
-
-if (spinButton) {
-  spinButton.addEventListener("click", function(){
-      wheel.startAnimation(); // start wheel
-  });
-}
-
 </script>
 
 </body>
