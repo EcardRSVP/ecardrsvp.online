@@ -1292,7 +1292,7 @@ function copyTNG() {
   </p>
   
   <!-- Form untuk isi maklumat -->
-<form id="spinForm" action="https://docs.google.com/forms/d/e/1FAIpQLSckbqQrsWFOBqPhwaBLh6AVSCTahgElyhvpLr8imULQbZrC6Q/formResponse" method="POST" target="hidden_iframe" style="margin-top:20px;">
+<form id="spinForm" action="https://docs.google.com/forms/e/1FAIpQLSckbqQrsWFOBqPhwaBLh6AVSCTahgElyhvpLr8imULQbZrC6Q/formResponse" method="POST" target="hidden_iframe" style="margin-top:20px;" onsubmit="return false;">
   <input type="text" name="entry.852432316" placeholder="Nama" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
   <input type="text" name="entry.1466033400" placeholder="Order ID (Pembelian melalui Shopee) @ No WS" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
   <input type="tel" name="entry.423056438" placeholder="No Telefon" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
@@ -2710,18 +2710,20 @@ var wheel = new Winwheel({
 });
 
 const spinForm = document.getElementById("spinForm");
+const spinSection = document.getElementById("spinSection");
+const spinButton = document.getElementById("spinButton");
+
 if (spinForm) {
-  spinForm.addEventListener("submit", function(){
-      setTimeout(function(){
-          document.getElementById("spinSection").style.display="block";
-      },1000);
+  spinForm.addEventListener("submit", function(e){
+      e.preventDefault(); // cegah reload page
+      spinSection.style.display = "block"; // terus tunjuk wheel
+      this.submit(); // hantar data ke Google Form melalui iframe
   });
 }
 
-const spinButton = document.getElementById("spinButton");
 if (spinButton) {
   spinButton.addEventListener("click", function(){
-      wheel.startAnimation();
+      wheel.startAnimation(); // start wheel
   });
 }
 
