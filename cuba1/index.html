@@ -14,10 +14,7 @@
 </head>
 <body style="background-color: #FADADD; font-family: sans-serif;">
 
-<!-- Winwheel.js & GSAP -->
-<script src="https://cdn.jsdelivr.net/npm/winwheel@2.7.0/Winwheel.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>  
-
+  
 <style>
   .menu-container {
   position: fixed;   /* sentiasa nampak walau scroll */
@@ -1308,15 +1305,19 @@ function copyTNG() {
   <!-- Hidden iframe untuk submit form background -->
   <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-  <!-- Spinner Wheel (tersorok awalnya) -->
-  <div id="spinSection" style="display:none; margin-top:30px;">
-    <h3 style="font-size:1.5em; color:#800000;">🎡 Spin & Menang!</h3>
-    <canvas id="wheelCanvas" width="400" height="400" style="margin-top:20px;"></canvas>
-    <br>
-    <button id="spinButton" style="margin-top:15px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
-      SPIN SEKARANG
-    </button>
-  </div>
+<!-- Spinner Wheel (tersorok awalnya) -->
+<div id="spinSection" style="display:none; margin-top:30px;">
+  <h3 style="font-size:1.5em; color:#800000;">🎡 Spin & Menang!</h3>
+
+  <!-- SINI TEMPAT CANVAS -->
+  <canvas id="wheelCanvas" width="400" height="400" style="margin-top:20px;"></canvas>
+
+  <br>
+
+  <button id="spinButton" style="margin-top:15px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
+    SPIN SEKARANG
+  </button>
+</div>
 
 </section>
   
@@ -2651,73 +2652,85 @@ function prevGallery() {
 </script>
 
 
-  <script>
-// ====== Wheel Setup ======
-var wheel = new Winwheel({
-    'numSegments': 30,
-    'segments': [
-        {'text':'Free RSVP Pakej Silver'},
-        {'text':'Free RSVP Pakej Silver'},
-        {'text':'Free RSVP Pakej Bronze'},
-        {'text':'Free RSVP Pakej Bronze'},
-        {'text':'Free RSVP Pakej Bronze'},
-        {'text':'Free Kad PDF A6 + QR'},
-        {'text':'Free Kad PDF A6 + QR'},
-        {'text':'Free Kad PDF A6 + QR'},
-        {'text':'Free Video Design'},
-        {'text':'Free Video Design'},
-        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},
-        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},
-        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},
-        {'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'},{'text':'💔 Tiada Rezeki'}
-    ],
-    'animation': {
-        'type':'spinToStop',
-        'duration':5,
-        'spins':8,
-        'callbackFinished':alertPrize
-    },
-    'pins':{
-        'number':30,
-        'fillStyle':'#800000',
-        'outerRadius':4,
-    }
-});
 
-// ====== Show spinner selepas submit form ======
-document.getElementById("spinForm").addEventListener("submit", function(e){
-    setTimeout(function(){
-        document.getElementById("spinSection").style.display = "block";
-    }, 1000);
-});
-
-// ====== Spin button ======
-document.getElementById("spinButton").addEventListener("click", function(){
-    wheel.startAnimation();
-});
-
-// ====== Alert result ======
-function alertPrize(indicatedSegment) {
-    alert("Tahniah! Anda mendapat: " + indicatedSegment.text);
-}
-</script>
-  
 
        
   <script src="n98hm1a2n.js"></script>
 
-  <script>
-function toggleGambar(id) {
-  var img = document.getElementById(id);
-  if (img.style.display === "none") {
-    img.style.display = "block";
-  } else {
-    img.style.display = "none";
-  }
-}
-</script>
 
-       
+... SEMUA CONTENT WEBSITE ...
+
+<script src="https://cdn.jsdelivr.net/npm/winwheel@2.7.0/Winwheel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script>
+
+var wheel = new Winwheel({
+    'canvasId':'wheelCanvas',
+    'numSegments':30,
+    'outerRadius':180,
+    'textFontSize':12,  
+    'segments':[
+{'text':'Free RSVP Pakej Silver'},
+{'text':'Free RSVP Pakej Silver'},
+{'text':'Free RSVP Pakej Bronze'},
+{'text':'Free RSVP Pakej Bronze'},
+{'text':'Free RSVP Pakej Bronze'},
+{'text':'Free Kad PDF A6 + QR'},
+{'text':'Free Kad PDF A6 + QR'},
+{'text':'Free Kad PDF A6 + QR'},
+{'text':'Free Video Design'},
+{'text':'Free Video Design'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'},
+{'text':'💔 Tiada Rezeki'}
+],
+    'animation':{
+        'type':'spinToStop',
+        'duration':5,
+        'spins':8,
+        'callbackFinished':alertPrize
+    }
+});
+
+const spinForm = document.getElementById("spinForm");
+if (spinForm) {
+  spinForm.addEventListener("submit", function(){
+      setTimeout(function(){
+          document.getElementById("spinSection").style.display="block";
+      },1000);
+  });
+}
+
+const spinButton = document.getElementById("spinButton");
+if (spinButton) {
+  spinButton.addEventListener("click", function(){
+      wheel.startAnimation();
+  });
+}
+
+function alertPrize(indicatedSegment){
+    alert("Terima kasih kerana mencuba! Semoga hari anda ceria." + indicatedSegment.text);
+}
+
+</script>
 
 </body>
 </html>
