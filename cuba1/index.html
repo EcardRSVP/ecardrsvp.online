@@ -478,32 +478,7 @@
 </div>
 </section>
 
-<section id="spin" style="padding:40px 20px; text-align:center; background:linear-gradient(135deg, #fce4ec, #fff8f0); border-radius:12px; margin:20px auto; max-width:600px;">
-  <h2 style="font-size:2em; color:#800000;">SPIN & WIN</h2>
-  <p style="margin-top:10px; color:#333; font-size:1em;">
-    Tekan "Hantar & Main Spin" untuk lihat wheel berfungsi.
-  </p>
 
-  <form id="spinForm" style="margin-top:20px;">
-    <input type="text" placeholder="Nama" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
-    <br>
-    <button type="submit" style="margin-top:10px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
-      HANTAR & MAIN SPIN
-    </button>
-  </form>
-
-  <div id="spinSection" style="display:none; margin-top:30px;">
-    <h3 style="font-size:1.5em; color:#800000;">🎡 Spin & Menang!</h3>
-    <canvas id="wheelCanvas" width="400" height="400" style="margin-top:20px;"></canvas>
-    <br>
-    <button id="spinButton" style="margin-top:15px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
-      SPIN SEKARANG
-    </button>
-  </div>
-</section>
-  
-  
-  
 <!-- Preview Kad Kahwin -->
 <section id="designkad">
   <h2>KATALOG RSVP</h2><br><br>
@@ -1318,42 +1293,41 @@ function copyTNG() {
 
   
   <!-- Form untuk isi maklumat -->
-<form id="spinForm" action="https://docs.google.com/forms/e/1FAIpQLSckbqQrsWFOBqPhwaBLh6AVSCTahgElyhvpLr8imULQbZrC6Q/formResponse" method="POST" target="hidden_iframe" style="margin-top:20px;">
-  <input type="text" name="entry.852432316" placeholder="Nama" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
-  <input type="text" name="entry.1466033400" placeholder="Order ID (Pembelian melalui Shopee) @ No WS" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
-  <input type="tel" name="entry.423056438" placeholder="No Telefon" required style="padding:10px; width:80%; margin:5px 0; border-radius:6px; border:1px solid #ccc;">
-  <br>
-  <button type="submit" style="margin-top:10px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
-    HANTAR & MAIN SPIN
-  </button>
+<form id="spinForm"
+action="https://docs.google.com/forms/d/e/1FAIpQLSckbqQrsWFOBqPhwaBLh6AVSCTahgElyhvpLr8imULQbZrC6Q/formResponse"
+method="POST"
+target="hidden_iframe">
+
+<input name="entry.852432316" type="text" placeholder="Nama" required><br>
+
+<input name="entry.1466033400" type="text" placeholder="ID Shopee" required><br>
+
+<input name="entry.423056438" type="tel" placeholder="No Telefon" required><br>
+
+<button type="submit">HANTAR & MAIN SPIN</button>
+
 </form>
 
-  <!-- Hidden iframe untuk submit form background -->
-  <iframe name="hidden_iframe" style="display:none;"></iframe>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 
 <!-- Spinner Wheel (tersorok awalnya) -->
 <div id="spinSection" style="display:none; margin-top:30px;">
-  <h3 style="font-size:1.5em; color:#800000;">🎡 Spin & Menang!</h3>
 
-  <!-- SINI TEMPAT CANVAS -->
-  <canvas id="wheelCanvas" width="400" height="400" style="margin-top:20px;"></canvas>
+<canvas id="wheelCanvas" width="400" height="400"></canvas>
 
-  <br>
+<br>
 
-  <button id="spinButton" style="margin-top:15px; padding:12px 25px; font-size:1em; border:none; background:#800000; color:#fff; border-radius:8px; cursor:pointer;">
-    SPIN SEKARANG
-  </button>
+<button id="spinButton">
+SPIN SEKARANG
+</button>
+
 </div>
 
 </section>
   
 
 
-
-
-
-  
-  
  <!-- Preview Video Kad Kahwin -->
 <section id="video">
   <h2>VIDEO DIGITAL</h2><br>
@@ -2691,11 +2665,13 @@ function prevGallery() {
 <script>
 
 var wheel = new Winwheel({
-    'canvasId':'wheelCanvas',
-    'numSegments':6,
-    'outerRadius':150,
-    'textFontSize':12,  
-    'segments':[
+canvasId:'wheelCanvas',
+numSegments:30,
+outerRadius:180,
+textFontSize:14,
+
+segments:[
+
 {'text':'Free RSVP Pakej Silver'},
 {'text':'Free RSVP Pakej Silver'},
 {'text':'Free RSVP Pakej Bronze'},
@@ -2727,27 +2703,58 @@ var wheel = new Winwheel({
 {'text':'💔 Tiada Rezeki'},
 {'text':'💔 Tiada Rezeki'}
 ],
-    'animation':{
-        'type':'spinToStop',
-        'duration':6,
-        'spins':8,
-        'callbackFinished':alertPrize
-    }
-});
+  
+animation:{
+type:'spinToStop',
+duration:5,
+spins:8,
+callbackFinished:alertPrize
+}
 
-const spinForm = document.getElementById("spinForm");
-const spinSection = document.getElementById("spinSection");
+});
+  
+let wheelSpinning = false;
+
 const spinButton = document.getElementById("spinButton");
 
-if (spinForm) {
-  spinForm.addEventListener("submit", function(e){
-      e.preventDefault();               // cegah reload page
-      spinSection.style.display = "block"; // terus tunjuk wheel
+if(spinButton){
+spinButton.onclick = function(){
 
-spinButton.addEventListener("click", function(){
-  wheel.startAnimation();           // start wheel
-  });
+if(!wheelSpinning){
+wheel.startAnimation();
+wheelSpinning = true;
+}
+
+};
+}
+
+function alertPrize(seg){
+alert("🎉 Tahniah! Anda dapat: " + seg.text);
+}
+
+const spinButton = document.getElementById("spinButton");
+
+if(spinButton){
+spinButton.onclick = function(){
+wheel.startAnimation();
+};
+}
 </script>
+
+ <script>
+const spinForm = document.getElementById("spinForm");
+const spinSection = document.getElementById("spinSection");
+
+if(spinForm){
+spinForm.addEventListener("submit", function(){
+
+setTimeout(function(){
+spinSection.style.display = "block";
+},800);
+
+});
+}
+</script> 
 
 </body>
 </html>
