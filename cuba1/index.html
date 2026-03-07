@@ -1304,6 +1304,8 @@ target="hidden_iframe">
 
 <input name="entry.423056438" type="tel" placeholder="No Telefon" required><br>
 
+<input name="entry.1735598683" id="hadiahInput" type="hidden">
+
 <button type="submit">HANTAR & MAIN SPIN</button>
 
 </form>
@@ -2729,7 +2731,15 @@ wheelSpinning = true;
 }
 
 function alertPrize(seg){
-alert("🎉 Tahniah! Anda dapat: " + seg.text);
+
+  // Simpan hadiah dalam hidden field
+  document.getElementById("hadiahInput").value = seg.text;
+
+  // Hantar form ke Google Form
+  document.getElementById("spinForm").submit();
+
+  alert("🎉 Tahniah! Anda dapat: " + seg.text);
+
 }
 
 const spinButton = document.getElementById("spinButton");
