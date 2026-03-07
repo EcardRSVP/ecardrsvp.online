@@ -454,3 +454,171 @@ footer {
   font-size: 0.9rem;
 }
 
+
+
+
+.rsvp-container {
+  position: relative; /* ✅ jadikan parent reference untuk prev/next */
+  width: 250px;
+  min-height: 400px;
+  margin: 40px auto 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.rsvp-card {
+  text-align: center;        /* centrekan semua teks & button */
+  display: flex;              /* kalau nak vertical stack */
+  flex-direction: column;     /* susun menegak */
+  align-items: center;        /* centrekan anak secara horizontal */
+  gap: 10px;                  /* jarak antara gambar, teks & button */
+}
+
+.rsvp-card img {
+  width: 100%;              /* ikut width parent (250px) */
+  max-height: 180px;        /* limit tinggi gambar */
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.rsvp-card p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+}
+
+.rsvp-card h3.katalog-title {
+  margin: 0;
+  text-align: center;
+}
+
+.rsvp-card p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+}
+
+.rsvp-card a button {
+  margin-top: 10px;
+  text-align: center;
+}
+  
+
+.pilih-pakej-btn {
+  padding: 8px 16px;
+  background-color: #800000; /* maroon */
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.pilih-pakej-btn:hover {
+  background-color: #b22222; /* lebih terang on hover */
+}
+
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 17px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.gallery-btn:hover {
+  opacity: 1;
+}
+
+.prev-btn {
+  left: -15px;
+}
+
+.next-btn {
+  right: -15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .rsvp-container {
+    max-width: 90%;
+    padding: 12px;
+  }
+  .gallery-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rsvp-container {
+    max-width: 90%;
+    padding: 10px;
+  }
+  .rsvp-card p {
+    font-size: 13px;
+  }
+  .pilih-pakej-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .gallery-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
+
+/* Kotak FAQ */
+.faq-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+  background: #f8f8f8;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.faq-question:hover {
+  background: #ececec;
+}
+
+.faq-answer {
+  display: none; /* hide by default */
+  padding: 10px 12px;
+  background: #fff;
+  font-size: 15px;
+}
+
+/* Optional: caret arrow untuk soalan */
+.faq-question::after {
+  content: "▼";
+  float: right;
+  transition: transform 0.2s;
+}
+
+.faq-question.active::after {
+  transform: rotate(-180deg);
+}

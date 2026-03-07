@@ -113,7 +113,8 @@
 }
 
 .faq-answer {
-  display: block !important;
+  /* display: block !important;  ← buang ni */
+  display: none; /* hide by default */
   padding: 10px;
   font-size: 13px;
   font-weight: bold;
@@ -324,10 +325,10 @@
     <div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
     <div class="dropdown-menu" id="dropdownMenu">
       <a href="javascript:void(0)" onclick="showSection('pakej')">PAKEJ</a>
-      <a href="javascript:void(0)" onclick="showSection('designkad')">DESIGN RSVP</a>
-      <a href="javascript:void(0)" onclick="showSection('borang')">BORANG</a>
+      <a href="javascript:void(0)" onclick="showSection('designkad')">KATALOG RSVP</a>
+      <a href="javascript:void(0)" onclick="showSection('borang')">BORANG MAKLUMAT RSVP</a>
       <a href="javascript:void(0)" onclick="showSection('pembayaran')">PEMBAYARAN</a>
-      <a href="javascript:void(0)" onclick="showSection('video')">VIDEO KAD DIGITAL</a>
+      <a href="javascript:void(0)" onclick="showSection('video')">VIDEO DIGITAL</a>
       <a href="javascript:void(0)" onclick="showSection('teks-edar')">TEKS EDARAN</a> 
       <a href="javascript:void(0)" onclick="showSection('step-rsvp')">TUTORIAL</a>       
       <a href="javascript:void(0)" onclick="showSection('faq')">FAQ</a>
@@ -356,7 +357,7 @@
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
         <p><i class="fas fa-gift"></i> Wishlist<br>
-          (Hadiah Mengikut Link pilihan anda sendiri)<br>
+          (Hadiah Pilihan Sendiri)<br>
          <a href="javascript:void(0);" onclick="toggleGambar('wishlist-img')">Lihat Contoh</a>
          </p>
 
@@ -397,7 +398,7 @@
         <p><i class="fas fa-envelope-open-text"></i> RSVP</p>
         <p><i class="fas fa-money-bill-wave"></i> Money Gift</p>
         <p><i class="fas fa-gift"></i> Wishlist<br>
-          (Boleh Pilih Hadiah Existing)<br>
+          (Hadiah Sediada)<br>
          <a href="javascript:void(0);" onclick="toggleGambar('WISHLIST EXISTING-img')">Lihat Contoh</a>
          </p>
 
@@ -440,29 +441,57 @@
   </a>      
       </div>
     </div>
-    
-  </div> <!-- ✅ TUTUP .pakej -->
-</section> <!-- ✅ TUTUP .pakej-section -->
+  </div>    
+  
+<br><br>
+  
+<div class="rsvp-container">
 
+  <!-- Button Prev -->
+  <button class="gallery-btn prev-btn" onclick="prevGallery()">&#10094;</button>
+
+  <!-- Card utama -->
+  <div class="rsvp-card">
+
+    <!-- Tajuk Dalam Kotak -->
+    <h3 class="katalog-title">SAMPLE RSVP</h3><br>
+
+  <!-- Card utama -->
+    <img id="rsvp-gallery-img" src="GambarGaleri1.png" alt="Gambar 1">
+    <p id="rsvp-gallery-caption">
+      2 Pengantin - Pakej Silver & Gold 
+      *Penambahan Bayaran RM 5.00
+      (2 QR & 2 Nama Penerima Wishlist)
+    </p>
+    <a id="rsvp-gallery-preview" href="https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul" target="_blank">
+      <button class="pilih-pakej-btn">Preview</button>
+    </a>
+  </div>
+
+  <!-- Button Next -->
+  <button class="gallery-btn next-btn" onclick="nextGallery()">&#10095;</button>
+
+</div>
+</section>
+  
+  
 <!-- Preview Kad Kahwin -->
 <section id="designkad">
-  <h2>DESIGN RSVP</h2><br><br>
+  <h2>KATALOG RSVP</h2><br><br>
 
 <!-- 🌸 Dropdown Filter -->
 <div class="filter-dropdown">
   <button id="filterToggle" class="filter-toggle-btn">Kategori 🔻</button>
   <div id="filterMenu" class="filter-menu">
     <button class="filter-btn active" data-filter="all">Semua</button>
-    <button class="filter-btn" data-filter="kad-kahwin">Kad Kahwin/Tunang</button>
-    <button class="filter-btn" data-filter="kad-birthday">Kad Birthday/Aqiqah</button>
-    <button class="filter-btn" data-filter="kad-raya">Kad Raya/Puasa</button>   
+    <button class="filter-btn" data-filter="kad-kahwin">Kahwin/Pertunangan</button>
+    <button class="filter-btn" data-filter="kad-birthday">Birthday/Aqiqah</button>
+    <button class="filter-btn" data-filter="kad-raya">Raya/Puasa</button>   
     <button class="filter-btn" data-filter="konvo">Konvokesyen</button>
-    <button class="filter-btn" data-filter="persaraan">Persaraan</button>
     <button class="filter-btn" data-filter="family-day">Family Day</button>
     <button class="filter-btn" data-filter="dinner">Dinner</button>   
     <button class="filter-btn" data-filter="keusahawanan">Hari Keusahawanan</button>  
     <button class="filter-btn" data-filter="Acara">Acara</button>  
-    <button class="filter-btn" data-filter="kad-contoh">Contoh</button>
     </div>
   </div> <!-- ✅ tutup filter-dropdown -->
   
@@ -1176,50 +1205,37 @@
       <p><strong>A55</strong></p><br>
       <a href="https://ecardrsvp.online/A55/" target="_blank" class="preview-btn">PREVIEW</a>
     </div>    
-
-    <div class="kad-item" data-category="kad-contoh">
-      <img src="M1.png" alt="Kad 120">
-      <p><strong>Majlis Persaraan</strong></p><br>
-      <a href="https://ecardrsvp.online/Majlis_Persaraan_Puan_Aishah/" target="_blank" class="preview-btn">PREVIEW</a>
-    </div>       
-
-    <div class="kad-item" data-category="kad-contoh">
-      <img src="ContohMajlis2Pengantin.png" alt="Kad 121">
-      <p style="margin: 0; line-height: 0.7;"><strong>Majlis Gabung</strong></p>
-      <p style="margin: 0; line-height: 0.7;"><strong>2 Pengantin</strong></p>
-      <a href="https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul/" target="_blank" class="preview-btn">PREVIEW</a>
-    </div> 
   </div>
 </section>
 
 
 <!-- Borang Maklumat -->
 <section id="borang">
-  <h2>BORANG</h2>
+  <h2>BORANG MAKLUMAT RSVP</h2>
   <br>
     <p style="text-align:center; font-size:14px; margin-top:10px; line-height:1.5;">
-    1) Anda hanya perlu membuat pembayaran<br>
-      setelah menerima pautan RSVP daripada pihak kami.<br><br>
+    1) Pembayaran boleh dilakukan setelah<br>
+       menerima pautan RSVP daripada pihak kami.<br><br>
     2) Selepas pengesahan dibuat dan tiada perubahan<br>
-      pada maklumat, anda akan menerima emel<br>
-      yang mengandungi pautan Google Drive<br>
+       pada maklumat, anda akan menerima pautan<br>
+       Google Drive<br>
       (Google Sheet/Google Form) untuk<br>
       🔴 Semakan bilangan kehadiran tetamu<br>
-      🔴 Semakan No Tracking pemberian hadiah<br>
-      🔴 Softcopy Saiz A6 (2 Page) tanpa Peta [Gold Package]</em>
+      🔴 Semakan No Tracking pemberian hadiah [Silver & Gold Package]<br>
+      🔴 Softcopy Saiz A6 (2 Page) beserta<br>QR Lokasi Majlis [Gold Package]</em>
   </p>
   <br>
   <div style="text-align: center;">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpZGSwL6C_UVm72VK_56pV8cSr8yOAqgPr_EQw4uFJfljY7w/viewform" target="_blank">
       <button class="pilih-pakej-btn">
-        <i class="fas fa-edit"></i> Isi Borang
+        <i class="fas fa-edit"></i> Isi Maklumat
       </button>
     </a>
   </div>
   
   <p style="font-size:13px; color:#b22222; text-align:center; margin-top:15px; line-height:1.4;">
-    ⚠️ Reminder: Pembayaran perlu dibuat dalam tempoh <strong>12 jam</strong> selepas menerima link RSVP,  
-    Jika tidak seller berhak untuk memadam semula link tanpa persetujuan anda.
+    ⚠️ Reminder: Pembayaran perlu dibuat dalam tempoh <strong>12 jam</strong> selepas menerima pautan RSVP,<br>  
+    Jika tidak, Pihak kami berhak untuk memadam semula link tanpa persetujuan anda.
   </p>
 </section>
 
@@ -1240,7 +1256,7 @@
     Nombor akaun berjaya disalin!
   </p>
   <br>
-  <p style="margin-top: 20px; text-align:center;">Atau imbas QR TNG di bawah</p>
+  <p style="margin-top: 20px; text-align:center;">Imbas QR TNG di bawah</p>
 
   <div style="text-align: center; margin-top: 10px;">
     <img src="QR TNG.png" alt="QR TNG" 
@@ -1263,7 +1279,7 @@ function copyTNG() {
 
  <!-- Preview Video Kad Kahwin -->
 <section id="video">
-  <h2>VIDEO KAD DIGITAL</h2><br>
+  <h2>VIDEO DIGITAL</h2><br>
     <p style="text-align:center; font-size:15px; margin-top:10px; line-height:1.5;">
       Hanya <strong>RM 5.50 - RM 6.50</strong> Sahaja !!<br>
   <i class="fas fa-cart-shopping" style="color:#000000; margin-right:5px;"></i> Tempah Sekarang
@@ -2198,6 +2214,12 @@ Sekian, terima kasih
 <section id="faq">
   <h2>FREQUENTLY ASKED QUESTIONS (FAQ)</h2><br><br>
 
+    <!-- Kotak search di dalam section -->
+  <div id="faq-search-wrapper" style="margin-bottom:20px;">
+    <input type="text" id="faqSearch" placeholder="Cari soalan..." style="width:100%;padding:10px;font-size:15px;">
+  </div>
+  <br><br>
+
   <div class="faq-container">
     <div class="faq-item">
       <div class="faq-question">Q: Berapakah tempoh yang diperlukan untuk menyiapkan laman RSVP?</div>
@@ -2221,7 +2243,7 @@ Sekian, terima kasih
 
            <div class="faq-item">
       <button class="faq-question">Q: Jika saya mengambil Pakej Silver atau Bronze, adakah saya boleh membeli softcopy kad jemputan bersaiz A6?</button>
-      <div class="faq-answer">A: Boleh, softcopy boleh dibeli dengan caj tambahan sebanyak RM 3.00</div>
+      <div class="faq-answer">A: Boleh, softcopy boleh dibeli dengan caj tambahan sebanyak RM 3.50</div>
     </div>   
 
        <div class="faq-item">
@@ -2236,7 +2258,7 @@ Sekian, terima kasih
 
     <div class="faq-item">
       <button class="faq-question">Q: Bolehkah lagu dimulakan dari bahagian chorus?</button>
-      <div class="faq-answer">A: Boleh, namun sila nyatakan dengan jelas dalam borang Google bahagian mana lagu ingin dimulakan. Sekiranya tidak dinyatakan, Kami berhak mengenakan caj tambahan sebanyak RM 2.00 bagi setiap perubahan lagu</div>
+      <div class="faq-answer">A: Boleh, namun sila nyatakan dengan jelas dalam borang maklumat bahagian mana lagu ingin dimulakan. Sekiranya tidak dinyatakan, Kami berhak mengenakan caj tambahan sebanyak RM 2.00 bagi setiap perubahan</div>
     </div>
 
     <div class="faq-item">
@@ -2275,13 +2297,13 @@ Sekian, terima kasih
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">Q: Saya beli Bronze Package (RM 13.00) tapi saya nak buang bahagian gambar dan ditukarkan dengan Money Gift/ Ucapan/ Wishlist?</button>
+      <button class="faq-question">Q: Saya beli Bronze Package (RM 14.91) tapi saya nak buang bahagian gambar dan ditukarkan dengan Money Gift/ Ucapan/ Wishlist?</button>
       <div class="faq-answer">A: Anda dibenarkan untuk membuang bahagian gambar, namun pertukaran ke "Money Gift/ Ucapan/ Wishlist" tidak dibenarkan</div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">Q: Saya buat majlis kecil-kecilan, boleh hadkan tetamu ke?</button>
-      <div class="faq-answer">A: RSVP tiada limit tetamu. Namun, sekiranya anda ingin mengehadkan jumlah tetamu, sila nyatakan secara jelas dalam Teks Edaran. Contoh boleh rujuk di Teks Edaran PILIHAN 7</div>
+      <div class="faq-answer">A: RSVP tiada limit tetamu. Namun, sekiranya anda ingin mengehadkan jumlah tetamu, sila nyatakan secara jelas dalam Teks Edaran. (Rujuk Teks Edaran PILIHAN 7)</div>
     </div>
 
     <div class="faq-item">
@@ -2300,13 +2322,13 @@ Sekian, terima kasih
     </div>
     
     <div class="faq-item">
-      <button class="faq-question">Q: Boleh ke saya nak beli juga video kad kahwin?</button>
-      <div class="faq-answer">A: Boleh</div>
+      <button class="faq-question">Q: Boleh saya beli Video Digital?</button>
+      <div class="faq-answer">A: Boleh, terdapat juga design lain di Shopee saya</div>
     </div>
 
      <div class="faq-item">
-      <button class="faq-question">Q: Berapa harga untuk video kad kahwin?</button>
-      <div class="faq-answer">A: RM 5.00 untuk majlis sebelah pihak / RM 6.00 untuk majlis gabung</div>
+      <button class="faq-question">Q: Berapa harga untuk Video Digital?</button>
+      <div class="faq-answer">A: RM 5.50 untuk majlis sebelah pihak / RM 6.50 untuk majlis gabung</div>
     </div>
   
      <div class="faq-item">
@@ -2315,15 +2337,17 @@ Sekian, terima kasih
     </div>
 
      <div class="faq-item">
-      <button class="faq-question">Q: Adakah saya boleh menukar ilustrasi (gambar kartun) pengantin?</button>
-      <div class="faq-answer">A: Pertukaran ilustrasi (gambar kartun) pengantin hanya dibenarkan untuk design Video Kad Digital yang memang tersedia dengan ilustrasi pengantin. Sebarang perubahan pada pakaian atau warna hanya mengikut CODE yang disediakan.<div>
+      <button class="faq-question">Q: Boleh tukar ilustrasi (kartun) pengantin?</button>
+      <div class="faq-answer">A: Boleh, tetapi hanya untuk design Video Digital yang mempunyai ilustrasi pengantin. Perubahan pakaian atau warna mengikut CODE yang disediakan.</div>
     </div>    
    
      <div class="faq-item">
-      <button class="faq-question">Q: Boleh ke saya nak guna design kahwin untuk majlis birthday?</button>
-      <div class="faq-answer">A: Boleh, design yang terdapat dalam website kami boleh digunakan untuk semua jenis majlis<div>
+      <button class="faq-question">Q: Boleh guna design kahwin untuk majlis birthday?</button>
+      <div class="faq-answer">A: Boleh, design boleh digunakan untuk semua jenis majlis.</div>
     </div>    
-  </div>  
+       
+  </div> <!-- Tutup faq-container -->
+
 </section>   
       
 <div id="popupOverlay" 
@@ -2343,12 +2367,31 @@ Sekian, terima kasih
   
 <!-- FAQ Script -->
 <script>
-const faqBtns = document.querySelectorAll(".faq-question");
+// Toggle jawapan bila klik soalan
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const answer = button.nextElementSibling;
 
-faqBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const answer = btn.nextElementSibling;
-    answer.style.display = answer.style.display === "block" ? "none" : "block";
+    if(answer.style.display === 'block') {
+      answer.style.display = 'none';
+      button.classList.remove('active');
+    } else {
+      answer.style.display = 'block';
+      button.classList.add('active');
+    }
+  });
+});
+
+// Filter soalan sahaja
+document.getElementById('faqSearch').addEventListener('input', function() {
+  const filter = this.value.toLowerCase();
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const questionText = item.querySelector('.faq-question').textContent.toLowerCase();
+    if(questionText.includes(filter)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
   });
 });
 </script>
@@ -2491,7 +2534,69 @@ document.querySelectorAll(".filter-dropdown").forEach((dropdown) => {
 }
 </style>
 
-  
+
+<script>
+// Galeri array: gambar, caption, link preview
+const gallery = [
+  {
+    img: "GambarGaleri1.png",
+    caption: "2 Pengantin *Penambahan Bayaran RM 5.00 (2 QR & 2 Nama Penerima Wishlist)",
+    preview: "https://ecardrsvp.online/WalimatulurusHaikal-Liya_Haziq_Nurul"
+  },
+  {
+    img: "GambarGaleri2.png",
+    caption: "2 Pengantin (Pakej Bronze)",
+    preview: "https://ecardrsvp.online/Haikal-Liya_Haziq_Nurul"
+  },
+  {
+    img: "GambarGaleri3.png",
+    caption: "Majlis Perkahwinan Non Muslim",
+    preview: "https://ecardrsvp.online/Tira-Sacirbey"
+  },
+  {
+    img: "GambarGaleri4.png",
+    caption: "Majlis Persaraan",
+    preview: "https://ecardrsvp.online/Majlis_Persaraan_Puan_Aishah"
+  },
+  {
+    img: "GambarGaleri5.png",
+    caption: "Majlis Berbuka Puasa",
+    preview: "https://ecardrsvp.online/A48/"
+  },  
+  {
+    img: "GambarGaleri6.png",
+    caption: "Majlis Rumah Terbuka",
+    preview: "https://ecardrsvp.online/A53/"
+  }    
+];
+
+let currentIndex = 0;
+
+// Update card utama
+function updateGallery() {
+  const imgEl = document.getElementById("rsvp-gallery-img");
+  const captionEl = document.getElementById("rsvp-gallery-caption");
+  const previewEl = document.getElementById("rsvp-gallery-preview");
+
+  imgEl.src = gallery[currentIndex].img;
+  captionEl.innerText = gallery[currentIndex].caption;
+  previewEl.href = gallery[currentIndex].preview;
+}
+
+// Next / Prev
+function nextGallery() {
+  currentIndex = (currentIndex + 1) % gallery.length;
+  updateGallery();
+}
+
+function prevGallery() {
+  currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+  updateGallery();
+}
+</script>
+       
+
+       
   <script src="n98hm1a2n.js"></script>
 
   <script>
