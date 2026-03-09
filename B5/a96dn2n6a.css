@@ -576,7 +576,7 @@ html {
 
 /* Kad setiap contact */
 .contact-card {
-  background: linear-gradient(135deg, #fcd5c5, #ffffff, #fff8f0); /* Gradient peach pastel + putih + ivory */
+  background: #FFF1EB; /* peach pastel super soft */
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
@@ -835,11 +835,11 @@ section *, .wishlist *, #main-content * {
   width: 8px;
 }
 #hadiahList::-webkit-scrollbar-thumb {
-  background-color: #fcd5c5;
+  background-color: maroon; /* 💙 peach pastel lembut */
   border-radius: 10px;
 }
 #hadiahList::-webkit-scrollbar-thumb:hover {
-  background-color: #fbb8a0;
+  background-color: #B22222;/* 💧 biru lebih cerah bila hover */
 }
 
 /* gaya teks dalam senarai */
@@ -1161,13 +1161,13 @@ hr::before {
 }
 
 #ucapanList::-webkit-scrollbar-thumb {
-  background-color: #fcd5c5; /* 💙 peach pastel lembut */
+  background-color: maroon; /* 💙 peach pastel lembut */
   border-radius: 10px;
   margin-top: 30px;  /* 🚀 ruang kosong atas */
   margin-bottom: 30px; /* 🚀 ruang kosong bawah */  
 }
 #ucapanList::-webkit-scrollbar-thumb:hover {
-  background-color: #fbb8a0;/* 💧 biru lebih cerah bila hover */
+  background-color: #B22222;/* 💧 biru lebih cerah bila hover */
 }
 
 
@@ -1381,7 +1381,7 @@ html, body {
   width: 100vw !important;
   max-width: 390px !important;
   height: 100vh !important;
-  background: url('B5.png') center center / cover no-repeat !important;
+  background: url('B2.png') center center / cover no-repeat !important;
   background-attachment: fixed !important;
   z-index: -1 !important;
   pointer-events: none !important;
