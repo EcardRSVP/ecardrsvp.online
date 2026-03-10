@@ -772,7 +772,7 @@ section *, .wishlist *, #main-content * {
 }
 
 .hadiah-box {
-  background: linear-gradient(135deg, #6b6b6b, #4b4b4b, #a9a9a9);
+  background: linear-gradient(135deg, #e0e0e0, #f2f2f2, #dcdcdc);
   background-size: 400% 400%; /* beri ruang gradient bergerak */
   border-radius: 16px;
   box-shadow:
