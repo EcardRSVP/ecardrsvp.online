@@ -1405,3 +1405,18 @@ html, body {
   pointer-events: none !important;
   will-change: transform, background-position; /* GPU layer */
 }
+
+.logo-front,
+.footer-logo {
+  width: 80px;
+  opacity: 0.9;
+}
+
+/* specific */
+.logo-front {
+  margin-bottom: 5px;
+}
+
+.footer-logo {
+  margin-top: 5px;
+}
