@@ -401,7 +401,7 @@ form button[type="submit"] {
 
 .font-b {
   font-family: 'Lexend Deca', sans-serif;
-  font-size: 1.0rem;
+  font-size: 1.1rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -458,7 +458,7 @@ form button[type="submit"] {
 .font-g {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -523,7 +523,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-b {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
   } 
 
   .font-c {
@@ -544,7 +544,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-g {
-    font-size: 1.0rem;
+    font-size: 1.2rem;
   }
 
   .font-h {
