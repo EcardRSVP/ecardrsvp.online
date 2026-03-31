@@ -576,7 +576,7 @@ html {
 
 /* Kad setiap contact */
 .contact-card {
-  background: #F5E8D0; /* coklat paling cair & soft */
+  background: #F2E6D9; /* coklat paling cair & soft */
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
@@ -1428,7 +1428,7 @@ html, body {
 }
 
 .footer-logo {
-  width: 200px;
+  width: 250px;
   opacity: 0.9;
   text-align: center;
 }
