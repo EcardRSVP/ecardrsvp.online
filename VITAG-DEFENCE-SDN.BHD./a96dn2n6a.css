@@ -576,7 +576,7 @@ html {
 
 /* Kad setiap contact */
 .contact-card {
-  background: #FFF5E6; /* cream sangat soft dan light */
+  background: #F5E8D0; /* coklat paling cair & soft */
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
@@ -699,6 +699,9 @@ html {
   height: 200px;
   object-fit: cover;
   display: block;
+  /* Tambah shadow & sudut lembut */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 12px;
 }
 
 .gallery-prev,
@@ -736,7 +739,7 @@ html {
   margin: 4px 0;
   line-height: 1.2;
   font-family: 'Lexend', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: black !important;
   -webkit-text-fill-color: black !important;
 }
@@ -1412,6 +1415,12 @@ html, body {
   text-align: center;    
 }
 
+.logo-page {
+  width: 80px;
+  opacity: 0.9;
+  text-align: center;    
+}
+
 .logo-company {
   width: 120px;
   opacity: 0.9;
@@ -1419,7 +1428,7 @@ html, body {
 }
 
 .footer-logo {
-  width: 170px;
+  width: 200px;
   opacity: 0.9;
   text-align: center;
 }
