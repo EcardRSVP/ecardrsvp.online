@@ -401,7 +401,7 @@ form button[type="submit"] {
 
 .font-b {
   font-family: 'Lexend Deca', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */ 
   -webkit-font-smoothing: antialiased;
@@ -421,8 +421,8 @@ form button[type="submit"] {
 }
 
 .font-d {
-  font-family: 'Lora', serif;
-  font-weight: 800;
+  font-family: 'Marcellus', serif;
+  font-weight: 400;
   font-size: 1.0rem;
   font-weight: bold;
   color: black !important;
@@ -523,7 +523,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-b {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   } 
 
   .font-c {
@@ -576,7 +576,7 @@ html {
 
 /* Kad setiap contact */
 .contact-card {
-  background: #F5E0C3; /* Cream coklat cair */
+  background: #F2E6D9; /* coklat paling cair & soft */
   border-radius: 14px;
   padding: 12px 14px;
   margin: 10px auto;
@@ -699,6 +699,9 @@ html {
   height: 200px;
   object-fit: cover;
   display: block;
+  /* Tambah shadow & sudut lembut */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 12px;
 }
 
 .gallery-prev,
@@ -736,7 +739,7 @@ html {
   margin: 4px 0;
   line-height: 1.2;
   font-family: 'Lexend', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: black !important;
   -webkit-text-fill-color: black !important;
 }
@@ -1404,4 +1407,69 @@ html, body {
   z-index: -1 !important;
   pointer-events: none !important;
   will-change: transform, background-position; /* GPU layer */
+}
+
+.logo-front {
+  width: 250px;
+  opacity: 0.9;
+  text-align: center;    
+}
+
+.logo-page {
+  width: 80px;
+  opacity: 0.9;
+  text-align: center;    
+}
+
+.logo-company {
+  width: 120px;
+  opacity: 0.9;
+  text-align: center;  
+}
+
+.footer-logo {
+  width: 250px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* specific */
+.logo-front,
+.footer-logo,
+.logo-company {
+  margin: 0px;
+}
+
+.registration-box {
+  border: 1px solid #dcdcdc;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #fafafa;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.registration-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.registration-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #8B4513; /* sama macam btn-hantar */
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.registration-btn:hover {
+  background-color: #A0522D; /* hover sama */
 }
