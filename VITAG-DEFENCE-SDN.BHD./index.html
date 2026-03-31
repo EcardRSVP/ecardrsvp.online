@@ -282,7 +282,7 @@
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
   <div class="footer-icon home" onclick="goHome()">🏠<span>Home</span></div>
-  <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
+  <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">📝<span>Registration</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
 </div>
@@ -291,51 +291,20 @@
 <!-- ✅ Seksyen RSVP -->
 <div id="popup-RSVP" class="popup-overlay">
   <div class="popup-section">
-  <h4>RSVP</h4>
-<form id="rsvp-form" 
-      action="https://docs.google.com/forms/d/e/1FAIpQLScbrGyYWPAB0XWB8YJoURlxi-zbZiVcBhRTMmQ6HmeQ2rV3Kw/formResponse" 
-      method="POST" 
-      target="hidden_iframe"
-      onsubmit="handleSubmit(event)">
+    <h4>REGISTRATION</h4>
 
-    <!-- Nama -->
-    <br>
-    <label for="nama"><strong>Nama</strong></label>
-    <input type="text" id="nama" name="entry.1301650669" placeholder="Nama Anda" required>
+    <div class="registration-box">
+      <p class="registration-text">
+        Kindly register your attendance via the link below:
+      </p>
 
-    <!-- Kehadiran -->
-    <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
-      <label>
-        <input type="radio" name="entry.1097916453" value="Hadir" required> Hadir
-      </label>
-      <label>
-        <input type="radio" name="entry.1097916453" value="Tidak Hadir"> Tidak Hadir
-      </label>
+      <a href="https://form.evenesis.com/dsanatsec2026/trade" 
+         target="_blank" 
+         class="registration-btn">
+         REGISTER NOW
+      </a>
     </div>
 
-    <!-- Bilangan Kehadiran -->
-    <br>
-    <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
-    <input type="number" id="bilangan" name="entry.1433371299" min="1" placeholder="Contoh: 2">
-
-      <button type="submit" class="btn-hantar">Hantar</button>
-    </form>
-
-    <!-- ✅ Popup alert khas -->
-    <div id="rsvp-alert" class="alert-box">
-      <div class="alert-header">ecardrsvp.online says:</div>
-      <div class="alert-body">
-        <p>Kehadiran anda telah direkodkan.</p>
-        <button onclick="closeRsvpAlert()">OK</button>
-      </div>
-    </div>
-
-<iframe
-  name="hidden_iframe"
-  id="hidden_iframe"
-  style="display:none;"
-  onload="if (window.rsvpSuccessHandler) rsvpSuccessHandler();">
-   </iframe>
   </div>
 </div>
 
