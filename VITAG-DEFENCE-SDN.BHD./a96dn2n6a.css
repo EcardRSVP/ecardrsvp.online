@@ -1406,10 +1406,20 @@ html, body {
   will-change: transform, background-position; /* GPU layer */
 }
 
-.logo-front,
-.footer-logo {
-  width: 100px;
+.logo-front {
+  width: 120px;
   opacity: 0.9;
+}
+
+.logo-company {
+  width: 150px;
+  opacity: 0.9;
+}
+
+.footer-logo {
+  width: 170px;
+  opacity: 0.9;
+  text-align: center;
 }
 
 /* specific */
