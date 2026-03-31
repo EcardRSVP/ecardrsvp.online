@@ -1407,13 +1407,15 @@ html, body {
 }
 
 .logo-front {
-  width: 120px;
+  width: 170px;
   opacity: 0.9;
+  text-align: center;    
 }
 
 .logo-company {
-  width: 150px;
+  width: 110px;
   opacity: 0.9;
+  text-align: center;  
 }
 
 .footer-logo {
@@ -1423,12 +1425,10 @@ html, body {
 }
 
 /* specific */
-.logo-front {
-  margin-bottom: 5px;
-}
-
-.footer-logo {
-  margin-top: 5px;
+.logo-front,
+.footer-logo,
+.logo-company {
+  margin: 0px;
 }
 
 .registration-box {
