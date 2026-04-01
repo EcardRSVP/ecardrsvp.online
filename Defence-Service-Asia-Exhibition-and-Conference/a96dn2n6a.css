@@ -962,18 +962,18 @@ hr::before {
 
 /* ✅ Popup Styling */
 .popup-overlay {
-  display: none; 
-  position: static; /* default – ikut aliran biasa */
-  margin: 100px auto 0 auto;
-  padding-top: 40px;
-  max-width: 390px;
+  display: none;
+  position: fixed;        /* ✅ penting */
+  top: 0;                 /* ✅ lekat atas */
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  background: transparent !important;
-  z-index: 1;
-  box-sizing: border-box;
-  overflow-y: visible;
-  height: auto;
-  max-height: none;  
+  max-width: 390px;
+  height: 100vh;          /* full screen */
+  overflow-y: auto;       /* boleh scroll kalau panjang */
+  padding-top: 20px;      /* jarak dari atas */
+  z-index: 999;
+  background: transparent;
 }
 
 .popup-overlay,
