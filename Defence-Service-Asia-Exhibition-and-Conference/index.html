@@ -31,10 +31,11 @@
   
   
 <!-- ✅ Google Fonts (dikemas kini dengan Mea Culpa, Eagle Lake, Rochester, Ephesis & Lexend Deca) -->
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Gabriela&family=Lexend:wght@300;400;600&family=Mea+Culpa&family=Rochester&family=Eagle+Lake&family=Ephesis&family=Lexend+Deca&family=Lavishly+Yours&family=Corinthia:wght@400;700&family=Marcellus&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Cormorant+Garamond:wght@600;900&family=Great+Vibes&family=Italianno&family=Gabriela&family=Lexend:wght@300;400;600&family=Mea+Culpa&family=Rochester&family=Eagle+Lake&family=Ephesis&family=Lexend+Deca&family=Lavishly+Yours&family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans&display=swap">
 <link rel="stylesheet" href="a96dn2n6a.css" />
+
   
   
   <style>
@@ -127,18 +128,12 @@
      
   <!-- ✅ HALAMAN DEPAN -->
 <section class="page front-page" style="position: relative; top: -8vh;">
-  
-      <!-- LOGO -->
-    <img src="logo company.png" alt="Logo" class="logo-company">
-    <br><br><br>
-    <img src="dsa-logo-2026.png" alt="Logo" class="logo-front">  
-    <br>
     <h1 class="font-b" style="margin: 0;">DEFENCE SERVICE</h1>
     <h1 class="font-b" style="margin: 0;">ASIA EXHIBITION</h1>
     <h1 class="font-b" style="margin: 0;">AND CONFERENCE (DSA)</h1>
     <h1 class="font-b" style="margin: 0;">2026</h1>
     <button id="start-btn" class="small-btn">BUKA</button>
-  
+  </section>
 
 
   <!-- ✅ KANDUNGAN UTAMA (DISOROK PADA MULA) -->
@@ -146,7 +141,7 @@
 
  <!-- Gabungan Page 2–4 -->
     <section class="page">
-      <img src="logo company.png" alt="Logo" class="logo-page">
+      <br><br>
       <h2 class="font-f" style="margin-bottom:1px;">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
       <span class="font-h" style="display:inline-block; margin-top:0px;">Salam Sejahtera</span><br>
       <p class="nama-ayah"><strong>VITAG DEFENCE SDN. BHD.</strong><br><br>
@@ -158,24 +153,17 @@
       
       <hr>   
     
-     <p>
+      <p>
       <strong class="font-e">PADA</strong><br>
       20 April 2026 - 23 April 2026
       </p>
-
-      <p>
-      <strong class="font-e">OPENING HOURS</strong><br>
-      <strong>20 - 22 April 2026:</strong><br>1000 – 1800 hrs<br><br>
-      <strong>23 April 2026:</strong><br>1000 – 1700 hrs</p>
-
-     <hr>   
-      
+   
       <p>
       <strong class="font-e">LOKASI</strong><br>
       <strong>Malaysia International Trade<br>and Exhibition Centre (MITEC)</strong><br>
       Kompleks MITEC, 8, Jalan Dutamas 2,<br>
       Kompleks Kerajaan,<br>
-      50480 Kuala Lumpur,<br>Wilayah Persekutuan Kuala Lumpur
+      50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur
       </p>
 
       <p>
@@ -186,6 +174,11 @@
 
       <hr> 
       
+      <p>
+      <strong class="font-e">OPENING HOURS</strong><br>
+      <strong>20 - 22 April 2026:</strong><br>1000 – 1800 hrs<br><br>
+      <strong>23 April 2026:</strong><br>1000 – 1700 hrs</p>
+
       <p>
       <strong class="font-e">ADMISSION RULES</strong><br>
       Open to Trade Visitors &<br>Invited Guests only.<br><br>  
@@ -269,9 +262,7 @@
 </section>
       
 <div class="footer-credit" style="margin-top: 20px; text-align: center;">
-  <p>#DSA2026<br>#VITAGDEFENCE<br>#LEADING INNOVATION<br>IN DEFENCE AND SECURITY</p> 
-<img src="LOGO FOOTER.png" alt="Logo" class="footer-logo" align="center">
-</div>
+  <p>#DSA2026<br>#VITAGDEFENCE<br>#LEADING INNOVATION IN DEFENCE AND SECURITY</p> 
 </section>
 </section>
 
@@ -282,7 +273,7 @@
 <!-- ✅ Sticky Footer Menu -->
 <div class="footer">
   <div class="footer-icon home" onclick="goHome()">🏠<span>Home</span></div>
-  <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">🖋️<span>Registration</span></div>
+  <div class="footer-icon rsvp" onclick="togglePopup('RSVP')">💌<span>RSVP</span></div>
   <div class="footer-icon contact" onclick="togglePopup('Contact')">📞<span>Contact</span></div>
   <div class="footer-icon location" onclick="togglePopup('Location')">📍<span>Location</span></div>
 </div>
@@ -291,16 +282,51 @@
 <!-- ✅ Seksyen RSVP -->
 <div id="popup-RSVP" class="popup-overlay">
   <div class="popup-section">
-    <h4>REGISTRATION</h4>
+  <h4>RSVP</h4>
+<form id="rsvp-form" 
+      action="https://docs.google.com/forms/d/e/1FAIpQLScbrGyYWPAB0XWB8YJoURlxi-zbZiVcBhRTMmQ6HmeQ2rV3Kw/formResponse" 
+      method="POST" 
+      target="hidden_iframe"
+      onsubmit="handleSubmit(event)">
 
-<p class="registration-text">
-  Kindly register your attendance<br>via the link below:
-</p>
-      <a href="https://form.evenesis.com/dsanatsec2026/trade" 
-         target="_blank" 
-         class="registration-btn">
-         REGISTER NOW
-    </a>
+    <!-- Nama -->
+    <br>
+    <label for="nama"><strong>Nama</strong></label>
+    <input type="text" id="nama" name="entry.1301650669" placeholder="Nama Anda" required>
+
+    <!-- Kehadiran -->
+    <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
+      <label>
+        <input type="radio" name="entry.1097916453" value="Hadir" required> Hadir
+      </label>
+      <label>
+        <input type="radio" name="entry.1097916453" value="Tidak Hadir"> Tidak Hadir
+      </label>
+    </div>
+
+    <!-- Bilangan Kehadiran -->
+    <br>
+    <label for="bilangan"><strong>Bilangan Kehadiran</strong></label>
+    <input type="number" id="bilangan" name="entry.1433371299" min="1" placeholder="Contoh: 2">
+
+      <button type="submit" class="btn-hantar">Hantar</button>
+    </form>
+
+    <!-- ✅ Popup alert khas -->
+    <div id="rsvp-alert" class="alert-box">
+      <div class="alert-header">ecardrsvp.online says:</div>
+      <div class="alert-body">
+        <p>Kehadiran anda telah direkodkan.</p>
+        <button onclick="closeRsvpAlert()">OK</button>
+      </div>
+    </div>
+
+<iframe
+  name="hidden_iframe"
+  id="hidden_iframe"
+  style="display:none;"
+  onload="if (window.rsvpSuccessHandler) rsvpSuccessHandler();">
+   </iframe>
   </div>
 </div>
 
@@ -356,7 +382,6 @@
   </div>
 </div>
 
-
         
 <!-- ✅ Seksyen Location -->
   <div id="popup-Location" class="popup-overlay">
@@ -366,7 +391,7 @@
       <strong>Malaysia International Trade<br>and Exhibition Centre (MITEC)</strong><br>
       Kompleks MITEC, 8, Jalan Dutamas 2,<br>
       Kompleks Kerajaan,<br>
-      50480 Kuala Lumpur,<br>Wilayah Persekutuan Kuala Lumpur<br>
+      50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur<br>
   <a href="https://maps.app.goo.gl/NWDwKd2U9yKVq8VH9" target="_blank" class="location-button">
     <img src="https://img.icons8.com/color/48/000000/google-maps.png" alt="Google Maps" width="24" height="24">
     Google Maps
