@@ -967,7 +967,7 @@ hr::before {
 .popup-overlay {
   display: none; 
   position: static; /* default – ikut aliran biasa */
-  margin: 100px auto 0 auto;
+  margin: 0 auto;
   padding-top: 40px;
   max-width: 390px;
   width: 100%;
