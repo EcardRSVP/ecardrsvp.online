@@ -158,19 +158,6 @@ body, html {
   overflow-x: hidden;
 }
 
-.container, .page, section, #main-content, .front-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: 390px;         /* ✅ ikut saiz iPhone */
-  margin: 0 auto;           /* ✅ center horizontal */
-  padding: 20px;
-  box-sizing: border-box;
-  min-height: auto;
-}
 
 img {
   max-width: 100%;
@@ -1480,4 +1467,28 @@ html, body {
   color: #5C3317;   /* ✅ coklat gelap */
   margin-top: 7px;
   text-align: center;
+}
+
+.container, .page, #main-content, .front-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 390px;         /* ✅ ikut saiz iPhone */
+  margin: 0 auto;           /* ✅ center horizontal */
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: auto;
+}
+
+#popup-Contact .popup-section,
+#popup-RSVP .popup-section,
+#popup-Location .popup-section {
+  display: flex;                /* ✅ WAJIB */
+  flex-direction: column;       /* ✅ WAJIB */
+  justify-content: flex-start !important;
+  align-items: center;
+  padding-top: 10px;
 }
