@@ -968,7 +968,7 @@ hr::before {
   display: none; 
   position: static; /* default – ikut aliran biasa */
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 0px;
   max-width: 390px;
   width: 100%;
   background: transparent !important;
