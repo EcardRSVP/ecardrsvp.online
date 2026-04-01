@@ -1473,3 +1473,10 @@ html, body {
 .registration-btn:hover {
   background-color: #A0522D; /* hover sama */
 }
+
+.registration-deadline {
+  font-size: 10px;
+  color: #5C3317;   /* ✅ coklat gelap */
+  margin-top: 7px;
+  text-align: center;
+}
