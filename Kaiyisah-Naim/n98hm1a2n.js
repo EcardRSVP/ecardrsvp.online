@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
-      if (!nama.value.trim() || !kehadiran) {
+      if (!nama.value.trim()) {
         e.preventDefault();
         alert("Sila lengkapkan semua maklumat.");
         return;
