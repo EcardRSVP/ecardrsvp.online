@@ -391,7 +391,7 @@ form button[type="submit"] {
 /* ✅ Font Custom Styles */
 .font-a {
   font-family: 'Rochester', cursive;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -412,7 +412,7 @@ form button[type="submit"] {
 .font-c {
   font-family: 'Corinthia', cursive;
   font-weight: 700;   /* ini yang jadikan bold */
-  font-size: 3.15rem;
+  font-size: 2.5rem;
   color: black !important;
   -webkit-text-fill-color: black !important; /* Safari */
   -webkit-font-smoothing: antialiased;
@@ -519,7 +519,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
 
 @media (max-width: 480px) {
   .font-a {
-    font-size: 1.9rem; /* sedikit besar supaya jelas di skrin kecil */
+    font-size: 1.5rem; /* sedikit besar supaya jelas di skrin kecil */
   } 
 
   .font-b {
@@ -527,7 +527,7 @@ body, p, span, div, strong, em, label, input, button, td, th {
   } 
 
   .font-c {
-    font-size: 3.15rem;
+    font-size: 2.5rem;
   } 
 
   .font-d {
