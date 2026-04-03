@@ -134,8 +134,7 @@ function toggleSection(id) {
 
 
 // ✅ Fetch Ucapan (PapaParse)
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTONmtyXeFt4Olk7uNeMC-Bs520cMOy7HdJcxBiE6JnqyIlZuVWToi_j4KUez9OEupHzd2Ay3r6X0cr/pub?gid=1838185162&single=true&output=csv
-")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTONmtyXeFt4Olk7uNeMC-Bs520cMOy7HdJcxBiE6JnqyIlZuVWToi_j4KUez9OEupHzd2Ay3r6X0cr/pub?gid=1838185162&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
     const parsed = Papa.parse(data, { header: true });
