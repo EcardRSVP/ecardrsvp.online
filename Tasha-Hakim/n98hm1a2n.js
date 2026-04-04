@@ -42,6 +42,7 @@ function mulakanSalji() {
 }
 
 
+
 // ✅ RSVP Popup & Validasi
 let submitted = false;
 
@@ -52,30 +53,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const startBtn = document.getElementById("start-btn");
 
  // 📨 Validasi sebelum submit
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.1393405338"]:checked');
+if (form) {
+  form.addEventListener("submit", function (e) {
+    const ucapan = document.getElementById("ucapan");
 
-      if (!nama.value.trim() || !kehadiran) {
-        e.preventDefault();
-        alert("Sila lengkapkan semua maklumat.");
-        return;
-      }
+    if (!nama.value.trim() || !ucapan.value.trim()) {
+      e.preventDefault();
+      alert("Sila isi nama dan ucapan.");
+      return;
+    }
 
-      if (kehadiran.value === "Hadir" && !bilangan.value) {
-        e.preventDefault();
-        alert("Sila isi bilangan kehadiran jika anda akan hadir.");
-        return;
-      }
-
-      submitted = true;
-    });
-  } else {
-    console.error("❌ Elemen borang RSVP tidak dijumpai.");
-  }
-
-  
-
+    submitted = true;
+  });
+}
 
   // 🎬 Butang BUKA - Tunjuk kandungan utama
   if (startBtn) {
