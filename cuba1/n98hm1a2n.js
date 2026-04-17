@@ -42,7 +42,6 @@ function mulakanSalji() {
 }
 
 
-
 // ✅ RSVP Popup & Validasi
 let submitted = false;
 
@@ -53,19 +52,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const startBtn = document.getElementById("start-btn");
 
  // 📨 Validasi sebelum submit
-if (form) {
-  form.addEventListener("submit", function (e) {
-    const ucapan = document.getElementById("ucapan");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
-    if (!nama.value.trim() || !ucapan.value.trim()) {
-      e.preventDefault();
-      alert("Sila isi nama dan ucapan.");
-      return;
-    }
+      if (!nama.value.trim() || !kehadiran) {
+        e.preventDefault();
+        alert("Sila lengkapkan semua maklumat.");
+        return;
+      }
 
-    submitted = true;
-  });
-}
+      if (kehadiran.value === "Hadir" && !bilangan.value) {
+        e.preventDefault();
+        alert("Sila isi bilangan kehadiran jika anda akan hadir.");
+        return;
+      }
+
+      submitted = true;
+    });
+  } else {
+    console.error("❌ Elemen borang RSVP tidak dijumpai.");
+  }
+
+  
+
 
   // 🎬 Butang BUKA - Tunjuk kandungan utama
   if (startBtn) {
@@ -124,7 +134,7 @@ function toggleSection(id) {
 
 
 // ✅ Fetch Ucapan (PapaParse)
-fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vS8HRoPRdH3wosf8HXdn_oJq38fPcalzFKa2rOfMZQ2ht3ocIyMIjhH4UXBYcVXKPh6ELh3sGaqqBEs/pub?gid=185734771&single=true&output=csv")
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRyk8BLqcP2bSKwSTjMl76FCVnwr05Eow0r8K5Cn1J1N1cI-KFVPpQGq4/pub?gid=241095374&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
     const parsed = Papa.parse(data, { header: true });
