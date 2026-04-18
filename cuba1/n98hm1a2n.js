@@ -1,18 +1,3 @@
-// 🔥 DUPLICATE CHECK FUNCTION (LETK ATAS SEKALI)
-async function checkDuplicatePhone(phoneInput) {
-  const res = await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6X4WfU2TYIkPCdsLP3WsrbFlrkGHDrS_dDhzqt5rXj_fgHYblwqsZQI/pub?gid=1339694217&single=true&output=csv");
-
-  const data = await res.text();
-  const parsed = Papa.parse(data, { header: true });
-
-  const phoneBaru = phoneInput.replace(/\D/g, "");
-
-  return parsed.data.some(row => {
-    const phoneSheet = (row["Nombor Telefon"] || "").replace(/\D/g, "");
-    return phoneSheet === phoneBaru;
-  });
-}
-
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
   const wrapper = document.getElementById("snow-wrapper");
@@ -69,45 +54,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadUcapan(); // ✅ OK
 
-  // 📨 VALIDATION (WAJIB DALAM SUBMIT EVENT)
-  if (form) {
-    form.addEventListener("submit", async function (e) {
-      const kehadiran = document.querySelector('input[name="entry.314288959"]:checked');
+// 📨 VALIDATION + SUBMIT
+if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-      // ✅ basic required
-      if (!nama.value.trim() || !kehadiran || !phone.value.trim()) {
-        e.preventDefault();
-        alert("Sila lengkapkan semua maklumat.");
-        return;
-      }
+    const kehadiran = document.querySelector('input[name="entry.314288959"]:checked');
 
-      // ✅ validate phone
-      let phoneValue = phone.value.replace(/\D/g, "");
+    // ✅ VALIDATION BASIC
+    if (!nama.value.trim() || !kehadiran || !phone.value.trim()) {
+      alert("Sila lengkapkan semua maklumat.");
+      return;
+    }
 
-      if (phoneValue.length < 9 || phoneValue.length > 12) {
-        e.preventDefault();
-        alert("Sila masukkan nombor telefon yang sah.");
-        return;
-      }
+    let phoneValue = phone.value.replace(/\D/g, "");
 
-      // ✅ kalau hadir wajib isi bilangan
-      if (kehadiran.value === "Hadir" && !bilangan.value) {
-        e.preventDefault();
-        alert("Sila isi bilangan kehadiran jika anda akan hadir.");
-        return;
-      }
+    if (phoneValue.length < 9 || phoneValue.length > 12) {
+      alert("Sila masukkan nombor telefon yang sah.");
+      return;
+    }
+
+    if (kehadiran.value === "Hadir" && !bilangan.value) {
+      alert("Sila isi bilangan kehadiran jika anda akan hadir.");
+      return;
+    }
+
+    // 🔥 disable button AWAL
+    const btn = form.querySelector("button[type='submit']");
+    if (btn) {
+      btn.disabled = true;
+      btn.innerText = "Menghantar...";
+    }
+
+    try {
+      // 🔥 SEND TO APPS SCRIPT (AUTO UPDATE / ADD ROW)
+      const res = await fetch("https://script.google.com/macros/s/AKfycbzIcWWb5wyLKsbORj3jmxspZFRJi5iesNpx-IhnSJewVXjCnC8WtK9wAul1zfS0SODM/exec", {
+        method: "POST",
+        body: JSON.stringify({
+          nama: nama.value.trim(),
+          kehadiran: kehadiran.value,
+          bilangan: bilangan.value,
+          phone: phone.value.trim(),
+          ucapan: ""
+        })
+      });
+
+      const result = await res.text();
+      console.log("Apps Script:", result);
 
       submitted = true;
 
-      // 🔥 disable button elak spam click
-      const btn = form.querySelector("button[type='submit']");
-      if (btn) {
-        btn.disabled = true;
-        btn.innerText = "Menghantar...";
-      }
-    });
-  }
+    } catch (err) {
+      console.error(err);
+      alert("Error submit. Cuba lagi.");
 
+      // re-enable button kalau error
+      if (btn) {
+        btn.disabled = false;
+        btn.innerText = "Hantar";
+      }
+    }
+  });
+}
+  
   // ✅ Auto clean phone input
   if (phone) {
     phone.addEventListener("input", function () {
