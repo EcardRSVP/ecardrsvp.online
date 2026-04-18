@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const phone = document.getElementById("phone");
   const startBtn = document.getElementById("start-btn");
 
+  loadUcapan(); // ✅ OK
+
   // 📨 VALIDATION (WAJIB DALAM SUBMIT EVENT)
   if (form) {
     form.addEventListener("submit", function (e) {
