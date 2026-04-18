@@ -1059,6 +1059,53 @@ hr::before {
   margin-top: 2px;
 }
 
+
+/* =========================
+   KEHADIRAN (TRANSPARENT STYLE)
+========================= */
+
+.kehadiran-section {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.kehadiran-section h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+/* row tetap center */
+.kehadiran-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* column TANPA BOX */
+.kehadiran-col {
+  text-align: center;
+}
+
+/* number sahaja */
+.count {
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* label simple */
+.label {
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 1px;
+}
+
+
 .snow {
   position: fixed;
   top: -10px;
