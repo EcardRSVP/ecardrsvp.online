@@ -163,7 +163,13 @@ function toggleSection(id) {
 
 
 
-// ✅ Fetch Ucapan (PapaParse)
+// ✅ Fetch Ucapan (PapaParse) - OPTIMIZED
+let ucapanLoaded = false;
+
+function loadUcapan() {
+  if (ucapanLoaded) return;   // 🔥 ELak double load
+  ucapanLoaded = true;
+  
 fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRyk8BLqcP2bSKwSTjMl76FCVnwr05Eow0r8K5Cn1J1N1cI-KFVPpQGq4/pub?gid=241095374&single=true&output=csv")
   .then(response => response.text())
   .then(data => {
@@ -183,7 +189,7 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRy
       });
     }
   });
-
+} // ✅ IMPORTANT: TUTUP FUNCTION DI SINI
 
 
 
