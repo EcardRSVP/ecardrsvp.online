@@ -1074,7 +1074,7 @@ hr::before {
 .kehadiran-row {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
