@@ -49,19 +49,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("rsvp-form");
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
+  const phone = document.getElementById("phone");
   const startBtn = document.getElementById("start-btn");
 
- // 📨 Validasi sebelum submit
+  // 📨 VALIDATION (WAJIB DALAM SUBMIT EVENT)
   if (form) {
     form.addEventListener("submit", function (e) {
       const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
-      if (!nama.value.trim() || !kehadiran) {
+      // ✅ basic required
+      if (!nama.value.trim() || !kehadiran || !phone.value.trim()) {
         e.preventDefault();
         alert("Sila lengkapkan semua maklumat.");
         return;
       }
 
+      // ✅ validate phone
+      let phoneValue = phone.value.replace(/\D/g, "");
+
+      if (phoneValue.length < 9 || phoneValue.length > 12) {
+        e.preventDefault();
+        alert("Sila masukkan nombor telefon yang sah.");
+        return;
+      }
+
+      // ✅ kalau hadir wajib isi bilangan
       if (kehadiran.value === "Hadir" && !bilangan.value) {
         e.preventDefault();
         alert("Sila isi bilangan kehadiran jika anda akan hadir.");
@@ -69,12 +81,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       submitted = true;
+
+      // 🔥 disable button elak spam click
+      const btn = form.querySelector("button[type='submit']");
+      if (btn) {
+        btn.disabled = true;
+        btn.innerText = "Menghantar...";
+      }
     });
-  } else {
-    console.error("❌ Elemen borang RSVP tidak dijumpai.");
   }
 
-  
+  // ✅ Auto clean phone input
+  if (phone) {
+    phone.addEventListener("input", function () {
+      this.value = this.value.replace(/[^0-9]/g, "");
+    });
+  }
 
 
   // 🎬 Butang BUKA - Tunjuk kandungan utama
@@ -96,6 +118,13 @@ function rsvpSuccessHandler() {
     const form = document.getElementById("rsvp-form");
     if (form) form.reset();
 
+    // ✅ ENABLE BALIK BUTTON
+    const btn = document.querySelector("#rsvp-form button[type='submit']");
+    if (btn) {
+      btn.disabled = false;
+      btn.innerText = "Hantar";
+    }
+
     // ✅ Tunjuk popup alert tengah skrin
     const alertBox = document.getElementById("rsvp-alert");
     if (alertBox) {
@@ -104,6 +133,7 @@ function rsvpSuccessHandler() {
     } else {
       console.warn("⚠️ Elemen #rsvp-alert tidak dijumpai.");
     }
+
   } else {
     console.log("ℹ️ iframe reload tanpa submitted");
   }
