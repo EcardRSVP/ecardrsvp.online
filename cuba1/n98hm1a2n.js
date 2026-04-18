@@ -1,3 +1,18 @@
+// 🔥 DUPLICATE CHECK FUNCTION (LETK ATAS SEKALI)
+async function checkDuplicatePhone(phoneInput) {
+  const res = await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6X4WfU2TYIkPCdsLP3WsrbFlrkGHDrS_dDhzqt5rXj_fgHYblwqsZQI/pub?gid=1339694217&single=true&output=csv");
+
+  const data = await res.text();
+  const parsed = Papa.parse(data, { header: true });
+
+  const phoneBaru = phoneInput.replace(/\D/g, "");
+
+  return parsed.data.some(row => {
+    const phoneSheet = (row["Nombor Telefon"] || "").replace(/\D/g, "");
+    return phoneSheet === phoneBaru;
+  });
+}
+
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
   const wrapper = document.getElementById("snow-wrapper");
@@ -56,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 📨 VALIDATION (WAJIB DALAM SUBMIT EVENT)
   if (form) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       const kehadiran = document.querySelector('input[name="entry.314288959"]:checked');
 
       // ✅ basic required
