@@ -174,3 +174,32 @@ function closeRsvpAlert() {
   const box = document.getElementById("rsvp-alert");
   if (box) box.style.display = "none";
 }
+
+// =========================
+// 📌 POPUP CONTROL
+// =========================
+function togglePopup(section) {
+  // sembunyikan main content
+  document.getElementById("main-content").style.display = "none";
+
+  // sembunyikan semua popup dulu
+  document.querySelectorAll(".popup-section").forEach(el => {
+    el.classList.remove("show");
+  });
+
+  // tunjuk popup yang dipilih
+  const target = document.getElementById(section);
+  if (target) {
+    target.classList.add("show");
+  }
+}
+
+function closePopup() {
+  // hide semua popup
+  document.querySelectorAll(".popup-section").forEach(el => {
+    el.classList.remove("show");
+  });
+
+  // balik ke main content
+  document.getElementById("main-content").style.display = "block";
+}
