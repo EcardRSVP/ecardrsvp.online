@@ -178,28 +178,39 @@ function closeRsvpAlert() {
 // =========================
 // 📌 POPUP CONTROL
 // =========================
-function togglePopup(section) {
-  // sembunyikan main content
-  document.getElementById("main-content").style.display = "none";
+// SENARAI ID popup & ikon yang berkaitan
+const popupMap = {
+  RSVP: "popup-RSVP",
+  MoneyGift: "popup-MoneyGift",
+  Wishlist: "popup-Wishlist",
+  Contact: "popup-Contact",
+  Location: "popup-Location"
+};
 
-  // sembunyikan semua popup dulu
-  document.querySelectorAll(".popup-section").forEach(el => {
-    el.classList.remove("show");
-  });
+let popupTerbuka = null;
 
-  // tunjuk popup yang dipilih
-  const target = document.getElementById(section);
-  if (target) {
-    target.classList.add("show");
+function togglePopup(nama) {
+  const idPopup = popupMap[nama];
+  const popup = document.getElementById(idPopup);
+  const mainContent = document.getElementById("main-content");
+
+  if (!popup || !mainContent) return;
+
+  // Kalau popup sekarang terbuka dan ditekan semula → tutup
+  if (popupTerbuka === idPopup) {
+    popup.style.display = "none";
+    mainContent.style.display = "block";
+    popupTerbuka = null;
+  } else {
+    // Tutup semua popup lain dulu
+    Object.values(popupMap).forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = "none";
+    });
+
+    // Buka popup yang diminta
+    popup.style.display = "block";
+    mainContent.style.display = "none";
+    popupTerbuka = idPopup;
   }
-}
-
-function closePopup() {
-  // hide semua popup
-  document.querySelectorAll(".popup-section").forEach(el => {
-    el.classList.remove("show");
-  });
-
-  // balik ke main content
-  document.getElementById("main-content").style.display = "block";
 }
