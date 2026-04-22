@@ -49,31 +49,50 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("rsvp-form");
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
-  const startBtn = document.getElementById("start-btn");
 
- // 📨 Validasi sebelum submit
-if (form) {
+  const radios = document.querySelectorAll('input[name="entry.727555102"]');
+
+  // 🔥 CONTROL BILANGAN
+  radios.forEach(radio => {
+    radio.addEventListener("change", () => {
+
+      if (radio.value === "Hadir" && radio.checked) {
+        bilangan.disabled = false;
+        bilangan.required = true;
+        bilangan.value = "1";
+      }
+
+      if (radio.value === "Tidak Hadir" && radio.checked) {
+        bilangan.disabled = true;
+        bilangan.required = false;
+        bilangan.value = "";
+      }
+    });
+  });
+
+  // 🔥 VALIDATION SUBMIT
   form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
     const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
+    const jumlah = parseInt(bilangan.value);
 
     if (!nama.value.trim() || !kehadiran) {
-      e.preventDefault();
       alert("Sila lengkapkan semua maklumat.");
       return;
     }
 
-    const jumlah = parseInt(bilangan.value);
-
-    if (kehadiran.value === "Hadir" && (isNaN(jumlah) || jumlah <= 0)) {
-      e.preventDefault();
-      alert("Sila isi bilangan kehadiran yang sah.");
-      return;
+    if (kehadiran.value === "Hadir") {
+      if (isNaN(jumlah) || jumlah <= 0) {
+        alert("Sila isi bilangan kehadiran.");
+        return;
+      }
     }
 
-    // ✅ hanya sampai sini baru dianggap valid
     submitted = true;
+    form.submit();
   });
-}
+});
 
   
 
@@ -193,4 +212,18 @@ function togglePopup(nama) {
     mainContent.style.display = "none";
     popupTerbuka = idPopup;
   }
+}
+
+let dataRSVP = [];
+
+function loadKehadiran() {
+  fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRj4vi5sshHiiuRvtBr7CgNRyk8BLqcP2bSKwSTjMl76FCVnwr05Eow0r8K5Cn1J1N1cI-KFVPpQGq4/pub?gid=241095374&single=true&output=csv")
+    .then(res => res.text())
+    .then(data => {
+      const parsed = Papa.parse(data, { header: true });
+      dataRSVP = parsed.data;
+
+      updateKehadiranUI(parsed.data);
+      loadGuestbook(parsed.data);
+    });
 }
