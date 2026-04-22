@@ -52,27 +52,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const startBtn = document.getElementById("start-btn");
 
  // 📨 Validasi sebelum submit
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
+if (form) {
+  form.addEventListener("submit", function (e) {
+    const kehadiran = document.querySelector('input[name="entry.727555102"]:checked');
 
-      if (!nama.value.trim() || !kehadiran) {
-        e.preventDefault();
-        alert("Sila lengkapkan semua maklumat.");
-        return;
-      }
+    if (!nama.value.trim() || !kehadiran) {
+      e.preventDefault();
+      alert("Sila lengkapkan semua maklumat.");
+      return;
+    }
 
-      if (kehadiran.value === "Hadir" && !bilangan.value) {
-        e.preventDefault();
-        alert("Sila isi bilangan kehadiran jika anda akan hadir.");
-        return;
-      }
+    const jumlah = parseInt(bilangan.value);
 
-      submitted = true;
-    });
-  } else {
-    console.error("❌ Elemen borang RSVP tidak dijumpai.");
-  }
+    if (kehadiran.value === "Hadir" && (isNaN(jumlah) || jumlah <= 0)) {
+      e.preventDefault();
+      alert("Sila isi bilangan kehadiran yang sah.");
+      return;
+    }
+
+    // ✅ hanya sampai sini baru dianggap valid
+    submitted = true;
+  });
+}
 
   
 
