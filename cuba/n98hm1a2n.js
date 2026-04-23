@@ -3,6 +3,7 @@ let submitted = false;
 // 🟢 TAMBAH (WAJIB FIX CONSISTENCY)
 let lastKehadiran = null;
 let lastBilangan = 0;
+let isFetching = false; // ✅ LETAK SINI
 
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
@@ -181,12 +182,39 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6
 
 
 function liveRSVPDashboard() {
+  if (isFetching) return;
+  isFetching = true;
+
   fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6X4WfU2TYIkPCdsLP3WsrbFlrkGHDrS_dDhzqt5rXj_fgHYblwqsZQI/pub?gid=1339694217&single=true&output=csv&cache=" + new Date().getTime())
     .then(res => res.text())
     .then(data => {
+      isFetching = false;
+
       const parsed = Papa.parse(data, { header: true }).data;
 
       let hadir = 0;
       let tidakHadir = 0;
 
+      parsed.forEach(row => {
+        const status = row["Kehadiran"]?.trim();
+        const bil = parseInt(row["Bilangan"]) || 1;
 
+        if (status === "Hadir") {
+          hadir += bil;
+        } else if (status === "Tidak Hadir") {
+          tidakHadir += 1;
+        }
+      });
+
+      // 👉 UPDATE UI (WAJIB ADA)
+      const hadirEl = document.getElementById("total-hadir");
+      const tidakEl = document.getElementById("total-tidak");
+
+      if (hadirEl) hadirEl.textContent = hadir;
+      if (tidakEl) tidakEl.textContent = tidakHadir;
+
+    })
+    .catch(() => {
+      isFetching = false;
+    });
+}
