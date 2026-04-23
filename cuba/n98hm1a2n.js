@@ -206,6 +206,18 @@ function liveRSVPDashboard() {
         }
       });
 
+// 🔥 INSTANT UPDATE (LEPAS SUBMIT)
+if (lastKehadiran) {
+  if (lastKehadiran === "Hadir") {
+    hadir += lastBilangan;
+  } else {
+    tidakHadir += 1;
+  }
+
+  // ❗ reset lepas guna (penting)
+  lastKehadiran = null;
+}
+
       // 👉 UPDATE UI (WAJIB ADA)
       const hadirEl = document.getElementById("total-hadir");
       const tidakEl = document.getElementById("total-tidak");
