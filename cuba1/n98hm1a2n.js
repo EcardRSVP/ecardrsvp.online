@@ -69,45 +69,84 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
+      // ✅ tambah ini
+if (kehadiran.value === "Hadir" && !bilangan.value) {
+  alert("Sila isi bilangan kehadiran");
+  return;
+}
+      
       btn.disabled = true;
       btn.innerText = "Menghantar...";
 
-      try {
-        await fetch("https://script.google.com/macros/s/AKfycbzIcWWb5wyLKsbORj3jmxspZFRJi5iesNpx-IhnSJewVXjCnC8WtK9wAul1zfS0SODM/exec", {
-          method: "POST",
-          body: JSON.stringify({
-            nama: nama.value.trim(),
-            kehadiran: kehadiran.value,
-            bilangan: bilangan.value,
-            phone: phone.value.trim(),
-            ucapan: ""
-          })
-        });
+try {
 
-        // RESET FORM
-        form.reset();
+    // =========================
+    // 🚫 CHECK DUPLICATE PHONE
+    // =========================
+    const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6X4WfU2TYIkPCdsLP3WsrbFlrkGHDrS_dDhzqt5rXj_fgHYblwqsZQI/pub?gid=1339694217&single=true&output=csv";
 
-        // 🔥 FORCE UPDATE DATA
-        loadUcapan();
+    const res = await fetch(csvUrl);
+    const text = await res.text();
+    const data = Papa.parse(text, { header: true }).data;
 
-        // BUTTON RESET
-        btn.disabled = false;
-        btn.innerText = "Hantar";
+  const normalize = num => num.replace(/\D/g, "");
+  
+const phoneExists = data.some(r => {
+  const existingPhone = normalize(r["Nombor Telefon"] || "");
+  const currentPhone = normalize(phone.value);
+  return existingPhone === currentPhone;
+});
 
-        // POPUP
-        document.getElementById("rsvp-alert").style.display = "block";
+    if (phoneExists) {
+      alert("Nombor telefon ini sudah digunakan");
+      btn.disabled = false;
+      btn.innerText = "Hantar";
+      return;
+    }
 
-      } catch (err) {
-        console.error(err);
+    // =========================
+    // 📩 SUBMIT DATA
+    // =========================
+    const ucapanInput = document.getElementById("ucapan");
 
-        btn.disabled = false;
-        btn.innerText = "Hantar";
-
-        alert("Error submit");
-      }
+    await fetch("https://script.google.com/macros/s/AKfycbzIcWWb5wyLKsbORj3jmxspZFRJi5iesNpx-IhnSJewVXjCnC8WtK9wAul1zfS0SODM/exec", {
+      method: "POST",
+      body: JSON.stringify({
+        nama: nama.value.trim(),
+        kehadiran: kehadiran.value,
+        bilangan: bilangan.value,
+        phone: phone.value.trim(),
+        ucapan: ucapanInput.value.trim() // ✅ FIX guestbook
+      })
     });
-  }
 
+    // RESET
+    form.reset();
+
+    // ⏳ DELAY UPDATE (elak data belum masuk sheet)
+    setTimeout(() => {
+      loadUcapan();
+    }, 3000);
+
+    btn.disabled = false;
+    btn.innerText = "Hantar";
+
+    document.getElementById("rsvp-alert").style.display = "block";
+
+  } catch (err) {
+    console.error(err);
+
+    btn.disabled = false;
+    btn.innerText = "Hantar";
+
+    alert("Error submit");
+  }
+});
+
+      
+
+
+  
   // PHONE ONLY NUMBER
   if (phone) {
     phone.addEventListener("input", () => {
