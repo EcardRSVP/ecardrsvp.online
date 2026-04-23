@@ -120,6 +120,11 @@ function rsvpSuccessHandler() {
   if (submitted) {
     submitted = false;
 
+  // 🔥 TAMBAH SINI
+  setTimeout(() => {
+    liveRSVPDashboard();
+  }, 1500);    
+
 // ❌ NO LOCAL COUNT UPDATE
 // Data now controlled by Google Sheet realtime
 
@@ -188,7 +193,7 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6
 
 
 function liveRSVPDashboard() {
-  fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6X4WfU2TYIkPCdsLP3WsrbFlrkGHDrS_dDhzqt5rXj_fgHYblwqsZQI/pub?gid=1339694217&single=true&output=csv")
+  fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6X4WfU2TYIkPCdsLP3WsrbFlrkGHDrS_dDhzqt5rXj_fgHYblwqsZQI/pub?gid=1339694217&single=true&output=csv&cache=" + new Date().getTime())
     .then(res => res.text())
     .then(data => {
       const parsed = Papa.parse(data, { header: true }).data;
