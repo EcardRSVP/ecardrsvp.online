@@ -1,3 +1,6 @@
+let countHadir = 0;
+let countTidakHadir = 0;
+
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
   const wrapper = document.getElementById("snow-wrapper");
@@ -49,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("rsvp-form");
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
+  const phone = document.getElementById("phone");
   const startBtn = document.getElementById("start-btn");
 
  // 📨 Validasi sebelum submit
@@ -68,6 +72,20 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
+  if (!phone.value.trim()) {
+  e.preventDefault();
+  alert("Sila isi nombor telefon.");
+  return;
+}
+
+// optional (lebih strict - Malaysia format)
+const phoneRegex = /^(\+?6?01)[0-9]{8,9}$/;
+if (!phoneRegex.test(phone.value.trim())) {
+  e.preventDefault();
+  alert("Sila masukkan nombor telefon yang sah.");
+  return;
+}
+      
       submitted = true;
     });
   } else {
@@ -90,11 +108,30 @@ document.addEventListener("DOMContentLoaded", function () {
 function rsvpSuccessHandler() {
   console.log("📢 rsvpSuccessHandler triggered");
 
+const kehadiran = document.querySelector('input[name="entry.314288959"]:checked');
+const bilangan = document.getElementById("bilangan").value || 0;
+
+if (kehadiran) {
+  if (kehadiran.value === "Hadir") {
+    countHadir += parseInt(bilangan) || 1;
+  } else {
+    countTidakHadir += 1;
+  }
+}
+
+// update UI
+document.getElementById("countHadir").textContent = countHadir;
+document.getElementById("countTidakHadir").textContent = countTidakHadir;
+  
   if (submitted) {
     submitted = false;
 
     const form = document.getElementById("rsvp-form");
     if (form) form.reset();
+
+
+
+    
 
     // ✅ Tunjuk popup alert tengah skrin
     const alertBox = document.getElementById("rsvp-alert");
