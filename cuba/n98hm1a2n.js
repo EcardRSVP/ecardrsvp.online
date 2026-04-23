@@ -1,6 +1,10 @@
 let countHadir = 0;
 let countTidakHadir = 0;
 
+// ✅ TAMBAH INI (SIMPAN DATA SEBELUM SUBMIT)
+let lastKehadiran = null;
+let lastBilangan = 0;
+
 // ✅ Fungsi Salji Jatuh
 function mulakanSalji() {
   const wrapper = document.getElementById("snow-wrapper");
@@ -57,41 +61,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
  // 📨 Validasi sebelum submit
   if (form) {
-    form.addEventListener("submit", function (e) {
-      const kehadiran = document.querySelector('input[name="entry.314288959"]:checked');
+form.addEventListener("submit", function (e) {
+  const kehadiran = document.querySelector('input[name="entry.314288959"]:checked');
 
-      if (!nama.value.trim() || !kehadiran) {
-        e.preventDefault();
-        alert("Sila lengkapkan semua maklumat.");
-        return;
-      }
-
-      if (kehadiran.value === "Hadir" && !bilangan.value) {
-        e.preventDefault();
-        alert("Sila isi bilangan kehadiran jika anda akan hadir.");
-        return;
-      }
-
-  if (!phone.value.trim()) {
-  e.preventDefault();
-  alert("Sila isi nombor telefon.");
-  return;
-}
-
-// optional (lebih strict - Malaysia format)
-const phoneRegex = /^(\+?6?01)[0-9]{8,9}$/;
-if (!phoneRegex.test(phone.value.trim())) {
-  e.preventDefault();
-  alert("Sila masukkan nombor telefon yang sah.");
-  return;
-}
-      
-      submitted = true;
-    });
-  } else {
-    console.error("❌ Elemen borang RSVP tidak dijumpai.");
+  if (!nama.value.trim() || !kehadiran) {
+    e.preventDefault();
+    alert("Sila lengkapkan semua maklumat.");
+    return;
   }
 
+  if (kehadiran.value === "Hadir" && !bilangan.value) {
+    e.preventDefault();
+    alert("Sila isi bilangan kehadiran jika anda akan hadir.");
+    return;
+  }
+
+  // ✅ VALIDASI PHONE
+  if (!phone.value.trim()) {
+    e.preventDefault();
+    alert("Sila isi nombor telefon.");
+    return;
+  }
+
+  const phoneRegex = /^(\+?6?01)[0-9]{8,9}$/;
+  if (!phoneRegex.test(phone.value.trim())) {
+    e.preventDefault();
+    alert("Sila masukkan nombor telefon yang sah.");
+    return;
+  }
+
+  // ✅ SIMPAN DATA SEBELUM SUBMIT
+  lastKehadiran = kehadiran.value;
+  lastBilangan = parseInt(bilangan.value) || 1;
+  
+      submitted = true;
+    });
+  }
   
 
 
@@ -108,44 +113,33 @@ if (!phoneRegex.test(phone.value.trim())) {
 function rsvpSuccessHandler() {
   console.log("📢 rsvpSuccessHandler triggered");
 
-const kehadiran = document.querySelector('input[name="entry.314288959"]:checked');
-const bilangan = document.getElementById("bilangan").value || 0;
-
-if (kehadiran) {
-  if (kehadiran.value === "Hadir") {
-    countHadir += parseInt(bilangan) || 1;
-  } else {
-    countTidakHadir += 1;
-  }
-}
-
-// update UI
-document.getElementById("countHadir").textContent = countHadir;
-document.getElementById("countTidakHadir").textContent = countTidakHadir;
-  
   if (submitted) {
     submitted = false;
+
+    // ✅ UPDATE KEHADIRAN (GUNA DATA YANG DISIMPAN)
+    if (lastKehadiran === "Hadir") {
+      countHadir += lastBilangan;
+    } else if (lastKehadiran === "Tidak Hadir") {
+      countTidakHadir += 1;
+    }
+
+    // ✅ UPDATE DISPLAY
+    document.getElementById("countHadir").textContent = countHadir;
+    document.getElementById("countTidakHadir").textContent = countTidakHadir;
 
     const form = document.getElementById("rsvp-form");
     if (form) form.reset();
 
-
-
-    
-
-    // ✅ Tunjuk popup alert tengah skrin
+    // ✅ POPUP ALERT
     const alertBox = document.getElementById("rsvp-alert");
     if (alertBox) {
       alertBox.style.display = "block";
-      console.log("✅ Popup alert tengah skrin muncul");
-    } else {
-      console.warn("⚠️ Elemen #rsvp-alert tidak dijumpai.");
     }
   } else {
     console.log("ℹ️ iframe reload tanpa submitted");
   }
 }
-window.rsvpSuccessHandler = rsvpSuccessHandler;
+
 
 // ✅ Tutup popup bila tekan OK
 function closeRsvpAlert() {
