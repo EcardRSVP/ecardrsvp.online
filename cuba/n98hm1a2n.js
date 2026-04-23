@@ -1,6 +1,3 @@
-let countHadir = 0;
-let countTidakHadir = 0;
-
 // ✅ TAMBAH INI (SIMPAN DATA SEBELUM SUBMIT)
 let lastKehadiran = null;
 let lastBilangan = 0;
@@ -52,7 +49,14 @@ function mulakanSalji() {
 // ✅ RSVP Popup & Validasi
 let submitted = false;
 
+function liveRSVPDashboard() {
+  // kira Google Sheet
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  
+  liveRSVPDashboard();
+  
   const form = document.getElementById("rsvp-form");
   const nama = document.getElementById("nama");
   const bilangan = document.getElementById("bilangan");
@@ -116,16 +120,13 @@ function rsvpSuccessHandler() {
   if (submitted) {
     submitted = false;
 
-    // ✅ UPDATE KEHADIRAN (GUNA DATA YANG DISIMPAN)
-    if (lastKehadiran === "Hadir") {
-      countHadir += lastBilangan;
-    } else if (lastKehadiran === "Tidak Hadir") {
-      countTidakHadir += 1;
-    }
+// ❌ NO LOCAL COUNT UPDATE
+// Data now controlled by Google Sheet realtime
 
-    // ✅ UPDATE DISPLAY
-    document.getElementById("countHadir").textContent = countHadir;
-    document.getElementById("countTidakHadir").textContent = countTidakHadir;
+// optional: just refresh dashboard
+if (typeof liveRSVPDashboard === "function") {
+  liveRSVPDashboard();
+}
 
     const form = document.getElementById("rsvp-form");
     if (form) form.reset();
@@ -184,6 +185,36 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6
       });
     }
   });
+
+
+function liveRSVPDashboard() {
+  fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRw9YsHinVgUJnl88RkGPbdl6X4WfU2TYIkPCdsLP3WsrbFlrkGHDrS_dDhzqt5rXj_fgHYblwqsZQI/pub?gid=1339694217&single=true&output=csv")
+    .then(res => res.text())
+    .then(data => {
+      const parsed = Papa.parse(data, { header: true }).data;
+
+      let hadir = 0;
+      let tidakHadir = 0;
+
+      parsed.forEach(row => {
+        const status = (row["Kehadiran"] || "").trim();
+        const bil = parseInt(row["Bilangan"]) || 1;
+
+        // 🟢 AUTO DETECT STATUS
+        if (status === "Hadir") {
+          hadir += bil;
+        } 
+        else if (status === "Tidak Hadir") {
+          tidakHadir += 1;
+        }
+      });
+
+      document.getElementById("countHadir").textContent = hadir;
+      document.getElementById("countTidakHadir").textContent = tidakHadir;
+    });
+}
+
+
 
 
 
